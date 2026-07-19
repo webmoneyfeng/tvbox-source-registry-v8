@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import worker from '../src/worker.mjs';
+import worker, { probeVodSource } from '../src/worker.mjs';
 
 function jsonResponse(value) {
   return new Response(JSON.stringify(value), { status: 200, headers: { 'content-type': 'application/json' } });
@@ -34,6 +34,19 @@ test('scheduled harness probes VOD and LIVE in bounded batches and persists heal
     assert.ok(state.generatedAt);
     assert.ok(Object.keys(state.sources).length > 0);
     assert.ok(state.revision);
+    assert.match(state.revision, /\|live:/u);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('probe rejects a redirect to a private address as a hard violation', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response('', { status: 302, headers: { location: 'http://127.0.0.1/private' } });
+  try {
+    const probe = await probeVodSource({ slug: 'unsafe', kind: 'vod', api: 'https://public.example.test/api' });
+    assert.equal(probe.ok, false);
+    assert.equal(probe.hardViolation, true);
   } finally {
     globalThis.fetch = originalFetch;
   }

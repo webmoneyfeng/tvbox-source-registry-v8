@@ -7,6 +7,7 @@ export function isPublicHttpUrl(value) {
     if (!['http:', 'https:'].includes(url.protocol)) return false;
     if (url.username || url.password) return false;
     if (PRIVATE_HOST_RE.test(url.hostname)) return false;
+    if (url.hostname.includes('..') || url.hostname.length > 253) return false;
     if (url.port && !['80', '443'].includes(url.port)) return false;
     return true;
   } catch {

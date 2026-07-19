@@ -14,7 +14,9 @@ export function emptyHealthState(generatedAt = null) {
   return {
     schemaVersion: HEALTH_SCHEMA_VERSION,
     generatedAt,
+    checkedAt: generatedAt,
     revision: 'seed',
+    liveRevision: 'none',
     sources: {},
     cursor: 0,
     persistedAt: null,
@@ -22,8 +24,11 @@ export function emptyHealthState(generatedAt = null) {
     lastKnownGoodLIVE: [],
     discoveredSources: [],
     liveCatalog: [],
+    liveCatalogBySource: {},
     lastDiscoveryAt: null,
     discoveryCursor: 0,
+    lastDiscoveryFeed: null,
+    lastDiscoveryError: null,
   };
 }
 
@@ -32,7 +37,9 @@ export function normalizeHealthState(value) {
   return {
     schemaVersion: HEALTH_SCHEMA_VERSION,
     generatedAt: value.generatedAt || null,
+    checkedAt: value.checkedAt || value.generatedAt || null,
     revision: String(value.revision || 'seed'),
+    liveRevision: String(value.liveRevision || 'none'),
     sources: value.sources && typeof value.sources === 'object' && !Array.isArray(value.sources)
       ? value.sources
       : {},
@@ -42,8 +49,14 @@ export function normalizeHealthState(value) {
     lastKnownGoodLIVE: Array.isArray(value.lastKnownGoodLIVE) ? value.lastKnownGoodLIVE : [],
     discoveredSources: Array.isArray(value.discoveredSources) ? value.discoveredSources : [],
     liveCatalog: Array.isArray(value.liveCatalog) ? value.liveCatalog : [],
+    liveCatalogBySource: value.liveCatalogBySource && typeof value.liveCatalogBySource === 'object' && !Array.isArray(value.liveCatalogBySource)
+      ? value.liveCatalogBySource
+      : {},
     lastDiscoveryAt: value.lastDiscoveryAt || null,
     discoveryCursor: Number.isInteger(value.discoveryCursor) ? value.discoveryCursor : 0,
+    lastDiscoveryFeed: value.lastDiscoveryFeed || null,
+    lastDiscoveryError: value.lastDiscoveryError || null,
+    discoveryCount: Number(value.discoveryCount || 0),
   };
 }
 
@@ -93,6 +106,7 @@ export function applyProbe(previous, source, probe, checkedAt) {
     duplicateRate: Number(probe.duplicateRate || 0),
     httpStatus: Number(probe.httpStatus || 0),
     error: ok ? '' : String(probe.error || 'probe failed').slice(0, 240),
+    hardViolation: Boolean(probe.hardViolation),
     state,
     score: Number(probe.score?.total || 0),
     scoreBreakdown: probe.score || null,
@@ -116,7 +130,11 @@ export function sourceIsVisible(source, healthRow) {
 
 export function visibleSources(registry, healthState) {
   const state = normalizeHealthState(healthState);
-  return registry.filter((source) => sourceIsVisible(source, state.sources[sourceHealthKey(source)] || state.sources[source.slug]));
+  const initialized = Object.keys(state.sources).length > 0;
+  return registry.filter((source) => {
+    const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug];
+    return row ? sourceIsVisible(source, row) : !initialized && source.seedStatus === 'ACTIVE';
+  });
 }
 
 export function healthRevision(registry, healthState) {

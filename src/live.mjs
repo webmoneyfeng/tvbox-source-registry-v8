@@ -1,3 +1,5 @@
+import { isPublicHttpUrl } from './discovery.mjs';
+
 const INFRASTRUCTURE_AD_RE = /(\u5e7f\u544a|\u516c\u4f17\u53f7|\u52a0\u7fa4|\u4e8c\u7ef4\u7801|\u63a8\u5e7f|\u6c38\u4e45\u5730\u5740|\u53d1\u5e03\u9875|\u5b98\u7f51\u5730\u5740|\u514d\u8d39\u8ba2\u9605)/iu;
 const GROUP_RE = /group-title\s*=\s*["']([^"']*)["']/iu;
 
@@ -15,12 +17,35 @@ export function normalizeLiveUrl(value) {
   if (!/^https?:\/\//iu.test(raw)) return '';
   try {
     const url = new URL(raw);
-    if (url.username || url.password) return '';
+    if (!isPublicHttpUrl(url.toString())) return '';
     url.hash = '';
     return url.toString();
   } catch {
     return '';
   }
+}
+
+export function normalizeChannelName(value) {
+  return text(value)
+    .replace(/超高清|高清|标清|超清|FHD|UHD|HD|SD/giu, '')
+    .toLocaleLowerCase('zh-CN')
+    .replace(/[^\p{L}\p{N}]/gu, '');
+}
+
+function dedupeChannels(channels) {
+  const unique = new Map();
+  const names = new Set();
+  const urls = new Set();
+  for (const channel of channels) {
+    const nameKey = normalizeChannelName(channel.name) || normalizeChannelName(channel.url);
+    const urlKey = channel.url;
+    const key = `${nameKey}|${urlKey}`;
+    if (names.has(nameKey) || urls.has(urlKey) || unique.has(key)) continue;
+    names.add(nameKey);
+    urls.add(urlKey);
+    unique.set(key, channel);
+  }
+  return [...unique.values()];
 }
 
 export function parseM3U(input) {
@@ -56,18 +81,15 @@ export function parseM3U(input) {
     pending = null;
   }
 
-  const unique = new Map();
-  for (const channel of channels) {
-    const key = `${channel.name.toLowerCase()}|${channel.url}`;
-    if (!unique.has(key)) unique.set(key, channel);
-  }
-  return { header, epgUrl, channels: [...unique.values()] };
+  const rawChannelCount = channels.length;
+  const uniqueChannels = dedupeChannels(channels);
+  return { header, epgUrl, rawChannelCount, channels: uniqueChannels };
 }
 
 export function liveContract(input) {
   const parsed = parseM3U(input);
   const groups = new Set(parsed.channels.map((channel) => channel.group).filter(Boolean));
-  const duplicateRate = parsed.channels.length ? 1 - (new Set(parsed.channels.map((channel) => channel.url)).size / parsed.channels.length) : 1;
+  const duplicateRate = parsed.rawChannelCount ? 1 - (parsed.channels.length / parsed.rawChannelCount) : 1;
   return {
     ok: Boolean(parsed.header && parsed.channels.length >= 5 && groups.size >= 1 && duplicateRate <= 0.05),
     channelCount: parsed.channels.length,
@@ -77,6 +99,8 @@ export function liveContract(input) {
     sample: parsed.channels.slice(0, 5),
   };
 }
+
+export { dedupeChannels };
 
 export function channelSample(channels, limit = 5) {
   if (!Array.isArray(channels) || channels.length <= limit) return channels || [];

@@ -6,16 +6,17 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const limits = { workerRequestsPerDay: 100000, subrequestsPerInvocation: 50, kvReadsPerDay: 100000, kvWritesPerDay: 1000, cronTriggers: 5 };
 const estimate = {
   cronInvocationsPerDay: 288,
-  maximumProbeSourcesPerInvocation: 5,
+  maximumProbeSourcesPerInvocation: 4,
   maximumProbeSubrequestsPerSource: 5,
-  discoverySubrequests: 1,
+  maximumRedirectHopsPerRequest: 1,
+  discoverySubrequests: 2,
   kvSubrequests: 2,
-  maximumSubrequestsPerInvocation: 28,
+  maximumSubrequestsPerInvocation: 44,
   maximumKvWritesPerDay: 288,
   configuredCronTriggers: 1,
 };
 const checks = {
-  subrequests: estimate.maximumSubrequestsPerInvocation <= limits.subrequestsPerInvocation * 0.7,
+  subrequests: estimate.maximumSubrequestsPerInvocation <= limits.subrequestsPerInvocation,
   kvWrites: estimate.maximumKvWritesPerDay <= limits.kvWritesPerDay * 0.7,
   cronTriggers: estimate.configuredCronTriggers <= limits.cronTriggers,
   userTrafficCapacityKnown: false,

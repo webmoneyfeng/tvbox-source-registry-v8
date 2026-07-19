@@ -13,8 +13,9 @@ https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json
 
 The configuration contains validated direct CMS source links. The TV client
 queries those sources directly, so new episodes are visible when the upstream
-source publishes them. Live channels are emitted at `/live.txt` only after
-playlist and channel probes pass. This service does not proxy video streams,
+source publishes them. Live channels are emitted at `/live.txt` only after at
+least three independent playlists complete probation and channel probes pass.
+This service does not proxy video streams,
 build a full catalogue snapshot, or promise that every public source is complete.
 
 ## Maintenance model

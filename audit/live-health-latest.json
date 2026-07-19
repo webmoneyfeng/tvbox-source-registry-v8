@@ -1,30 +1,31 @@
 {
-  "generatedAt": "2026-07-19T14:33:53.971Z",
+  "generatedAt": "2026-07-19T15:18:38.459Z",
   "registryVersion": "v8.1.0",
-  "candidateCount": 4,
-  "passed": 0,
-  "failed": 4,
+  "candidateCount": 7,
+  "passed": 2,
+  "failed": 5,
   "rows": [
     {
       "kind": "live",
       "slug": "fanmingming-index",
       "ok": false,
       "httpStatus": 200,
-      "channelCount": 93,
-      "groupCount": 4,
-      "duplicateRate": 0,
+      "channelCount": 46,
+      "groupCount": 3,
+      "duplicateRate": 0.0612,
       "playableCount": 0,
       "sampleCount": 4,
-      "latencyMs": 3020,
+      "latencyMs": 2214,
+      "hardViolation": false,
       "error": "live playlist or channel contract failed",
       "score": {
-        "total": 60,
+        "total": 58,
         "playlist": 20,
         "parse": 15,
         "playback": 0,
         "freshness": 10,
-        "quality": 10,
-        "latency": 5
+        "quality": 5,
+        "latency": 8
       },
       "channelSample": []
     },
@@ -33,20 +34,21 @@
       "slug": "fanmingming-itv",
       "ok": false,
       "httpStatus": 200,
-      "channelCount": 188,
+      "channelCount": 130,
       "groupCount": 7,
-      "duplicateRate": 0,
+      "duplicateRate": 0.3122,
       "playableCount": 0,
       "sampleCount": 4,
-      "latencyMs": 2405,
+      "latencyMs": 2632,
+      "hardViolation": false,
       "error": "live playlist or channel contract failed",
       "score": {
-        "total": 63,
+        "total": 58,
         "playlist": 20,
         "parse": 15,
         "playback": 0,
         "freshness": 10,
-        "quality": 10,
+        "quality": 5,
         "latency": 8
       },
       "channelSample": []
@@ -54,46 +56,192 @@
     {
       "kind": "live",
       "slug": "fanmingming-ipv6",
-      "ok": false,
+      "ok": true,
       "httpStatus": 200,
-      "channelCount": 82,
-      "groupCount": 4,
+      "channelCount": 27,
+      "groupCount": 3,
       "duplicateRate": 0,
-      "playableCount": 1,
+      "playableCount": 2,
       "sampleCount": 4,
-      "latencyMs": 714,
-      "error": "live playlist or channel contract failed",
+      "latencyMs": 1084,
+      "hardViolation": false,
+      "error": "",
       "score": {
-        "total": 73.75,
+        "total": 82.5,
         "playlist": 20,
         "parse": 15,
-        "playback": 8.75,
+        "playback": 17.5,
         "freshness": 10,
         "quality": 10,
         "latency": 10
       },
-      "channelSample": []
+      "channelSample": [
+        {
+          "name": "浙江公共新闻",
+          "group": "浙江频道",
+          "logo": "https://live.fanmingming.cn/tv/浙江新闻.png",
+          "tvgId": "",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8"
+        },
+        {
+          "name": "浙江国际",
+          "group": "浙江频道",
+          "logo": "https://live.fanmingming.cn/tv/浙江国际.png",
+          "tvgId": "",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8"
+        },
+        {
+          "name": "浙江少儿",
+          "group": "浙江频道",
+          "logo": "https://live.fanmingming.cn/tv/浙江少儿.png",
+          "tvgId": "",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8"
+        },
+        {
+          "name": "浙江教科影视",
+          "group": "浙江频道",
+          "logo": "https://live.fanmingming.cn/tv/浙江教科影视.png",
+          "tvgId": "",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8"
+        },
+        {
+          "name": "之江纪录",
+          "group": "浙江频道",
+          "logo": "https://live.fanmingming.cn/tv/之江纪录.png",
+          "tvgId": "",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8"
+        }
+      ]
     },
     {
       "kind": "live",
       "slug": "iptv-org-cn",
       "ok": false,
       "httpStatus": 200,
-      "channelCount": 539,
+      "channelCount": 283,
       "groupCount": 1,
-      "duplicateRate": 0,
+      "duplicateRate": 0.1749,
       "playableCount": 1,
       "sampleCount": 4,
-      "latencyMs": 10019,
+      "latencyMs": 5949,
+      "hardViolation": false,
       "error": "live playlist or channel contract failed",
       "score": {
-        "total": 60.75,
+        "total": 55.75,
         "playlist": 20,
         "parse": 15,
         "playback": 8.75,
         "freshness": 10,
+        "quality": 0,
+        "latency": 2
+      },
+      "channelSample": []
+    },
+    {
+      "kind": "live",
+      "slug": "zbds-ipv4",
+      "ok": true,
+      "httpStatus": 200,
+      "channelCount": 397,
+      "groupCount": 12,
+      "duplicateRate": 0.0173,
+      "playableCount": 4,
+      "sampleCount": 4,
+      "latencyMs": 4156,
+      "hardViolation": false,
+      "error": "",
+      "score": {
+        "total": 95,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 35,
+        "freshness": 10,
+        "quality": 10,
+        "latency": 5
+      },
+      "channelSample": [
+        {
+          "name": "CCTV4",
+          "group": "央视频道",
+          "logo": "https://tb.zbds.top/logo/CCTV4.png",
+          "tvgId": "CCTV-4",
+          "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8"
+        },
+        {
+          "name": "CCTV13",
+          "group": "央视频道",
+          "logo": "https://tb.zbds.top/logo/CCTV13.png",
+          "tvgId": "CCTV13",
+          "url": "http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8"
+        },
+        {
+          "name": "CCTV世界地理",
+          "group": "央视频道",
+          "logo": "https://tb.zbds.top/logo/CCTV世界地理.png",
+          "tvgId": "世界地理",
+          "url": "https://shcm-stream-cf1.stream.264788.xyz/cms001/ch00000090990000001620/index.m3u8?streamid=8a034b40397504e25b3775c772237996&streamkey=01vY5fRxC8VyKg4oq30vfikHXTCAKySLP29l6OG91kQlzDttHgzNLkUw5kivm3PfNsVHJv5FgdsPBYFYI2IWpt7tfRCuFHqLT2pvX67ubMds8jl2DHtvOh0&token=1775754349-4f33f4f84a4abeba-0-91687dc8c9325092efa1d00f330d2710"
+        },
+        {
+          "name": "CCTV风云足球",
+          "group": "央视频道",
+          "logo": "https://tb.zbds.top/logo/CCTV风云足球.png",
+          "tvgId": "风云足球",
+          "url": "https://epg.pw/stream/ac8062ec9484078061d3bef507c15a423ac57ae4144e3fcc4b0a198dd420f911.m3u8"
+        },
+        {
+          "name": "CGTN",
+          "group": "央视频道",
+          "logo": "https://tb.zbds.top/logo/CGTN.png",
+          "tvgId": "CGTN",
+          "url": "http://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8"
+        }
+      ]
+    },
+    {
+      "kind": "live",
+      "slug": "yang-gather",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 81,
+      "groupCount": 3,
+      "duplicateRate": 0.3468,
+      "playableCount": 2,
+      "sampleCount": 4,
+      "latencyMs": 6180,
+      "hardViolation": true,
+      "error": "hard content or redirect violation",
+      "score": {
+        "total": 69.5,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 17.5,
+        "freshness": 10,
         "quality": 5,
         "latency": 2
+      },
+      "channelSample": []
+    },
+    {
+      "kind": "live",
+      "slug": "kimentanm",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 9,
+      "groupCount": 3,
+      "duplicateRate": 0.8269,
+      "playableCount": 3,
+      "sampleCount": 4,
+      "latencyMs": 2813,
+      "hardViolation": false,
+      "error": "live playlist or channel contract failed",
+      "score": {
+        "total": 84.25,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 26.25,
+        "freshness": 10,
+        "quality": 5,
+        "latency": 8
       },
       "channelSample": []
     }

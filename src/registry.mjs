@@ -1,4 +1,4 @@
-export const REGISTRY_VERSION = 'v8.1.0';
+export const REGISTRY_VERSION = 'v8.1.1';
 
 const RAW_SOURCES = [
   { slug: 'baidu', api: 'https://api.apibdzy.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 110 },
