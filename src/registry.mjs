@@ -83,11 +83,11 @@ export function mergeRegistries(...registries) {
   return loadRegistry(rows, 'vod');
 }
 
-export function candidateToRegistrySource(candidate, index = 0) {
+export function candidateToRegistrySource(candidate) {
   const kind = candidate.kind === 'live' ? 'live' : 'vod';
   const digest = String(candidate.api).replace(/[^a-z0-9]+/giu, '_').slice(-48);
   return {
-    slug: `discovered_${kind}_${index}_${digest}`.toLowerCase(),
+    slug: `discovered_${kind}_${digest}`.toLowerCase(),
     api: candidate.api,
     kind,
     seedStatus: 'WATCH',

@@ -245,7 +245,7 @@ async function mapWithConcurrency(items, limit, callback) {
 
 function discoveredRegistry(state) {
   const candidates = dedupeCandidates(state.discoveredSources || []);
-  return candidates.map((candidate, index) => candidateToRegistrySource(candidate, index));
+  return candidates.map((candidate) => candidateToRegistrySource(candidate));
 }
 
 function allRegistry(state) {

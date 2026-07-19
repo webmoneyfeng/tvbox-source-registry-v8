@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from '../src/discovery.mjs';
+import { candidateToRegistrySource } from '../src/registry.mjs';
 
 test('discovery accepts only public HTTP URLs', () => {
   assert.equal(isPublicHttpUrl('https://example.com/config.json'), true);
@@ -29,4 +30,10 @@ test('discovery deduplicates same physical path', () => {
     { kind: 'live', api: 'https://example.com/live.m3u' },
   ]);
   assert.equal(result.length, 2);
+});
+
+test('discovered source key does not depend on candidate order', () => {
+  const a = candidateToRegistrySource({ kind: 'vod', api: 'https://example.com/api/a' }, 0);
+  const b = candidateToRegistrySource({ kind: 'vod', api: 'https://example.com/api/a' }, 99);
+  assert.equal(a.slug, b.slug);
 });
