@@ -1,0 +1,21 @@
+{
+  "name": "tvbox-source-registry-v8",
+  "version": "8.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/registry.mjs && node --check src/health.mjs && node --check src/live.mjs && node --check src/discovery.mjs && node --check src/scoring.mjs && node --check src/worker.mjs && node --check scripts/probe-sources.mjs && node --check scripts/probe-live-sources.mjs && node --check scripts/audit-free-budget.mjs && node --check scripts/validate-online.mjs && node --test",
+    "test": "node --test",
+    "probe": "node scripts/probe-sources.mjs",
+    "probe:live": "node scripts/probe-live-sources.mjs",
+    "audit:free": "node scripts/audit-free-budget.mjs",
+    "validate:online": "node scripts/validate-online.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "4.112.0"
+  }
+}

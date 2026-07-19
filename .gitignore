@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+.dev.vars
+audit/*.tmp
+audit/online-validation-latest.json

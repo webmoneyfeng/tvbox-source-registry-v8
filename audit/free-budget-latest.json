@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-07-19T14:39:34.943Z",
+  "basis": "Cloudflare Workers and KV Free limits verified 2026-07-19",
+  "limits": {
+    "workerRequestsPerDay": 100000,
+    "subrequestsPerInvocation": 50,
+    "kvReadsPerDay": 100000,
+    "kvWritesPerDay": 1000,
+    "cronTriggers": 5
+  },
+  "estimate": {
+    "cronInvocationsPerDay": 288,
+    "maximumProbeSourcesPerInvocation": 5,
+    "maximumProbeSubrequestsPerSource": 5,
+    "discoverySubrequests": 1,
+    "kvSubrequests": 2,
+    "maximumSubrequestsPerInvocation": 28,
+    "maximumKvWritesPerDay": 288,
+    "configuredCronTriggers": 1
+  },
+  "checks": {
+    "subrequests": true,
+    "kvWrites": true,
+    "cronTriggers": true,
+    "userTrafficCapacityKnown": false
+  },
+  "verdict": "PASS_WITH_TRAFFIC_BOUNDARY",
+  "boundary": "Worker request usage depends on TV client traffic. Free operation does not guarantee a 10,000-user commercial SLA."
+}

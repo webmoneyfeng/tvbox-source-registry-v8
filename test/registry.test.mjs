@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { SOURCE_REGISTRY, loadRegistry, tvSite } from '../src/registry.mjs';
+
+test('registry has unique physical sources and stable priority', () => {
+  assert.equal(SOURCE_REGISTRY.length, 14);
+  assert.equal(new Set(SOURCE_REGISTRY.map((source) => source.physicalKey)).size, SOURCE_REGISTRY.length);
+  assert.deepEqual([...SOURCE_REGISTRY].sort((a, b) => b.priority - a.priority), SOURCE_REGISTRY);
+});
+
+test('registry rejects duplicate physical hosts', () => {
+  assert.throws(() => loadRegistry([
+    { slug: 'a', api: 'https://www.example.com/api', seedStatus: 'ACTIVE' },
+    { slug: 'b', api: 'https://example.com/other', seedStatus: 'WATCH' },
+  ]), /duplicate physical source/);
+});
+
+test('TV sites use clean labels and only the first line joins quick search', () => {
+  const sites = SOURCE_REGISTRY.slice(0, 2).map((source, index) => tvSite(source, index, { quickSearch: index === 0 }));
+  assert.equal(sites[0].name, '\u5f71\u89c6\u7ebf\u8def 01');
+  assert.equal(sites[0].quickSearch, 1);
+  assert.equal(sites[1].quickSearch, 0);
+  assert.equal(sites[0].api, SOURCE_REGISTRY[0].api);
+  assert.ok(!JSON.stringify(sites).includes('\u5907\u7528'));
+});

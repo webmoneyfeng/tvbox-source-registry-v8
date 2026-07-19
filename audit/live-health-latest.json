@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-07-19T14:33:53.971Z",
+  "registryVersion": "v8.1.0",
+  "candidateCount": 4,
+  "passed": 0,
+  "failed": 4,
+  "rows": [
+    {
+      "kind": "live",
+      "slug": "fanmingming-index",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 93,
+      "groupCount": 4,
+      "duplicateRate": 0,
+      "playableCount": 0,
+      "sampleCount": 4,
+      "latencyMs": 3020,
+      "error": "live playlist or channel contract failed",
+      "score": {
+        "total": 60,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 0,
+        "freshness": 10,
+        "quality": 10,
+        "latency": 5
+      },
+      "channelSample": []
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-itv",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 188,
+      "groupCount": 7,
+      "duplicateRate": 0,
+      "playableCount": 0,
+      "sampleCount": 4,
+      "latencyMs": 2405,
+      "error": "live playlist or channel contract failed",
+      "score": {
+        "total": 63,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 0,
+        "freshness": 10,
+        "quality": 10,
+        "latency": 8
+      },
+      "channelSample": []
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-ipv6",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 82,
+      "groupCount": 4,
+      "duplicateRate": 0,
+      "playableCount": 1,
+      "sampleCount": 4,
+      "latencyMs": 714,
+      "error": "live playlist or channel contract failed",
+      "score": {
+        "total": 73.75,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 8.75,
+        "freshness": 10,
+        "quality": 10,
+        "latency": 10
+      },
+      "channelSample": []
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-cn",
+      "ok": false,
+      "httpStatus": 200,
+      "channelCount": 539,
+      "groupCount": 1,
+      "duplicateRate": 0,
+      "playableCount": 1,
+      "sampleCount": 4,
+      "latencyMs": 10019,
+      "error": "live playlist or channel contract failed",
+      "score": {
+        "total": 60.75,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 8.75,
+        "freshness": 10,
+        "quality": 5,
+        "latency": 2
+      },
+      "channelSample": []
+    }
+  ]
+}
