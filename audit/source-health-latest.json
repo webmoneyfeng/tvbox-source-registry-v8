@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-19T15:18:38.385Z",
-  "registryVersion": "v8.1.0",
-  "candidateCount": 14,
-  "active": 9,
-  "failed": 5,
+  "generatedAt": "2026-07-25T08:10:36.549Z",
+  "registryVersion": "v8.1.2",
+  "candidateCount": 11,
+  "active": 11,
+  "failed": 0,
   "rows": [
     {
       "kind": "vod",
@@ -28,8 +28,10 @@
       "searchCount": 4,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T13:20:23.000Z",
-      "latencyMs": 3330,
+      "mediaLatencyMs": 1056,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T03:02:58.000Z",
+      "latencyMs": 4446,
       "error": "",
       "score": {
         "total": 97.5,
@@ -64,37 +66,24 @@
       "searchCount": 40,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T15:18:34.000Z",
-      "latencyMs": 2099,
+      "mediaLatencyMs": 948,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T08:10:34.000Z",
+      "latencyMs": 3376,
       "error": "",
       "score": {
-        "total": 99,
+        "total": 97.5,
         "availability": 25,
         "contract": 20,
         "freshness": 20,
         "coverage": 15,
         "playback": 15,
-        "latency": 4
+        "latency": 2.5
       }
     },
     {
       "kind": "vod",
-      "slug": "taopian",
-      "ok": false,
-      "hardViolation": false,
-      "httpStatus": 0,
-      "classCount": 0,
-      "listCount": 0,
-      "searchEvidence": [],
-      "searchCount": 0,
-      "detailOk": false,
-      "playOk": false,
-      "latencyMs": 4516,
-      "error": "timeout"
-    },
-    {
-      "kind": "vod",
-      "slug": "huya",
+      "slug": "hhzy-v2",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
@@ -115,44 +104,10 @@
       "searchCount": 26,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T15:00:03.000Z",
-      "latencyMs": 5008,
-      "error": "",
-      "score": {
-        "total": 96,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 1
-      }
-    },
-    {
-      "kind": "vod",
-      "slug": "hhzy",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "latestAt": "2026-07-19T15:18:02.000Z",
-      "latencyMs": 3815,
+      "mediaLatencyMs": 1182,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T08:06:02.000Z",
+      "latencyMs": 3393,
       "error": "",
       "score": {
         "total": 97.5,
@@ -187,8 +142,10 @@
       "searchCount": 26,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T15:00:04.000Z",
-      "latencyMs": 2103,
+      "mediaLatencyMs": 619,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T07:48:03.000Z",
+      "latencyMs": 2578,
       "error": "",
       "score": {
         "total": 99,
@@ -202,58 +159,7 @@
     },
     {
       "kind": "vod",
-      "slug": "guangsu",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "latestAt": "2026-07-19T15:18:04.000Z",
-      "latencyMs": 7068,
-      "error": "",
-      "score": {
-        "total": 96,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 1
-      }
-    },
-    {
-      "kind": "vod",
       "slug": "modu",
-      "ok": false,
-      "hardViolation": false,
-      "httpStatus": 0,
-      "classCount": 0,
-      "listCount": 0,
-      "searchEvidence": [],
-      "searchCount": 0,
-      "detailOk": false,
-      "playOk": false,
-      "latencyMs": 4502,
-      "error": "timeout"
-    },
-    {
-      "kind": "vod",
-      "slug": "xinlang",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
@@ -274,8 +180,10 @@
       "searchCount": 26,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T15:18:06.000Z",
-      "latencyMs": 7625,
+      "mediaLatencyMs": 676,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T07:31:56.000Z",
+      "latencyMs": 8924,
       "error": "",
       "score": {
         "total": 96,
@@ -289,7 +197,7 @@
     },
     {
       "kind": "vod",
-      "slug": "lzi-direct",
+      "slug": "lzi-v2",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
@@ -310,8 +218,10 @@
       "searchCount": 40,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T15:11:51.000Z",
-      "latencyMs": 4667,
+      "mediaLatencyMs": 734,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T06:18:26.000Z",
+      "latencyMs": 4634,
       "error": "",
       "score": {
         "total": 97.5,
@@ -325,7 +235,7 @@
     },
     {
       "kind": "vod",
-      "slug": "ffzy-direct",
+      "slug": "ffzy-v2",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
@@ -346,8 +256,10 @@
       "searchCount": 14,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T14:54:10.000Z",
-      "latencyMs": 2309,
+      "mediaLatencyMs": 1084,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T06:36:46.000Z",
+      "latencyMs": 2372,
       "error": "",
       "score": {
         "total": 99,
@@ -361,8 +273,8 @@
     },
     {
       "kind": "vod",
-      "slug": "sdzy",
-      "ok": false,
+      "slug": "zuida",
+      "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
       "classCount": 0,
@@ -370,40 +282,37 @@
       "searchEvidence": [
         {
           "term": "天道",
-          "ok": false,
-          "count": 0
+          "ok": true,
+          "count": 20
         },
         {
           "term": "亮剑",
-          "ok": false,
-          "count": 0
-        },
-        {
-          "term": "电影",
-          "ok": false,
-          "count": 0
+          "ok": true,
+          "count": 8
         }
       ],
-      "searchCount": 0,
+      "searchCount": 28,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T14:53:45.000Z",
-      "latencyMs": 1782,
-      "error": "vod contract failed",
+      "mediaLatencyMs": 1037,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T06:54:22.000Z",
+      "latencyMs": 2337,
+      "error": "",
       "score": {
-        "total": 76,
+        "total": 99,
         "availability": 25,
-        "contract": 12,
+        "contract": 20,
         "freshness": 20,
-        "coverage": 0,
+        "coverage": 15,
         "playback": 15,
         "latency": 4
       }
     },
     {
       "kind": "vod",
-      "slug": "ffzy",
-      "ok": false,
+      "slug": "subo",
+      "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
       "classCount": 0,
@@ -411,50 +320,108 @@
       "searchEvidence": [
         {
           "term": "天道",
-          "ok": false,
-          "count": 0
+          "ok": true,
+          "count": 20
         },
         {
           "term": "亮剑",
-          "ok": false,
-          "count": 0
-        },
-        {
-          "term": "电影",
-          "ok": false,
-          "count": 0
+          "ok": true,
+          "count": 6
         }
       ],
-      "searchCount": 0,
+      "searchCount": 26,
       "detailOk": true,
       "playOk": true,
-      "latestAt": "2026-07-19T14:54:10.000Z",
-      "latencyMs": 4684,
-      "error": "vod contract failed",
+      "mediaLatencyMs": 1375,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T08:07:27.000Z",
+      "latencyMs": 5977,
+      "error": "",
       "score": {
-        "total": 74.5,
+        "total": 96,
         "availability": 25,
-        "contract": 12,
+        "contract": 20,
         "freshness": 20,
-        "coverage": 0,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
+      }
+    },
+    {
+      "kind": "vod",
+      "slug": "lovedan",
+      "ok": true,
+      "hardViolation": false,
+      "httpStatus": 200,
+      "classCount": 0,
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 10
+        }
+      ],
+      "searchCount": 30,
+      "detailOk": true,
+      "playOk": true,
+      "mediaLatencyMs": 175,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T08:02:47.000Z",
+      "latencyMs": 4499,
+      "error": "",
+      "score": {
+        "total": 97.5,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
         "playback": 15,
         "latency": 2.5
       }
     },
     {
       "kind": "vod",
-      "slug": "wujin",
-      "ok": false,
+      "slug": "jinying",
+      "ok": true,
       "hardViolation": false,
-      "httpStatus": 0,
+      "httpStatus": 200,
       "classCount": 0,
-      "listCount": 0,
-      "searchEvidence": [],
-      "searchCount": 0,
-      "detailOk": false,
-      "playOk": false,
-      "latencyMs": 4515,
-      "error": "timeout"
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 6
+        }
+      ],
+      "searchCount": 26,
+      "detailOk": true,
+      "playOk": true,
+      "mediaLatencyMs": 1383,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T08:10:07.000Z",
+      "latencyMs": 6102,
+      "error": "",
+      "score": {
+        "total": 96,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
+      }
     }
   ],
   "admission": "Only rows with listing, search, detail and direct playable URL checks passing are ACTIVE candidates."

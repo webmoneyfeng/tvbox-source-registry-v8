@@ -1,5 +1,18 @@
 # TVBox Source Registry v8.1
 
+## v8.1.2 quality admission
+
+The production directory currently contains 11 independently-addressed VOD
+CMS endpoints and 14 independently-addressed live playlists. Each production
+entry passed the current contract probe; the quality audit additionally checks
+direct media response, HD evidence and bounded latency. Upstream playlist
+contents are kept intact and are not merged or rewritten.
+
+The TVBox config exposes each admitted live playlist as its own direct live
+entry. `/live.txt` remains available for clients that only support one M3U
+endpoint. Candidates that fail a current probe remain in `audit/` only and are
+not exposed by the config.
+
 This is an independent source-registry project. It does not modify or deploy the
 existing `tvbox-source-hub-v73` project.
 
@@ -13,8 +26,8 @@ https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json
 
 The configuration contains validated direct CMS source links. The TV client
 queries those sources directly, so new episodes are visible when the upstream
-source publishes them. Live channels are emitted at `/live.txt` only after at
-least three independent playlists complete probation and channel probes pass.
+source publishes them. Live playlists are exposed directly after their source
+probes pass; `/live.txt` remains a compatibility endpoint.
 This service does not proxy video streams,
 build a full catalogue snapshot, or promise that every public source is complete.
 
@@ -32,8 +45,9 @@ build a full catalogue snapshot, or promise that every public source is complete
 ## Validation contract
 
 A VOD probe checks listing, multiple search terms, detail, and a direct playable
-media URL. A live probe checks M3U structure, groups, duplicate rate and sample
-HLS responses. The initial registry is based on the previous project's source
+media URL. A live probe checks M3U structure, groups and sample HLS responses;
+source-internal duplicate rate is reported but the upstream playlist is not
+rewritten. The initial registry is based on the previous project's source
 admission report plus new live candidates; local and online probes are required
 before a source becomes active.
 

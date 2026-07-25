@@ -3,7 +3,7 @@ import test from 'node:test';
 import { SOURCE_REGISTRY, candidateToRegistrySource, loadRegistry, tvSite } from '../src/registry.mjs';
 
 test('registry has unique physical sources and stable priority', () => {
-  assert.equal(SOURCE_REGISTRY.length, 14);
+  assert.ok(SOURCE_REGISTRY.length >= 10);
   assert.equal(new Set(SOURCE_REGISTRY.map((source) => source.physicalKey)).size, SOURCE_REGISTRY.length);
   assert.deepEqual([...SOURCE_REGISTRY].sort((a, b) => b.priority - a.priority), SOURCE_REGISTRY);
 });

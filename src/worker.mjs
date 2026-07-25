@@ -18,7 +18,7 @@ import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from './discover
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.1.1';
+const VERSION = 'tvbox-source-registry-v8.1.2';
 const HEALTH_KEY = 'registry:health:v2';
 const PROBE_TIMEOUT_MS = 4500;
 const MAX_PROBE_SOURCES = 4;
@@ -165,9 +165,18 @@ function classesOf(data) {
   return Array.isArray(values) ? values : [];
 }
 
+function directMediaUrls(row) {
+  const value = [row?.vod_play_url, row?.url, row?.vod_url, row?.vod_down_url].filter(Boolean).join(' ');
+  const matches = value.match(/https?:\/\/[^\s$#|"'<>]+(?:m3u8|mp4|\.ts)(?:\?[^\s$|"'<>]*)?/giu) || [];
+  return [...new Set(matches.map((item) => item.replace(/[),.;]+$/u, '')))].filter((item) => !/(?:player\.html|iframe|parse|jiexi)/iu.test(item));
+}
+
+function firstPlayableUrl(row) {
+  return directMediaUrls(row)[0] || '';
+}
+
 function firstPlayable(row) {
-  const value = [row?.vod_play_url, row?.url, row?.vod_url].filter(Boolean).join(' ');
-  return /https?:\/\/[^\s$#|]+(?:m3u8|mp4|\.ts)(?:\?[^\s$|]*)?/iu.test(value);
+  return Boolean(firstPlayableUrl(row));
 }
 
 function latestSourceTime(rows) {
@@ -200,14 +209,17 @@ export async function probeVodSource(source) {
     const detail = sample?.vod_id ? await fetchJson(source, { ac: 'detail', ids: sample.vod_id }) : null;
     const detailRow = rowsOf(detail?.data)[0] || detail?.data?.data?.[0] || null;
     const detailOk = Boolean(detail?.ok && detailRow);
-    const playOk = Boolean(detailOk && firstPlayable(detailRow));
+    const playableUrl = detailOk ? firstPlayableUrl(detailRow) : '';
+    const mediaCheck = playableUrl ? await probeMediaUrl(playableUrl) : { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
+    const playOk = Boolean(detailOk && mediaCheck.ok);
     const searchOk = evidence.some((item) => item.ok);
     const ok = Boolean(listing.ok && (classes.length > 0 || listingRows.length > 0) && searchOk && detailOk && playOk);
-    const hardViolation = [listing, ...searchResults, detail].some(hardDocumentViolation);
+    const hardViolation = [listing, ...searchResults, detail, mediaCheck].some(hardDocumentViolation);
     const probe = {
       kind: 'vod', slug: source.slug, ok: ok && !hardViolation, hardViolation, httpStatus: listing.status || detail?.status || 0,
       classCount: classes.length, listCount: listingRows.length, searchEvidence: evidence,
       searchCount: evidence.reduce((sum, item) => sum + item.count, 0), detailOk, playOk,
+      mediaLatencyMs: mediaCheck.latencyMs, mediaStatus: mediaCheck.status,
       latestAt: latestSourceTime(listingRows), latencyMs: Date.now() - started, error: hardViolation ? 'hard content or redirect violation' : ok ? '' : 'vod contract failed',
     };
     return { ...probe, score: scoreVodProbe(probe) };
@@ -218,13 +230,13 @@ export async function probeVodSource(source) {
 
 async function probeMediaUrl(url) {
   const normalized = normalizeLiveUrl(url);
-  if (!normalized) return { ok: false, status: 0 };
+  if (!normalized) return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
   try {
     const result = await fetchDocument(normalized, 96 * 1024);
     const contentType = result.text.slice(0, 256).includes('#EXTM3U') || /mpegurl|video\//iu.test(result.text.slice(0, 256));
-    return { ok: Boolean(result.status >= 200 && result.status < 400 && contentType), status: result.status, hardViolation: Boolean(result.hardViolation) };
+    return { ok: Boolean(result.status >= 200 && result.status < 400 && contentType), status: result.status, latencyMs: result.latencyMs, hardViolation: Boolean(result.hardViolation), text: result.text };
   } catch {
-    return { ok: false, status: 0 };
+    return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
   }
 }
 
@@ -234,7 +246,9 @@ export async function probeLiveSource(source) {
     const document = await fetchDocument(source.api, MAX_PLAYLIST_BYTES);
     const contract = liveContract(document.text);
     const parsed = parseM3U(document.text);
-    const samples = channelSample(parsed.channels, 4);
+    const qualityFirst = parsed.channels.filter((channel) => /(?:4k|2160p?|uhd|1080p?|fhd|高清|超清|hd\b)/iu.test(`${channel.name} ${channel.group} ${channel.url}`));
+    const samplePool = [...qualityFirst, ...parsed.channels.filter((channel) => !qualityFirst.includes(channel))];
+    const samples = channelSample(samplePool, 4);
     const mediaResults = [];
     for (const channel of samples) mediaResults.push(await probeMediaUrl(channel.url));
     const playable = mediaResults.filter((item) => item.ok).length;
@@ -337,7 +351,7 @@ export function buildConfig(origin, state = emptyHealthState()) {
     spider: '',
     wallPaper: '',
     sites,
-    lives: state.liveCatalog.length && live.length >= MIN_LIVE_SOURCES ? [{ name: '\u76f4\u64ad\u9891\u9053', type: 0, url: origin + '/live.txt' }] : [],
+    lives: live.length >= MIN_LIVE_SOURCES ? live.map((source) => ({ name: sourceDisplayName(source, kindRegistry(registry, 'live').indexOf(source)), type: 0, url: source.api })) : [],
     registry: {
       version: REGISTRY_VERSION,
       mode: 'validated-direct-source-registry',

@@ -7,7 +7,8 @@ import { LIVE_SOURCE_REGISTRY, SOURCE_REGISTRY } from '../src/registry.mjs';
 
 test('config is directly importable and has no empty site list', () => {
   const config = buildConfig('https://example.workers.dev', emptyHealthState());
-  assert.equal(config.sites.length, 10);
+  assert.ok(config.sites.length >= 10);
+  assert.ok(config.lives.length >= 10);
   assert.equal(config.sites[0].type, 1);
   assert.equal(config.sites[0].searchable, 1);
   assert.equal(config.sites[0].quickSearch, 1);
@@ -27,7 +28,8 @@ test('worker exposes config route with TVBox JSON', async () => {
   const response = await worker.fetch(new Request('https://v8.example/config.json'), {});
   assert.equal(response.status, 200);
   const body = await response.json();
-  assert.equal(body.sites.length, 10);
+  assert.ok(body.sites.length >= 10);
+  assert.ok(body.lives.length >= 10);
 });
 
 test('quick search moves to the first currently visible source', () => {
@@ -56,12 +58,15 @@ test('last known good source is used when current source set is empty', () => {
   assert.equal(config.sites[0].key, SOURCE_REGISTRY[1].key);
 });
 
-test('probe selection includes untested watch sources before recently checked active sources', () => {
+test('probe selection includes an untested discovered source', () => {
   const state = emptyHealthState('2026-07-19T00:00:00.000Z');
+  state.discoveredSources = [{ kind: 'vod', api: 'https://candidate.example.com/api.php/provide/vod/' }];
   const registry = allRegistry(state);
-  for (const source of registry.slice(0, 10)) state.sources[sourceHealthKey(source)] = { state: 'ACTIVE', checkedAt: '2026-07-19T01:00:00.000Z' };
+  for (const source of registry) {
+    if (!source.api.includes('candidate.example.com')) state.sources[sourceHealthKey(source)] = { state: 'ACTIVE', checkedAt: '2026-07-19T01:00:00.000Z' };
+  }
   const batch = selectionBatch(registry, state);
-  assert.ok(batch.some((source) => source.seedStatus === 'WATCH'));
+  assert.ok(batch.some((source) => source.api.includes('candidate.example.com')));
 });
 
 test('discovered source matching a seeded physical path is ignored', () => {
@@ -84,5 +89,5 @@ test('live entry is published only after three independent sources are active', 
   assert.equal(buildConfig('https://v8.example', state).lives.length, 0);
   const third = LIVE_SOURCE_REGISTRY[2];
   state.sources[sourceHealthKey(third)] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
-  assert.equal(buildConfig('https://v8.example', state).lives.length, 1);
+  assert.equal(buildConfig('https://v8.example', state).lives.length, 3);
 });

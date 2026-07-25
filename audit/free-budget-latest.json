@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T15:18:25.508Z",
+  "generatedAt": "2026-07-25T08:15:48.214Z",
   "basis": "Cloudflare Workers and KV Free limits verified 2026-07-19",
   "limits": {
     "workerRequestsPerDay": 100000,
@@ -11,11 +11,11 @@
   "estimate": {
     "cronInvocationsPerDay": 288,
     "maximumProbeSourcesPerInvocation": 4,
-    "maximumProbeSubrequestsPerSource": 5,
+    "maximumProbeSubrequestsPerSource": 6,
     "maximumRedirectHopsPerRequest": 1,
     "discoverySubrequests": 2,
     "kvSubrequests": 2,
-    "maximumSubrequestsPerInvocation": 44,
+    "maximumSubrequestsPerInvocation": 28,
     "maximumKvWritesPerDay": 288,
     "configuredCronTriggers": 1
   },

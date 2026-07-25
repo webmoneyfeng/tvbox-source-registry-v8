@@ -1,30 +1,34 @@
-export const REGISTRY_VERSION = 'v8.1.1';
+export const REGISTRY_VERSION = 'v8.1.2';
 
 const RAW_SOURCES = [
   { slug: 'baidu', api: 'https://api.apibdzy.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 110 },
   { slug: 'bfzy', api: 'https://bfzyapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 109 },
-  { slug: 'taopian', api: 'https://taopianapi.com/cjapi/mc/vod/json.html', seedStatus: 'ACTIVE', priority: 108 },
-  { slug: 'huya', api: 'https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/', seedStatus: 'ACTIVE', priority: 107 },
-  { slug: 'hhzy', api: 'https://hhzyapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 106 },
+  { slug: 'hhzy-v2', api: 'https://hhzyapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 108 },
   { slug: 'hongniu', api: 'https://www.hongniuzy2.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 105 },
-  { slug: 'guangsu', api: 'https://api.guangsuapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 104 },
-  { slug: 'modu', api: 'https://caiji.moduapi.cc/api.php/provide/vod/', seedStatus: 'WATCH', priority: 103 },
-  { slug: 'xinlang', api: 'https://api.xinlangapi.com/xinlangapi.php/provide/vod/', seedStatus: 'WATCH', priority: 102 },
-  { slug: 'lzi-direct', api: 'https://cj.lziapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 101 },
-  { slug: 'ffzy-direct', api: 'http://ffzy.tv/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 100 },
-  { slug: 'sdzy', api: 'http://sdzyapi.com/api.php/provide/vod/', seedStatus: 'WATCH', priority: 90 },
-  { slug: 'ffzy', api: 'https://api.ffzyapi.com/api.php/provide/vod/', seedStatus: 'WATCH', priority: 89 },
-  { slug: 'wujin', api: 'https://api.wujinapi.me/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 88 },
+  { slug: 'modu', api: 'https://caiji.moduapi.cc/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 103 },
+  { slug: 'lzi-v2', api: 'https://cj.lziapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 102 },
+  { slug: 'ffzy-v2', api: 'http://ffzy.tv/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 101 },
+  { slug: 'zuida', api: 'https://api.zuidapi.com/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 99 },
+  { slug: 'subo', api: 'http://suboziyuan.net/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 98 },
+  { slug: 'lovedan', api: 'https://www.lovedan.net/api.php/provide/vod/', seedStatus: 'ACTIVE', priority: 97 },
+  { slug: 'jinying', api: 'https://jyzyapi.com/provide/vod/', seedStatus: 'ACTIVE', priority: 96 },
 ];
 
 const RAW_LIVE_SOURCES = [
-  { slug: 'fanmingming-index', api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u', seedStatus: 'WATCH', priority: 100 },
-  { slug: 'fanmingming-itv', api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u', seedStatus: 'WATCH', priority: 99 },
-  { slug: 'fanmingming-ipv6', api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u', seedStatus: 'WATCH', priority: 98 },
-  { slug: 'iptv-org-cn', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u', seedStatus: 'WATCH', priority: 90 },
-  { slug: 'zbds-ipv4', api: 'https://live.zbds.org/tv/iptv4.m3u', seedStatus: 'WATCH', priority: 89 },
-  { slug: 'yang-gather', api: 'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u', seedStatus: 'WATCH', priority: 88 },
-  { slug: 'kimentanm', api: 'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u', seedStatus: 'WATCH', priority: 87 },
+  { slug: 'fanmingming-ipv6', api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u', seedStatus: 'ACTIVE', priority: 98 },
+  { slug: 'iptv-org-cn-v2', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u', seedStatus: 'ACTIVE', priority: 90 },
+  { slug: 'zbds-ipv4-v2', api: 'https://live.zbds.org/tv/iptv4.m3u', seedStatus: 'ACTIVE', priority: 89 },
+  { slug: 'iptv-org-in', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u', seedStatus: 'ACTIVE', priority: 88 },
+  { slug: 'iptv-org-br', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u', seedStatus: 'ACTIVE', priority: 87 },
+  { slug: 'iptv-org-jp', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u', seedStatus: 'ACTIVE', priority: 86 },
+  { slug: 'iptv-org-us', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u', seedStatus: 'ACTIVE', priority: 85 },
+  { slug: 'iptv-org-uk', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u', seedStatus: 'ACTIVE', priority: 84 },
+  { slug: 'iptv-org-de', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u', seedStatus: 'ACTIVE', priority: 83 },
+  { slug: 'iptv-org-ca', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u', seedStatus: 'ACTIVE', priority: 82 },
+  { slug: 'iptv-org-th', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u', seedStatus: 'ACTIVE', priority: 81 },
+  { slug: 'iptv-org-es', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u', seedStatus: 'ACTIVE', priority: 77 },
+  { slug: 'iptv-org-it', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u', seedStatus: 'ACTIVE', priority: 76 },
+  { slug: 'iptv-org-nl', api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/nl.m3u', seedStatus: 'ACTIVE', priority: 75 },
 ];
 
 function canonicalApi(value) {

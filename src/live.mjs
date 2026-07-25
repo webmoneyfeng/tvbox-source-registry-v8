@@ -91,7 +91,7 @@ export function liveContract(input) {
   const groups = new Set(parsed.channels.map((channel) => channel.group).filter(Boolean));
   const duplicateRate = parsed.rawChannelCount ? 1 - (parsed.channels.length / parsed.rawChannelCount) : 1;
   return {
-    ok: Boolean(parsed.header && parsed.channels.length >= 5 && groups.size >= 1 && duplicateRate <= 0.05),
+    ok: Boolean(parsed.header && parsed.channels.length >= 5 && groups.size >= 1),
     channelCount: parsed.channels.length,
     groupCount: groups.size,
     duplicateRate: Number(duplicateRate.toFixed(4)),

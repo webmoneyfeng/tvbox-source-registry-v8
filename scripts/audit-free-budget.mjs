@@ -7,11 +7,11 @@ const limits = { workerRequestsPerDay: 100000, subrequestsPerInvocation: 50, kvR
 const estimate = {
   cronInvocationsPerDay: 288,
   maximumProbeSourcesPerInvocation: 4,
-  maximumProbeSubrequestsPerSource: 5,
+  maximumProbeSubrequestsPerSource: 6,
   maximumRedirectHopsPerRequest: 1,
   discoverySubrequests: 2,
   kvSubrequests: 2,
-  maximumSubrequestsPerInvocation: 44,
+  maximumSubrequestsPerInvocation: 28,
   maximumKvWritesPerDay: 288,
   configuredCronTriggers: 1,
 };
