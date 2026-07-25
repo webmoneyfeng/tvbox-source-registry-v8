@@ -130,10 +130,9 @@ export function sourceIsVisible(source, healthRow) {
 
 export function visibleSources(registry, healthState) {
   const state = normalizeHealthState(healthState);
-  const initialized = Object.keys(state.sources).length > 0;
   return registry.filter((source) => {
     const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug];
-    return row ? sourceIsVisible(source, row) : !initialized && source.seedStatus === 'ACTIVE';
+    return sourceIsVisible(source, row);
   });
 }
 

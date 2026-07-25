@@ -42,11 +42,13 @@ test('quick search moves to the first currently visible source', () => {
   assert.equal(config.sites.filter((site) => site.quickSearch === 1).length, 1);
 });
 
-test('initialized health does not publish unprobed active seeds', () => {
+test('initialized health publishes preaudited active seeds but hides watch candidates', () => {
   const state = emptyHealthState('2026-07-19T00:00:00.000Z');
+  state.discoveredSources = [{ kind: 'vod', api: 'https://candidate.example.com/api.php/provide/vod/' }];
   state.sources[sourceHealthKey(SOURCE_REGISTRY[0])] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
   const config = buildConfig('https://v8.example', state);
-  assert.deepEqual(config.sites.map((site) => site.key), [SOURCE_REGISTRY[0].key]);
+  assert.equal(config.sites.length, SOURCE_REGISTRY.length);
+  assert.ok(!config.sites.some((site) => site.api.includes('candidate.example.com')));
 });
 
 test('last known good source is used when current source set is empty', () => {
@@ -83,6 +85,7 @@ test('discovered source matching a seeded physical path is ignored', () => {
 test('live entry is published only after three independent sources are active', () => {
   const state = emptyHealthState('2026-07-19T00:00:00.000Z');
   state.liveCatalog = [{ name: 'Channel', group: 'News', url: 'https://example.test/live.m3u8' }];
+  for (const source of LIVE_SOURCE_REGISTRY) state.sources[sourceHealthKey(source)] = { state: 'WATCH' };
   for (const source of LIVE_SOURCE_REGISTRY.slice(0, 2)) {
     state.sources[sourceHealthKey(source)] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
   }
