@@ -85,13 +85,18 @@ export function mergeRegistries(...registries) {
 
 export function candidateToRegistrySource(candidate) {
   const kind = candidate.kind === 'live' ? 'live' : 'vod';
-  const digest = String(candidate.api).replace(/[^a-z0-9]+/giu, '_').slice(-48);
+  const api = canonicalApi(candidate.api);
+  const digest = api.replace(/[^a-z0-9]+/giu, '_').slice(-48);
+  const physicalKey = kind === 'live'
+    ? physicalSourceKey(api) + new URL(api).pathname
+    : physicalSourceKey(api);
   return {
     slug: `discovered_${kind}_${digest}`.toLowerCase(),
-    api: candidate.api,
+    api,
     kind,
     seedStatus: 'WATCH',
     priority: 10,
+    physicalKey,
   };
 }
 

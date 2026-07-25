@@ -539,7 +539,19 @@ function root(request) {
 
 export default {
   async scheduled(_event, env) {
-    await scheduled(env);
+    const startedAt = new Date().toISOString();
+    console.log(JSON.stringify({ event: 'source-registry-cron-start', startedAt }));
+    try {
+      const result = await scheduled(env);
+      console.log(JSON.stringify({ event: 'source-registry-cron-complete', ...result }));
+    } catch (error) {
+      console.log(JSON.stringify({
+        event: 'source-registry-cron-error',
+        startedAt,
+        error: String(error?.message || error).slice(0, 240),
+      }));
+      throw error;
+    }
   },
   async fetch(request, env) {
     try {

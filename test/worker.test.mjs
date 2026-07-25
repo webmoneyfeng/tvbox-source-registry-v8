@@ -64,6 +64,17 @@ test('probe selection includes untested watch sources before recently checked ac
   assert.ok(batch.some((source) => source.seedStatus === 'WATCH'));
 });
 
+test('discovered source matching a seeded physical path is ignored', () => {
+  const state = emptyHealthState('2026-07-19T00:00:00.000Z');
+  state.discoveredSources = [{
+    kind: 'live',
+    api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
+  }];
+  const registry = allRegistry(state);
+  const matches = registry.filter((source) => source.physicalKey === 'raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u');
+  assert.equal(matches.length, 1);
+});
+
 test('live entry is published only after three independent sources are active', () => {
   const state = emptyHealthState('2026-07-19T00:00:00.000Z');
   state.liveCatalog = [{ name: 'Channel', group: 'News', url: 'https://example.test/live.m3u8' }];

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { SOURCE_REGISTRY, loadRegistry, tvSite } from '../src/registry.mjs';
+import { SOURCE_REGISTRY, candidateToRegistrySource, loadRegistry, tvSite } from '../src/registry.mjs';
 
 test('registry has unique physical sources and stable priority', () => {
   assert.equal(SOURCE_REGISTRY.length, 14);
@@ -13,6 +13,14 @@ test('registry rejects duplicate physical hosts', () => {
     { slug: 'a', api: 'https://www.example.com/api', seedStatus: 'ACTIVE' },
     { slug: 'b', api: 'https://example.com/other', seedStatus: 'WATCH' },
   ]), /duplicate physical source/);
+});
+
+test('discovered sources carry the same physical key as seeded sources', () => {
+  const source = candidateToRegistrySource({
+    kind: 'live',
+    api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
+  });
+  assert.equal(source.physicalKey, 'raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u');
 });
 
 test('TV sites use clean labels and only the first line joins quick search', () => {
