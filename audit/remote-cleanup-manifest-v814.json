@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-07-25T13:57:54.471Z",
+  "scope": "v8.1.4 formal cutover and stale TVBox resource cleanup",
+  "policy": "Protect the v8 production Worker, its health KV, formal domains and current GitHub repository. Delete only resources verified as old TVBox or temporary canary resources.",
+  "protected": {
+    "worker": "tvbox-source-registry-v8",
+    "kvNamespace": {
+      "title": "tvbox-source-registry-v8-health",
+      "id": "17fb49c03c994650968ed5441d70c77e",
+      "runtimeKey": "registry:health:v3"
+    },
+    "customDomains": [
+      "tv.webhome.eu.org",
+      "tv.webclound.eu.org"
+    ],
+    "githubRepository": "webmoneyfeng/tvbox-source-registry-v8"
+  },
+  "observedBeforeCutover": {
+    "formalWorkerVersion": "tvbox-source-registry-v8.1.3",
+    "formalVisibleVodCount": 7,
+    "formalVisibleLiveCount": 12,
+    "formalCacheControl": "public, max-age=30",
+    "oldWorker": {
+      "name": "tvbox-source-hub",
+      "formalCustomDomains": [],
+      "bindingNamespaceId": "398f07fafd0b463da486b623a00b57ba"
+    },
+    "canaryWorker": {
+      "name": "tvbox-source-registry-v8-canary",
+      "formalCustomDomains": [],
+      "productionKvBinding": false
+    },
+    "pagesProject": "tvbox-source-hub-v73 not present in current Pages project list",
+    "githubOldRepository": {
+      "name": "webmoneyfeng/tvbox-source-hub-v73",
+      "archived": true
+    },
+    "unrelatedProtectedResources": [
+      "cloud-mail",
+      "dingyueqi",
+      "ip-pool-subscription",
+      "mail KV",
+      "txt KV",
+      "other Pages projects"
+    ],
+    "oldSnapshotNamespace": {
+      "title": "RIP_SNAPSHOT",
+      "id": "095e29faf14d43eaaefdbc4a884ea87e",
+      "keys": ["latest"],
+      "currentWorkerBinding": false
+    }
+  },
+  "actions": {
+    "formalDeploy": "completed",
+    "formalValidation": "completed",
+    "deleteOldWorker": "completed",
+    "deleteCanaryWorker": "completed",
+    "deleteOldSnapshotNamespace": "completed",
+    "deleteOldGithubRepository": "completed"
+  },
+  "verification": {
+    "formalVersion": "843878ec-652c-4860-8c8f-1f78a374135c",
+    "formalWorker": "tvbox-source-registry-v8",
+    "formalKvPreserved": true,
+    "formalDomainsValidated": true,
+    "oldGithubRepository": {
+      "fullName": "webmoneyfeng/tvbox-source-hub-v73",
+      "wasArchived": true,
+      "deleteRequestInitiallyRejected": true,
+      "rejectionReason": "delete_repo scope required",
+      "deletedDate": "2026-07-25",
+      "verifiedAbsent": true,
+      "verification": "GitHub API returned 404 after deletion"
+    },
+    "temporaryCanaryConfigRemoved": true
+  }
+}
