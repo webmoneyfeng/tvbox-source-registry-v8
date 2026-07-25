@@ -4,6 +4,11 @@ compatibility_date = "2024-11-01"
 workers_dev = true
 preview_urls = true
 
+routes = [
+  { pattern = "tv.webhome.eu.org", custom_domain = true },
+  { pattern = "tv.webclound.eu.org", custom_domain = true }
+]
+
 [[kv_namespaces]]
 binding = "SOURCE_HEALTH"
 id = "17fb49c03c994650968ed5441d70c77e"

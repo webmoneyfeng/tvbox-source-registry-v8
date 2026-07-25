@@ -1,0 +1,65 @@
+# TVBox source directory v8.1
+
+## Scope
+
+This version publishes validated source links instead of building a second
+catalogue. The TV client queries each upstream source directly. The service does
+not proxy media, merge programme records, rewrite titles, or promise cross-source
+deduplication.
+
+Only public, standard TVBox/FongMi-compatible endpoints that are permitted for
+the intended use are eligible for registration.
+
+## Runtime flow
+
+```text
+candidate feed
+  -> canonical URL and physical-host deduplication
+  -> VOD/live contract probe
+  -> rolling health state in KV
+  -> ACTIVE source directory
+  -> TVBox config
+  -> direct upstream requests from the TV client
+```
+
+VOD and live sources are kept in separate registries. A source is visible only
+after its contract probe passes listing or playlist, search/detail or channel
+parsing, and a direct media sample.
+
+## State machine
+
+| State | TV visibility | Meaning |
+| --- | --- | --- |
+| `ACTIVE` | visible | Contract and playback probes pass |
+| `WATCH` | hidden | Intermittent or recovering source |
+| `PROBATION` | hidden | New source awaiting stable samples |
+| `QUARANTINED` | hidden | Repeated failure or hard violation |
+
+One failed probe does not remove a source. Three consecutive failures hide it;
+recovery requires two successful probes and the probation rules.
+
+## Update behavior
+
+- The Worker cron checks a bounded number of sources every five minutes.
+- KV stores health state and the last known good source directory only.
+- A new episode becomes visible when the upstream CMS publishes it; no catalogue
+  rebuild is required.
+- `checkedAt` describes the last probe. `updatedAt` changes only when the visible
+  source set changes.
+- Config responses are short-cacheable and carry a stable registry revision.
+- On a failed probe cycle the previous valid directory remains active.
+
+## Free-tier boundary
+
+The Worker does not proxy video or media segments. This keeps the registry small
+and avoids turning subscriber playback into Worker traffic. The design uses one
+Worker, one KV namespace, and bounded scheduled probes. It does not guarantee a
+free commercial SLA for large user populations because each TV client still
+calls the upstream sources directly.
+
+## Migration rule
+
+The v7.3 catalogue Worker, Pages snapshot project, catalogue KV namespace, and
+scheduled GitHub workflows are retired after the custom domains are moved to
+this v8 Worker. The v7.3 repository is archived rather than deleted so the last
+known implementation remains recoverable without continuing to execute.

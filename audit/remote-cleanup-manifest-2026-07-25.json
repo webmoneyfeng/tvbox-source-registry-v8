@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-07-25",
+  "scope": "TVBox remote programs only",
+  "status": "completed",
+  "completedAt": "2026-07-25",
+  "retain": {
+    "worker": "tvbox-source-registry-v8",
+    "githubRepository": "webmoneyfeng/tvbox-source-registry-v8",
+    "kvNamespace": {
+      "title": "tvbox-source-registry-v8-health",
+      "id": "17fb49c03c994650968ed5441d70c77e"
+    },
+    "subscriptionEntries": [
+      "https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json",
+      "https://tv.webhome.eu.org/config.json",
+      "https://tv.webclound.eu.org/config.json"
+    ]
+  },
+  "migrate": {
+    "customDomains": [
+      "tv.webhome.eu.org",
+      "tv.webclound.eu.org"
+    ],
+    "fromWorker": "tvbox-source-hub-v73",
+    "toWorker": "tvbox-source-registry-v8"
+  },
+  "retire": {
+    "worker": "tvbox-source-hub-v73",
+    "pagesProject": "tvbox-source-hub-v73",
+    "kvNamespace": {
+      "title": "tvbox_source_hub_data",
+      "id": "398f07fafd0b463da486b623a00b57ba"
+    },
+    "githubRepositoryAction": "archive webmoneyfeng/tvbox-source-hub-v73 and disable its workflows"
+  },
+  "untouched": [
+    "cloud-mail repository and mail D1",
+    "mail R2 bucket",
+    "other Cloudflare Pages projects",
+    "unattributed KV namespaces RIP_SNAPSHOT and txt"
+  ],
+  "cleanupResults": {
+    "oldWorker": "deleted",
+    "oldPagesProject": "deleted",
+    "oldKvNamespace": "deleted",
+    "oldGithubRepository": "archived; workflows disabled",
+    "customDomains": "migrated to tvbox-source-registry-v8",
+    "newWorkerVersion": "dbf93470-c3e9-436c-8a0c-983cb186af12"
+  },
+  "postCleanupValidation": {
+    "primaryConfig": "HTTP 200; v8.1.1; 7 VOD sites",
+    "secondaryConfig": "HTTP 200; v8.1.1; 7 VOD sites",
+    "status": "HTTP 200; degraded=true because live registry is below its target",
+    "live": "HTTP 200; playlist currently contains only #EXTM3U",
+    "oldWorker": "not found",
+    "oldPagesProject": "not listed",
+    "oldKvNamespace": "deleted"
+  },
+  "evidence": [
+    {
+      "url": "https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json",
+      "observed": "HTTP 200; registry v8.1.1; 7 visible VOD sources"
+    },
+    {
+      "url": "https://tv.webhome.eu.org/config.json",
+      "observed": "HTTP 200; v7.3 catalogue revision 843152706202"
+    },
+    {
+      "url": "https://tvbox-source-registry-v8.feng-yang.workers.dev/status.json",
+      "observed": "HTTP 200; latest v8 registry update 2026-07-20"
+    }
+  ]
+}
