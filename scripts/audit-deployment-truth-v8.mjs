@@ -52,17 +52,16 @@ async function get(base, pathname) {
   return last || { url: `${base}${pathname}`, status: 0, ok: false, latencyMs: Date.now() - started, attempts: 0, hash: '', body: null, headers: {}, error: 'request failed' };
 }
 
-const rows = [];
-for (const base of BASES) {
+const rows = await Promise.all(BASES.map(async (base) => {
   const [config, status, sources] = await Promise.all([get(base, '/config.json'), get(base, '/status.json'), get(base, '/sources.json')]);
-  rows.push({
+  return {
     base,
     checkedAt: new Date().toISOString(),
      config: { status: config.status, ok: config.ok, hash: config.hash, headers: config.headers, sites: config.body?.sites?.map((site) => ({ name: site.name, api: site.api, filterable: site.filterable, changeable: site.changeable, hasCategories: Object.prototype.hasOwnProperty.call(site, 'categories') })) || [], lives: config.body?.lives || [], registry: config.body?.registry || null },
     status: { status: status.status, ok: status.ok, hash: status.hash, headers: status.headers, version: status.body?.version, registryVersion: status.body?.registryVersion, revision: status.body?.revision, vod: status.body?.vod, live: status.body?.live, degraded: status.body?.degraded },
     sources: { status: sources.status, ok: sources.ok, hash: sources.hash, headers: sources.headers },
-  });
-}
+  };
+}));
 
 const validRows = rows.filter((row) => row.config.ok && row.status.ok);
 const revisions = [...new Set(validRows.map((row) => row.status.revision).filter(Boolean))];

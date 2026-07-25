@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T13:57:54.471Z",
+  "generatedAt": "2026-07-25T14:07:10.430Z",
   "checks": {
     "endpointsReachable": true,
     "sameRevision": true,
@@ -18,7 +18,7 @@
     {
       "base": "https://tv.webhome.eu.org",
       "config": {
-        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
         "cacheControl": "no-store, no-cache, must-revalidate",
         "cfCacheStatus": "",
         "age": "",
@@ -31,13 +31,13 @@
         "age": "",
         "contentType": "application/json; charset=utf-8"
       },
-      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
       "version": "tvbox-source-registry-v8.1.4"
     },
     {
       "base": "https://tv.webclound.eu.org",
       "config": {
-        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
         "cacheControl": "no-store, no-cache, must-revalidate",
         "cfCacheStatus": "",
         "age": "",
@@ -50,13 +50,13 @@
         "age": "",
         "contentType": "application/json; charset=utf-8"
       },
-      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
       "version": "tvbox-source-registry-v8.1.4"
     },
     {
       "base": "https://tvbox-source-registry-v8.feng-yang.workers.dev",
       "config": {
-        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+        "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
         "cacheControl": "no-store, no-cache, must-revalidate",
         "cfCacheStatus": "",
         "age": "",
@@ -69,7 +69,7 @@
         "age": "",
         "contentType": "application/json; charset=utf-8"
       },
-      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+      "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
       "version": "tvbox-source-registry-v8.1.4"
     }
   ]

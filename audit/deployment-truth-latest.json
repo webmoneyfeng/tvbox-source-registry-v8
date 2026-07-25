@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T13:57:54.471Z",
+  "generatedAt": "2026-07-25T14:07:10.430Z",
   "bases": [
     "https://tv.webhome.eu.org",
     "https://tv.webclound.eu.org",
@@ -20,13 +20,13 @@
   "rows": [
     {
       "base": "https://tv.webhome.eu.org",
-      "checkedAt": "2026-07-25T13:57:38.249Z",
+      "checkedAt": "2026-07-25T14:06:59.310Z",
       "config": {
         "status": 200,
         "ok": true,
-        "hash": "f6d83bb9",
+        "hash": "a279f842",
         "headers": {
-          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "cfCacheStatus": "",
           "age": "",
@@ -90,11 +90,6 @@
             "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
           },
           {
-            "name": "IPTV-org 香港",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u"
-          },
-          {
             "name": "IPTV-org 韩国",
             "type": 0,
             "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u"
@@ -123,16 +118,6 @@
             "name": "Suxuang IPv4",
             "type": 0,
             "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"
-          },
-          {
-            "name": "Guovin 汇总",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
-          },
-          {
-            "name": "Guovin IPv4",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
           },
           {
             "name": "IPTV-org 泰国",
@@ -173,15 +158,15 @@
         "registry": {
           "version": "v8.1.4",
           "mode": "validated-direct-source-registry",
-          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
-          "updatedAt": "2026-07-25T13:55:02.581Z",
+          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
+          "updatedAt": "2026-07-25T14:05:02.517Z",
           "vodCount": 7,
-          "liveCount": 17,
-          "liveChannelCount": 1850,
+          "liveCount": 14,
+          "liveChannelCount": 2000,
           "strictVodCount": 0,
           "watchVodCount": 3,
           "strictLiveCount": 0,
-          "watchLiveCount": 0,
+          "watchLiveCount": 3,
           "degraded": true,
           "health": "https://tv.webhome.eu.org/status.json",
           "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
@@ -190,7 +175,7 @@
       "status": {
         "status": 200,
         "ok": true,
-        "hash": "af3babc1",
+        "hash": "7fea9b8f",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
@@ -200,7 +185,7 @@
         },
         "version": "tvbox-source-registry-v8.1.4",
         "registryVersion": "v8.1.4",
-        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
         "vod": {
           "registered": 14,
           "visible": 7,
@@ -211,11 +196,11 @@
         },
         "live": {
           "registered": 18,
-          "visible": 17,
+          "visible": 14,
           "active": 0,
-          "watch": 0,
-          "providers": 5,
-          "channels": 1850,
+          "watch": 3,
+          "providers": 4,
+          "channels": 2000,
           "target": "10+"
         },
         "degraded": true
@@ -223,7 +208,7 @@
       "sources": {
         "status": 200,
         "ok": true,
-        "hash": "f5511a65",
+        "hash": "d37cd162",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
@@ -235,13 +220,13 @@
     },
     {
       "base": "https://tv.webclound.eu.org",
-      "checkedAt": "2026-07-25T13:57:39.209Z",
+      "checkedAt": "2026-07-25T14:06:59.230Z",
       "config": {
         "status": 200,
         "ok": true,
-        "hash": "5d703587",
+        "hash": "c6c11740",
         "headers": {
-          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "cfCacheStatus": "",
           "age": "",
@@ -305,11 +290,6 @@
             "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
           },
           {
-            "name": "IPTV-org 香港",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u"
-          },
-          {
             "name": "IPTV-org 韩国",
             "type": 0,
             "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u"
@@ -338,16 +318,6 @@
             "name": "Suxuang IPv4",
             "type": 0,
             "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"
-          },
-          {
-            "name": "Guovin 汇总",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
-          },
-          {
-            "name": "Guovin IPv4",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
           },
           {
             "name": "IPTV-org 泰国",
@@ -388,15 +358,15 @@
         "registry": {
           "version": "v8.1.4",
           "mode": "validated-direct-source-registry",
-          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
-          "updatedAt": "2026-07-25T13:55:02.581Z",
+          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
+          "updatedAt": "2026-07-25T14:05:02.517Z",
           "vodCount": 7,
-          "liveCount": 17,
-          "liveChannelCount": 1850,
+          "liveCount": 14,
+          "liveChannelCount": 2000,
           "strictVodCount": 0,
           "watchVodCount": 3,
           "strictLiveCount": 0,
-          "watchLiveCount": 0,
+          "watchLiveCount": 3,
           "degraded": true,
           "health": "https://tv.webclound.eu.org/status.json",
           "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
@@ -405,7 +375,7 @@
       "status": {
         "status": 200,
         "ok": true,
-        "hash": "a91d1e27",
+        "hash": "e43438c1",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
@@ -415,7 +385,7 @@
         },
         "version": "tvbox-source-registry-v8.1.4",
         "registryVersion": "v8.1.4",
-        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
         "vod": {
           "registered": 14,
           "visible": 7,
@@ -426,11 +396,11 @@
         },
         "live": {
           "registered": 18,
-          "visible": 17,
+          "visible": 14,
           "active": 0,
-          "watch": 0,
-          "providers": 5,
-          "channels": 1850,
+          "watch": 3,
+          "providers": 4,
+          "channels": 2000,
           "target": "10+"
         },
         "degraded": true
@@ -438,7 +408,7 @@
       "sources": {
         "status": 200,
         "ok": true,
-        "hash": "f5511a65",
+        "hash": "d37cd162",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
@@ -450,13 +420,13 @@
     },
     {
       "base": "https://tvbox-source-registry-v8.feng-yang.workers.dev",
-      "checkedAt": "2026-07-25T13:57:54.470Z",
+      "checkedAt": "2026-07-25T14:07:10.428Z",
       "config": {
         "status": 200,
         "ok": true,
-        "hash": "680b99b4",
+        "hash": "67e13595",
         "headers": {
-          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a\"",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "cfCacheStatus": "",
           "age": "",
@@ -520,11 +490,6 @@
             "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
           },
           {
-            "name": "IPTV-org 香港",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u"
-          },
-          {
             "name": "IPTV-org 韩国",
             "type": 0,
             "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u"
@@ -553,16 +518,6 @@
             "name": "Suxuang IPv4",
             "type": 0,
             "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"
-          },
-          {
-            "name": "Guovin 汇总",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
-          },
-          {
-            "name": "Guovin IPv4",
-            "type": 0,
-            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
           },
           {
             "name": "IPTV-org 泰国",
@@ -603,15 +558,15 @@
         "registry": {
           "version": "v8.1.4",
           "mode": "validated-direct-source-registry",
-          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
-          "updatedAt": "2026-07-25T13:55:02.581Z",
+          "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
+          "updatedAt": "2026-07-25T14:05:02.517Z",
           "vodCount": 7,
-          "liveCount": 17,
-          "liveChannelCount": 1850,
+          "liveCount": 14,
+          "liveChannelCount": 2000,
           "strictVodCount": 0,
           "watchVodCount": 3,
           "strictLiveCount": 0,
-          "watchLiveCount": 0,
+          "watchLiveCount": 3,
           "degraded": true,
           "health": "https://tvbox-source-registry-v8.feng-yang.workers.dev/status.json",
           "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
@@ -620,7 +575,7 @@
       "status": {
         "status": 200,
         "ok": true,
-        "hash": "98c6939a",
+        "hash": "5a29d58e",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
@@ -630,7 +585,7 @@
         },
         "version": "tvbox-source-registry-v8.1.4",
         "registryVersion": "v8.1.4",
-        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:64c40b55",
+        "revision": "vod:hhzy-m3u8|vod:modu|vod:subo-m3u8|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:iptv-org-th|live:iptv-org-vn|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:fanmingming-index|live:ecf0ac7a",
         "vod": {
           "registered": 14,
           "visible": 7,
@@ -641,11 +596,11 @@
         },
         "live": {
           "registered": 18,
-          "visible": 17,
+          "visible": 14,
           "active": 0,
-          "watch": 0,
-          "providers": 5,
-          "channels": 1850,
+          "watch": 3,
+          "providers": 4,
+          "channels": 2000,
           "target": "10+"
         },
         "degraded": true
@@ -653,7 +608,7 @@
       "sources": {
         "status": 200,
         "ok": true,
-        "hash": "f5511a65",
+        "hash": "d37cd162",
         "headers": {
           "etag": "",
           "cacheControl": "no-store, no-cache, must-revalidate",
