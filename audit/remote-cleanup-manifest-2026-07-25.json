@@ -56,6 +56,13 @@
     "oldPagesProject": "not listed",
     "oldKvNamespace": "deleted"
   },
+  "cronValidation": {
+    "failureRootCause": "discovered live source did not carry a physicalKey, so it collided with the seeded source during merge",
+    "fixCommit": "c4168de",
+    "verifiedAt": "2026-07-25T06:50:39.400Z",
+    "checkedAtAdvanced": true,
+    "contentTimestampUnchangedWhenRevisionUnchanged": true
+  },
   "evidence": [
     {
       "url": "https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json",
