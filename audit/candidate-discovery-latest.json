@@ -1,0 +1,800 @@
+{
+  "generatedAt": "2026-07-25T11:03:54.334Z",
+  "feeds": [
+    {
+      "url": "https://szyyds.cn/tv/x.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 27831,
+      "error": ""
+    },
+    {
+      "url": "https://16409.kstore.vip/tv/ngzmods.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 8194,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 50584,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/c.txt",
+      "ok": true,
+      "status": 200,
+      "bytes": 1633,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/a.txt",
+      "ok": true,
+      "status": 200,
+      "bytes": 2259,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/d.txt",
+      "ok": true,
+      "status": 200,
+      "bytes": 1341,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/fast.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 404,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/b.txt",
+      "ok": true,
+      "status": 200,
+      "bytes": 1654,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/a.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://raw.liucn.cc/box/m.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 50584,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/szyyds/TVBox/main/x.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://play.iptv365.org/api.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 0,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 45597,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/b.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 121737,
+      "error": ""
+    },
+    {
+      "url": "https://d.kstore.dev/download/7213/",
+      "ok": false,
+      "status": 404,
+      "bytes": 0,
+      "error": ""
+    },
+    {
+      "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymz",
+      "ok": true,
+      "status": 200,
+      "bytes": 112052,
+      "error": ""
+    },
+    {
+      "url": "https://pan.shangui.cc/f/v68xuk/xm.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://jihulab.com/bh666/YGBH/-/raw/main/ygbox.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 109167,
+      "error": ""
+    },
+    {
+      "url": "https://dxawi.github.io/0/0.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 17548,
+      "error": ""
+    },
+    {
+      "url": "http://meowtv.cn/tv",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://pan.shangui.cc/f/eoVMFQ/ppa.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://agit.ai/kvymin/TV/raw/branch/master/Box.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://agit.ai/n/b/raw/branch/a/b/c.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "http://xn--z7x900a.live/",
+      "ok": true,
+      "status": 200,
+      "bytes": 677,
+      "error": ""
+    },
+    {
+      "url": "http://xn--sss604efuw.top/tv",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://tvbox.cainisi.cf/",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "http://www.dmtv.ml/mao/single.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://xhdwc.tk/0",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 85560,
+      "error": ""
+    },
+    {
+      "url": "https://weixine.net/ysc.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xianyuyimu/TVBOX-/main/TVBox/%E4%B8%80%E6%9C%A8%E8%87%AA%E7%94%A8.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 28120,
+      "error": ""
+    },
+    {
+      "url": "https://freed.yuanhsing.cf/TVBox/meowcf.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8",
+      "ok": false,
+      "status": 404,
+      "bytes": 7907,
+      "error": ""
+    },
+    {
+      "url": "https://pastebin.com/raw/5NHaxyGR",
+      "ok": false,
+      "status": 404,
+      "bytes": 474,
+      "error": ""
+    },
+    {
+      "url": "https://cn.kstore.space/download/2863/01.txt",
+      "ok": false,
+      "status": 401,
+      "bytes": 22,
+      "error": ""
+    },
+    {
+      "url": "https://cn.kstore.space/download/2883/0110.txt",
+      "ok": false,
+      "status": 401,
+      "bytes": 22,
+      "error": ""
+    },
+    {
+      "url": "https://agit.ai/cyl518/yl/raw/branch/master/ml.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
+      "ok": true,
+      "status": 200,
+      "bytes": 5497,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 18001,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 2001,
+      "error": ""
+    },
+    {
+      "url": "http://itvbox.cc/tvbox/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0/1.m3u8",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://ju.binghe.ga/4.txt",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://agit.ai/66666/mao/raw/branch/master/00/000.m3u8",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 11,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 85560,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "ok": true,
+      "status": 200,
+      "bytes": 45597,
+      "error": ""
+    },
+    {
+      "url": "http://8.210.232.168/xc.json",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "http://yydsys.top/duo/ali",
+      "ok": false,
+      "status": 404,
+      "bytes": 1076,
+      "error": ""
+    },
+    {
+      "url": "http://yydsys.top/duo/v.json",
+      "ok": false,
+      "status": 404,
+      "bytes": 1076,
+      "error": ""
+    },
+    {
+      "url": "http://yydsys.top/duo",
+      "ok": true,
+      "status": 200,
+      "bytes": 12914,
+      "error": ""
+    },
+    {
+      "url": "http://101.34.67.237/config/1",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    }
+  ],
+  "extractedCount": 87,
+  "candidateCount": 49,
+  "candidates": [
+    {
+      "kind": "vod",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/",
+      "name": "影视 | 量子[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "cj.lziapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://ffzy.tv/api.php/provide/vod/",
+      "name": "影视 | 非凡[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "ffzy.tv/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://suoniapi.com/api.php/provide/vod/at/xml/",
+      "name": "影视 | 索尼[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "suoniapi.com/api.php/provide/vod/at/xml/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
+      "name": "影视 | 极速[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "jszyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
+      "name": "影视 | 率率[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "suoniapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
+      "name": "百度",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "api.apibdzy.com/api.php/provide/vod",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
+      "name": "影视 | 暴風[直连]",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "bfzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/at/m3u8/",
+      "name": "️天堂┃采集",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/at/m3u8/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "name": "红牛资源(切)",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "hongniuzy2.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://sdzyapi.com/api.php/provide/vod/",
+      "name": "闪电资源(切)",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "sdzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "name": "光速资源(切)",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "api.guangsuapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "name": "新浪资源(切)",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://develop202.github.io/migu_video/interface.txt",
+      "name": "咪咕",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "develop202.github.io/migu_video/interface.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://szyyds.cn/tv/live/x.txt",
+      "name": "手动不知何时更新",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "szyyds.cn/tv/live/x.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "http://m.szyyds.cn/api.php?token=8664f352657e8b13585bcf0f84fc3512",
+      "name": "有效期27年7月",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "m.szyyds.cn/api.php",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://z.szyyds.cn/iptv",
+      "name": "自动更新",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "z.szyyds.cn/iptv",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://szyyds.cn/tv/live/yy.txt",
+      "name": "音乐所",
+      "discoveredFrom": "https://szyyds.cn/tv/x.json",
+      "physicalKey": "szyyds.cn/tv/live/yy.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://c.xn--yetu07f.icu/api.php/provide/vod/",
+      "name": "👒┃小胡┃资源┃",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "c.xn--yetu07f.icu/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://taopianapi.com/cjapi/mc/vod/json.html",
+      "name": "🕹️淘片┃采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "taopianapi.com/cjapi/mc/vod/json.html",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "http://ffzy1.tv/api.php/provide/vod/",
+      "name": "🥗┃非凡┃资源",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "ffzy1.tv/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://lzizy1.com/api.php/provide/vod/",
+      "name": "🥑┃量子┃资源",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "lzizy1.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://49zy1.com/api.php/provide/vod/?ac=list",
+      "name": "🦁┃四九┃资源",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "49zy1.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://www.feisuzyapi.com/api.php/provide/vod/?ac=list",
+      "name": "🛰️飞速┃采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "feisuzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://caiji.qhzyapi.com/api.php/provide/vod/",
+      "name": "🐯┃奇虎┃采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "caiji.qhzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://kekezy1.com/api.php/provide/vod/?ac=list",
+      "name": "⛱┃可可┃采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "kekezy1.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8",
+      "name": "🐯虎牙采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "huyaapi.com/api.php/provide/vod/from/hym3u8",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://hhzyapi.com/api.php/provide/vod/",
+      "name": "🦊火狐采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "hhzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://app.bfzyapi.com/api.php/provide/vod/",
+      "name": "🌪️暴风影音",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "app.bfzyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/?ac=list",
+      "name": "🎏百度┃采集",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "api.apibdzy.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://mv.wogg.link/mv/vod",
+      "name": "🎶明星┃MV",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "mv.wogg.link/mv/vod",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "http://xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
+      "name": "肥猫",
+      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "physicalKey": "xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://github.moeyy.xyz/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
+      "name": "Ray",
+      "discoveredFrom": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "physicalKey": "github.moeyy.xyz/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://bfzyapi.com/api.php/provide/vod",
+      "name": "暴风",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "bfzyapi.com/api.php/provide/vod",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
+      "name": "IK",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://haiwaikan.com/api.php/provide/vod",
+      "name": "海外看(墙外)",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "haiwaikan.com/api.php/provide/vod",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://ghp.ci/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/itvlist.txt",
+      "name": "IPV4",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "ghp.ci/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/itvlist.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://ghp.ci/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
+      "name": "IPV6①",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "ghp.ci/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://ghp.ci/raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+      "name": "IPV6②",
+      "discoveredFrom": "https://dxawi.github.io/0/0.json",
+      "physicalKey": "ghp.ci/raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
+      "name": "♻️49资源",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "49zyw.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+      "name": "♻️快车.云播",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "caiji.kczyapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
+      "name": "♻️卧龙.云播",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "collect.wolongzyw.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://xkanzy10.com/api.php/provide/vod",
+      "name": "♻️享看.云播",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "xkanzy10.com/api.php/provide/vod",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://api.tiankongapi.com/api.php/provide/vod/",
+      "name": "♻️天空.云播",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "api.tiankongapi.com/api.php/provide/vod/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
+      "name": "♻️live",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
+      "name": "♻️TV",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
+      "name": "♻️MTV",
+      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://a.nxog.top/m/tv/?ou=2d5",
+      "name": "a",
+      "discoveredFrom": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
+      "physicalKey": "a.nxog.top/m/tv/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://bc.188766.xyz/?ip=&json=true",
+      "name": "冰茶",
+      "discoveredFrom": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
+      "physicalKey": "bc.188766.xyz/",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
+      "name": "FMM_IPV6",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "physicalKey": "m3u.ibert.me/txt/fmml_ipv6.txt",
+      "state": "CANDIDATE"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 # TVBox Source Registry v8.1
 
-## v8.1.2 quality admission
+## v8.1.3 quality admission
 
-The production directory currently contains 11 independently-addressed VOD
-CMS endpoints and 14 independently-addressed live playlists. Each production
-entry passed the current contract probe; the quality audit additionally checks
-direct media response, HD evidence and bounded latency. Upstream playlist
+The production directory currently contains 10 independently-addressed VOD
+CMS endpoints and 12 independently-addressed live playlists. Each production
+entry passed the current runtime contract probe; the quality audit additionally checks
+category branches, direct media response, HD evidence and bounded latency. Upstream playlist
 contents are kept intact and are not merged or rewritten.
 
 The TVBox config exposes each admitted live playlist as its own direct live
@@ -44,8 +44,9 @@ build a full catalogue snapshot, or promise that every public source is complete
 
 ## Validation contract
 
-A VOD probe checks listing, multiple search terms, detail, and a direct playable
-media URL. A live probe checks M3U structure, groups and sample HLS responses;
+A VOD probe checks class metadata, leaf-category samples, multiple search terms,
+detail, direct play branches and a direct playable media URL. A live probe checks
+M3U structure, groups and sample HLS responses;
 source-internal duplicate rate is reported but the upstream playlist is not
 rewritten. The initial registry is based on the previous project's source
 admission report plus new live candidates; local and online probes are required

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T08:15:48.214Z",
+  "generatedAt": "2026-07-25T11:19:01.774Z",
   "basis": "Cloudflare Workers and KV Free limits verified 2026-07-19",
   "limits": {
     "workerRequestsPerDay": 100000,

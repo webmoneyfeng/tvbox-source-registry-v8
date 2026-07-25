@@ -18,18 +18,18 @@ import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from './discover
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.1.2';
-const HEALTH_KEY = 'registry:health:v2';
-const PROBE_TIMEOUT_MS = 4500;
+const VERSION = 'tvbox-source-registry-v8.1.3';
+const HEALTH_KEY = 'registry:health:v3';
+const PROBE_TIMEOUT_MS = 8000;
 const MAX_PROBE_SOURCES = 4;
 const MAX_BODY_BYTES = 512 * 1024;
 const MAX_PLAYLIST_BYTES = 2 * 1024 * 1024;
 const MAX_REDIRECTS = 1;
-const TARGET_VOD_SOURCES = 8;
-const MIN_LIVE_SOURCES = 3;
+const TARGET_VOD_SOURCES = 10;
+const MIN_LIVE_SOURCES = 10;
 const PERSIST_HEARTBEAT_MS = 30 * 60 * 1000;
 const DISCOVERY_INTERVAL_MS = 6 * 60 * 60 * 1000;
-const SEARCH_TERMS = ['\u5929\u9053', '\u4eae\u5251', '\u7535\u5f71', '\u7535\u89c6\u5267', '\u52a8\u4f5c'];
+const SEARCH_TERMS = ['\u5929\u9053', '\u4eae\u5251', '\u7504\u5b1b\u4f20', '\u6d41\u6d6a\u5730\u7403', '\u54ea\u5412'];
 const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/liu673cn/box/main/m.json',
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json',
@@ -110,6 +110,7 @@ async function readTextLimited(response, maxBytes) {
 
 function sourceUrl(source, params = {}) {
   const url = new URL(source.api);
+  if (!Object.prototype.hasOwnProperty.call(params, 'ac') && Object.keys(params).some((key) => ['wd', 't', 'ids', 'pg'].includes(key))) url.searchParams.delete('ac');
   for (const [key, value] of Object.entries(params)) {
     if (value !== undefined && value !== null && value !== '') url.searchParams.set(key, String(value));
   }
@@ -179,6 +180,24 @@ function firstPlayable(row) {
   return Boolean(firstPlayableUrl(row));
 }
 
+function playBranchContract(row) {
+  const groups = String(row?.vod_play_url || '').split('$$$').filter((value) => String(value).trim());
+  const branches = groups.map((group) => {
+    const entries = group.split('#').map((value) => String(value).split('$').pop().trim()).filter(Boolean);
+    const direct = entries.filter((value) => /https?:\/\/[^\s]+(?:m3u8|mp4|\.ts)(?:\?|$)/iu.test(value) && !/(?:player\.html|iframe|parse|jiexi)/iu.test(value));
+    return { entryCount: entries.length, directCount: direct.length };
+  });
+  return {
+    branchCount: branches.length,
+    directBranchCount: branches.filter((branch) => branch.directCount > 0).length,
+    invalidBranchCount: branches.filter((branch) => branch.directCount === 0).length,
+  };
+}
+
+function likelyLeafCategory(value) {
+  return !/(?:^\u7535\u5f71$|^\u7535\u5f71\u7247$|^\u8fde\u7eed\u5267$|^\u7535\u89c6\u5267$|^\u7efc\u827a$|^\u7efc\u827a\u7247$|^\u52a8\u6f2b$|^\u52a8\u6f2b\u7247$|^\u8d44\u8baf$|^\u4f53\u80b2(?:\u8d5b\u4e8b)?$|^\u7eaa\u5f55\u7247?$)/iu.test(String(value || '').trim());
+}
+
 function latestSourceTime(rows) {
   let latest = 0;
   for (const row of rows || []) {
@@ -192,9 +211,15 @@ function latestSourceTime(rows) {
 export async function probeVodSource(source) {
   const started = Date.now();
   try {
+    const classListing = await fetchJson(source, { ac: 'list' });
     const listing = await fetchJson(source, { ac: 'videolist', pg: 1 });
     const listingRows = rowsOf(listing.data);
-    const classes = classesOf(listing.data);
+    const classes = classesOf(classListing.data);
+    const leafClasses = classes.filter((item) => likelyLeafCategory(item.name));
+    const categoryChecks = await mapWithConcurrency(leafClasses.slice(0, 3), 3, async (category) => {
+      const result = await fetchJson(source, { ac: 'videolist', t: category.id, pg: 1 });
+      return { id: category.id, name: category.name, ok: Boolean(result.ok && rowsOf(result.data).length), count: rowsOf(result.data).length };
+    });
     const evidence = [];
     const searchResults = [];
     let sample = listingRows[0] || null;
@@ -212,13 +237,17 @@ export async function probeVodSource(source) {
     const playableUrl = detailOk ? firstPlayableUrl(detailRow) : '';
     const mediaCheck = playableUrl ? await probeMediaUrl(playableUrl) : { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
     const playOk = Boolean(detailOk && mediaCheck.ok);
+    const playContract = playBranchContract(detailRow);
     const searchOk = evidence.some((item) => item.ok);
-    const ok = Boolean(listing.ok && (classes.length > 0 || listingRows.length > 0) && searchOk && detailOk && playOk);
-    const hardViolation = [listing, ...searchResults, detail, mediaCheck].some(hardDocumentViolation);
+    const categoryOk = categoryChecks.length > 0 && categoryChecks.every((item) => item.ok);
+    const ok = Boolean(classListing.ok && listing.ok && classes.length > 0 && categoryOk && searchOk && detailOk && playOk && playContract.branchCount > 0 && playContract.invalidBranchCount === 0);
+    const hardViolation = [classListing, listing, ...searchResults, detail, mediaCheck].some(hardDocumentViolation);
     const probe = {
       kind: 'vod', slug: source.slug, ok: ok && !hardViolation, hardViolation, httpStatus: listing.status || detail?.status || 0,
-      classCount: classes.length, listCount: listingRows.length, searchEvidence: evidence,
+      classCount: classes.length, categoryCount: categoryChecks.length, categoryOkCount: categoryChecks.filter((item) => item.ok).length, categoryChecks,
+      listCount: listingRows.length, searchEvidence: evidence,
       searchCount: evidence.reduce((sum, item) => sum + item.count, 0), detailOk, playOk,
+      playBranchCount: playContract.branchCount, directBranchCount: playContract.directBranchCount, invalidBranchCount: playContract.invalidBranchCount,
       mediaLatencyMs: mediaCheck.latencyMs, mediaStatus: mediaCheck.status,
       latestAt: latestSourceTime(listingRows), latencyMs: Date.now() - started, error: hardViolation ? 'hard content or redirect violation' : ok ? '' : 'vod contract failed',
     };
@@ -377,6 +406,8 @@ function publicSourceRows(registry, state) {
       slug: source.slug,
       key: source.key,
       name: nameMap.get(key) || source.slug,
+      provider: source.provider,
+      qualityTier: source.qualityTier,
       seedStatus: source.seedStatus,
       visible: visibleSources([source], state).length > 0,
       physicalSource: source.physicalKey,
@@ -532,8 +563,8 @@ async function status(request, env) {
     ok: true, version: VERSION, registryVersion: REGISTRY_VERSION, checkedAt: state.checkedAt || state.generatedAt, updatedAt: state.generatedAt,
     persistedAt: state.persistedAt, revision: state.revision, degraded: vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
     configUrl: new URL('/config.json', request.url).toString(),
-    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, target: '8-12' },
-    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, channels: state.liveCatalog.length, target: '3+' },
+    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
+    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
     discovery: { lastAt: state.lastDiscoveryAt, feed: state.lastDiscoveryFeed, error: state.lastDiscoveryError, candidates: state.discoveredSources.length },
     policy: 'Direct source registry only; no video proxy, no full catalogue snapshot, no adult filtering.',
     sources: publicSourceRows(registry, state),

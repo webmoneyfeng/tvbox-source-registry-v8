@@ -5,7 +5,7 @@
 This version publishes validated source links instead of building a second
 catalogue. The TV client queries each upstream source directly. The service does
 not proxy media, merge programme records, rewrite titles, or promise cross-source
-deduplication. v8.1.2 publishes 11 VOD endpoints and 14 live playlists after
+deduplication. v8.1.3 publishes 10 VOD endpoints and 12 live playlists after
 the current quality and production probes.
 
 Only public, standard TVBox/FongMi-compatible endpoints that are permitted for

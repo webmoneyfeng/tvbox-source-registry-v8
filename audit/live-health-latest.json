@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-07-25T08:10:36.549Z",
-  "registryVersion": "v8.1.2",
-  "candidateCount": 14,
-  "passed": 14,
+  "generatedAt": "2026-07-25T11:10:17.552Z",
+  "registryVersion": "v8.1.3",
+  "candidateCount": 12,
+  "passed": 12,
   "failed": 0,
+  "target": 10,
+  "targetMet": true,
   "rows": [
     {
       "kind": "live",
@@ -15,17 +17,17 @@
       "duplicateRate": 0,
       "playableCount": 2,
       "sampleCount": 4,
-      "latencyMs": 2552,
+      "latencyMs": 3810,
       "hardViolation": false,
       "error": "",
       "score": {
-        "total": 80.5,
+        "total": 77.5,
         "playlist": 20,
         "parse": 15,
         "playback": 17.5,
         "freshness": 10,
         "quality": 10,
-        "latency": 8
+        "latency": 5
       },
       "channelSample": [
         {
@@ -67,85 +69,25 @@
     },
     {
       "kind": "live",
-      "slug": "iptv-org-cn-v2",
+      "slug": "zbds-ipv4",
       "ok": true,
       "httpStatus": 200,
-      "channelCount": 285,
-      "groupCount": 1,
-      "duplicateRate": 0.1739,
-      "playableCount": 2,
-      "sampleCount": 4,
-      "latencyMs": 9892,
-      "hardViolation": false,
-      "error": "",
-      "score": {
-        "total": 64.5,
-        "playlist": 20,
-        "parse": 15,
-        "playback": 17.5,
-        "freshness": 10,
-        "quality": 0,
-        "latency": 2
-      },
-      "channelSample": [
-        {
-          "name": "Ando TV (1080p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AndoTV.cn@SD",
-          "url": "http://play.kankanlive.com/live/1711956137852982.m3u8"
-        },
-        {
-          "name": "Anshun Comprehensive News Channel",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AnshunComprehensiveNewsChannel.cn@SD",
-          "url": "https://hplayer1.juyun.tv/camera/154379194.m3u8"
-        },
-        {
-          "name": "BRTV Kaku Childrens Channel",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "BRTVKakuChildrensChannel.cn@SD",
-          "url": "http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8"
-        },
-        {
-          "name": "BRTV 北京卫视 (1080p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "BeijingSatelliteTV.cn@HD",
-          "url": "http://go.bkpcp.top/mg/bjws"
-        },
-        {
-          "name": "BRTV 北京卫视 [Not 24/7]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "BeijingSatelliteTV.cn@SD",
-          "url": "http://ivi.bupt.edu.cn/hls/btv1.m3u8"
-        }
-      ]
-    },
-    {
-      "kind": "live",
-      "slug": "zbds-ipv4-v2",
-      "ok": true,
-      "httpStatus": 200,
-      "channelCount": 421,
-      "groupCount": 12,
-      "duplicateRate": 0.0164,
+      "channelCount": 401,
+      "groupCount": 11,
+      "duplicateRate": 0.0172,
       "playableCount": 3,
       "sampleCount": 4,
-      "latencyMs": 7409,
+      "latencyMs": 4845,
       "hardViolation": false,
       "error": "",
       "score": {
-        "total": 83.25,
+        "total": 86.25,
         "playlist": 20,
         "parse": 15,
         "playback": 26.25,
         "freshness": 10,
         "quality": 10,
-        "latency": 2
+        "latency": 5
       },
       "channelSample": [
         {
@@ -181,127 +123,7 @@
           "group": "央视频道",
           "logo": "https://tb.zbds.top/logo/CCTV第一剧场.png",
           "tvgId": "第一剧场",
-          "url": "https://live.264788.xyz/channel/diyijuchang?streamid=d81e188b59ece96b7e8f1ce34aea3ef8&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
-        }
-      ]
-    },
-    {
-      "kind": "live",
-      "slug": "iptv-org-in",
-      "ok": true,
-      "httpStatus": 200,
-      "channelCount": 584,
-      "groupCount": 1,
-      "duplicateRate": 0.0818,
-      "playableCount": 3,
-      "sampleCount": 4,
-      "latencyMs": 8750,
-      "hardViolation": false,
-      "error": "",
-      "score": {
-        "total": 73.25,
-        "playlist": 20,
-        "parse": 15,
-        "playback": 26.25,
-        "freshness": 10,
-        "quality": 0,
-        "latency": 2
-      },
-      "channelSample": [
-        {
-          "name": "7S Music (576p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "7SMusic.in@SD",
-          "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8"
-        },
-        {
-          "name": "9X Jalwa (1080p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "9XJalwa.in@SD",
-          "url": "https://b.jsrdn.com/strm/channels/9xjalwa/master.m3u8"
-        },
-        {
-          "name": "9X Jalwa (576p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "9XJalwa.in@SD",
-          "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8"
-        },
-        {
-          "name": "9X Jhakaas (1080p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "9XJhakaas.in@SD",
-          "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8"
-        },
-        {
-          "name": "9X Jhakaas (576p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "9XJhakaas.in@SD",
-          "url": "https://mumt03.tangotv.in/Dsly5z3H9XJHAKAAS/index.m3u8"
-        }
-      ]
-    },
-    {
-      "kind": "live",
-      "slug": "iptv-org-br",
-      "ok": true,
-      "httpStatus": 200,
-      "channelCount": 307,
-      "groupCount": 1,
-      "duplicateRate": 0.3523,
-      "playableCount": 3,
-      "sampleCount": 4,
-      "latencyMs": 8757,
-      "hardViolation": false,
-      "error": "",
-      "score": {
-        "total": 73.25,
-        "playlist": 20,
-        "parse": 15,
-        "playback": 26.25,
-        "freshness": 10,
-        "quality": 0,
-        "latency": 2
-      },
-      "channelSample": [
-        {
-          "name": "1001 Noites (720p) [Not 24/7]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "1001Noites.br@SD",
-          "url": "https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8"
-        },
-        {
-          "name": "Adesso TV (720p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AdessoTV.br@SD",
-          "url": "https://cdn.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8"
-        },
-        {
-          "name": "AgroBrasil TV (720p) [Not 24/7]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AgroBrasilTV.br@SD",
-          "url": "https://server.flixtv.com.br/agrobrasiltv/agrobrasiltv/playlist.m3u8"
-        },
-        {
-          "name": "AgroCanal (720p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AgroCanal.br@SD",
-          "url": "http://45.162.64.114/AGRO_CANAL/index.m3u8"
-        },
-        {
-          "name": "AgroMais (720p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "AgroMais.br@SD",
-          "url": "http://45.162.64.114/AGROMAIS/index.m3u8"
+          "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
         }
       ]
     },
@@ -315,7 +137,7 @@
       "duplicateRate": 0.1111,
       "playableCount": 3,
       "sampleCount": 4,
-      "latencyMs": 7108,
+      "latencyMs": 5185,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -367,6 +189,126 @@
     },
     {
       "kind": "live",
+      "slug": "iptv-org-in",
+      "ok": true,
+      "httpStatus": 200,
+      "channelCount": 584,
+      "groupCount": 1,
+      "duplicateRate": 0.0818,
+      "playableCount": 3,
+      "sampleCount": 4,
+      "latencyMs": 11903,
+      "hardViolation": false,
+      "error": "",
+      "score": {
+        "total": 73.25,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 26.25,
+        "freshness": 10,
+        "quality": 0,
+        "latency": 2
+      },
+      "channelSample": [
+        {
+          "name": "7S Music (576p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "7SMusic.in@SD",
+          "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8"
+        },
+        {
+          "name": "9X Jalwa (1080p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "9XJalwa.in@SD",
+          "url": "https://b.jsrdn.com/strm/channels/9xjalwa/master.m3u8"
+        },
+        {
+          "name": "9X Jalwa (576p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "9XJalwa.in@SD",
+          "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8"
+        },
+        {
+          "name": "9X Jhakaas (1080p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "9XJhakaas.in@SD",
+          "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8"
+        },
+        {
+          "name": "9X Jhakaas (576p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "9XJhakaas.in@SD",
+          "url": "https://mumt03.tangotv.in/Dsly5z3H9XJHAKAAS/index.m3u8"
+        }
+      ]
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-it",
+      "ok": true,
+      "httpStatus": 200,
+      "channelCount": 248,
+      "groupCount": 1,
+      "duplicateRate": 0.0498,
+      "playableCount": 3,
+      "sampleCount": 4,
+      "latencyMs": 5532,
+      "hardViolation": false,
+      "error": "",
+      "score": {
+        "total": 78.25,
+        "playlist": 20,
+        "parse": 15,
+        "playback": 26.25,
+        "freshness": 10,
+        "quality": 5,
+        "latency": 2
+      },
+      "channelSample": [
+        {
+          "name": "7 RadioVisione (720p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "7RadioVisione.it@HD",
+          "url": "https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8"
+        },
+        {
+          "name": "7 YOU & ME (720p)",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "7YOUME.it@HD",
+          "url": "https://stream10.xdevel.com/video0s977798-2239/stream/playlist.m3u8"
+        },
+        {
+          "name": "12 TV Parma (540p) [Not 24/7]",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "12TVParma.it@SD",
+          "url": "https://5929b138b139d.streamlock.net/12TVParma/livestream/playlist.m3u8"
+        },
+        {
+          "name": "20 Mediaset [Geo-blocked]",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "20.it@SD",
+          "url": "https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8"
+        },
+        {
+          "name": "27 TwentySeven [Geo-blocked]",
+          "group": "其他",
+          "logo": "",
+          "tvgId": "Twentyseven.it@SD",
+          "url": "https://live2.msf.cdn.mediaset.net/content/hls_h0_cls_vos/live/channel(ts)/index.m3u8"
+        }
+      ]
+    },
+    {
+      "kind": "live",
       "slug": "iptv-org-us",
       "ok": true,
       "httpStatus": 200,
@@ -375,7 +317,7 @@
       "duplicateRate": 0.1504,
       "playableCount": 4,
       "sampleCount": 4,
-      "latencyMs": 8142,
+      "latencyMs": 9399,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -435,7 +377,7 @@
       "duplicateRate": 0.1007,
       "playableCount": 4,
       "sampleCount": 4,
-      "latencyMs": 5181,
+      "latencyMs": 5527,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -495,7 +437,7 @@
       "duplicateRate": 0.0973,
       "playableCount": 3,
       "sampleCount": 4,
-      "latencyMs": 8952,
+      "latencyMs": 10980,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -547,61 +489,61 @@
     },
     {
       "kind": "live",
-      "slug": "iptv-org-ca",
+      "slug": "iptv-org-fr",
       "ok": true,
       "httpStatus": 200,
-      "channelCount": 147,
+      "channelCount": 181,
       "groupCount": 1,
-      "duplicateRate": 0.0068,
-      "playableCount": 2,
+      "duplicateRate": 0.1697,
+      "playableCount": 3,
       "sampleCount": 4,
-      "latencyMs": 9218,
+      "latencyMs": 6867,
       "hardViolation": false,
       "error": "",
       "score": {
-        "total": 69.5,
+        "total": 73.25,
         "playlist": 20,
         "parse": 15,
-        "playback": 17.5,
+        "playback": 26.25,
         "freshness": 10,
-        "quality": 5,
+        "quality": 0,
         "latency": 2
       },
       "channelSample": [
         {
-          "name": "Amazing Discoveries TV (720p)",
+          "name": "20 Minutes TV (1080p)",
           "group": "其他",
           "logo": "",
-          "tvgId": "AmazingDiscoveriesTV.ca@SD",
-          "url": "https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/playlist.m3u8"
+          "tvgId": "20MinutesTV.fr@SD",
+          "url": "https://live-20minutestv.digiteka.com/1961167769/index.m3u8"
         },
         {
-          "name": "Amazing Discoveries TV (270p)",
+          "name": "Action HD (720p)",
           "group": "其他",
           "logo": "",
-          "tvgId": "AmazingDiscoveriesTV.ca@SD",
-          "url": "https://rpn.bozztv.com/gfaith/gfaith-amazing/index.m3u8"
+          "tvgId": "Action.fr@HD",
+          "url": "http://rezofoot.tv/Action/index.m3u8"
         },
         {
-          "name": "Az Star TV (1080p)",
+          "name": "ADN TV+ (720p)",
           "group": "其他",
           "logo": "",
-          "tvgId": "AzStarTV.ca@SD",
-          "url": "http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8"
+          "tvgId": "ADNTVPlus.fr@SD",
+          "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8"
         },
         {
-          "name": "Az Star TV (240p)",
+          "name": "Africa 24 (1080p)",
           "group": "其他",
           "logo": "",
-          "tvgId": "AzStarTV.ca@SD",
-          "url": "https://live.livestreamtv.ca/azstar/ngrp:azstar/playlist.m3u8"
+          "tvgId": "Africa24.fr@SD",
+          "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8"
         },
         {
-          "name": "Azan TV",
+          "name": "Africa 24 English (1080p)",
           "group": "其他",
           "logo": "",
-          "tvgId": "AzanTV.ca@SD",
-          "url": "https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8"
+          "tvgId": "Africa24English.fr@SD",
+          "url": "https://edge20.vedge.infomaniak.com/livecast/ik:africa24english/manifest.m3u8"
         }
       ]
     },
@@ -615,7 +557,7 @@
       "duplicateRate": 0.1389,
       "playableCount": 4,
       "sampleCount": 4,
-      "latencyMs": 6891,
+      "latencyMs": 7928,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -675,7 +617,7 @@
       "duplicateRate": 0.0786,
       "playableCount": 3,
       "sampleCount": 4,
-      "latencyMs": 8023,
+      "latencyMs": 7250,
       "hardViolation": false,
       "error": "",
       "score": {
@@ -727,66 +669,6 @@
     },
     {
       "kind": "live",
-      "slug": "iptv-org-it",
-      "ok": true,
-      "httpStatus": 200,
-      "channelCount": 248,
-      "groupCount": 1,
-      "duplicateRate": 0.0498,
-      "playableCount": 3,
-      "sampleCount": 4,
-      "latencyMs": 5939,
-      "hardViolation": false,
-      "error": "",
-      "score": {
-        "total": 78.25,
-        "playlist": 20,
-        "parse": 15,
-        "playback": 26.25,
-        "freshness": 10,
-        "quality": 5,
-        "latency": 2
-      },
-      "channelSample": [
-        {
-          "name": "7 RadioVisione (720p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "7RadioVisione.it@HD",
-          "url": "https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8"
-        },
-        {
-          "name": "7 YOU & ME (720p)",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "7YOUME.it@HD",
-          "url": "https://stream10.xdevel.com/video0s977798-2239/stream/playlist.m3u8"
-        },
-        {
-          "name": "12 TV Parma (540p) [Not 24/7]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "12TVParma.it@SD",
-          "url": "https://5929b138b139d.streamlock.net/12TVParma/livestream/playlist.m3u8"
-        },
-        {
-          "name": "20 Mediaset [Geo-blocked]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "20.it@SD",
-          "url": "https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8"
-        },
-        {
-          "name": "27 TwentySeven [Geo-blocked]",
-          "group": "其他",
-          "logo": "",
-          "tvgId": "Twentyseven.it@SD",
-          "url": "https://live2.msf.cdn.mediaset.net/content/hls_h0_cls_vos/live/channel(ts)/index.m3u8"
-        }
-      ]
-    },
-    {
-      "kind": "live",
       "slug": "iptv-org-nl",
       "ok": true,
       "httpStatus": 200,
@@ -795,7 +677,7 @@
       "duplicateRate": 0.0598,
       "playableCount": 4,
       "sampleCount": 4,
-      "latencyMs": 7585,
+      "latencyMs": 5841,
       "hardViolation": false,
       "error": "",
       "score": {

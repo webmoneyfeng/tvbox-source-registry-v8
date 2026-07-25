@@ -1,4 +1,4 @@
-export const HEALTH_SCHEMA_VERSION = 'v8-health-1';
+export const HEALTH_SCHEMA_VERSION = 'v8-health-2';
 export const FAILURES_TO_HIDE = 3;
 export const SUCCESSES_TO_RECOVER = 2;
 export const FAILURES_TO_QUARANTINE = 6;
@@ -93,11 +93,17 @@ export function applyProbe(previous, source, probe, checkedAt) {
     checkedAt,
     latencyMs: Number.isFinite(probe.latencyMs) ? probe.latencyMs : null,
     classCount: Number(probe.classCount || 0),
+    categoryCount: Number(probe.categoryCount || 0),
+    categoryOkCount: Number(probe.categoryOkCount || 0),
+    categoryChecks: Array.isArray(probe.categoryChecks) ? probe.categoryChecks : [],
     listCount: Number(probe.listCount || 0),
     searchCount: Number(probe.searchCount || 0),
     searchEvidence: Array.isArray(probe.searchEvidence) ? probe.searchEvidence : [],
     detailOk: Boolean(probe.detailOk),
     playOk: Boolean(probe.playOk),
+    playBranchCount: Number(probe.playBranchCount || 0),
+    directBranchCount: Number(probe.directBranchCount || 0),
+    invalidBranchCount: Number(probe.invalidBranchCount || 0),
     latestAt: probe.latestAt || null,
     channelCount: Number(probe.channelCount || 0),
     groupCount: Number(probe.groupCount || 0),

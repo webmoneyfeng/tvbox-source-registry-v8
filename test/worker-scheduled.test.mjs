@@ -30,7 +30,7 @@ test('scheduled harness probes VOD and LIVE in bounded batches and persists heal
   };
   try {
     await worker.scheduled({ cron: '*/5 * * * *' }, env);
-    const state = JSON.parse(store.get('registry:health:v2'));
+    const state = JSON.parse(store.get('registry:health:v3'));
     assert.ok(state.generatedAt);
     assert.ok(Object.keys(state.sources).length > 0);
     assert.ok(state.revision);

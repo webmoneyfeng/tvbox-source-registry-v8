@@ -82,15 +82,15 @@ test('discovered source matching a seeded physical path is ignored', () => {
   assert.equal(matches.length, 1);
 });
 
-test('live entry is published only after three independent sources are active', () => {
+test('live entry is published only after ten validated source links are active', () => {
   const state = emptyHealthState('2026-07-19T00:00:00.000Z');
   state.liveCatalog = [{ name: 'Channel', group: 'News', url: 'https://example.test/live.m3u8' }];
   for (const source of LIVE_SOURCE_REGISTRY) state.sources[sourceHealthKey(source)] = { state: 'WATCH' };
-  for (const source of LIVE_SOURCE_REGISTRY.slice(0, 2)) {
+  for (const source of LIVE_SOURCE_REGISTRY.slice(0, 9)) {
     state.sources[sourceHealthKey(source)] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
   }
   assert.equal(buildConfig('https://v8.example', state).lives.length, 0);
-  const third = LIVE_SOURCE_REGISTRY[2];
-  state.sources[sourceHealthKey(third)] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
-  assert.equal(buildConfig('https://v8.example', state).lives.length, 3);
+  const tenth = LIVE_SOURCE_REGISTRY[9];
+  state.sources[sourceHealthKey(tenth)] = { state: 'ACTIVE', ok: true, lastSuccessAt: '2026-07-19T00:00:00.000Z' };
+  assert.equal(buildConfig('https://v8.example', state).lives.length, 10);
 });

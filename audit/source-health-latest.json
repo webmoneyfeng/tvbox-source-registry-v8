@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-07-25T08:10:36.549Z",
-  "registryVersion": "v8.1.2",
-  "candidateCount": 11,
-  "active": 11,
+  "generatedAt": "2026-07-25T11:09:30.755Z",
+  "registryVersion": "v8.1.3",
+  "candidateCount": 10,
+  "active": 10,
   "failed": 0,
+  "target": 10,
+  "targetMet": true,
   "rows": [
     {
       "kind": "vod",
@@ -11,7 +13,23 @@
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 54,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
@@ -28,162 +46,13 @@
       "searchCount": 4,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 1056,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 1555,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T03:02:58.000Z",
-      "latencyMs": 4446,
-      "error": "",
-      "score": {
-        "total": 97.5,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 2.5
-      }
-    },
-    {
-      "kind": "vod",
-      "slug": "bfzy",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 20
-        }
-      ],
-      "searchCount": 40,
-      "detailOk": true,
-      "playOk": true,
-      "mediaLatencyMs": 948,
-      "mediaStatus": 200,
-      "latestAt": "2026-07-25T08:10:34.000Z",
-      "latencyMs": 3376,
-      "error": "",
-      "score": {
-        "total": 97.5,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 2.5
-      }
-    },
-    {
-      "kind": "vod",
-      "slug": "hhzy-v2",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "mediaLatencyMs": 1182,
-      "mediaStatus": 200,
-      "latestAt": "2026-07-25T08:06:02.000Z",
-      "latencyMs": 3393,
-      "error": "",
-      "score": {
-        "total": 97.5,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 2.5
-      }
-    },
-    {
-      "kind": "vod",
-      "slug": "hongniu",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "mediaLatencyMs": 619,
-      "mediaStatus": 200,
-      "latestAt": "2026-07-25T07:48:03.000Z",
-      "latencyMs": 2578,
-      "error": "",
-      "score": {
-        "total": 99,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 4
-      }
-    },
-    {
-      "kind": "vod",
-      "slug": "modu",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "mediaLatencyMs": 676,
-      "mediaStatus": 200,
-      "latestAt": "2026-07-25T07:31:56.000Z",
-      "latencyMs": 8924,
+      "latestAt": "2026-07-25T08:48:37.000Z",
+      "latencyMs": 6513,
       "error": "",
       "score": {
         "total": 96,
@@ -197,11 +66,141 @@
     },
     {
       "kind": "vod",
-      "slug": "lzi-v2",
+      "slug": "hongniu",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 31,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 6
+        }
+      ],
+      "searchCount": 26,
+      "detailOk": true,
+      "playOk": true,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 283,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T11:08:04.000Z",
+      "latencyMs": 5688,
+      "error": "",
+      "score": {
+        "total": 96,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
+      }
+    },
+    {
+      "kind": "vod",
+      "slug": "modu",
+      "ok": true,
+      "hardViolation": false,
+      "httpStatus": 200,
+      "classCount": 42,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 6
+        }
+      ],
+      "searchCount": 26,
+      "detailOk": true,
+      "playOk": true,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 700,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T10:49:12.000Z",
+      "latencyMs": 10003,
+      "error": "",
+      "score": {
+        "total": 96,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
+      }
+    },
+    {
+      "kind": "vod",
+      "slug": "lzi",
+      "ok": true,
+      "hardViolation": false,
+      "httpStatus": 200,
+      "classCount": 44,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
@@ -218,10 +217,70 @@
       "searchCount": 40,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 734,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 760,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T06:18:26.000Z",
-      "latencyMs": 4634,
+      "latestAt": "2026-07-25T11:07:35.000Z",
+      "latencyMs": 5493,
+      "error": "",
+      "score": {
+        "total": 96,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
+      }
+    },
+    {
+      "kind": "vod",
+      "slug": "bfzy",
+      "ok": true,
+      "hardViolation": false,
+      "httpStatus": 200,
+      "classCount": 49,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 20
+        }
+      ],
+      "searchCount": 40,
+      "detailOk": true,
+      "playOk": true,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 1135,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T11:09:37.000Z",
+      "latencyMs": 4653,
       "error": "",
       "score": {
         "total": 97.5,
@@ -235,40 +294,116 @@
     },
     {
       "kind": "vod",
-      "slug": "ffzy-v2",
+      "slug": "jszy",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 39,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
           "term": "天道",
           "ok": true,
-          "count": 10
+          "count": 14
         },
         {
           "term": "亮剑",
           "ok": true,
-          "count": 4
+          "count": 5
         }
       ],
-      "searchCount": 14,
+      "searchCount": 19,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 1084,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 1443,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T06:36:46.000Z",
-      "latencyMs": 2372,
+      "latestAt": "2026-07-25T11:09:12.000Z",
+      "latencyMs": 7672,
       "error": "",
       "score": {
-        "total": 99,
+        "total": 96,
         "availability": 25,
         "contract": 20,
         "freshness": 20,
         "coverage": 15,
         "playback": 15,
-        "latency": 4
+        "latency": 1
+      }
+    },
+    {
+      "kind": "vod",
+      "slug": "jinying",
+      "ok": true,
+      "hardViolation": false,
+      "httpStatus": 200,
+      "classCount": 31,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
+      "listCount": 20,
+      "searchEvidence": [
+        {
+          "term": "天道",
+          "ok": true,
+          "count": 20
+        },
+        {
+          "term": "亮剑",
+          "ok": true,
+          "count": 6
+        }
+      ],
+      "searchCount": 26,
+      "detailOk": true,
+      "playOk": true,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 1067,
+      "mediaStatus": 200,
+      "latestAt": "2026-07-25T11:08:03.000Z",
+      "latencyMs": 9522,
+      "error": "",
+      "score": {
+        "total": 96,
+        "availability": 25,
+        "contract": 20,
+        "freshness": 20,
+        "coverage": 15,
+        "playback": 15,
+        "latency": 1
       }
     },
     {
@@ -277,7 +412,23 @@
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 59,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
@@ -294,10 +445,13 @@
       "searchCount": 28,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 1037,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 827,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T06:54:22.000Z",
-      "latencyMs": 2337,
+      "latestAt": "2026-07-25T10:14:02.000Z",
+      "latencyMs": 2922,
       "error": "",
       "score": {
         "total": 99,
@@ -311,49 +465,27 @@
     },
     {
       "kind": "vod",
-      "slug": "subo",
-      "ok": true,
-      "hardViolation": false,
-      "httpStatus": 200,
-      "classCount": 0,
-      "listCount": 20,
-      "searchEvidence": [
-        {
-          "term": "天道",
-          "ok": true,
-          "count": 20
-        },
-        {
-          "term": "亮剑",
-          "ok": true,
-          "count": 6
-        }
-      ],
-      "searchCount": 26,
-      "detailOk": true,
-      "playOk": true,
-      "mediaLatencyMs": 1375,
-      "mediaStatus": 200,
-      "latestAt": "2026-07-25T08:07:27.000Z",
-      "latencyMs": 5977,
-      "error": "",
-      "score": {
-        "total": 96,
-        "availability": 25,
-        "contract": 20,
-        "freshness": 20,
-        "coverage": 15,
-        "playback": 15,
-        "latency": 1
-      }
-    },
-    {
-      "kind": "vod",
       "slug": "lovedan",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 70,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
@@ -370,28 +502,47 @@
       "searchCount": 30,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 175,
+      "playBranchCount": 6,
+      "directBranchCount": 6,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 948,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T08:02:47.000Z",
-      "latencyMs": 4499,
+      "latestAt": "2026-07-25T11:01:10.000Z",
+      "latencyMs": 6463,
       "error": "",
       "score": {
-        "total": 97.5,
+        "total": 96,
         "availability": 25,
         "contract": 20,
         "freshness": 20,
         "coverage": 15,
         "playback": 15,
-        "latency": 2.5
+        "latency": 1
       }
     },
     {
       "kind": "vod",
-      "slug": "jinying",
+      "slug": "360zy",
       "ok": true,
       "hardViolation": false,
       "httpStatus": 200,
-      "classCount": 0,
+      "classCount": 51,
+      "categoryCount": 3,
+      "categoryOkCount": 3,
+      "categoryChecks": [
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        },
+        {
+          "ok": true,
+          "count": 20
+        }
+      ],
       "listCount": 20,
       "searchEvidence": [
         {
@@ -402,25 +553,28 @@
         {
           "term": "亮剑",
           "ok": true,
-          "count": 6
+          "count": 5
         }
       ],
-      "searchCount": 26,
+      "searchCount": 25,
       "detailOk": true,
       "playOk": true,
-      "mediaLatencyMs": 1383,
+      "playBranchCount": 1,
+      "directBranchCount": 1,
+      "invalidBranchCount": 0,
+      "mediaLatencyMs": 1243,
       "mediaStatus": 200,
-      "latestAt": "2026-07-25T08:10:07.000Z",
-      "latencyMs": 6102,
+      "latestAt": "2026-07-25T10:16:30.000Z",
+      "latencyMs": 4591,
       "error": "",
       "score": {
-        "total": 96,
+        "total": 97.5,
         "availability": 25,
         "contract": 20,
         "freshness": 20,
         "coverage": 15,
         "playback": 15,
-        "latency": 1
+        "latency": 2.5
       }
     }
   ],
