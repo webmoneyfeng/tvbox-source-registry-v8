@@ -1,0 +1,569 @@
+{
+  "generatedAt": "2026-07-25T12:55:06.851Z",
+  "bases": [
+    "https://tv.webhome.eu.org",
+    "https://tv.webclound.eu.org",
+    "https://tvbox-source-registry-v8.feng-yang.workers.dev"
+  ],
+  "checks": {
+    "endpointsReachable": true,
+    "sameRevision": true,
+    "sameVersion": true,
+    "configNoStore": false,
+    "statusNoStore": false,
+    "sourceNamesDistinct": true,
+    "liveNamesDistinct": true,
+    "noCategoriesRewrite": true,
+    "clientFieldContract": true,
+    "noHealthLabels": true
+  },
+  "rows": [
+    {
+      "base": "https://tv.webhome.eu.org",
+      "checkedAt": "2026-07-25T12:55:01.972Z",
+      "config": {
+        "status": 200,
+        "ok": true,
+        "hash": "132282e6",
+        "headers": {
+          "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+          "cacheControl": "public, max-age=60",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "sites": [
+          {
+            "name": "百度资源",
+            "api": "https://api.apibdzy.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "红牛直连",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "魔都动漫",
+            "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "量子直连",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "暴风资源",
+            "api": "https://bfzyapi.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "爱旦资源",
+            "api": "https://www.lovedan.net/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "360直连",
+            "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          }
+        ],
+        "lives": [
+          {
+            "name": "范明明 IPv6",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+          },
+          {
+            "name": "ZBDS IPv4",
+            "type": 0,
+            "url": "https://live.zbds.org/tv/iptv4.m3u"
+          },
+          {
+            "name": "IPTV-org 日本",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u"
+          },
+          {
+            "name": "IPTV-org 印度",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"
+          },
+          {
+            "name": "IPTV-org 意大利",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u"
+          },
+          {
+            "name": "IPTV-org 美国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u"
+          },
+          {
+            "name": "IPTV-org 英国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u"
+          },
+          {
+            "name": "IPTV-org 德国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u"
+          },
+          {
+            "name": "IPTV-org 法国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u"
+          },
+          {
+            "name": "IPTV-org 泰国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u"
+          },
+          {
+            "name": "IPTV-org 西班牙",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u"
+          },
+          {
+            "name": "IPTV-org 荷兰",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/nl.m3u"
+          }
+        ],
+        "registry": {
+          "version": "v8.1.3",
+          "mode": "validated-direct-source-registry",
+          "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+          "updatedAt": "2026-07-25T12:40:39.417Z",
+          "vodCount": 7,
+          "liveCount": 12,
+          "liveChannelCount": 2000,
+          "degraded": true,
+          "health": "https://tv.webhome.eu.org/status.json",
+          "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
+        }
+      },
+      "status": {
+        "status": 200,
+        "ok": true,
+        "hash": "8ddb3392",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "version": "tvbox-source-registry-v8.1.3",
+        "registryVersion": "v8.1.3",
+        "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+        "vod": {
+          "registered": 10,
+          "visible": 7,
+          "providers": 7,
+          "target": "10+"
+        },
+        "live": {
+          "registered": 12,
+          "visible": 12,
+          "providers": 3,
+          "channels": 2000,
+          "target": "10+"
+        },
+        "degraded": true
+      },
+      "sources": {
+        "status": 200,
+        "ok": true,
+        "hash": "d23cc803",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        }
+      }
+    },
+    {
+      "base": "https://tv.webclound.eu.org",
+      "checkedAt": "2026-07-25T12:55:03.111Z",
+      "config": {
+        "status": 200,
+        "ok": true,
+        "hash": "10b19d84",
+        "headers": {
+          "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+          "cacheControl": "public, max-age=60",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "sites": [
+          {
+            "name": "百度资源",
+            "api": "https://api.apibdzy.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "红牛直连",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "魔都动漫",
+            "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "量子直连",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "暴风资源",
+            "api": "https://bfzyapi.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "爱旦资源",
+            "api": "https://www.lovedan.net/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "360直连",
+            "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          }
+        ],
+        "lives": [
+          {
+            "name": "范明明 IPv6",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+          },
+          {
+            "name": "ZBDS IPv4",
+            "type": 0,
+            "url": "https://live.zbds.org/tv/iptv4.m3u"
+          },
+          {
+            "name": "IPTV-org 日本",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u"
+          },
+          {
+            "name": "IPTV-org 印度",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"
+          },
+          {
+            "name": "IPTV-org 意大利",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u"
+          },
+          {
+            "name": "IPTV-org 美国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u"
+          },
+          {
+            "name": "IPTV-org 英国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u"
+          },
+          {
+            "name": "IPTV-org 德国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u"
+          },
+          {
+            "name": "IPTV-org 法国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u"
+          },
+          {
+            "name": "IPTV-org 泰国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u"
+          },
+          {
+            "name": "IPTV-org 西班牙",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u"
+          },
+          {
+            "name": "IPTV-org 荷兰",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/nl.m3u"
+          }
+        ],
+        "registry": {
+          "version": "v8.1.3",
+          "mode": "validated-direct-source-registry",
+          "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+          "updatedAt": "2026-07-25T12:40:39.417Z",
+          "vodCount": 7,
+          "liveCount": 12,
+          "liveChannelCount": 2000,
+          "degraded": true,
+          "health": "https://tv.webclound.eu.org/status.json",
+          "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
+        }
+      },
+      "status": {
+        "status": 200,
+        "ok": true,
+        "hash": "acd48c78",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "version": "tvbox-source-registry-v8.1.3",
+        "registryVersion": "v8.1.3",
+        "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+        "vod": {
+          "registered": 10,
+          "visible": 7,
+          "providers": 7,
+          "target": "10+"
+        },
+        "live": {
+          "registered": 12,
+          "visible": 12,
+          "providers": 3,
+          "channels": 2000,
+          "target": "10+"
+        },
+        "degraded": true
+      },
+      "sources": {
+        "status": 200,
+        "ok": true,
+        "hash": "d23cc803",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        }
+      }
+    },
+    {
+      "base": "https://tvbox-source-registry-v8.feng-yang.workers.dev",
+      "checkedAt": "2026-07-25T12:55:06.850Z",
+      "config": {
+        "status": 200,
+        "ok": true,
+        "hash": "ae0bc249",
+        "headers": {
+          "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+          "cacheControl": "public, max-age=60",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "sites": [
+          {
+            "name": "百度资源",
+            "api": "https://api.apibdzy.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "红牛直连",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "魔都动漫",
+            "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "量子直连",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "暴风资源",
+            "api": "https://bfzyapi.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "爱旦资源",
+            "api": "https://www.lovedan.net/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          },
+          {
+            "name": "360直连",
+            "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+            "filterable": 0,
+            "changeable": 0,
+            "hasCategories": false
+          }
+        ],
+        "lives": [
+          {
+            "name": "范明明 IPv6",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+          },
+          {
+            "name": "ZBDS IPv4",
+            "type": 0,
+            "url": "https://live.zbds.org/tv/iptv4.m3u"
+          },
+          {
+            "name": "IPTV-org 日本",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u"
+          },
+          {
+            "name": "IPTV-org 印度",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"
+          },
+          {
+            "name": "IPTV-org 意大利",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u"
+          },
+          {
+            "name": "IPTV-org 美国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u"
+          },
+          {
+            "name": "IPTV-org 英国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u"
+          },
+          {
+            "name": "IPTV-org 德国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u"
+          },
+          {
+            "name": "IPTV-org 法国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u"
+          },
+          {
+            "name": "IPTV-org 泰国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u"
+          },
+          {
+            "name": "IPTV-org 西班牙",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u"
+          },
+          {
+            "name": "IPTV-org 荷兰",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/nl.m3u"
+          }
+        ],
+        "registry": {
+          "version": "v8.1.3",
+          "mode": "validated-direct-source-registry",
+          "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+          "updatedAt": "2026-07-25T12:40:39.417Z",
+          "vodCount": 7,
+          "liveCount": 12,
+          "liveChannelCount": 2000,
+          "degraded": true,
+          "health": "https://tvbox-source-registry-v8.feng-yang.workers.dev/status.json",
+          "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
+        }
+      },
+      "status": {
+        "status": 200,
+        "ok": true,
+        "hash": "7657ee4f",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "version": "tvbox-source-registry-v8.1.3",
+        "registryVersion": "v8.1.3",
+        "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+        "vod": {
+          "registered": 10,
+          "visible": 7,
+          "providers": 7,
+          "target": "10+"
+        },
+        "live": {
+          "registered": 12,
+          "visible": 12,
+          "providers": 3,
+          "channels": 2000,
+          "target": "10+"
+        },
+        "degraded": true
+      },
+      "sources": {
+        "status": 200,
+        "ok": true,
+        "hash": "d23cc803",
+        "headers": {
+          "etag": "",
+          "cacheControl": "public, max-age=30",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        }
+      }
+    }
+  ],
+  "pass": false
+}

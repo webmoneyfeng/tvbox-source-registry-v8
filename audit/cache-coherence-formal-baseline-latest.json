@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-07-25T12:55:06.851Z",
+  "checks": {
+    "endpointsReachable": true,
+    "sameRevision": true,
+    "sameVersion": true,
+    "configNoStore": false,
+    "statusNoStore": false,
+    "sourceNamesDistinct": true,
+    "liveNamesDistinct": true,
+    "noCategoriesRewrite": true,
+    "clientFieldContract": true,
+    "noHealthLabels": true,
+    "sameConfigHash": false,
+    "sameStatusHash": false
+  },
+  "rows": [
+    {
+      "base": "https://tv.webhome.eu.org",
+      "config": {
+        "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+        "cacheControl": "public, max-age=60",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "status": {
+        "etag": "",
+        "cacheControl": "public, max-age=30",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+      "version": "tvbox-source-registry-v8.1.3"
+    },
+    {
+      "base": "https://tv.webclound.eu.org",
+      "config": {
+        "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+        "cacheControl": "public, max-age=60",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "status": {
+        "etag": "",
+        "cacheControl": "public, max-age=30",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+      "version": "tvbox-source-registry-v8.1.3"
+    },
+    {
+      "base": "https://tvbox-source-registry-v8.feng-yang.workers.dev",
+      "config": {
+        "etag": "W/\"vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9\"",
+        "cacheControl": "public, max-age=60",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "status": {
+        "etag": "",
+        "cacheControl": "public, max-age=30",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "revision": "vod:baidu|live:fanmingming-ipv6|vod:hongniu|live:zbds-ipv4|vod:modu|live:iptv-org-jp|vod:lzi|live:iptv-org-in|vod:bfzy|live:iptv-org-it|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|vod:lovedan|live:iptv-org-fr|vod:360zy|live:iptv-org-th|live:iptv-org-es|live:iptv-org-nl|live:5e115dc9",
+      "version": "tvbox-source-registry-v8.1.3"
+    }
+  ]
+}

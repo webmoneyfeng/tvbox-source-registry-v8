@@ -1,0 +1,341 @@
+{
+  "generatedAt": "2026-07-25T13:14:20.165Z",
+  "registryVersion": "v8.1.4",
+  "policy": "Names remain the registry or upstream-provided display names. No category, title, sort or filter rewriting is performed.",
+  "counts": {
+    "total": 32,
+    "vod": 14,
+    "live": 18
+  },
+  "checks": {
+    "uniqueNames": true,
+    "uniqueApis": true,
+    "traceableIdentity": true
+  },
+  "duplicateNames": [],
+  "duplicateApis": [],
+  "missingIdentity": [],
+  "rows": [
+    {
+      "kind": "vod",
+      "slug": "hhzy-m3u8",
+      "name": "豪华直连",
+      "provider": "hhzy",
+      "host": "hhzyapi.com",
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "physicalSource": "hhzyapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "hongniu-m3u8",
+      "name": "红牛直连",
+      "provider": "hongniu",
+      "host": "www.hongniuzy2.com",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "physicalSource": "hongniuzy2.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "modu",
+      "name": "魔都动漫",
+      "provider": "modu",
+      "host": "caiji.moduapi.cc",
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+      "physicalSource": "caiji.moduapi.cc",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "lzi-m3u8",
+      "name": "量子直连",
+      "provider": "lzi",
+      "host": "cj.lziapi.com",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+      "physicalSource": "cj.lziapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "ffzy-m3u8",
+      "name": "非凡直连",
+      "provider": "ffzy",
+      "host": "ffzy.tv",
+      "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+      "physicalSource": "ffzy.tv",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "jinying",
+      "name": "金鹰资源",
+      "provider": "jinying",
+      "host": "jyzyapi.com",
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+      "physicalSource": "jyzyapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "zuida",
+      "name": "最大资源",
+      "provider": "zuida",
+      "host": "api.zuidapi.com",
+      "api": "https://api.zuidapi.com/api.php/provide/vod/",
+      "physicalSource": "api.zuidapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "subo-m3u8",
+      "name": "速播直连",
+      "provider": "subo",
+      "host": "suboziyuan.net",
+      "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+      "physicalSource": "suboziyuan.net",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "360zy-direct",
+      "name": "360直连",
+      "provider": "360zy",
+      "host": "360zy.com",
+      "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+      "physicalSource": "360zy.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "xinlang-m3u8",
+      "name": "新浪直连",
+      "provider": "xinlang",
+      "host": "api.xinlangapi.com",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+      "physicalSource": "api.xinlangapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "baidu",
+      "name": "百度资源",
+      "provider": "baidu",
+      "host": "api.apibdzy.com",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
+      "physicalSource": "api.apibdzy.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "bfzy",
+      "name": "暴风资源",
+      "provider": "bfzy",
+      "host": "bfzyapi.com",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
+      "physicalSource": "bfzyapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "jszy-m3u8",
+      "name": "极速直连",
+      "provider": "jszy",
+      "host": "jszyapi.com",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+      "physicalSource": "jszyapi.com",
+      "traceable": true
+    },
+    {
+      "kind": "vod",
+      "slug": "lovedan",
+      "name": "爱旦资源",
+      "provider": "lovedan",
+      "host": "www.lovedan.net",
+      "api": "https://www.lovedan.net/api.php/provide/vod/",
+      "physicalSource": "lovedan.net",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-ipv6",
+      "name": "范明明 IPv6",
+      "provider": "fanmingming",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "physicalSource": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-cn",
+      "name": "IPTV-org 中国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-hk",
+      "name": "IPTV-org 香港",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-kr",
+      "name": "IPTV-org 韩国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-us",
+      "name": "IPTV-org 美国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-uk",
+      "name": "IPTV-org 英国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-de",
+      "name": "IPTV-org 德国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-ca",
+      "name": "IPTV-org 加拿大",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "suxuang-ipv4",
+      "name": "Suxuang IPv4",
+      "provider": "suxuang",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "physicalSource": "raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-result",
+      "name": "Guovin 汇总",
+      "provider": "guovin",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "physicalSource": "raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-ipv4",
+      "name": "Guovin IPv4",
+      "provider": "guovin",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+      "physicalSource": "raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-th",
+      "name": "IPTV-org 泰国",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-vn",
+      "name": "IPTV-org 越南",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/vn.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/vn.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-it",
+      "name": "IPTV-org 意大利",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-in",
+      "name": "IPTV-org 印度",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-br",
+      "name": "IPTV-org 巴西",
+      "provider": "iptv-org",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "physicalSource": "raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "zbds-ipv4",
+      "name": "ZBDS IPv4",
+      "provider": "zbds",
+      "host": "live.zbds.org",
+      "api": "https://live.zbds.org/tv/iptv4.m3u",
+      "physicalSource": "live.zbds.org/tv/iptv4.m3u",
+      "traceable": true
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-index",
+      "name": "范明明全量",
+      "provider": "fanmingming",
+      "host": "raw.githubusercontent.com",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "physicalSource": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "traceable": true
+    }
+  ],
+  "pass": true
+}

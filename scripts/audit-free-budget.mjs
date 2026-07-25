@@ -6,12 +6,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const limits = { workerRequestsPerDay: 100000, subrequestsPerInvocation: 50, kvReadsPerDay: 100000, kvWritesPerDay: 1000, cronTriggers: 5 };
 const estimate = {
   cronInvocationsPerDay: 288,
-  maximumProbeSourcesPerInvocation: 4,
-  maximumProbeSubrequestsPerSource: 6,
+  maximumProbeSourcesPerInvocation: 3,
+  maximumProbeSubrequestsPerSource: 10,
   maximumRedirectHopsPerRequest: 1,
-  discoverySubrequests: 2,
+  discoverySubrequests: 1,
   kvSubrequests: 2,
-  maximumSubrequestsPerInvocation: 28,
+  maximumSubrequestsPerInvocation: 33,
   maximumKvWritesPerDay: 288,
   configuredCronTriggers: 1,
 };

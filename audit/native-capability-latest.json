@@ -1,0 +1,4193 @@
+{
+  "generatedAt": "2026-07-25T12:54:15.750Z",
+  "policy": "Native categories, filters and request semantics are observed and passed through; no categories whitelist or synthetic sorting is generated.",
+  "sources": 14,
+  "passed": 13,
+  "rows": [
+    {
+      "slug": "hhzy-m3u8",
+      "name": "豪华直连",
+      "provider": "hhzy",
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "checkedAt": "2026-07-25T12:52:35.198Z",
+      "native": {
+        "classCount": 39,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电视剧",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "欧美剧",
+            "parentId": "1"
+          },
+          {
+            "id": "4",
+            "name": "香港剧",
+            "parentId": "1"
+          },
+          {
+            "id": "5",
+            "name": "韩剧",
+            "parentId": "1"
+          },
+          {
+            "id": "6",
+            "name": "日剧",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "马泰剧",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "9",
+            "name": "动作片",
+            "parentId": "2"
+          },
+          {
+            "id": "10",
+            "name": "爱情片",
+            "parentId": "2"
+          },
+          {
+            "id": "11",
+            "name": "喜剧片",
+            "parentId": "2"
+          },
+          {
+            "id": "12",
+            "name": "科幻片",
+            "parentId": "2"
+          },
+          {
+            "id": "13",
+            "name": "恐怖片",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "剧情片",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "战争片",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "记录片",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "20",
+            "name": "内地剧",
+            "parentId": "1"
+          },
+          {
+            "id": "23",
+            "name": "动画片",
+            "parentId": "2"
+          },
+          {
+            "id": "24",
+            "name": "中国动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "25",
+            "name": "日本动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "26",
+            "name": "欧美动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "27",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "28",
+            "name": "台湾剧",
+            "parentId": "1"
+          },
+          {
+            "id": "30",
+            "name": "大陆综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "31",
+            "name": "日韩综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "32",
+            "name": "港台综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "33",
+            "name": "欧美综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "34",
+            "name": "灾难片",
+            "parentId": "2"
+          },
+          {
+            "id": "35",
+            "name": "悬疑片",
+            "parentId": "2"
+          },
+          {
+            "id": "36",
+            "name": "犯罪片",
+            "parentId": "2"
+          },
+          {
+            "id": "37",
+            "name": "奇幻片",
+            "parentId": "2"
+          },
+          {
+            "id": "38",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "39",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "40",
+            "name": "体育赛事",
+            "parentId": "0"
+          },
+          {
+            "id": "41",
+            "name": "足球",
+            "parentId": "40"
+          },
+          {
+            "id": "42",
+            "name": "篮球",
+            "parentId": "40"
+          },
+          {
+            "id": "43",
+            "name": "台球",
+            "parentId": "40"
+          },
+          {
+            "id": "44",
+            "name": "其他赛事",
+            "parentId": "40"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1173
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 524
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 744
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 1522
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1433
+          }
+        ],
+        "detail": {
+          "id": 131948,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.hhuus.com/play/bqx7VKDa/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_hhzy_m3u8",
+          "name": "豪华直连",
+          "type": 1,
+          "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "hongniu-m3u8",
+      "name": "红牛直连",
+      "provider": "hongniu",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "checkedAt": "2026-07-25T12:52:39.214Z",
+      "native": {
+        "classCount": 31,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": ""
+          },
+          {
+            "id": "2",
+            "name": "连续剧",
+            "parentId": ""
+          },
+          {
+            "id": "3",
+            "name": "综艺",
+            "parentId": ""
+          },
+          {
+            "id": "4",
+            "name": "动漫",
+            "parentId": ""
+          },
+          {
+            "id": "5",
+            "name": "动作片",
+            "parentId": ""
+          },
+          {
+            "id": "6",
+            "name": "喜剧片",
+            "parentId": ""
+          },
+          {
+            "id": "7",
+            "name": "爱情片",
+            "parentId": ""
+          },
+          {
+            "id": "8",
+            "name": "科幻片",
+            "parentId": ""
+          },
+          {
+            "id": "9",
+            "name": "恐怖片",
+            "parentId": ""
+          },
+          {
+            "id": "10",
+            "name": "剧情片",
+            "parentId": ""
+          },
+          {
+            "id": "11",
+            "name": "战争片",
+            "parentId": ""
+          },
+          {
+            "id": "12",
+            "name": "国产剧",
+            "parentId": ""
+          },
+          {
+            "id": "13",
+            "name": "港澳剧",
+            "parentId": ""
+          },
+          {
+            "id": "14",
+            "name": "日剧",
+            "parentId": ""
+          },
+          {
+            "id": "15",
+            "name": "欧美剧",
+            "parentId": ""
+          },
+          {
+            "id": "16",
+            "name": "台湾剧",
+            "parentId": ""
+          },
+          {
+            "id": "17",
+            "name": "泰剧",
+            "parentId": ""
+          },
+          {
+            "id": "18",
+            "name": "韩剧",
+            "parentId": ""
+          },
+          {
+            "id": "19",
+            "name": "纪录片",
+            "parentId": ""
+          },
+          {
+            "id": "20",
+            "name": "动漫电影",
+            "parentId": ""
+          },
+          {
+            "id": "21",
+            "name": "伦理片",
+            "parentId": ""
+          },
+          {
+            "id": "29",
+            "name": "体育赛事",
+            "parentId": ""
+          },
+          {
+            "id": "30",
+            "name": "短剧",
+            "parentId": ""
+          },
+          {
+            "id": "31",
+            "name": "预告片",
+            "parentId": ""
+          },
+          {
+            "id": "32",
+            "name": "足球",
+            "parentId": ""
+          },
+          {
+            "id": "33",
+            "name": "篮球",
+            "parentId": ""
+          },
+          {
+            "id": "34",
+            "name": "台球",
+            "parentId": ""
+          },
+          {
+            "id": "35",
+            "name": "其他赛事",
+            "parentId": ""
+          },
+          {
+            "id": "36",
+            "name": "中国动漫",
+            "parentId": ""
+          },
+          {
+            "id": "37",
+            "name": "日本动漫",
+            "parentId": ""
+          },
+          {
+            "id": "38",
+            "name": "欧美动漫",
+            "parentId": ""
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 827
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 325
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 2
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1046
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 1978
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2134
+          }
+        ],
+        "detail": {
+          "id": 147942,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 51,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://hn.bfvvs.com/play/e0R8gwNb/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_hongniu_m3u8",
+          "name": "红牛直连",
+          "type": 1,
+          "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "modu",
+      "name": "魔都动漫",
+      "provider": "modu",
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+      "checkedAt": "2026-07-25T12:52:50.569Z",
+      "native": {
+        "classCount": 42,
+        "classes": [
+          {
+            "id": "1",
+            "name": "国产动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "日韩动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "欧美动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "港台动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "5",
+            "name": "动漫电影",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "里番动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "7",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "8",
+            "name": "连续剧",
+            "parentId": "0"
+          },
+          {
+            "id": "9",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "10",
+            "name": "动作片",
+            "parentId": "7"
+          },
+          {
+            "id": "11",
+            "name": "喜剧片",
+            "parentId": "7"
+          },
+          {
+            "id": "12",
+            "name": "爱情片",
+            "parentId": "7"
+          },
+          {
+            "id": "13",
+            "name": "科幻片",
+            "parentId": "7"
+          },
+          {
+            "id": "14",
+            "name": "恐怖片",
+            "parentId": "7"
+          },
+          {
+            "id": "15",
+            "name": "剧情片",
+            "parentId": "7"
+          },
+          {
+            "id": "16",
+            "name": "战争片",
+            "parentId": "7"
+          },
+          {
+            "id": "17",
+            "name": "惊悚片",
+            "parentId": "7"
+          },
+          {
+            "id": "18",
+            "name": "家庭片",
+            "parentId": "7"
+          },
+          {
+            "id": "19",
+            "name": "古装片",
+            "parentId": "7"
+          },
+          {
+            "id": "20",
+            "name": "历史片",
+            "parentId": "7"
+          },
+          {
+            "id": "21",
+            "name": "悬疑片",
+            "parentId": "7"
+          },
+          {
+            "id": "22",
+            "name": "犯罪片",
+            "parentId": "7"
+          },
+          {
+            "id": "23",
+            "name": "灾难片",
+            "parentId": "7"
+          },
+          {
+            "id": "24",
+            "name": "记录片",
+            "parentId": "7"
+          },
+          {
+            "id": "25",
+            "name": "短片",
+            "parentId": "7"
+          },
+          {
+            "id": "26",
+            "name": "国产剧",
+            "parentId": "8"
+          },
+          {
+            "id": "27",
+            "name": "香港剧",
+            "parentId": "8"
+          },
+          {
+            "id": "28",
+            "name": "韩国剧",
+            "parentId": "8"
+          },
+          {
+            "id": "29",
+            "name": "欧美剧",
+            "parentId": "8"
+          },
+          {
+            "id": "30",
+            "name": "台湾剧",
+            "parentId": "8"
+          },
+          {
+            "id": "31",
+            "name": "日本剧",
+            "parentId": "8"
+          },
+          {
+            "id": "32",
+            "name": "海外剧",
+            "parentId": "8"
+          },
+          {
+            "id": "33",
+            "name": "泰国剧",
+            "parentId": "8"
+          },
+          {
+            "id": "34",
+            "name": "大陆综艺",
+            "parentId": "9"
+          },
+          {
+            "id": "35",
+            "name": "港台综艺",
+            "parentId": "9"
+          },
+          {
+            "id": "36",
+            "name": "日韩综艺",
+            "parentId": "9"
+          },
+          {
+            "id": "37",
+            "name": "欧美综艺",
+            "parentId": "9"
+          },
+          {
+            "id": "38",
+            "name": "短剧",
+            "parentId": "8"
+          },
+          {
+            "id": "39",
+            "name": "伦理片",
+            "parentId": "7"
+          },
+          {
+            "id": "40",
+            "name": "体育",
+            "parentId": "0"
+          },
+          {
+            "id": "41",
+            "name": "足球",
+            "parentId": "40"
+          },
+          {
+            "id": "42",
+            "name": "AI漫剧",
+            "parentId": "0"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 3013
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1131
+        },
+        "category": {
+          "id": "1",
+          "name": "国产动漫",
+          "status": 200,
+          "schemaOk": true,
+          "count": 20
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1122
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 2616
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2940
+          }
+        ],
+        "detail": {
+          "id": 78682,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 74,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.modujx11.com/20260314/m8Wq8e9X/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_modu",
+          "name": "魔都动漫",
+          "type": 1,
+          "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "lzi-m3u8",
+      "name": "量子直连",
+      "provider": "lzi",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+      "checkedAt": "2026-07-25T12:52:55.902Z",
+      "native": {
+        "classCount": 44,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影片",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "连续剧",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "综艺片",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "动漫片",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": "1"
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": "1"
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": "1"
+          },
+          {
+            "id": "11",
+            "name": "剧情片",
+            "parentId": "1"
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": "1"
+          },
+          {
+            "id": "13",
+            "name": "国产剧",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "香港剧",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "韩国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "欧美剧",
+            "parentId": "2"
+          },
+          {
+            "id": "20",
+            "name": "记录片",
+            "parentId": "1"
+          },
+          {
+            "id": "21",
+            "name": "台湾剧",
+            "parentId": "2"
+          },
+          {
+            "id": "22",
+            "name": "日本剧",
+            "parentId": "2"
+          },
+          {
+            "id": "23",
+            "name": "海外剧",
+            "parentId": "2"
+          },
+          {
+            "id": "24",
+            "name": "泰国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "25",
+            "name": "大陆综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "26",
+            "name": "港台综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "27",
+            "name": "日韩综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "28",
+            "name": "欧美综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "29",
+            "name": "国产动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "30",
+            "name": "日韩动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "31",
+            "name": "欧美动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "32",
+            "name": "港台动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "33",
+            "name": "海外动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "34",
+            "name": "伦理片",
+            "parentId": "1"
+          },
+          {
+            "id": "35",
+            "name": "电影解说",
+            "parentId": "0"
+          },
+          {
+            "id": "36",
+            "name": "体育",
+            "parentId": "0"
+          },
+          {
+            "id": "37",
+            "name": "足球",
+            "parentId": "36"
+          },
+          {
+            "id": "38",
+            "name": "篮球",
+            "parentId": "36"
+          },
+          {
+            "id": "39",
+            "name": "网球",
+            "parentId": "36"
+          },
+          {
+            "id": "40",
+            "name": "斯诺克",
+            "parentId": "36"
+          },
+          {
+            "id": "41",
+            "name": "演员",
+            "parentId": "0"
+          },
+          {
+            "id": "42",
+            "name": "新闻资讯",
+            "parentId": "0"
+          },
+          {
+            "id": "43",
+            "name": "电影资讯",
+            "parentId": "42"
+          },
+          {
+            "id": "44",
+            "name": "娱乐新闻",
+            "parentId": "42"
+          },
+          {
+            "id": "45",
+            "name": "预告片",
+            "parentId": "1"
+          },
+          {
+            "id": "46",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "49",
+            "name": "动画片",
+            "parentId": "1"
+          },
+          {
+            "id": "52",
+            "name": "AI漫剧",
+            "parentId": "0"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1500
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1144
+        },
+        "category": {
+          "id": "1",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 492
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1602
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1645
+          }
+        ],
+        "detail": {
+          "id": 137374,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 48,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v.lzcdn28.com/20260521/10308_d34ae361/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_lzi_m3u8",
+          "name": "量子直连",
+          "type": 1,
+          "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "ffzy-m3u8",
+      "name": "非凡直连",
+      "provider": "ffzy",
+      "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+      "checkedAt": "2026-07-25T12:52:58.560Z",
+      "native": {
+        "classCount": 31,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影片",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "连续剧",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "综艺片",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "动漫片",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": "1"
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": "1"
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": "1"
+          },
+          {
+            "id": "11",
+            "name": "剧情片",
+            "parentId": "1"
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": "1"
+          },
+          {
+            "id": "13",
+            "name": "国产剧",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "香港剧",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "韩国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "欧美剧",
+            "parentId": "2"
+          },
+          {
+            "id": "20",
+            "name": "记录片",
+            "parentId": "1"
+          },
+          {
+            "id": "21",
+            "name": "台湾剧",
+            "parentId": "2"
+          },
+          {
+            "id": "22",
+            "name": "日本剧",
+            "parentId": "2"
+          },
+          {
+            "id": "23",
+            "name": "海外剧",
+            "parentId": "2"
+          },
+          {
+            "id": "24",
+            "name": "泰国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "25",
+            "name": "大陆综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "26",
+            "name": "港台综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "27",
+            "name": "日韩综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "28",
+            "name": "欧美综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "29",
+            "name": "国产动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "30",
+            "name": "日韩动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "31",
+            "name": "欧美动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "32",
+            "name": "港台动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "33",
+            "name": "海外动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "34",
+            "name": "伦理片",
+            "parentId": "1"
+          },
+          {
+            "id": "36",
+            "name": "短剧",
+            "parentId": "2"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1264
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 248
+        },
+        "category": {
+          "id": "1",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 10,
+            "latencyMs": 281
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 4,
+            "latencyMs": 619
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 606
+          }
+        ],
+        "detail": {
+          "id": 98476,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 8,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://super.ffzy-online6.com/20260703/35944_db053e00/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_ffzy_m3u8",
+          "name": "非凡直连",
+          "type": 1,
+          "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "jinying",
+      "name": "金鹰资源",
+      "provider": "jinying",
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+      "checkedAt": "2026-07-25T12:53:31.273Z",
+      "native": {
+        "classCount": 31,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电视剧",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "欧美剧",
+            "parentId": "1"
+          },
+          {
+            "id": "4",
+            "name": "香港剧",
+            "parentId": "1"
+          },
+          {
+            "id": "5",
+            "name": "韩剧",
+            "parentId": "1"
+          },
+          {
+            "id": "6",
+            "name": "日剧",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "马泰剧",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "9",
+            "name": "动作片",
+            "parentId": "2"
+          },
+          {
+            "id": "10",
+            "name": "爱情片",
+            "parentId": "2"
+          },
+          {
+            "id": "11",
+            "name": "喜剧片",
+            "parentId": "2"
+          },
+          {
+            "id": "12",
+            "name": "科幻片",
+            "parentId": "2"
+          },
+          {
+            "id": "13",
+            "name": "恐怖片",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "剧情片",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "战争片",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "记录片",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "20",
+            "name": "内地剧",
+            "parentId": "1"
+          },
+          {
+            "id": "23",
+            "name": "动画片",
+            "parentId": "2"
+          },
+          {
+            "id": "24",
+            "name": "中国动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "25",
+            "name": "日本动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "26",
+            "name": "欧美动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "27",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "28",
+            "name": "台湾剧",
+            "parentId": "1"
+          },
+          {
+            "id": "29",
+            "name": "体育赛事",
+            "parentId": "0"
+          },
+          {
+            "id": "30",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "31",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "32",
+            "name": "足球",
+            "parentId": "29"
+          },
+          {
+            "id": "33",
+            "name": "篮球",
+            "parentId": "29"
+          },
+          {
+            "id": "34",
+            "name": "台球",
+            "parentId": "29"
+          },
+          {
+            "id": "35",
+            "name": "其他赛事",
+            "parentId": "29"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 659
+        },
+        "list": {
+          "status": 0,
+          "schemaOk": false,
+          "latencyMs": 8007
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 0,
+          "schemaOk": false,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8015
+          },
+          {
+            "term": "亮剑",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8013
+          },
+          {
+            "term": "王志文",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8010
+          }
+        ],
+        "detail": {
+          "id": 111740,
+          "status": 0,
+          "schemaOk": false,
+          "count": 0,
+          "directUrlCount": 0,
+          "directPlaybackEligible": false,
+          "sampleUrl": ""
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_jinying",
+          "name": "金鹰资源",
+          "type": 1,
+          "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 0
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": false,
+        "changeableMatchesPlayback": true
+      },
+      "pass": false
+    },
+    {
+      "slug": "zuida",
+      "name": "最大资源",
+      "provider": "zuida",
+      "api": "https://api.zuidapi.com/api.php/provide/vod/",
+      "checkedAt": "2026-07-25T12:53:33.357Z",
+      "native": {
+        "classCount": 59,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": ""
+          },
+          {
+            "id": "2",
+            "name": "电视剧",
+            "parentId": ""
+          },
+          {
+            "id": "3",
+            "name": "综艺",
+            "parentId": ""
+          },
+          {
+            "id": "4",
+            "name": "动漫",
+            "parentId": ""
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": ""
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": ""
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": ""
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": ""
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": ""
+          },
+          {
+            "id": "11",
+            "name": "剧情片",
+            "parentId": ""
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": ""
+          },
+          {
+            "id": "13",
+            "name": "国产剧",
+            "parentId": ""
+          },
+          {
+            "id": "14",
+            "name": "欧美剧",
+            "parentId": ""
+          },
+          {
+            "id": "15",
+            "name": "韩剧",
+            "parentId": ""
+          },
+          {
+            "id": "16",
+            "name": "日剧",
+            "parentId": ""
+          },
+          {
+            "id": "17",
+            "name": "港剧",
+            "parentId": ""
+          },
+          {
+            "id": "18",
+            "name": "台剧",
+            "parentId": ""
+          },
+          {
+            "id": "19",
+            "name": "泰剧",
+            "parentId": ""
+          },
+          {
+            "id": "20",
+            "name": "纪录片",
+            "parentId": ""
+          },
+          {
+            "id": "23",
+            "name": "海外剧",
+            "parentId": ""
+          },
+          {
+            "id": "25",
+            "name": "大陆综艺",
+            "parentId": ""
+          },
+          {
+            "id": "26",
+            "name": "日韩综艺",
+            "parentId": ""
+          },
+          {
+            "id": "27",
+            "name": "港台综艺",
+            "parentId": ""
+          },
+          {
+            "id": "28",
+            "name": "欧美综艺",
+            "parentId": ""
+          },
+          {
+            "id": "29",
+            "name": "国产动漫",
+            "parentId": ""
+          },
+          {
+            "id": "30",
+            "name": "日韩动漫",
+            "parentId": ""
+          },
+          {
+            "id": "31",
+            "name": "欧美动漫",
+            "parentId": ""
+          },
+          {
+            "id": "39",
+            "name": "动画片",
+            "parentId": ""
+          },
+          {
+            "id": "44",
+            "name": "港台动漫",
+            "parentId": ""
+          },
+          {
+            "id": "45",
+            "name": "海外动漫",
+            "parentId": ""
+          },
+          {
+            "id": "47",
+            "name": "演唱会",
+            "parentId": ""
+          },
+          {
+            "id": "48",
+            "name": "体育赛事",
+            "parentId": ""
+          },
+          {
+            "id": "49",
+            "name": "篮球",
+            "parentId": ""
+          },
+          {
+            "id": "50",
+            "name": "足球",
+            "parentId": ""
+          },
+          {
+            "id": "51",
+            "name": "预告片",
+            "parentId": ""
+          },
+          {
+            "id": "52",
+            "name": "斯诺克",
+            "parentId": ""
+          },
+          {
+            "id": "53",
+            "name": "影视解说",
+            "parentId": ""
+          },
+          {
+            "id": "54",
+            "name": "爽文短剧",
+            "parentId": ""
+          },
+          {
+            "id": "55",
+            "name": "伦理",
+            "parentId": ""
+          },
+          {
+            "id": "56",
+            "name": "港台三级",
+            "parentId": ""
+          },
+          {
+            "id": "57",
+            "name": "韩国伦理",
+            "parentId": ""
+          },
+          {
+            "id": "58",
+            "name": "西方伦理",
+            "parentId": ""
+          },
+          {
+            "id": "59",
+            "name": "日本伦理",
+            "parentId": ""
+          },
+          {
+            "id": "60",
+            "name": "两性课堂",
+            "parentId": ""
+          },
+          {
+            "id": "61",
+            "name": "写真热舞",
+            "parentId": ""
+          },
+          {
+            "id": "62",
+            "name": "4K电影",
+            "parentId": ""
+          },
+          {
+            "id": "63",
+            "name": "有声动漫",
+            "parentId": ""
+          },
+          {
+            "id": "64",
+            "name": "女频恋爱",
+            "parentId": ""
+          },
+          {
+            "id": "65",
+            "name": "反转爽剧",
+            "parentId": ""
+          },
+          {
+            "id": "66",
+            "name": "古装仙侠",
+            "parentId": ""
+          },
+          {
+            "id": "67",
+            "name": "年代穿越",
+            "parentId": ""
+          },
+          {
+            "id": "68",
+            "name": "脑洞悬疑",
+            "parentId": ""
+          },
+          {
+            "id": "69",
+            "name": "现代都市",
+            "parentId": ""
+          },
+          {
+            "id": "70",
+            "name": "邵氏电影",
+            "parentId": ""
+          },
+          {
+            "id": "71",
+            "name": "Netflix电影",
+            "parentId": ""
+          },
+          {
+            "id": "72",
+            "name": "Netflix自制剧",
+            "parentId": ""
+          },
+          {
+            "id": "73",
+            "name": "擦边短剧",
+            "parentId": ""
+          },
+          {
+            "id": "74",
+            "name": "科普学习",
+            "parentId": ""
+          },
+          {
+            "id": "75",
+            "name": "漫剧",
+            "parentId": ""
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 717
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 204
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 210
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 8,
+            "latencyMs": 615
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 633
+          }
+        ],
+        "detail": {
+          "id": 73298,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 108,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v14.zuidazym3u8.com/yyv14/202607/18/UhPXnp75Li27/video/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_zuida",
+          "name": "最大资源",
+          "type": 1,
+          "api": "https://api.zuidapi.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "subo-m3u8",
+      "name": "速播直连",
+      "provider": "subo",
+      "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+      "checkedAt": "2026-07-25T12:53:39.093Z",
+      "native": {
+        "classCount": 31,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "电视剧",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "5",
+            "name": "纪录片",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "爱情片",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "科幻片",
+            "parentId": "1"
+          },
+          {
+            "id": "9",
+            "name": "战争片",
+            "parentId": "1"
+          },
+          {
+            "id": "10",
+            "name": "剧情片",
+            "parentId": "1"
+          },
+          {
+            "id": "11",
+            "name": "恐怖片",
+            "parentId": "1"
+          },
+          {
+            "id": "12",
+            "name": "喜剧片",
+            "parentId": "1"
+          },
+          {
+            "id": "13",
+            "name": "动漫电影",
+            "parentId": "1"
+          },
+          {
+            "id": "14",
+            "name": "大陆剧",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "台湾剧",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "韩剧",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "美剧",
+            "parentId": "2"
+          },
+          {
+            "id": "18",
+            "name": "港澳剧",
+            "parentId": "2"
+          },
+          {
+            "id": "20",
+            "name": "日剧",
+            "parentId": "2"
+          },
+          {
+            "id": "21",
+            "name": "泰剧",
+            "parentId": "2"
+          },
+          {
+            "id": "22",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "23",
+            "name": "体育赛事",
+            "parentId": "0"
+          },
+          {
+            "id": "24",
+            "name": "中国动漫",
+            "parentId": "3"
+          },
+          {
+            "id": "25",
+            "name": "日本动漫",
+            "parentId": "3"
+          },
+          {
+            "id": "26",
+            "name": "欧美动漫",
+            "parentId": "3"
+          },
+          {
+            "id": "27",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "28",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "29",
+            "name": "足球",
+            "parentId": "23"
+          },
+          {
+            "id": "30",
+            "name": "篮球",
+            "parentId": "23"
+          },
+          {
+            "id": "31",
+            "name": "台球",
+            "parentId": "23"
+          },
+          {
+            "id": "32",
+            "name": "其他赛事",
+            "parentId": "23"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1658
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 994
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1234
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 2017
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2200
+          }
+        ],
+        "detail": {
+          "id": 109828,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.xluuss.com/play/bo2VvGAa/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_subo_m3u8",
+          "name": "速播直连",
+          "type": 1,
+          "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "360zy-direct",
+      "name": "360直连",
+      "provider": "360zy",
+      "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+      "checkedAt": "2026-07-25T12:53:44.469Z",
+      "native": {
+        "classCount": 51,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "连续剧",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "5",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": "1"
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": "1"
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": "1"
+          },
+          {
+            "id": "11",
+            "name": "剧情片",
+            "parentId": "1"
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": "1"
+          },
+          {
+            "id": "13",
+            "name": "国产剧",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "香港剧",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "韩国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "欧美剧",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "体育",
+            "parentId": "0"
+          },
+          {
+            "id": "18",
+            "name": "NBA",
+            "parentId": "17"
+          },
+          {
+            "id": "20",
+            "name": "惊悚片",
+            "parentId": "1"
+          },
+          {
+            "id": "21",
+            "name": "家庭篇",
+            "parentId": "1"
+          },
+          {
+            "id": "22",
+            "name": "古装片",
+            "parentId": "1"
+          },
+          {
+            "id": "23",
+            "name": "历史片",
+            "parentId": "1"
+          },
+          {
+            "id": "24",
+            "name": "悬疑片",
+            "parentId": "1"
+          },
+          {
+            "id": "25",
+            "name": "犯罪片",
+            "parentId": "1"
+          },
+          {
+            "id": "26",
+            "name": "灾难片",
+            "parentId": "1"
+          },
+          {
+            "id": "27",
+            "name": "纪录片",
+            "parentId": "1"
+          },
+          {
+            "id": "28",
+            "name": "短片",
+            "parentId": "1"
+          },
+          {
+            "id": "29",
+            "name": "动画片",
+            "parentId": "1"
+          },
+          {
+            "id": "30",
+            "name": "台湾剧",
+            "parentId": "2"
+          },
+          {
+            "id": "31",
+            "name": "日本剧",
+            "parentId": "2"
+          },
+          {
+            "id": "32",
+            "name": "海外剧",
+            "parentId": "2"
+          },
+          {
+            "id": "33",
+            "name": "泰国剧",
+            "parentId": "2"
+          },
+          {
+            "id": "34",
+            "name": "大陆综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "35",
+            "name": "港台综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "36",
+            "name": "日韩综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "37",
+            "name": "欧美综艺",
+            "parentId": "3"
+          },
+          {
+            "id": "38",
+            "name": "国产动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "39",
+            "name": "欧美动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "40",
+            "name": "日韩动漫",
+            "parentId": "4"
+          },
+          {
+            "id": "41",
+            "name": "足球",
+            "parentId": "17"
+          },
+          {
+            "id": "42",
+            "name": "篮球",
+            "parentId": "17"
+          },
+          {
+            "id": "43",
+            "name": "未分类",
+            "parentId": "1"
+          },
+          {
+            "id": "45",
+            "name": "西部片",
+            "parentId": "1"
+          },
+          {
+            "id": "46",
+            "name": "爽文短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "47",
+            "name": "现代都市",
+            "parentId": "46"
+          },
+          {
+            "id": "48",
+            "name": "脑洞悬疑",
+            "parentId": "46"
+          },
+          {
+            "id": "49",
+            "name": "年代穿越",
+            "parentId": "46"
+          },
+          {
+            "id": "50",
+            "name": "古装仙侠",
+            "parentId": "46"
+          },
+          {
+            "id": "51",
+            "name": "反转爽剧",
+            "parentId": "46"
+          },
+          {
+            "id": "52",
+            "name": "女频恋爱",
+            "parentId": "46"
+          },
+          {
+            "id": "53",
+            "name": "成长逆袭",
+            "parentId": "46"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1825
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 594
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 688
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 5,
+            "latencyMs": 2269
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 635
+          }
+        ],
+        "detail": {
+          "id": 100857,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 7,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://vod1.maowushi.com/20260705/T6sLgDW6/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_360zy_direct",
+          "name": "360直连",
+          "type": 1,
+          "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "xinlang-m3u8",
+      "name": "新浪直连",
+      "provider": "xinlang",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+      "checkedAt": "2026-07-25T12:53:58.614Z",
+      "native": {
+        "classCount": 28,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "电视剧",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "4",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "5",
+            "name": "纪录片",
+            "parentId": "0"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "爱情片",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "科幻片",
+            "parentId": "1"
+          },
+          {
+            "id": "9",
+            "name": "战争片",
+            "parentId": "1"
+          },
+          {
+            "id": "10",
+            "name": "剧情片",
+            "parentId": "1"
+          },
+          {
+            "id": "11",
+            "name": "恐怖片",
+            "parentId": "1"
+          },
+          {
+            "id": "12",
+            "name": "喜剧片",
+            "parentId": "1"
+          },
+          {
+            "id": "13",
+            "name": "大陆剧",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "港澳剧",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "台湾剧",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "欧美剧",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "动画片",
+            "parentId": "1"
+          },
+          {
+            "id": "18",
+            "name": "韩剧",
+            "parentId": "2"
+          },
+          {
+            "id": "20",
+            "name": "日剧",
+            "parentId": "2"
+          },
+          {
+            "id": "21",
+            "name": "泰剧",
+            "parentId": "2"
+          },
+          {
+            "id": "22",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "23",
+            "name": "体育",
+            "parentId": "0"
+          },
+          {
+            "id": "24",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "25",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "26",
+            "name": "足球",
+            "parentId": "23"
+          },
+          {
+            "id": "27",
+            "name": "篮球",
+            "parentId": "23"
+          },
+          {
+            "id": "28",
+            "name": "台球",
+            "parentId": "23"
+          },
+          {
+            "id": "29",
+            "name": "其他赛事",
+            "parentId": "23"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 3798
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 2899
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 4312
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 6701
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 6452
+          }
+        ],
+        "detail": {
+          "id": 161802,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.xluuss.com/play/bo2VvGAa/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_xinlang_m3u8",
+          "name": "新浪直连",
+          "type": 1,
+          "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "baidu",
+      "name": "百度资源",
+      "provider": "baidu",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
+      "checkedAt": "2026-07-25T12:54:01.992Z",
+      "native": {
+        "classCount": 54,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": ""
+          },
+          {
+            "id": "2",
+            "name": "电视剧",
+            "parentId": ""
+          },
+          {
+            "id": "3",
+            "name": "综艺",
+            "parentId": ""
+          },
+          {
+            "id": "4",
+            "name": "动漫",
+            "parentId": ""
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": ""
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": ""
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": ""
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": ""
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": ""
+          },
+          {
+            "id": "11",
+            "name": "剧情片",
+            "parentId": ""
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": ""
+          },
+          {
+            "id": "13",
+            "name": "大陆剧",
+            "parentId": ""
+          },
+          {
+            "id": "14",
+            "name": "欧美剧",
+            "parentId": ""
+          },
+          {
+            "id": "15",
+            "name": "韩剧",
+            "parentId": ""
+          },
+          {
+            "id": "16",
+            "name": "日剧",
+            "parentId": ""
+          },
+          {
+            "id": "17",
+            "name": "港澳剧",
+            "parentId": ""
+          },
+          {
+            "id": "18",
+            "name": "台湾剧",
+            "parentId": ""
+          },
+          {
+            "id": "19",
+            "name": "泰剧",
+            "parentId": ""
+          },
+          {
+            "id": "20",
+            "name": "纪录片",
+            "parentId": ""
+          },
+          {
+            "id": "23",
+            "name": "其他剧",
+            "parentId": ""
+          },
+          {
+            "id": "25",
+            "name": "大陆综艺",
+            "parentId": ""
+          },
+          {
+            "id": "26",
+            "name": "日韩综艺",
+            "parentId": ""
+          },
+          {
+            "id": "27",
+            "name": "港台综艺",
+            "parentId": ""
+          },
+          {
+            "id": "28",
+            "name": "欧美综艺",
+            "parentId": ""
+          },
+          {
+            "id": "29",
+            "name": "国产动漫",
+            "parentId": ""
+          },
+          {
+            "id": "30",
+            "name": "日韩动漫",
+            "parentId": ""
+          },
+          {
+            "id": "31",
+            "name": "欧美动漫",
+            "parentId": ""
+          },
+          {
+            "id": "39",
+            "name": "动画电影",
+            "parentId": ""
+          },
+          {
+            "id": "44",
+            "name": "港台动漫",
+            "parentId": ""
+          },
+          {
+            "id": "45",
+            "name": "海外动漫",
+            "parentId": ""
+          },
+          {
+            "id": "47",
+            "name": "演唱会",
+            "parentId": ""
+          },
+          {
+            "id": "48",
+            "name": "体育赛事",
+            "parentId": ""
+          },
+          {
+            "id": "49",
+            "name": "篮球",
+            "parentId": ""
+          },
+          {
+            "id": "50",
+            "name": "足球",
+            "parentId": ""
+          },
+          {
+            "id": "51",
+            "name": "预告片",
+            "parentId": ""
+          },
+          {
+            "id": "52",
+            "name": "斯诺克",
+            "parentId": ""
+          },
+          {
+            "id": "53",
+            "name": "影视解说",
+            "parentId": ""
+          },
+          {
+            "id": "54",
+            "name": "爽文短剧",
+            "parentId": ""
+          },
+          {
+            "id": "55",
+            "name": "伦理",
+            "parentId": ""
+          },
+          {
+            "id": "56",
+            "name": "港台三级",
+            "parentId": ""
+          },
+          {
+            "id": "57",
+            "name": "韩国伦理",
+            "parentId": ""
+          },
+          {
+            "id": "58",
+            "name": "西方伦理",
+            "parentId": ""
+          },
+          {
+            "id": "59",
+            "name": "日本伦理",
+            "parentId": ""
+          },
+          {
+            "id": "60",
+            "name": "两性课堂",
+            "parentId": ""
+          },
+          {
+            "id": "61",
+            "name": "写真热舞",
+            "parentId": ""
+          },
+          {
+            "id": "62",
+            "name": "4K电影",
+            "parentId": ""
+          },
+          {
+            "id": "63",
+            "name": "有声动漫",
+            "parentId": ""
+          },
+          {
+            "id": "64",
+            "name": "女频恋爱",
+            "parentId": ""
+          },
+          {
+            "id": "65",
+            "name": "反转爽剧",
+            "parentId": ""
+          },
+          {
+            "id": "66",
+            "name": "古装仙侠",
+            "parentId": ""
+          },
+          {
+            "id": "67",
+            "name": "年代穿越",
+            "parentId": ""
+          },
+          {
+            "id": "68",
+            "name": "脑洞悬疑",
+            "parentId": ""
+          },
+          {
+            "id": "69",
+            "name": "现代都市",
+            "parentId": ""
+          },
+          {
+            "id": "70",
+            "name": "邵氏电影",
+            "parentId": ""
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 889
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 315
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 1,
+            "latencyMs": 867
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 3,
+            "latencyMs": 1557
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1307
+          }
+        ],
+        "detail": {
+          "id": 49978,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 17,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://b3.bdzybf22.com/videos/202606/30/6a429ae6216ac4efb071df11/17d2c6/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_baidu",
+          "name": "百度资源",
+          "type": 1,
+          "api": "https://api.apibdzy.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "bfzy",
+      "name": "暴风资源",
+      "provider": "bfzy",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
+      "checkedAt": "2026-07-25T12:54:05.587Z",
+      "native": {
+        "classCount": 49,
+        "classes": [
+          {
+            "id": "20",
+            "name": "电影片",
+            "parentId": "0"
+          },
+          {
+            "id": "21",
+            "name": "动作片",
+            "parentId": "20"
+          },
+          {
+            "id": "22",
+            "name": "喜剧片",
+            "parentId": "20"
+          },
+          {
+            "id": "23",
+            "name": "恐怖片",
+            "parentId": "20"
+          },
+          {
+            "id": "24",
+            "name": "科幻片",
+            "parentId": "20"
+          },
+          {
+            "id": "25",
+            "name": "爱情片",
+            "parentId": "20"
+          },
+          {
+            "id": "26",
+            "name": "剧情片",
+            "parentId": "20"
+          },
+          {
+            "id": "27",
+            "name": "战争片",
+            "parentId": "20"
+          },
+          {
+            "id": "28",
+            "name": "纪录片",
+            "parentId": "20"
+          },
+          {
+            "id": "29",
+            "name": "理论片",
+            "parentId": "20"
+          },
+          {
+            "id": "30",
+            "name": "连续剧",
+            "parentId": "0"
+          },
+          {
+            "id": "31",
+            "name": "国产剧",
+            "parentId": "30"
+          },
+          {
+            "id": "32",
+            "name": "欧美剧",
+            "parentId": "30"
+          },
+          {
+            "id": "33",
+            "name": "香港剧",
+            "parentId": "30"
+          },
+          {
+            "id": "34",
+            "name": "韩国剧",
+            "parentId": "30"
+          },
+          {
+            "id": "35",
+            "name": "台湾剧",
+            "parentId": "30"
+          },
+          {
+            "id": "36",
+            "name": "日本剧",
+            "parentId": "30"
+          },
+          {
+            "id": "37",
+            "name": "海外剧",
+            "parentId": "30"
+          },
+          {
+            "id": "38",
+            "name": "泰国剧",
+            "parentId": "30"
+          },
+          {
+            "id": "39",
+            "name": "动漫片",
+            "parentId": "0"
+          },
+          {
+            "id": "40",
+            "name": "国产动漫",
+            "parentId": "39"
+          },
+          {
+            "id": "41",
+            "name": "日韩动漫",
+            "parentId": "39"
+          },
+          {
+            "id": "42",
+            "name": "欧美动漫",
+            "parentId": "39"
+          },
+          {
+            "id": "43",
+            "name": "港台动漫",
+            "parentId": "39"
+          },
+          {
+            "id": "44",
+            "name": "海外动漫",
+            "parentId": "39"
+          },
+          {
+            "id": "45",
+            "name": "综艺片",
+            "parentId": "0"
+          },
+          {
+            "id": "46",
+            "name": "大陆综艺",
+            "parentId": "45"
+          },
+          {
+            "id": "47",
+            "name": "港台综艺",
+            "parentId": "45"
+          },
+          {
+            "id": "48",
+            "name": "日韩综艺",
+            "parentId": "45"
+          },
+          {
+            "id": "49",
+            "name": "欧美综艺",
+            "parentId": "45"
+          },
+          {
+            "id": "50",
+            "name": "动画片",
+            "parentId": "20"
+          },
+          {
+            "id": "51",
+            "name": "电影解说",
+            "parentId": "0"
+          },
+          {
+            "id": "52",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "53",
+            "name": "体育赛事",
+            "parentId": "0"
+          },
+          {
+            "id": "54",
+            "name": "足球",
+            "parentId": "53"
+          },
+          {
+            "id": "55",
+            "name": "篮球",
+            "parentId": "53"
+          },
+          {
+            "id": "56",
+            "name": "网球",
+            "parentId": "53"
+          },
+          {
+            "id": "57",
+            "name": "斯诺克",
+            "parentId": "53"
+          },
+          {
+            "id": "58",
+            "name": "短剧大全",
+            "parentId": "0"
+          },
+          {
+            "id": "65",
+            "name": "重生民国",
+            "parentId": "58"
+          },
+          {
+            "id": "66",
+            "name": "穿越年代",
+            "parentId": "58"
+          },
+          {
+            "id": "67",
+            "name": "现代言情",
+            "parentId": "58"
+          },
+          {
+            "id": "68",
+            "name": "反转爽文",
+            "parentId": "58"
+          },
+          {
+            "id": "69",
+            "name": "女恋总裁",
+            "parentId": "58"
+          },
+          {
+            "id": "70",
+            "name": "闪婚离婚",
+            "parentId": "58"
+          },
+          {
+            "id": "71",
+            "name": "都市脑洞",
+            "parentId": "58"
+          },
+          {
+            "id": "72",
+            "name": "古装仙侠",
+            "parentId": "58"
+          },
+          {
+            "id": "73",
+            "name": "福利",
+            "parentId": "0"
+          },
+          {
+            "id": "74",
+            "name": "AI漫剧",
+            "parentId": "58"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 770
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 226
+        },
+        "category": {
+          "id": "20",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 12
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 334
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1114
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1462
+          }
+        ],
+        "detail": {
+          "id": 140405,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 15,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v.baofeng9.com/video/xiaoshuchidexiakeshanglingzhudeyangnv/05ddbe2ee775/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_bfzy",
+          "name": "暴风资源",
+          "type": 1,
+          "api": "https://bfzyapi.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "jszy-m3u8",
+      "name": "极速直连",
+      "provider": "jszy",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+      "checkedAt": "2026-07-25T12:54:10.474Z",
+      "native": {
+        "classCount": 39,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电视剧",
+            "parentId": "0"
+          },
+          {
+            "id": "2",
+            "name": "电影",
+            "parentId": "0"
+          },
+          {
+            "id": "3",
+            "name": "欧美剧",
+            "parentId": "1"
+          },
+          {
+            "id": "4",
+            "name": "香港剧",
+            "parentId": "1"
+          },
+          {
+            "id": "5",
+            "name": "韩剧",
+            "parentId": "1"
+          },
+          {
+            "id": "6",
+            "name": "日剧",
+            "parentId": "1"
+          },
+          {
+            "id": "7",
+            "name": "马泰剧",
+            "parentId": "1"
+          },
+          {
+            "id": "8",
+            "name": "伦理片",
+            "parentId": "0"
+          },
+          {
+            "id": "9",
+            "name": "动作片",
+            "parentId": "2"
+          },
+          {
+            "id": "10",
+            "name": "爱情片",
+            "parentId": "2"
+          },
+          {
+            "id": "11",
+            "name": "喜剧片",
+            "parentId": "2"
+          },
+          {
+            "id": "12",
+            "name": "科幻片",
+            "parentId": "2"
+          },
+          {
+            "id": "13",
+            "name": "恐怖片",
+            "parentId": "2"
+          },
+          {
+            "id": "14",
+            "name": "剧情片",
+            "parentId": "2"
+          },
+          {
+            "id": "15",
+            "name": "战争片",
+            "parentId": "2"
+          },
+          {
+            "id": "16",
+            "name": "记录片",
+            "parentId": "2"
+          },
+          {
+            "id": "17",
+            "name": "动漫",
+            "parentId": "0"
+          },
+          {
+            "id": "20",
+            "name": "内地剧",
+            "parentId": "1"
+          },
+          {
+            "id": "23",
+            "name": "动画片",
+            "parentId": "2"
+          },
+          {
+            "id": "24",
+            "name": "中国动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "25",
+            "name": "日本动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "26",
+            "name": "欧美动漫",
+            "parentId": "17"
+          },
+          {
+            "id": "27",
+            "name": "综艺",
+            "parentId": "0"
+          },
+          {
+            "id": "28",
+            "name": "台湾剧",
+            "parentId": "1"
+          },
+          {
+            "id": "29",
+            "name": "体育赛事",
+            "parentId": "0"
+          },
+          {
+            "id": "30",
+            "name": "大陆综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "31",
+            "name": "日韩综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "32",
+            "name": "港台综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "33",
+            "name": "欧美综艺",
+            "parentId": "27"
+          },
+          {
+            "id": "34",
+            "name": "灾难片",
+            "parentId": "2"
+          },
+          {
+            "id": "35",
+            "name": "悬疑片",
+            "parentId": "2"
+          },
+          {
+            "id": "36",
+            "name": "犯罪片",
+            "parentId": "2"
+          },
+          {
+            "id": "37",
+            "name": "奇幻片",
+            "parentId": "2"
+          },
+          {
+            "id": "38",
+            "name": "短剧",
+            "parentId": "0"
+          },
+          {
+            "id": "39",
+            "name": "预告片",
+            "parentId": "0"
+          },
+          {
+            "id": "40",
+            "name": "足球",
+            "parentId": "29"
+          },
+          {
+            "id": "41",
+            "name": "篮球",
+            "parentId": "29"
+          },
+          {
+            "id": "42",
+            "name": "台球",
+            "parentId": "29"
+          },
+          {
+            "id": "43",
+            "name": "其他赛事",
+            "parentId": "29"
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 2242
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 232
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 14,
+            "latencyMs": 323
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 5,
+            "latencyMs": 1347
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1336
+          }
+        ],
+        "detail": {
+          "id": 14767,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 8,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://vv.jisuzyv.com/play/Le3JWZxd/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_jszy_m3u8",
+          "name": "极速直连",
+          "type": 1,
+          "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    },
+    {
+      "slug": "lovedan",
+      "name": "爱旦资源",
+      "provider": "lovedan",
+      "api": "https://www.lovedan.net/api.php/provide/vod/",
+      "checkedAt": "2026-07-25T12:54:15.750Z",
+      "native": {
+        "classCount": 70,
+        "classes": [
+          {
+            "id": "1",
+            "name": "电影",
+            "parentId": ""
+          },
+          {
+            "id": "2",
+            "name": "电视剧",
+            "parentId": ""
+          },
+          {
+            "id": "3",
+            "name": "综艺",
+            "parentId": ""
+          },
+          {
+            "id": "4",
+            "name": "动漫",
+            "parentId": ""
+          },
+          {
+            "id": "5",
+            "name": "福利视频",
+            "parentId": ""
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "parentId": ""
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "parentId": ""
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "parentId": ""
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "parentId": ""
+          },
+          {
+            "id": "10",
+            "name": "恐怖片",
+            "parentId": ""
+          },
+          {
+            "id": "11",
+            "name": "犯罪片",
+            "parentId": ""
+          },
+          {
+            "id": "12",
+            "name": "战争片",
+            "parentId": ""
+          },
+          {
+            "id": "13",
+            "name": "国产剧",
+            "parentId": ""
+          },
+          {
+            "id": "14",
+            "name": "港台剧",
+            "parentId": ""
+          },
+          {
+            "id": "15",
+            "name": "日韩剧",
+            "parentId": ""
+          },
+          {
+            "id": "16",
+            "name": "欧美剧",
+            "parentId": ""
+          },
+          {
+            "id": "17",
+            "name": "三级伦理",
+            "parentId": ""
+          },
+          {
+            "id": "18",
+            "name": "网红主播",
+            "parentId": ""
+          },
+          {
+            "id": "20",
+            "name": "动画电影",
+            "parentId": ""
+          },
+          {
+            "id": "21",
+            "name": "剧情片",
+            "parentId": ""
+          },
+          {
+            "id": "22",
+            "name": "纪录片",
+            "parentId": ""
+          },
+          {
+            "id": "23",
+            "name": "日韩综艺",
+            "parentId": ""
+          },
+          {
+            "id": "24",
+            "name": "港台综艺",
+            "parentId": ""
+          },
+          {
+            "id": "25",
+            "name": "欧美综艺",
+            "parentId": ""
+          },
+          {
+            "id": "26",
+            "name": "国产动漫",
+            "parentId": ""
+          },
+          {
+            "id": "27",
+            "name": "日韩动漫",
+            "parentId": ""
+          },
+          {
+            "id": "28",
+            "name": "欧美动漫",
+            "parentId": ""
+          },
+          {
+            "id": "29",
+            "name": "海外动漫",
+            "parentId": ""
+          },
+          {
+            "id": "30",
+            "name": "海外剧",
+            "parentId": ""
+          },
+          {
+            "id": "31",
+            "name": "大陆综艺",
+            "parentId": ""
+          },
+          {
+            "id": "32",
+            "name": "明星",
+            "parentId": ""
+          },
+          {
+            "id": "33",
+            "name": "福利图片",
+            "parentId": ""
+          },
+          {
+            "id": "34",
+            "name": "爱蜜社",
+            "parentId": ""
+          },
+          {
+            "id": "35",
+            "name": "头条女神",
+            "parentId": ""
+          },
+          {
+            "id": "36",
+            "name": "美媛馆",
+            "parentId": ""
+          },
+          {
+            "id": "37",
+            "name": "海外抖音",
+            "parentId": ""
+          },
+          {
+            "id": "38",
+            "name": "嗲囡囡",
+            "parentId": ""
+          },
+          {
+            "id": "39",
+            "name": "波萝社",
+            "parentId": ""
+          },
+          {
+            "id": "40",
+            "name": "魅妍社",
+            "parentId": ""
+          },
+          {
+            "id": "41",
+            "name": "爱尤物",
+            "parentId": ""
+          },
+          {
+            "id": "42",
+            "name": "秀人网",
+            "parentId": ""
+          },
+          {
+            "id": "43",
+            "name": "尤果网",
+            "parentId": ""
+          },
+          {
+            "id": "44",
+            "name": "推女神",
+            "parentId": ""
+          },
+          {
+            "id": "45",
+            "name": "DGC套图",
+            "parentId": ""
+          },
+          {
+            "id": "46",
+            "name": "尤蜜荟",
+            "parentId": ""
+          },
+          {
+            "id": "47",
+            "name": "模范学院",
+            "parentId": ""
+          },
+          {
+            "id": "48",
+            "name": "尤物馆",
+            "parentId": ""
+          },
+          {
+            "id": "49",
+            "name": "优星馆",
+            "parentId": ""
+          },
+          {
+            "id": "50",
+            "name": "蜜桃社",
+            "parentId": ""
+          },
+          {
+            "id": "51",
+            "name": "影私荟",
+            "parentId": ""
+          },
+          {
+            "id": "52",
+            "name": "顽味生活",
+            "parentId": ""
+          },
+          {
+            "id": "53",
+            "name": "星乐园",
+            "parentId": ""
+          },
+          {
+            "id": "54",
+            "name": "花の颜",
+            "parentId": ""
+          },
+          {
+            "id": "55",
+            "name": "御女郎",
+            "parentId": ""
+          },
+          {
+            "id": "56",
+            "name": "糖果画报",
+            "parentId": ""
+          },
+          {
+            "id": "57",
+            "name": "花漾",
+            "parentId": ""
+          },
+          {
+            "id": "58",
+            "name": "星颜社",
+            "parentId": ""
+          },
+          {
+            "id": "59",
+            "name": "画语界",
+            "parentId": ""
+          },
+          {
+            "id": "60",
+            "name": "直播",
+            "parentId": ""
+          },
+          {
+            "id": "61",
+            "name": "央视",
+            "parentId": ""
+          },
+          {
+            "id": "62",
+            "name": "卫视",
+            "parentId": ""
+          },
+          {
+            "id": "63",
+            "name": "短剧",
+            "parentId": ""
+          },
+          {
+            "id": "64",
+            "name": "影视解说",
+            "parentId": ""
+          },
+          {
+            "id": "65",
+            "name": "港台三级",
+            "parentId": ""
+          },
+          {
+            "id": "66",
+            "name": "韩国伦理",
+            "parentId": ""
+          },
+          {
+            "id": "67",
+            "name": "西方伦理",
+            "parentId": ""
+          },
+          {
+            "id": "68",
+            "name": "日本伦理",
+            "parentId": ""
+          },
+          {
+            "id": "69",
+            "name": "预告片",
+            "parentId": ""
+          },
+          {
+            "id": "70",
+            "name": "网络电影",
+            "parentId": ""
+          },
+          {
+            "id": "71",
+            "name": "其他综艺",
+            "parentId": ""
+          }
+        ],
+        "filters": [],
+        "filterable": false,
+        "sortable": false,
+        "keys": [],
+        "filterProbe": null
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1564
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 517
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 20
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 733
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 10,
+            "latencyMs": 2063
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2037
+          }
+        ],
+        "detail": {
+          "id": 198192,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 159,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v10.ppqrrs.com/wjv10/202607/19/KE56Xnja4G94/video/index.m3u8"
+        }
+      },
+      "client": {
+        "configFields": {
+          "key": "registry_vod_lovedan",
+          "name": "爱旦资源",
+          "type": 1,
+          "api": "https://www.lovedan.net/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "pass": true
+    }
+  ]
+}

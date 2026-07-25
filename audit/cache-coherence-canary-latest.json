@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-07-25T13:13:38.180Z",
+  "checks": {
+    "endpointsReachable": true,
+    "sameRevision": true,
+    "sameVersion": true,
+    "configNoStore": true,
+    "statusNoStore": true,
+    "sourceNamesDistinct": true,
+    "liveNamesDistinct": true,
+    "noCategoriesRewrite": true,
+    "clientFieldContract": true,
+    "noHealthLabels": true,
+    "sameConfigHash": true,
+    "sameStatusHash": true
+  },
+  "rows": [
+    {
+      "base": "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev",
+      "config": {
+        "etag": "W/\"seed\"",
+        "cacheControl": "no-store, no-cache, must-revalidate",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "status": {
+        "etag": "",
+        "cacheControl": "no-store, no-cache, must-revalidate",
+        "cfCacheStatus": "",
+        "age": "",
+        "contentType": "application/json; charset=utf-8"
+      },
+      "revision": "seed",
+      "version": "tvbox-source-registry-v8.1.4"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "generatedAt": "2026-07-25T13:13:38.180Z",
+  "bases": [
+    "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev"
+  ],
+  "checks": {
+    "endpointsReachable": true,
+    "sameRevision": true,
+    "sameVersion": true,
+    "configNoStore": true,
+    "statusNoStore": true,
+    "sourceNamesDistinct": true,
+    "liveNamesDistinct": true,
+    "noCategoriesRewrite": true,
+    "clientFieldContract": true,
+    "noHealthLabels": true
+  },
+  "rows": [
+    {
+      "base": "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev",
+      "checkedAt": "2026-07-25T13:13:38.176Z",
+      "config": {
+        "status": 200,
+        "ok": true,
+        "hash": "a35bf4e1",
+        "headers": {
+          "etag": "W/\"seed\"",
+          "cacheControl": "no-store, no-cache, must-revalidate",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "sites": [
+          {
+            "name": "豪华直连",
+            "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "红牛直连",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "魔都动漫",
+            "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "量子直连",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "非凡直连",
+            "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "金鹰资源",
+            "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "最大资源",
+            "api": "https://api.zuidapi.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "速播直连",
+            "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "360直连",
+            "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "新浪直连",
+            "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "百度资源",
+            "api": "https://api.apibdzy.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "暴风资源",
+            "api": "https://bfzyapi.com/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "极速直连",
+            "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          },
+          {
+            "name": "爱旦资源",
+            "api": "https://www.lovedan.net/api.php/provide/vod/",
+            "filterable": 0,
+            "changeable": 1,
+            "hasCategories": false
+          }
+        ],
+        "lives": [
+          {
+            "name": "范明明 IPv6",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+          },
+          {
+            "name": "IPTV-org 中国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u"
+          },
+          {
+            "name": "IPTV-org 香港",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u"
+          },
+          {
+            "name": "IPTV-org 韩国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u"
+          },
+          {
+            "name": "IPTV-org 美国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u"
+          },
+          {
+            "name": "IPTV-org 英国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u"
+          },
+          {
+            "name": "IPTV-org 德国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u"
+          },
+          {
+            "name": "IPTV-org 加拿大",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u"
+          },
+          {
+            "name": "Suxuang IPv4",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u"
+          },
+          {
+            "name": "Guovin 汇总",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
+          },
+          {
+            "name": "Guovin IPv4",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u"
+          },
+          {
+            "name": "IPTV-org 泰国",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u"
+          },
+          {
+            "name": "IPTV-org 越南",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/vn.m3u"
+          },
+          {
+            "name": "IPTV-org 意大利",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u"
+          },
+          {
+            "name": "IPTV-org 印度",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"
+          },
+          {
+            "name": "IPTV-org 巴西",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u"
+          },
+          {
+            "name": "ZBDS IPv4",
+            "type": 0,
+            "url": "https://live.zbds.org/tv/iptv4.m3u"
+          },
+          {
+            "name": "范明明全量",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u"
+          }
+        ],
+        "registry": {
+          "version": "v8.1.4",
+          "mode": "validated-direct-source-registry",
+          "revision": "seed",
+          "updatedAt": null,
+          "vodCount": 14,
+          "liveCount": 18,
+          "liveChannelCount": 0,
+          "strictVodCount": 0,
+          "watchVodCount": 0,
+          "strictLiveCount": 0,
+          "watchLiveCount": 0,
+          "degraded": true,
+          "health": "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev/status.json",
+          "policy": "Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded."
+        }
+      },
+      "status": {
+        "status": 200,
+        "ok": true,
+        "hash": "7310c99b",
+        "headers": {
+          "etag": "",
+          "cacheControl": "no-store, no-cache, must-revalidate",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        },
+        "version": "tvbox-source-registry-v8.1.4",
+        "registryVersion": "v8.1.4",
+        "revision": "seed",
+        "vod": {
+          "registered": 14,
+          "visible": 14,
+          "active": 0,
+          "watch": 0,
+          "providers": 14,
+          "target": "10+"
+        },
+        "live": {
+          "registered": 18,
+          "visible": 18,
+          "active": 0,
+          "watch": 0,
+          "providers": 5,
+          "channels": 0,
+          "target": "10+"
+        },
+        "degraded": true
+      },
+      "sources": {
+        "status": 200,
+        "ok": true,
+        "hash": "92a01edf",
+        "headers": {
+          "etag": "",
+          "cacheControl": "no-store, no-cache, must-revalidate",
+          "cfCacheStatus": "",
+          "age": "",
+          "contentType": "application/json; charset=utf-8"
+        }
+      }
+    }
+  ],
+  "pass": true
+}

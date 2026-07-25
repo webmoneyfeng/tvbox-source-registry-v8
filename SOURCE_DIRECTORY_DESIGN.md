@@ -1,12 +1,13 @@
 # TVBox source directory v8.1
 
-## Scope
+## Scope (v8.1.4)
 
 This version publishes validated source links instead of building a second
 catalogue. The TV client queries each upstream source directly. The service does
 not proxy media, merge programme records, rewrite titles, or promise cross-source
-deduplication. v8.1.3 publishes 10 VOD endpoints and 12 live playlists after
-the current quality and production probes.
+deduplication. The registry currently contains 14 VOD endpoints and 18 live
+playlists; current admission reports distinguish strict `ACTIVE`, usable `WATCH`
+and hard-failed `REJECTED` entries.
 
 Only public, standard TVBox/FongMi-compatible endpoints that are permitted for
 the intended use are eligible for registration.
@@ -18,21 +19,23 @@ candidate feed
   -> canonical URL and physical-host deduplication
   -> VOD/live contract probe
   -> rolling health state in KV
-  -> ACTIVE source directory
+  -> ACTIVE/WATCH source directory
   -> TVBox config
   -> direct upstream requests from the TV client
 ```
 
-VOD and live sources are kept in separate registries. A source is visible only
-after its contract probe passes listing or playlist, search/detail or channel
-parsing, and a direct media sample.
+VOD and live sources are kept in separate registries. A source is visible after
+its hard contract passes listing or playlist, search/detail or channel parsing,
+and a direct media sample. Soft warnings such as an upstream empty category,
+partial channel failure or slow response place the source in `WATCH` but do not
+erase the original source.
 
 ## State machine
 
 | State | TV visibility | Meaning |
 | --- | --- | --- |
 | `ACTIVE` | visible | Contract and playback probes pass |
-| `WATCH` | hidden | Intermittent or recovering source |
+| `WATCH` | visible | Hard contract passes; a soft warning is recorded |
 | `PROBATION` | hidden | New source awaiting stable samples |
 | `QUARANTINED` | hidden | Repeated failure or hard violation |
 
@@ -47,7 +50,7 @@ recovery requires two successful probes and the probation rules.
   rebuild is required.
 - `checkedAt` describes the last probe. `updatedAt` changes only when the visible
   source set changes.
-- Config responses are short-cacheable and carry a stable registry revision.
+- Config, status and source responses use `no-store` and carry a stable registry revision.
 - On a failed probe cycle the previous valid directory remains active.
 - Live entries are exposed as direct upstream playlist URLs; `/live.txt` is a
   compatibility endpoint and is not the only live entry in the TVBox config.
@@ -63,6 +66,6 @@ calls the upstream sources directly.
 ## Migration rule
 
 The v7.3 catalogue Worker, Pages snapshot project, catalogue KV namespace, and
-scheduled GitHub workflows are retired after the custom domains are moved to
-this v8 Worker. The v7.3 repository is archived rather than deleted so the last
-known implementation remains recoverable without continuing to execute.
+scheduled GitHub workflows are retired only after a separately verified formal
+cutover. The v7.3 repository is archived rather than deleted so the last known
+implementation remains recoverable without continuing to execute.

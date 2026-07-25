@@ -18,10 +18,10 @@ import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from './discover
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.1.3';
+const VERSION = 'tvbox-source-registry-v8.1.4';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
-const MAX_PROBE_SOURCES = 4;
+const MAX_PROBE_SOURCES = 3;
 const MAX_BODY_BYTES = 512 * 1024;
 const MAX_PLAYLIST_BYTES = 2 * 1024 * 1024;
 const MAX_REDIRECTS = 1;
@@ -166,6 +166,29 @@ function classesOf(data) {
   return Array.isArray(values) ? values : [];
 }
 
+function classId(value) {
+  return String(value?.type_id ?? value?.id ?? value?.typeId ?? '').trim();
+}
+
+function className(value) {
+  return String(value?.type_name ?? value?.name ?? value?.typeName ?? '').trim();
+}
+
+function nativeFilterInfo(data) {
+  const raw = data?.filters ?? data?.data?.filters ?? {};
+  const entries = Array.isArray(raw) ? raw.map((item, index) => [String(index), item]) : Object.entries(raw || {});
+  const filters = entries.map(([categoryId, value]) => {
+    const rows = Array.isArray(value) ? value : Array.isArray(value?.value) ? value.value : [];
+    const keys = rows.map((item) => String(item?.key ?? item?.value ?? item?.name ?? item ?? '').trim()).filter(Boolean);
+    const names = rows.map((item) => String(item?.name ?? item?.value ?? item ?? '').trim()).filter(Boolean);
+    return { categoryId, optionCount: new Set(keys).size, keys, names };
+  }).filter((item) => item.optionCount > 0);
+  const nativeFilterKeys = [...new Set(filters.flatMap((item) => item.keys))];
+  const labels = filters.flatMap((item) => item.names).join(' ');
+  const sortable = /(?:sort|order|time|latest|\u6700\u65b0|\u6392\u5e8f|\u66f4\u65b0)/iu.test(`${nativeFilterKeys.join(' ')} ${labels}`);
+  return { filters, nativeFilterable: filters.some((item) => item.optionCount >= 2), nativeSortable: sortable, nativeFilterKeys };
+}
+
 function directMediaUrls(row) {
   const value = [row?.vod_play_url, row?.url, row?.vod_url, row?.vod_down_url].filter(Boolean).join(' ');
   const matches = value.match(/https?:\/\/[^\s$#|"'<>]+(?:m3u8|mp4|\.ts)(?:\?[^\s$|"'<>]*)?/giu) || [];
@@ -215,10 +238,25 @@ export async function probeVodSource(source) {
     const listing = await fetchJson(source, { ac: 'videolist', pg: 1 });
     const listingRows = rowsOf(listing.data);
     const classes = classesOf(classListing.data);
-    const leafClasses = classes.filter((item) => likelyLeafCategory(item.name));
-    const categoryChecks = await mapWithConcurrency(leafClasses.slice(0, 3), 3, async (category) => {
-      const result = await fetchJson(source, { ac: 'videolist', t: category.id, pg: 1 });
-      return { id: category.id, name: category.name, ok: Boolean(result.ok && rowsOf(result.data).length), count: rowsOf(result.data).length };
+    const native = nativeFilterInfo(classListing.data || listing.data || {});
+    const sampledClasses = classes.length <= 5
+      ? classes
+      : [...new Map([classes[0], classes[Math.floor(classes.length / 2)], classes[classes.length - 1]].map((item) => [classId(item), item])).values()];
+    const categoryChecks = await mapWithConcurrency(sampledClasses, 3, async (category) => {
+      const id = classId(category);
+      const result = await fetchJson(source, { ac: 'videolist', t: id, pg: 1 });
+      const rows = rowsOf(result.data);
+      const transient = [408, 425, 429, 500, 502, 503, 504].includes(result.status) || !result.status;
+      return {
+        id,
+        name: className(category),
+        ok: Boolean(result.ok && rows.length),
+        count: rows.length,
+        status: result.status,
+        transient,
+        latestAt: latestSourceTime(rows),
+        error: result.error || '',
+      };
     });
     const evidence = [];
     const searchResults = [];
@@ -229,31 +267,60 @@ export async function probeVodSource(source) {
       const rows = rowsOf(search.data);
       evidence.push({ term, ok: Boolean(search.ok && rows.length), count: rows.length });
       if (!sample && rows[0]) sample = rows[0];
-      if (sample && evidence.filter((item) => item.ok).length >= 2) break;
     }
-    const detail = sample?.vod_id ? await fetchJson(source, { ac: 'detail', ids: sample.vod_id }) : null;
+    const sampleId = sample?.vod_id ?? sample?.id ?? sample?.vod_id_str;
+    const detail = sampleId ? await fetchJson(source, { ac: 'detail', ids: sampleId }) : null;
     const detailRow = rowsOf(detail?.data)[0] || detail?.data?.data?.[0] || null;
     const detailOk = Boolean(detail?.ok && detailRow);
     const playableUrl = detailOk ? firstPlayableUrl(detailRow) : '';
     const mediaCheck = playableUrl ? await probeMediaUrl(playableUrl) : { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
     const playOk = Boolean(detailOk && mediaCheck.ok);
     const playContract = playBranchContract(detailRow);
-    const searchOk = evidence.some((item) => item.ok);
-    const categoryOk = categoryChecks.length > 0 && categoryChecks.every((item) => item.ok);
-    const ok = Boolean(classListing.ok && listing.ok && classes.length > 0 && categoryOk && searchOk && detailOk && playOk && playContract.branchCount > 0 && playContract.invalidBranchCount === 0);
+    const transientCategoryErrors = categoryChecks.filter((item) => !item.ok && item.transient);
+    const hardFailures = [];
+    const softWarnings = [];
+    if (!classListing.ok || !classes.length) hardFailures.push('CATEGORY_SCHEMA_UNAVAILABLE');
+    if (!listing.ok || !listingRows.length) hardFailures.push('LISTING_UNAVAILABLE');
+    if (!evidence.some((item) => item.ok)) hardFailures.push('SEARCH_UNAVAILABLE');
+    if (!detailOk) hardFailures.push('DETAIL_UNAVAILABLE');
+    if (!playOk || !playContract.branchCount || playContract.invalidBranchCount > 0) hardFailures.push('DIRECT_PLAYBACK_UNAVAILABLE');
     const hardViolation = [classListing, listing, ...searchResults, detail, mediaCheck].some(hardDocumentViolation);
+    if (hardViolation) hardFailures.push('AD_OR_PARSE_CONTENT');
+    const emptyCategoryCount = categoryChecks.filter((item) => !item.ok && !item.transient).length;
+    if (emptyCategoryCount) softWarnings.push(`EMPTY_NATIVE_CATEGORY:${emptyCategoryCount}`);
+    if (transientCategoryErrors.length) softWarnings.push(`TRANSIENT_CATEGORY_ERROR:${transientCategoryErrors.length}`);
+    const latestAt = latestSourceTime(listingRows);
+    const latestAgeHours = latestAt ? Math.max(0, (Date.now() - Date.parse(latestAt)) / 3600000) : null;
+    if (latestAgeHours === null) softWarnings.push('FRESHNESS_UNKNOWN');
+    else if (latestAgeHours > 72) softWarnings.push('STALE_CONTENT');
+    if (Date.now() - started > 9000) softWarnings.push('SLOW_SOURCE');
+    const ok = hardFailures.length === 0;
+    const admissionTier = ok && softWarnings.length ? 'WATCH' : ok ? 'ACTIVE' : 'REJECTED';
     const probe = {
-      kind: 'vod', slug: source.slug, ok: ok && !hardViolation, hardViolation, httpStatus: listing.status || detail?.status || 0,
-      classCount: classes.length, categoryCount: categoryChecks.length, categoryOkCount: categoryChecks.filter((item) => item.ok).length, categoryChecks,
+      kind: 'vod', slug: source.slug, ok, admissionTier, hardFailure: hardFailures.length > 0, hardFailures, softWarnings, hardViolation,
+      httpStatus: listing.status || detail?.status || 0,
+      classCount: classes.length, categoryCount: classes.length, categoryOkCount: categoryChecks.filter((item) => item.ok).length, categoryChecks,
       listCount: listingRows.length, searchEvidence: evidence,
       searchCount: evidence.reduce((sum, item) => sum + item.count, 0), detailOk, playOk,
       playBranchCount: playContract.branchCount, directBranchCount: playContract.directBranchCount, invalidBranchCount: playContract.invalidBranchCount,
       mediaLatencyMs: mediaCheck.latencyMs, mediaStatus: mediaCheck.status,
-      latestAt: latestSourceTime(listingRows), latencyMs: Date.now() - started, error: hardViolation ? 'hard content or redirect violation' : ok ? '' : 'vod contract failed',
+      latestAt, latestAgeHours, latencyMs: Date.now() - started,
+      nativeFilterable: native.nativeFilterable,
+      nativeSortable: native.nativeSortable,
+      nativeFilterKeys: native.nativeFilterKeys,
+      directPlaybackEligible: playOk && playContract.invalidBranchCount === 0,
+      error: hardFailures.join('; '),
     };
     return { ...probe, score: scoreVodProbe(probe) };
   } catch (error) {
-    return { kind: 'vod', slug: source.slug, ok: false, hardViolation: false, httpStatus: 0, classCount: 0, listCount: 0, searchEvidence: [], searchCount: 0, detailOk: false, playOk: false, latencyMs: Date.now() - started, error: String(error?.message || error).slice(0, 240) };
+    return {
+      kind: 'vod', slug: source.slug, ok: false, admissionTier: 'REJECTED', hardFailure: true,
+      hardFailures: ['PROBE_EXCEPTION'], softWarnings: [], hardViolation: false, httpStatus: 0,
+      classCount: 0, categoryCount: 0, categoryOkCount: 0, categoryChecks: [], listCount: 0,
+      searchEvidence: [], searchCount: 0, detailOk: false, playOk: false, directPlaybackEligible: false,
+      nativeFilterable: false, nativeSortable: false, nativeFilterKeys: [], latencyMs: Date.now() - started,
+      error: String(error?.message || error).slice(0, 240),
+    };
   }
 }
 
@@ -269,6 +336,22 @@ async function probeMediaUrl(url) {
   }
 }
 
+function liveGroupSamples(channels, limit = 8) {
+  const groups = new Map();
+  for (const channel of channels) {
+    const group = String(channel.group || '\u5176\u4ed6').trim() || '\u5176\u4ed6';
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(channel);
+  }
+  const selected = [...groups.values()].map((rows) => rows[0]);
+  if (selected.length >= limit) return selected.slice(0, limit);
+  for (const channel of channelSample(channels, limit)) {
+    if (!selected.some((item) => item.url === channel.url)) selected.push(channel);
+    if (selected.length >= limit) break;
+  }
+  return selected;
+}
+
 export async function probeLiveSource(source) {
   const started = Date.now();
   try {
@@ -277,21 +360,40 @@ export async function probeLiveSource(source) {
     const parsed = parseM3U(document.text);
     const qualityFirst = parsed.channels.filter((channel) => /(?:4k|2160p?|uhd|1080p?|fhd|高清|超清|hd\b)/iu.test(`${channel.name} ${channel.group} ${channel.url}`));
     const samplePool = [...qualityFirst, ...parsed.channels.filter((channel) => !qualityFirst.includes(channel))];
-    const samples = channelSample(samplePool, 4);
+    const samples = liveGroupSamples(samplePool, 8);
     const mediaResults = [];
     for (const channel of samples) mediaResults.push(await probeMediaUrl(channel.url));
     const playable = mediaResults.filter((item) => item.ok).length;
     const hardViolation = Boolean(document.hardViolation || mediaResults.some((item) => item.hardViolation));
-    const ok = Boolean(document.ok && contract.ok && playable >= Math.min(2, samples.length) && !hardViolation);
+    const hardFailures = [];
+    const softWarnings = [];
+    if (!document.ok || !contract.ok || contract.channelCount < 5 || contract.groupCount < 1) hardFailures.push('LIVE_PLAYLIST_SCHEMA_UNAVAILABLE');
+    if (playable < Math.min(2, samples.length)) hardFailures.push('LIVE_PLAYBACK_UNAVAILABLE');
+    if (hardViolation) hardFailures.push('AD_OR_PARSE_CONTENT');
+    const playableRate = samples.length ? playable / samples.length : 0;
+    const qualityRate = playable ? mediaResults.filter((item) => item.ok && /(?:4k|2160p?|uhd|1080p?|fhd|hd\b)/iu.test(`${item.text || ''}`)).length / playable : 0;
+    if (playableRate < 0.75) softWarnings.push('PARTIAL_CHANNEL_FAILURE');
+    if (qualityRate < 0.5) softWarnings.push('HD_EVIDENCE_LOW');
+    if (contract.duplicateRate > 0.35) softWarnings.push('DUPLICATE_RATE_HIGH');
+    if (Date.now() - started > 9000) softWarnings.push('SLOW_SOURCE');
+    const ok = hardFailures.length === 0;
+    const admissionTier = ok && softWarnings.length ? 'WATCH' : ok ? 'ACTIVE' : 'REJECTED';
     const probe = {
-      kind: 'live', slug: source.slug, ok, httpStatus: document.status, channelCount: contract.channelCount,
+      kind: 'live', slug: source.slug, ok, admissionTier, hardFailure: hardFailures.length > 0, hardFailures, softWarnings,
+      httpStatus: document.status, channelCount: contract.channelCount,
       groupCount: contract.groupCount, duplicateRate: contract.duplicateRate, playableCount: playable,
       sampleCount: samples.length, channels: ok ? parsed.channels.slice(0, 800) : [],
-      latencyMs: Date.now() - started, hardViolation, error: hardViolation ? 'hard content or redirect violation' : ok ? '' : 'live playlist or channel contract failed',
+      latencyMs: Date.now() - started, hardViolation, directPlaybackEligible: playable > 0,
+      error: hardFailures.join('; '),
     };
     return { ...probe, score: scoreLiveProbe(probe) };
   } catch (error) {
-    return { kind: 'live', slug: source.slug, ok: false, hardViolation: false, httpStatus: 0, channelCount: 0, groupCount: 0, duplicateRate: 1, playableCount: 0, sampleCount: 0, channels: [], latencyMs: Date.now() - started, error: String(error?.message || error).slice(0, 240) };
+    return {
+      kind: 'live', slug: source.slug, ok: false, admissionTier: 'REJECTED', hardFailure: true,
+      hardFailures: ['PROBE_EXCEPTION'], softWarnings: [], hardViolation: false, httpStatus: 0,
+      channelCount: 0, groupCount: 0, duplicateRate: 1, playableCount: 0, sampleCount: 0, channels: [],
+      directPlaybackEligible: false, latencyMs: Date.now() - started, error: String(error?.message || error).slice(0, 240),
+    };
   }
 }
 
@@ -337,7 +439,9 @@ function publishedFor(registry, state, kind) {
     const key = sourceHealthKey(source);
     if (!lastKeys.includes(key) && !lastKeys.includes(source.slug)) return false;
     const row = state.sources[key] || state.sources[source.slug];
-    return Boolean(row?.lastSuccessAt || (row?.state === 'ACTIVE' && row?.ok === true));
+    return row?.admissionTier !== 'REJECTED'
+      && !row?.hardFailure
+      && Boolean(row?.lastSuccessAt || (row?.state === 'ACTIVE' && row?.ok === true));
   });
   if (knownGood.length) return knownGood;
   if (!Object.keys(state.sources || {}).length) return sources.filter((source) => source.seedStatus === 'ACTIVE');
@@ -375,7 +479,10 @@ export function buildConfig(origin, state = emptyHealthState()) {
   const registry = allRegistry(state);
   const vod = publishedFor(registry, state, 'vod');
   const live = publishedFor(registry, state, 'live');
-  const sites = vod.map((source, index) => tvSite(source, kindRegistry(registry, 'vod').indexOf(source), { quickSearch: index === 0 }));
+  const sites = vod.map((source, index) => {
+    const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug] || null;
+    return tvSite(source, kindRegistry(registry, 'vod').indexOf(source), { quickSearch: index === 0, health: row });
+  });
   return {
     spider: '',
     wallPaper: '',
@@ -389,7 +496,11 @@ export function buildConfig(origin, state = emptyHealthState()) {
       vodCount: vod.length,
       liveCount: live.length,
       liveChannelCount: state.liveCatalog.length,
-      degraded: vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
+      strictVodCount: vod.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'ACTIVE').length,
+      watchVodCount: vod.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'WATCH').length,
+      strictLiveCount: live.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'ACTIVE').length,
+      watchLiveCount: live.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'WATCH').length,
+      degraded: Object.keys(state.sources || {}).length === 0 || vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
       health: origin + '/status.json',
       policy: 'Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded.',
     },
@@ -409,9 +520,15 @@ function publicSourceRows(registry, state) {
       provider: source.provider,
       qualityTier: source.qualityTier,
       seedStatus: source.seedStatus,
+      admissionTier: row?.admissionTier || (source.seedStatus === 'ACTIVE' ? 'ACTIVE' : 'WATCH'),
       visible: visibleSources([source], state).length > 0,
       physicalSource: source.physicalKey,
       api: source.api,
+      native: {
+        filterable: Boolean(row?.nativeFilterable || source.nativeFilterable),
+        sortable: Boolean(row?.nativeSortable || source.nativeSortable),
+        filterKeys: row?.nativeFilterKeys || source.nativeFilterKeys || [],
+      },
       health: row,
     };
   });
@@ -494,7 +611,7 @@ async function scheduled(env) {
   const registry = allRegistry(stateForProbe);
   const batch = selectionBatch(registry, stateForProbe);
   const checkedAt = new Date().toISOString();
-  const rows = await mapWithConcurrency(batch, 4, probeSource);
+  const rows = await mapWithConcurrency(batch, MAX_PROBE_SOURCES, probeSource);
   const next = updateHealthState(registry, stateForProbe, rows, checkedAt);
   next.lastKnownGoodVOD = stateForProbe.lastKnownGoodVOD || [];
   next.lastKnownGoodLIVE = stateForProbe.lastKnownGoodLIVE || [];
@@ -550,8 +667,8 @@ async function config(request, env) {
   const origin = new URL(request.url).origin;
   const payload = buildConfig(origin, state);
   const etag = `"${state.revision}"`;
-  if (request.headers.get('if-none-match') === etag) return new Response(null, { status: 304, headers: { etag, 'cache-control': 'public, max-age=60' } });
-  return responseJson(payload, 200, 60, { etag });
+  if (request.headers.get('if-none-match') === etag) return new Response(null, { status: 304, headers: { etag, 'cache-control': 'no-store, no-cache, must-revalidate' } });
+  return responseJson(payload, 200, 0, { etag, 'cache-control': 'no-store, no-cache, must-revalidate' });
 }
 
 async function status(request, env) {
@@ -559,22 +676,25 @@ async function status(request, env) {
   const registry = allRegistry(state);
   const vod = publishedFor(registry, state, 'vod');
   const live = publishedFor(registry, state, 'live');
+  const vodRows = kindRegistry(registry, 'vod').map((source) => state.sources[sourceHealthKey(source)] || {}).filter(Boolean);
+  const liveRows = kindRegistry(registry, 'live').map((source) => state.sources[sourceHealthKey(source)] || {}).filter(Boolean);
+  const countTier = (rows, tier) => rows.filter((row) => row.admissionTier === tier).length;
   return responseJson({
     ok: true, version: VERSION, registryVersion: REGISTRY_VERSION, checkedAt: state.checkedAt || state.generatedAt, updatedAt: state.generatedAt,
-    persistedAt: state.persistedAt, revision: state.revision, degraded: vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
+    persistedAt: state.persistedAt, revision: state.revision, degraded: Object.keys(state.sources || {}).length === 0 || vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
     configUrl: new URL('/config.json', request.url).toString(),
-    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
-    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
+    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, active: countTier(vodRows, 'ACTIVE'), watch: countTier(vodRows, 'WATCH'), providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
+    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, active: countTier(liveRows, 'ACTIVE'), watch: countTier(liveRows, 'WATCH'), providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
     discovery: { lastAt: state.lastDiscoveryAt, feed: state.lastDiscoveryFeed, error: state.lastDiscoveryError, candidates: state.discoveredSources.length },
-    policy: 'Direct source registry only; no video proxy, no full catalogue snapshot, no adult filtering.',
+    policy: 'Direct source registry only; upstream categories and filters are passed through unchanged. No category whitelist, video proxy, full catalogue snapshot, or adult filtering.',
     sources: publicSourceRows(registry, state),
-  }, 200, 30);
+  }, 200, 0, { 'cache-control': 'no-store, no-cache, must-revalidate' });
 }
 
 async function sourceStatus(request, env) {
   const state = await readHealth(env);
   const registry = allRegistry(state);
-  return responseJson({ ok: true, version: VERSION, registryVersion: REGISTRY_VERSION, ...state, sources: publicSourceRows(registry, state) }, 200, 30);
+  return responseJson({ ok: true, version: VERSION, registryVersion: REGISTRY_VERSION, ...state, sources: publicSourceRows(registry, state) }, 200, 0, { 'cache-control': 'no-store, no-cache, must-revalidate' });
 }
 
 function root(request) {

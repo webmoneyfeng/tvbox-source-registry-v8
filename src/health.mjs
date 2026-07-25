@@ -1,10 +1,24 @@
-export const HEALTH_SCHEMA_VERSION = 'v8-health-2';
+export const HEALTH_SCHEMA_VERSION = 'v8-health-3';
 export const FAILURES_TO_HIDE = 3;
 export const SUCCESSES_TO_RECOVER = 2;
 export const FAILURES_TO_QUARANTINE = 6;
 export const PROBATION_SAMPLE_COUNT = 12;
 export const PROBATION_SUCCESS_COUNT = 10;
 export const PROBATION_MIN_MS = 6 * 60 * 60 * 1000;
+
+const ADMISSION_TIERS = new Set(['ACTIVE', 'WATCH', 'REJECTED']);
+
+function list(value) {
+  return Array.isArray(value) ? value.map((item) => String(item || '').trim()).filter(Boolean) : [];
+}
+
+function getAdmissionTier(probe, before = {}) {
+  const requested = String(probe?.admissionTier || '').trim().toUpperCase();
+  if (ADMISSION_TIERS.has(requested)) return requested;
+  if (probe?.ok === true) return 'ACTIVE';
+  if (!probe?.hardFailure && !probe?.hardViolation) return 'WATCH';
+  return 'REJECTED';
+}
 
 export function sourceHealthKey(source) {
   return `${source.kind || 'vod'}:${source.slug}`;
@@ -63,6 +77,10 @@ export function normalizeHealthState(value) {
 export function applyProbe(previous, source, probe, checkedAt) {
   const before = previous && typeof previous === 'object' ? previous : {};
   const ok = Boolean(probe.ok);
+  const hardFailures = list(probe.hardFailures);
+  const softWarnings = list(probe.softWarnings);
+  const hardFailure = Boolean(probe.hardFailure || probe.hardViolation || hardFailures.length);
+  const tier = getAdmissionTier(probe, before);
   const consecutiveSuccesses = ok ? Number(before.consecutiveSuccesses || 0) + 1 : 0;
   const consecutiveFailures = ok ? 0 : Number(before.consecutiveFailures || 0) + 1;
   const firstSeenAt = before.firstSeenAt || checkedAt;
@@ -75,21 +93,26 @@ export function applyProbe(previous, source, probe, checkedAt) {
     ? Number(probe.playableCount || 0) >= 2
     : Boolean(probe.detailOk && probe.playOk);
   let state = previousState;
-  if (probe.hardViolation || consecutiveFailures >= FAILURES_TO_QUARANTINE) state = 'QUARANTINED';
+  if (hardFailure || consecutiveFailures >= FAILURES_TO_QUARANTINE) state = 'QUARANTINED';
   else if (consecutiveFailures >= FAILURES_TO_HIDE) state = 'WATCH';
   else if (previousState === 'QUARANTINED') state = consecutiveSuccesses >= SUCCESSES_TO_RECOVER ? 'WATCH' : 'QUARANTINED';
-  else if (previousState !== 'ACTIVE') {
+  else if (ok && source.seedStatus === 'WATCH' && previousState !== 'ACTIVE' && previousState !== 'WATCH') {
     state = probationWindow.length >= PROBATION_SAMPLE_COUNT
       && probationSuccesses >= PROBATION_SUCCESS_COUNT
       && ageMs >= PROBATION_MIN_MS
       && deepOk
-      ? 'ACTIVE'
+      ? tier
       : previousState === 'WATCH' ? 'WATCH' : 'PROBATION';
-  }
+  } else if (ok) state = tier;
   return {
     slug: source.slug,
     kind: source.kind || 'vod',
     ok,
+    admissionTier: tier,
+    hardFailure,
+    hardFailures,
+    softWarnings,
+    lastVerifiedAt: checkedAt,
     checkedAt,
     latencyMs: Number.isFinite(probe.latencyMs) ? probe.latencyMs : null,
     classCount: Number(probe.classCount || 0),
@@ -99,6 +122,10 @@ export function applyProbe(previous, source, probe, checkedAt) {
     listCount: Number(probe.listCount || 0),
     searchCount: Number(probe.searchCount || 0),
     searchEvidence: Array.isArray(probe.searchEvidence) ? probe.searchEvidence : [],
+    nativeFilterable: Boolean(probe.nativeFilterable),
+    nativeSortable: Boolean(probe.nativeSortable),
+    nativeFilterKeys: list(probe.nativeFilterKeys),
+    directPlaybackEligible: Boolean(probe.directPlaybackEligible ?? probe.playOk),
     detailOk: Boolean(probe.detailOk),
     playOk: Boolean(probe.playOk),
     playBranchCount: Number(probe.playBranchCount || 0),
@@ -111,8 +138,8 @@ export function applyProbe(previous, source, probe, checkedAt) {
     sampleCount: Number(probe.sampleCount || 0),
     duplicateRate: Number(probe.duplicateRate || 0),
     httpStatus: Number(probe.httpStatus || 0),
-    error: ok ? '' : String(probe.error || 'probe failed').slice(0, 240),
-    hardViolation: Boolean(probe.hardViolation),
+    error: ok ? '' : String(probe.error || hardFailures.join('; ') || 'probe failed').slice(0, 240),
+    hardViolation: Boolean(probe.hardViolation || hardFailure),
     state,
     score: Number(probe.score?.total || 0),
     scoreBreakdown: probe.score || null,
@@ -129,9 +156,13 @@ export function applyProbe(previous, source, probe, checkedAt) {
 
 export function sourceIsVisible(source, healthRow) {
   if (!healthRow) return source.seedStatus === 'ACTIVE';
-  if (healthRow.state) return healthRow.state === 'ACTIVE';
+  if (healthRow.admissionTier === 'REJECTED' || healthRow.hardFailure || (healthRow.hardFailures || []).length) return false;
+  if (healthRow.state === 'QUARANTINED' || healthRow.state === 'PROBATION') return false;
   if (healthRow.consecutiveFailures >= FAILURES_TO_HIDE) return false;
-  return source.seedStatus === 'ACTIVE';
+  if (healthRow.state === 'ACTIVE') return Number(healthRow.consecutiveFailures || 0) < FAILURES_TO_HIDE;
+  if (healthRow.state === 'WATCH') return Boolean(healthRow.lastSuccessAt || healthRow.ok === true);
+  if (healthRow.admissionTier === 'ACTIVE' || healthRow.admissionTier === 'WATCH') return Boolean(healthRow.lastSuccessAt || healthRow.ok === true);
+  return source.seedStatus === 'ACTIVE' && healthRow.ok === true;
 }
 
 export function visibleSources(registry, healthState) {
@@ -156,6 +187,7 @@ export function updateHealthState(registry, previousState, probeRows, checkedAt)
     nextSources[key] = applyProbe(previous.sources[key] || previous.sources[source.slug], source, probe, checkedAt);
   }
   const provisional = {
+    ...previous,
     schemaVersion: HEALTH_SCHEMA_VERSION,
     generatedAt: checkedAt,
     revision: previous.revision,

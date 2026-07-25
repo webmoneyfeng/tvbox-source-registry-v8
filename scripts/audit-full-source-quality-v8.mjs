@@ -416,6 +416,8 @@ async function auditVod(candidate) {
   const media = await mapLimit(branchSamples, REQUEST_CONCURRENCY, async (sample) => ({ ...sample, ...(await probeMedia(sample.url, sample.hint)) }));
   const requestTimes = [...contract.attempts.map((item) => item.latencyMs), ...categoryRows.map((item) => item.latencyMs), ...searchRows.map((item) => item.latencyMs), ...detailRows.map((item) => item.latencyMs)];
   const categoryErrors = categoryRows.filter((row) => !row.ok && (!row.status || row.status >= 400 || row.error));
+  const transientCategoryErrors = categoryErrors.filter((row) => [408, 425, 429, 500, 502, 503, 504].includes(row.status) || !row.status);
+  const hardCategoryErrors = categoryErrors.filter((row) => !transientCategoryErrors.includes(row));
   const emptyCategories = categoryRows.filter((row) => !row.ok && row.status >= 200 && row.status < 400 && !row.error);
   const staleCategories = categoryRows.filter((row) => row.ok && row.ageHours !== null && row.ageHours > 24 * 90);
   const unknownFreshness = categoryRows.filter((row) => row.ok && row.ageHours === null);
@@ -429,22 +431,27 @@ async function auditVod(candidate) {
   const apiMedianMs = median(requestTimes);
   const apiP95Ms = percentile(requestTimes, 0.95);
   const mediaMedianMs = median(media.map((row) => row.latencyMs));
-  let reason = 'PASS';
-  if (!contract.response?.ok) reason = 'API_ERROR';
-  else if (classes.length < 8) reason = 'CLASS_CONTRACT_GAP';
-  else if (categoryErrors.length) reason = 'CATEGORY_API_ERROR';
-  else if (emptyCategories.length) reason = 'EMPTY_CATEGORY';
-  else if (staleCategories.length) reason = 'STALE_CATEGORY';
-  else if (semanticHits < 3) reason = 'SEARCH_FAIL';
-  else if (detailOkRate < 0.9) reason = 'DETAIL_FAIL';
-  else if (branchOkRate < 1) reason = 'PLAY_BRANCH_FAIL';
-  else if (!media.length || mediaSuccessRate < 0.75) reason = 'MEDIA_FAIL';
-  else if (qualityRate < 0.5) reason = 'NO_HD';
-  else if (adOrParse) reason = 'AD_OR_PARSE';
-  else if ((apiP95Ms ?? Infinity) > 9000 || (mediaMedianMs ?? Infinity) > 6000) reason = 'SLOW';
-  const pass = reason === 'PASS';
+  const hardFailures = [];
+  const softWarnings = [];
+  if (!contract.response?.ok) hardFailures.push('API_ERROR');
+  else if (classes.length < 8) hardFailures.push('CLASS_CONTRACT_GAP');
+  if (hardCategoryErrors.length) hardFailures.push('CATEGORY_API_ERROR');
+  if (semanticHits < 3) hardFailures.push('SEARCH_FAIL');
+  if (detailOkRate < 0.9) hardFailures.push('DETAIL_FAIL');
+  if (branchOkRate < 1) hardFailures.push('PLAY_BRANCH_FAIL');
+  if (!media.length || mediaSuccessRate < 0.75) hardFailures.push('MEDIA_FAIL');
+  if (adOrParse) hardFailures.push('AD_OR_PARSE');
+  if (emptyCategories.length) softWarnings.push(`EMPTY_CATEGORY:${emptyCategories.length}`);
+  if (transientCategoryErrors.length) softWarnings.push(`TRANSIENT_CATEGORY_API:${transientCategoryErrors.length}`);
+  if (staleCategories.length) softWarnings.push(`STALE_CATEGORY:${staleCategories.length}`);
+  if (unknownFreshness.length) softWarnings.push(`FRESHNESS_UNKNOWN:${unknownFreshness.length}`);
+  if (qualityRate < 0.5) softWarnings.push('HD_EVIDENCE_LOW');
+  if ((apiP95Ms ?? Infinity) > 9000 || (mediaMedianMs ?? Infinity) > 6000) softWarnings.push('SLOW');
+  const admissionTier = hardFailures.length ? 'REJECTED' : softWarnings.length ? 'WATCH' : 'ACTIVE';
+  const reason = hardFailures[0] || softWarnings[0] || 'PASS';
+  const pass = hardFailures.length === 0 && softWarnings.length === 0;
   return {
-    kind: 'vod', slug, name, api, provider, physicalKey: physicalCandidateKey(api), pass, reason,
+    kind: 'vod', slug, name, api, provider, physicalKey: physicalCandidateKey(api), pass, admissionTier, hardFailures, softWarnings, reason,
     checkedAt: new Date().toISOString(), elapsedMs: Date.now() - started,
     metrics: {
       classCount: classes.length,
@@ -511,17 +518,21 @@ async function auditLive(candidate) {
   const groupCoverageRate = groups.size ? sampledGroups.size / groups.size : 0;
   const mediaMedianMs = median(media.map((row) => row.latencyMs));
   const hardViolation = INFRASTRUCTURE_RE.test(playlist.text.slice(0, 512 * 1024));
-  let reason = 'PASS';
-  if (!playlist.ok) reason = 'PLAYLIST_UNAVAILABLE';
-  else if (parsed.channels.length < 10 || groups.size < 1) reason = 'EMPTY_GROUP_OR_CHANNEL';
-  else if (groupCoverageRate < 1) reason = 'GROUP_AUDIT_INCOMPLETE';
-  else if (media.length < Math.min(8, parsed.channels.length) || mediaSuccessRate < 0.75) reason = 'MEDIA_FAIL';
-  else if (hdRate < 0.5) reason = 'NO_HD';
-  else if (duplicateRate > 0.35) reason = 'DUPLICATE_HEAVY';
-  else if (hardViolation) reason = 'AD_OR_PARSE';
-  else if (playlist.latencyMs > 7000 || (mediaMedianMs ?? Infinity) > 6000) reason = 'SLOW';
+  const hardFailures = [];
+  const softWarnings = [];
+  if (!playlist.ok) hardFailures.push('PLAYLIST_UNAVAILABLE');
+  else if (parsed.channels.length < 10 || groups.size < 1) hardFailures.push('EMPTY_GROUP_OR_CHANNEL');
+  if (groupCoverageRate < 1) hardFailures.push('GROUP_AUDIT_INCOMPLETE');
+  if (media.length < Math.min(8, parsed.channels.length) || successful.length < Math.min(2, media.length)) hardFailures.push('MEDIA_FAIL');
+  if (hardViolation) hardFailures.push('AD_OR_PARSE');
+  if (mediaSuccessRate < 0.75) softWarnings.push('PARTIAL_MEDIA_FAILURE');
+  if (hdRate < 0.5) softWarnings.push('HD_EVIDENCE_LOW');
+  if (duplicateRate > 0.35) softWarnings.push('DUPLICATE_HEAVY');
+  if (playlist.latencyMs > 7000 || (mediaMedianMs ?? Infinity) > 6000) softWarnings.push('SLOW');
+  const admissionTier = hardFailures.length ? 'REJECTED' : softWarnings.length ? 'WATCH' : 'ACTIVE';
+  const reason = hardFailures[0] || softWarnings[0] || 'PASS';
   return {
-    kind: 'live', slug, name, api, provider, physicalKey: physicalCandidateKey(api), pass: reason === 'PASS', reason,
+    kind: 'live', slug, name, api, provider, physicalKey: physicalCandidateKey(api), pass: hardFailures.length === 0 && softWarnings.length === 0, admissionTier, hardFailures, softWarnings, reason,
     checkedAt: new Date().toISOString(),
     metrics: {
       channelCount: parsed.channels.length,
@@ -564,26 +575,20 @@ function operationalVodPass(row) {
   const metrics = row.metrics;
   const branches = row.details.flatMap((detail) => detail.branches || []);
   const directRate = branches.length ? branches.filter((branch) => branch.directCount > 0).length / branches.length : 0;
-  return metrics.classCount >= 8
-    && metrics.categoryErrorCount === 0
-    && metrics.emptyCategoryCount / metrics.classCount <= 0.15
+  return row.hardFailures.length === 0
+    && metrics.classCount >= 8
     && metrics.semanticSearchHits >= 3
     && metrics.detailOkRate >= 0.9
     && directRate >= 0.5
-    && metrics.mediaSuccessRate >= 0.67
-    && metrics.hdRate >= 0.2
-    && (metrics.apiP95Ms ?? Infinity) <= 9000;
+    && metrics.mediaSuccessRate >= 0.67;
 }
 
 function operationalLivePass(row) {
   const metrics = row.metrics;
-  return metrics.channelCount >= 10
+  return row.hardFailures.length === 0
+    && metrics.channelCount >= 10
     && metrics.groupCoverageRate >= 1
-    && metrics.mediaSuccessRate >= 0.5
-    && metrics.hdRate >= 0.25
-    && metrics.duplicateRate <= 0.5
-    && metrics.playlistLatencyMs <= 9000
-    && (!Number.isFinite(metrics.mediaMedianMs) || metrics.mediaMedianMs <= 7000);
+    && metrics.duplicateRate <= 0.5;
 }
 
 function markdown(report) {
@@ -593,16 +598,17 @@ function markdown(report) {
     `Generated: ${report.generatedAt}`,
     '',
     `Strict pass: VOD ${report.passed.vod}/${report.candidates.vod} entries (${report.passedProviders.vod} providers), live ${report.passed.live}/${report.candidates.live} entries (${report.passedProviders.live} providers).`,
-    `Operational pass: VOD ${report.operational.vod} entries (${report.operationalProviders.vod} providers), live ${report.operational.live} entries (${report.operationalProviders.live} providers).`,
+    `Admission: VOD ACTIVE/WATCH/REJECTED ${report.admission.vod.active}/${report.admission.vod.watch}/${report.admission.vod.rejected}, live ACTIVE/WATCH/REJECTED ${report.admission.live.active}/${report.admission.live.watch}/${report.admission.live.rejected}.`,
+    `Hard-gate operational pass: VOD ${report.operational.vod} entries (${report.operationalProviders.vod} providers), live ${report.operational.live} entries (${report.operationalProviders.live} providers). Target met: ${report.targetMet}.`,
     '',
     '| Kind | Source | Result | Root cause | Categories/Groups | Search | Detail | Playback | HD | Latency |',
     '|---|---|---:|---|---:|---:|---:|---:|---:|---:|',
   ];
   for (const row of report.rows) {
     const m = row.metrics;
-    lines.push(`| ${row.kind} | ${row.name} | ${row.pass ? 'PASS' : 'FAIL'} | ${row.reason} | ${row.kind === 'vod' ? `${m.categoriesTested - m.emptyCategoryCount}/${m.categoriesTested}` : `${m.sampledGroupCount}/${m.groupCount}`} | ${row.kind === 'vod' ? `${m.semanticSearchHits}/${SEARCH_TERMS.length}` : '-'} | ${row.kind === 'vod' ? m.detailOkRate : '-'} | ${m.mediaSuccessRate} | ${m.hdRate} | ${row.kind === 'vod' ? m.apiP95Ms : m.playlistLatencyMs}ms |`);
+    lines.push(`| ${row.kind} | ${row.name} | ${row.admissionTier} | ${row.reason} | ${row.kind === 'vod' ? `${m.categoriesTested - m.emptyCategoryCount}/${m.categoriesTested}` : `${m.sampledGroupCount}/${m.groupCount}`} | ${row.kind === 'vod' ? `${m.semanticSearchHits}/${SEARCH_TERMS.length}` : '-'} | ${row.kind === 'vod' ? m.detailOkRate : '-'} | ${m.mediaSuccessRate} | ${m.hdRate} | ${row.kind === 'vod' ? m.apiP95Ms : m.playlistLatencyMs}ms |`);
   }
-  lines.push('', 'Strict pass means every advertised category/group passed. Operational pass is the bounded runtime admission tier; a source can be operational while retaining an upstream category warning. Mirrors or alternate endpoints sharing one provider do not increase provider diversity.');
+  lines.push('', 'Strict pass means no soft warnings. Hard-gate operational pass permits upstream empty categories, transient rate limits, stale metadata, slow responses or low HD evidence when the direct source, search, detail and playback contract remains usable. Mirrors or alternate endpoints sharing one provider do not increase provider diversity.');
   return lines.join('\n') + '\n';
 }
 
@@ -619,8 +625,8 @@ for (const row of rows) row.operationalPass = row.kind === 'vod' ? operationalVo
 const report = {
   generatedAt: new Date().toISOString(),
   policy: {
-    vod: 'Every advertised category must return data; common-title semantic search, sampled details, every sampled play branch, direct media bytes, HD evidence, freshness and latency are required.',
-    live: 'Every advertised group must be sampled; at least 75% sampled playback, at least 50% HD evidence, bounded duplication and latency are required.',
+    vod: 'Hard admission requires native class schema, semantic search, sampled details, direct play branches and direct media bytes. Empty native categories, transient category errors, HD evidence, freshness and latency are reported as soft warnings.',
+    live: 'Hard admission requires playlist schema, group coverage and usable sampled playback. Partial channel failures, HD evidence, duplication and latency are reported as soft warnings.',
     identity: 'Provider mirrors are audited but do not count as independent providers.',
   },
   targets: { vod: 10, live: 10 },
@@ -629,11 +635,27 @@ const report = {
   passedProviders: { vod: providerPassCount(vodRows.filter((row) => row.pass)), live: providerPassCount(liveRows.filter((row) => row.pass)) },
   operational: { vod: vodRows.filter((row) => row.operationalPass).length, live: liveRows.filter((row) => row.operationalPass).length },
   operationalProviders: { vod: providerPassCount(vodRows.filter((row) => row.operationalPass)), live: providerPassCount(liveRows.filter((row) => row.operationalPass)) },
+  admission: {
+    vod: {
+      active: vodRows.filter((row) => row.admissionTier === 'ACTIVE').length,
+      watch: vodRows.filter((row) => row.admissionTier === 'WATCH').length,
+      rejected: vodRows.filter((row) => row.admissionTier === 'REJECTED').length,
+      hardGate: vodRows.filter((row) => row.hardFailures.length === 0).length,
+    },
+    live: {
+      active: liveRows.filter((row) => row.admissionTier === 'ACTIVE').length,
+      watch: liveRows.filter((row) => row.admissionTier === 'WATCH').length,
+      rejected: liveRows.filter((row) => row.admissionTier === 'REJECTED').length,
+      hardGate: liveRows.filter((row) => row.hardFailures.length === 0).length,
+    },
+  },
+  targetMet: vodRows.filter((row) => row.operationalPass).length >= 10 && liveRows.filter((row) => row.operationalPass).length >= 10,
   rows,
 };
 
 await mkdir(path.join(ROOT, 'audit'), { recursive: true });
 await writeFile(path.join(ROOT, 'audit', 'full-source-quality-latest.json'), JSON.stringify(report, null, 2) + '\n', 'utf8');
 await writeFile(path.join(ROOT, 'audit', 'full-source-quality-summary.md'), markdown(report), 'utf8');
-console.log(JSON.stringify({ generatedAt: report.generatedAt, candidates: report.candidates, passed: report.passed, passedProviders: report.passedProviders }, null, 2));
+console.log(JSON.stringify({ generatedAt: report.generatedAt, candidates: report.candidates, passed: report.passed, passedProviders: report.passedProviders, admission: report.admission, operational: report.operational, operationalProviders: report.operationalProviders, targetMet: report.targetMet }, null, 2));
 for (const row of rows) console.log(`${row.pass ? 'PASS' : 'FAIL'} ${row.kind} ${row.slug} ${row.name} reason=${row.reason}`);
+if (!report.targetMet) process.exitCode = 1;

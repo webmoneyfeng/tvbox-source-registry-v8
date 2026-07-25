@@ -1,0 +1,985 @@
+{
+  "generatedAt": "2026-07-25T12:54:15.750Z",
+  "rows": [
+    {
+      "slug": "hhzy-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_hhzy_m3u8",
+          "name": "豪华直连",
+          "type": 1,
+          "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1173
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 524
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 744
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 1522
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1433
+          }
+        ],
+        "detail": {
+          "id": 131948,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.hhuus.com/play/bqx7VKDa/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "hongniu-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_hongniu_m3u8",
+          "name": "红牛直连",
+          "type": 1,
+          "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 827
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 325
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 2
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1046
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 1978
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2134
+          }
+        ],
+        "detail": {
+          "id": 147942,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 51,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://hn.bfvvs.com/play/e0R8gwNb/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "modu",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_modu",
+          "name": "魔都动漫",
+          "type": 1,
+          "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 3013
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1131
+        },
+        "category": {
+          "id": "1",
+          "name": "国产动漫",
+          "status": 200,
+          "schemaOk": true,
+          "count": 20
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1122
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 2616
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2940
+          }
+        ],
+        "detail": {
+          "id": 78682,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 74,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.modujx11.com/20260314/m8Wq8e9X/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "lzi-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_lzi_m3u8",
+          "name": "量子直连",
+          "type": 1,
+          "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1500
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1144
+        },
+        "category": {
+          "id": "1",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 492
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1602
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1645
+          }
+        ],
+        "detail": {
+          "id": 137374,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 48,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v.lzcdn28.com/20260521/10308_d34ae361/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "ffzy-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_ffzy_m3u8",
+          "name": "非凡直连",
+          "type": 1,
+          "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1264
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 248
+        },
+        "category": {
+          "id": "1",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 10,
+            "latencyMs": 281
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 4,
+            "latencyMs": 619
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 606
+          }
+        ],
+        "detail": {
+          "id": 98476,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 8,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://super.ffzy-online6.com/20260703/35944_db053e00/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "jinying",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_jinying",
+          "name": "金鹰资源",
+          "type": 1,
+          "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 0
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": false,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 659
+        },
+        "list": {
+          "status": 0,
+          "schemaOk": false,
+          "latencyMs": 8007
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 0,
+          "schemaOk": false,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8015
+          },
+          {
+            "term": "亮剑",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8013
+          },
+          {
+            "term": "王志文",
+            "status": 0,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 8010
+          }
+        ],
+        "detail": {
+          "id": 111740,
+          "status": 0,
+          "schemaOk": false,
+          "count": 0,
+          "directUrlCount": 0,
+          "directPlaybackEligible": false,
+          "sampleUrl": ""
+        }
+      }
+    },
+    {
+      "slug": "zuida",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_zuida",
+          "name": "最大资源",
+          "type": 1,
+          "api": "https://api.zuidapi.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 717
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 204
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 210
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 8,
+            "latencyMs": 615
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 633
+          }
+        ],
+        "detail": {
+          "id": 73298,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 108,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v14.zuidazym3u8.com/yyv14/202607/18/UhPXnp75Li27/video/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "subo-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_subo_m3u8",
+          "name": "速播直连",
+          "type": 1,
+          "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1658
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 994
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1234
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 2017
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2200
+          }
+        ],
+        "detail": {
+          "id": 109828,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.xluuss.com/play/bo2VvGAa/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "360zy-direct",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_360zy_direct",
+          "name": "360直连",
+          "type": 1,
+          "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1825
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 594
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 688
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 5,
+            "latencyMs": 2269
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 635
+          }
+        ],
+        "detail": {
+          "id": 100857,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 7,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://vod1.maowushi.com/20260705/T6sLgDW6/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "xinlang-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_xinlang_m3u8",
+          "name": "新浪直连",
+          "type": 1,
+          "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 3798
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 2899
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 1
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 4312
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 6,
+            "latencyMs": 6701
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 6452
+          }
+        ],
+        "detail": {
+          "id": 161802,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 59,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://play.xluuss.com/play/bo2VvGAa/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "baidu",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_baidu",
+          "name": "百度资源",
+          "type": 1,
+          "api": "https://api.apibdzy.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 889
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 315
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 1,
+            "latencyMs": 867
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 3,
+            "latencyMs": 1557
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1307
+          }
+        ],
+        "detail": {
+          "id": 49978,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 17,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://b3.bdzybf22.com/videos/202606/30/6a429ae6216ac4efb071df11/17d2c6/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "bfzy",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_bfzy",
+          "name": "暴风资源",
+          "type": 1,
+          "api": "https://bfzyapi.com/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 770
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 226
+        },
+        "category": {
+          "id": "20",
+          "name": "电影片",
+          "status": 200,
+          "schemaOk": true,
+          "count": 12
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 334
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1114
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 1462
+          }
+        ],
+        "detail": {
+          "id": 140405,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 15,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v.baofeng9.com/video/xiaoshuchidexiakeshanglingzhudeyangnv/05ddbe2ee775/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "jszy-m3u8",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_jszy_m3u8",
+          "name": "极速直连",
+          "type": 1,
+          "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 2242
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 232
+        },
+        "category": {
+          "id": "1",
+          "name": "电视剧",
+          "status": 200,
+          "schemaOk": true,
+          "count": 0
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 14,
+            "latencyMs": 323
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 5,
+            "latencyMs": 1347
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 1336
+          }
+        ],
+        "detail": {
+          "id": 14767,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 8,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://vv.jisuzyv.com/play/Le3JWZxd/index.m3u8"
+        }
+      }
+    },
+    {
+      "slug": "lovedan",
+      "client": {
+        "configFields": {
+          "key": "registry_vod_lovedan",
+          "name": "爱旦资源",
+          "type": 1,
+          "api": "https://www.lovedan.net/api.php/provide/vod/",
+          "searchable": 1,
+          "quickSearch": 0,
+          "filterable": 0,
+          "changeable": 1
+        },
+        "categoriesRewritten": false,
+        "filterableMatchesNative": true,
+        "changeableMeansFallback": true,
+        "changeableMatchesPlayback": true
+      },
+      "requests": {
+        "home": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 1564
+        },
+        "list": {
+          "status": 200,
+          "schemaOk": true,
+          "latencyMs": 517
+        },
+        "category": {
+          "id": "1",
+          "name": "电影",
+          "status": 200,
+          "schemaOk": true,
+          "count": 20
+        },
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "latencyMs": 733
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": true,
+            "count": 10,
+            "latencyMs": 2063
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "latencyMs": 2037
+          }
+        ],
+        "detail": {
+          "id": 198192,
+          "status": 200,
+          "schemaOk": true,
+          "count": 1,
+          "directUrlCount": 159,
+          "directPlaybackEligible": true,
+          "sampleUrl": "https://v10.ppqrrs.com/wjv10/202607/19/KE56Xnja4G94/video/index.m3u8"
+        }
+      }
+    }
+  ]
+}
