@@ -9,9 +9,9 @@ const estimate = {
   maximumProbeSourcesPerInvocation: 3,
   maximumProbeSubrequestsPerSource: 10,
   maximumRedirectHopsPerRequest: 1,
-  discoverySubrequests: 1,
+  discoverySubrequests: 3,
   kvSubrequests: 2,
-  maximumSubrequestsPerInvocation: 33,
+  maximumSubrequestsPerInvocation: 35,
   maximumKvWritesPerDay: 288,
   configuredCronTriggers: 1,
 };
