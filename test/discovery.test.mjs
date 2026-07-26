@@ -9,6 +9,8 @@ test('discovery accepts only public HTTP URLs', () => {
   assert.equal(isPublicHttpUrl('http://169.254.169.254/latest/meta-data'), false);
   assert.equal(isPublicHttpUrl('http://100.64.0.1/config.json'), false);
   assert.equal(isPublicHttpUrl('https://user:pass@example.com/config.json'), false);
+  assert.equal(isPublicHttpUrl('https://example.com/live.m3u?token=abc'), false);
+  assert.equal(isPublicHttpUrl('https://example.com/api.php/provide/vod/?ac=list'), true);
 });
 
 test('discovery parses comment-bearing TVBox JSON without changing string values', () => {

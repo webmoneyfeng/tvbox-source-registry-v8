@@ -21,7 +21,7 @@ import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 import { decodeSourceBytes, encodingEvidence } from './encoding.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.2.2';
+const VERSION = 'tvbox-source-registry-v8.2.3';
 const REGISTRY_MODE = 'validated-direct-source-registry-v8.2';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
@@ -41,13 +41,23 @@ const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json',
   'https://raw.githubusercontent.com/liu673cn/box/main/m.json',
   'https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json',
+  'https://szyyds.cn/tv/x.json',
+  'https://16409.kstore.vip/tv/ngzmods.json',
+  'https://dxawi.github.io/0/0.json',
+  'https://raw.liucn.cc/box/m.json',
+  'https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json',
   'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u',
   'https://live.zbds.org/tv/iptv4.m3u',
   'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
   'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
 ];
-const UA = 'tvbox-source-registry-v8.2.2-health/1.0';
+const UA = 'tvbox-source-registry-v8.2.3-health/1.0';
 
 function responseJson(value, status = 200, maxAge = 60, extraHeaders = {}) {
   const headers = new Headers({
@@ -502,6 +512,15 @@ function discoveredRegistry(state) {
   return candidates.map((candidate) => candidateToRegistrySource(candidate));
 }
 
+function baseRegistryCandidateKeys() {
+  return new Set([...SOURCE_REGISTRY, ...LIVE_SOURCE_REGISTRY].map((source) => `${source.kind}:${source.physicalKey}`));
+}
+
+function pruneDiscoveredCandidates(candidates = []) {
+  const baseKeys = baseRegistryCandidateKeys();
+  return dedupeCandidates(candidates).filter((candidate) => !baseKeys.has(`${candidate.kind}:${candidate.physicalKey}`));
+}
+
 function allRegistry(state) {
   const base = [...SOURCE_REGISTRY, ...LIVE_SOURCE_REGISTRY];
   const baseKeys = new Set(base.map((source) => `${source.kind}:${source.physicalKey}`));
@@ -676,7 +695,7 @@ async function discoverOne(state) {
   if (Number.isFinite(last) && now - last < interval) return { state, discovered: 0, attempts: 0 };
 
   const timestamp = new Date(now).toISOString();
-  const existing = dedupeCandidates(state.discoveredSources || []);
+  const existing = pruneDiscoveredCandidates(state.discoveredSources || []);
   let merged = existing;
   let cursor = Number(state.discoveryCursor || 0) % DISCOVERY_FEEDS.length;
   let supportedFeed = '';
@@ -708,7 +727,7 @@ async function discoverOne(state) {
     }
 
     supportedFeed = feed;
-    const candidates = dedupeCandidates(extractCandidates(payload, feed));
+    const candidates = pruneDiscoveredCandidates(extractCandidates(payload, feed));
     merged = dedupeCandidates([...merged, ...candidates]).slice(0, 100);
     if (candidates.length > 0) break;
   }
@@ -781,7 +800,7 @@ async function scheduled(env) {
   next.lastDiscoverySuccessAt = stateForProbe.lastDiscoverySuccessAt || null;
   next.lastDiscoveryFeed = stateForProbe.lastDiscoveryFeed || null;
   next.lastDiscoveryError = stateForProbe.lastDiscoveryError || null;
-  next.discoveredSources = stateForProbe.discoveredSources || [];
+  next.discoveredSources = pruneDiscoveredCandidates(stateForProbe.discoveredSources || []);
 
   const vod = publishedFor(registry, next, 'vod');
   const live = publishedFor(registry, next, 'live');
@@ -919,6 +938,7 @@ export {
   playBranchContract,
   playlistHardViolation,
   publishedFor,
+  pruneDiscoveredCandidates,
   rowsOf,
   selectionBatch,
   sourceUrl,

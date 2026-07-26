@@ -1,5 +1,6 @@
 const PRIVATE_HOST_RE = /^(?:localhost|0\.|10\.|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.|127\.|169\.254\.|172\.(?:1[6-9]|2\d|3[01])\.|192\.(?:0\.|168\.)|198\.(?:1[89])\.|2(?:2[4-9]|3\d|4\d|5[0-5])\.|\[?(?:::1|f[cd][0-9a-f]{2}:|fe[89ab][0-9a-f]:))/iu;
 const DISALLOWED_CONFIG_KEY_RE = /(?:jar|spider|ext|parse|player|script)/iu;
+const SENSITIVE_QUERY_KEYS = new Set(['token', 'access_token', 'auth', 'key', 'api_key', 'apikey', 'secret', 'pwd', 'password', 'sign', 'signature']);
 
 function stripJsonComments(value) {
   let output = '';
@@ -72,6 +73,9 @@ export function isPublicHttpUrl(value) {
     if (PRIVATE_HOST_RE.test(url.hostname)) return false;
     if (url.hostname.includes('..') || url.hostname.length > 253) return false;
     if (url.port && !['80', '443'].includes(url.port)) return false;
+    for (const key of url.searchParams.keys()) {
+      if (SENSITIVE_QUERY_KEYS.has(String(key || '').toLowerCase())) return false;
+    }
     return true;
   } catch {
     return false;

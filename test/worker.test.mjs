@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import worker, { allRegistry, buildConfig, effectiveSources, nativeFilterInfo, selectionBatch } from '../src/worker.mjs';
+import worker, { allRegistry, buildConfig, effectiveSources, nativeFilterInfo, pruneDiscoveredCandidates, selectionBatch } from '../src/worker.mjs';
 import { emptyHealthState } from '../src/health.mjs';
 import { sourceHealthKey } from '../src/health.mjs';
 import { LIVE_SOURCE_REGISTRY, SOURCE_REGISTRY, tvSite } from '../src/registry.mjs';
@@ -109,6 +109,21 @@ test('discovered source matching a seeded physical path is ignored', () => {
   const registry = allRegistry(state);
   const matches = registry.filter((source) => source.physicalKey === 'raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u');
   assert.equal(matches.length, 1);
+});
+
+test('discovery state prunes candidates matching seeded physical sources', () => {
+  const candidates = pruneDiscoveredCandidates([
+    {
+      kind: 'live',
+      api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
+    },
+    {
+      kind: 'vod',
+      api: 'https://candidate.example.com/api.php/provide/vod/',
+    },
+  ]);
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].api, 'https://candidate.example.com/api.php/provide/vod/');
 });
 
 test('live entries publish validated source links even when the target count is not met', () => {
