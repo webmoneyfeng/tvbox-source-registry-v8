@@ -1,0 +1,41 @@
+﻿{
+    "generatedAt":  "2026-07-26T10:33:06.4576016Z",
+    "deployedCodeCommit":  "52d00eb477db",
+    "branch":  "v8.2-native-audit",
+    "packageVersion":  "8.2.3",
+    "registryVersion":  "v8.2.3",
+    "canary":  {
+                   "worker":  "tvbox-source-registry-v8-canary",
+                   "url":  "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev/config.json",
+                   "versionId":  "e6d535f6-440b-4613-9c3c-a4d98da53ed6",
+                   "auditLog":  "audit/canary-audit-52d00eb.log",
+                   "deployLog":  "audit/canary-deploy-52d00eb.log",
+                   "pass":  true
+               },
+    "production":  {
+                       "worker":  "tvbox-source-registry-v8",
+                       "mainConfig":  "https://tv.webhome.eu.org/config.json",
+                       "secondaryConfig":  "https://tv.webclound.eu.org/config.json",
+                       "workerDevConfig":  "https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json",
+                       "versionId":  "17b36072-9f35-42fb-aebb-cde55e12ae76",
+                       "deployLog":  "audit/formal-deploy-52d00eb.log",
+                       "runtimeCoherenceLog":  "audit/runtime-coherence-formal-52d00eb.log",
+                       "statusSummaryLog":  "audit/formal-status-summary-52d00eb.log",
+                       "pass":  true
+                   },
+    "validation":  {
+                       "npmCheck":  "57 tests, 57 pass, 0 fail",
+                       "runtimeCoherence":  "PASS",
+                       "statusSummary":  "PASS",
+                       "freeBudget":  "PASS_WITH_TRAFFIC_BOUNDARY",
+                       "visibleVod":  14,
+                       "visibleLive":  20,
+                       "degraded":  false
+                   },
+    "boundaries":  [
+                       "No candidate expansion was performed for this deployment.",
+                       "No rejected or probation candidate source was published.",
+                       "No video stream proxying was introduced.",
+                       "Historical v8.1.4 rollback evidence was not deleted."
+                   ]
+}
