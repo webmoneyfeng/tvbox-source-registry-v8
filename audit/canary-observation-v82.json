@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-07-26T08:07:37.834Z",
+  "generatedAt": "2026-07-26T08:33:54.891Z",
   "base": "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev",
-  "deploymentVersionId": "ef132f0b-1230-4622-8ff3-cc8852776bc2",
+  "deploymentVersionId": "7c6eb0ea-ae23-4bf9-b39f-9cee4a9b30af",
   "rounds": [
     {
       "round": 1,
-      "capturedAt": "2026-07-26T08:07:24.893Z",
+      "capturedAt": "2026-07-26T08:33:46.855Z",
       "endpoints": [
         {
           "pathname": "/config.json",
           "status": 200,
           "ok": true,
-          "bytes": 5504,
+          "bytes": 5719,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
-          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 1723,
-          "attempts": 1
+          "latencyMs": 1744,
+          "attempts": 2
         },
         {
           "pathname": "/status.json",
           "status": 200,
           "ok": true,
-          "bytes": 155828,
+          "bytes": 144215,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 621,
+          "latencyMs": 509,
           "attempts": 1
         },
         {
           "pathname": "/sources.json",
           "status": 200,
           "ok": true,
-          "bytes": 1114254,
+          "bytes": 1102678,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 903,
+          "latencyMs": 776,
           "attempts": 1
         },
         {
@@ -56,13 +56,13 @@
           "etag": "",
           "liveFormat": true,
           "liveHasUrl": true,
-          "latencyMs": 1228,
+          "latencyMs": 792,
           "attempts": 1
         }
       ],
       "counts": {
         "sites": 14,
-        "lives": 18,
+        "lives": 20,
         "sourceRows": 39
       },
       "statusSummary": {
@@ -70,25 +70,25 @@
         "vod": {
           "registered": 16,
           "visible": 14,
-          "active": 3,
-          "watch": 11,
+          "active": 2,
+          "watch": 12,
           "unprobed": 0,
           "providers": 14,
           "target": "10+"
         },
         "live": {
           "registered": 23,
-          "visible": 18,
-          "active": 4,
-          "watch": 14,
+          "visible": 20,
+          "active": 1,
+          "watch": 19,
           "unprobed": 0,
-          "providers": 5,
+          "providers": 6,
           "channels": 2000,
           "target": "10+"
         }
       },
-      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
-      "version": "v8.2.1",
+      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
+      "version": "v8.2.2",
       "checks": {
         "allReachable": true,
         "configSitesNonEmpty": true,
@@ -107,45 +107,45 @@
     },
     {
       "round": 2,
-      "capturedAt": "2026-07-26T08:07:28.634Z",
+      "capturedAt": "2026-07-26T08:33:50.118Z",
       "endpoints": [
         {
           "pathname": "/config.json",
           "status": 200,
           "ok": true,
-          "bytes": 5504,
+          "bytes": 5719,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
-          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 358,
+          "latencyMs": 314,
           "attempts": 1
         },
         {
           "pathname": "/status.json",
           "status": 200,
           "ok": true,
-          "bytes": 155828,
+          "bytes": 144215,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 373,
+          "latencyMs": 342,
           "attempts": 1
         },
         {
           "pathname": "/sources.json",
           "status": 200,
           "ok": true,
-          "bytes": 1114254,
+          "bytes": 1102678,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 910,
+          "latencyMs": 858,
           "attempts": 1
         },
         {
@@ -158,13 +158,13 @@
           "etag": "",
           "liveFormat": true,
           "liveHasUrl": true,
-          "latencyMs": 1091,
+          "latencyMs": 730,
           "attempts": 1
         }
       ],
       "counts": {
         "sites": 14,
-        "lives": 18,
+        "lives": 20,
         "sourceRows": 39
       },
       "statusSummary": {
@@ -172,25 +172,25 @@
         "vod": {
           "registered": 16,
           "visible": 14,
-          "active": 3,
-          "watch": 11,
+          "active": 2,
+          "watch": 12,
           "unprobed": 0,
           "providers": 14,
           "target": "10+"
         },
         "live": {
           "registered": 23,
-          "visible": 18,
-          "active": 4,
-          "watch": 14,
+          "visible": 20,
+          "active": 1,
+          "watch": 19,
           "unprobed": 0,
-          "providers": 5,
+          "providers": 6,
           "channels": 2000,
           "target": "10+"
         }
       },
-      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
-      "version": "v8.2.1",
+      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
+      "version": "v8.2.2",
       "checks": {
         "allReachable": true,
         "configSitesNonEmpty": true,
@@ -209,45 +209,45 @@
     },
     {
       "round": 3,
-      "capturedAt": "2026-07-26T08:07:37.833Z",
+      "capturedAt": "2026-07-26T08:33:54.890Z",
       "endpoints": [
         {
           "pathname": "/config.json",
           "status": 200,
           "ok": true,
-          "bytes": 5504,
+          "bytes": 5719,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
-          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
+          "etag": "W/\"vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a\"",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 367,
+          "latencyMs": 311,
           "attempts": 1
         },
         {
           "pathname": "/status.json",
           "status": 200,
           "ok": true,
-          "bytes": 155828,
+          "bytes": 144215,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 357,
+          "latencyMs": 324,
           "attempts": 1
         },
         {
           "pathname": "/sources.json",
           "status": 200,
           "ok": true,
-          "bytes": 1114254,
+          "bytes": 1102678,
           "contentType": "application/json; charset=utf-8",
           "cacheControl": "no-store, no-cache, must-revalidate",
           "etag": "",
           "liveFormat": null,
           "liveHasUrl": null,
-          "latencyMs": 3627,
+          "latencyMs": 1171,
           "attempts": 1
         },
         {
@@ -260,13 +260,13 @@
           "etag": "",
           "liveFormat": true,
           "liveHasUrl": true,
-          "latencyMs": 3836,
+          "latencyMs": 1965,
           "attempts": 1
         }
       ],
       "counts": {
         "sites": 14,
-        "lives": 18,
+        "lives": 20,
         "sourceRows": 39
       },
       "statusSummary": {
@@ -274,25 +274,25 @@
         "vod": {
           "registered": 16,
           "visible": 14,
-          "active": 3,
-          "watch": 11,
+          "active": 2,
+          "watch": 12,
           "unprobed": 0,
           "providers": 14,
           "target": "10+"
         },
         "live": {
           "registered": 23,
-          "visible": 18,
-          "active": 4,
-          "watch": 14,
+          "visible": 20,
+          "active": 1,
+          "watch": 19,
           "unprobed": 0,
-          "providers": 5,
+          "providers": 6,
           "channels": 2000,
           "target": "10+"
         }
       },
-      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
-      "version": "v8.2.1",
+      "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
+      "version": "v8.2.2",
       "checks": {
         "allReachable": true,
         "configSitesNonEmpty": true,

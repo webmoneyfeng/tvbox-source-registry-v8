@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-26T08:07:37.834Z",
+  "generatedAt": "2026-07-26T08:33:54.891Z",
   "base": "https://tvbox-source-registry-v8-canary.feng-yang.workers.dev",
-  "deploymentVersionId": "ef132f0b-1230-4622-8ff3-cc8852776bc2",
-  "version": "v8.2.1",
-  "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
+  "deploymentVersionId": "7c6eb0ea-ae23-4bf9-b39f-9cee4a9b30af",
+  "version": "v8.2.2",
+  "revision": "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|live:fanmingming-ipv6|vod:bfzy|vod:jszy-m3u8|live:iptv-org-hk|vod:lovedan|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-uk|live:iptv-org-de|live:iptv-org-ca|live:suxuang-ipv4|live:guovin-result|live:guovin-ipv4|live:iptv-org-th|live:iptv-org-it|live:iptv-org-in|live:iptv-org-br|live:zbds-ipv4|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:d7950b7a",
   "counts": {
     "sites": 14,
-    "lives": 18,
+    "lives": 20,
     "sourceRows": 39
   },
   "checks": {

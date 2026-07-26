@@ -55,8 +55,14 @@ test('discovery skips an unsupported feed and accepts the next supported feed in
       });
     }
     if (url.pathname.endsWith('/gao/master/XYQ.json')) {
-      return jsonResponse({
-        sites: [{ type: 1, name: 'fallback source', api: 'https://candidate.example.test/api' }],
+      return new Response([
+        '// public TVBox config',
+        JSON.stringify({
+          sites: [{ type: 1, name: 'fallback source', api: 'https://candidate.example.test/api' }],
+        }),
+      ].join('\n'), {
+        status: 200,
+        headers: { 'content-type': 'application/json; charset=utf-8' },
       });
     }
     return new Response('', { status: 404 });

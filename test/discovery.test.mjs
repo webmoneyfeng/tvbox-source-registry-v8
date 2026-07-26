@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from '../src/discovery.mjs';
+import { dedupeCandidates, extractCandidates, isPublicHttpUrl, parseJsonLike } from '../src/discovery.mjs';
 import { candidateToRegistrySource } from '../src/registry.mjs';
 
 test('discovery accepts only public HTTP URLs', () => {
@@ -9,6 +9,19 @@ test('discovery accepts only public HTTP URLs', () => {
   assert.equal(isPublicHttpUrl('http://169.254.169.254/latest/meta-data'), false);
   assert.equal(isPublicHttpUrl('http://100.64.0.1/config.json'), false);
   assert.equal(isPublicHttpUrl('https://user:pass@example.com/config.json'), false);
+});
+
+test('discovery parses comment-bearing TVBox JSON without changing string values', () => {
+  const payload = parseJsonLike([
+    '// generated config',
+    '{',
+    '  "sites": [{"type": 1, "name": "https://example.com//native", "api": "https://example.com/api"}],',
+    '  /* keep the native structure */',
+    '  "lives": []',
+    '}',
+  ].join('\n'));
+  assert.equal(payload.sites[0].name, 'https://example.com//native');
+  assert.equal(payload.sites[0].api, 'https://example.com/api');
 });
 
 test('discovery extracts type 1 CMS and live candidates but ignores scripts', () => {

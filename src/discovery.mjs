@@ -1,6 +1,69 @@
 const PRIVATE_HOST_RE = /^(?:localhost|0\.|10\.|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.|127\.|169\.254\.|172\.(?:1[6-9]|2\d|3[01])\.|192\.(?:0\.|168\.)|198\.(?:1[89])\.|2(?:2[4-9]|3\d|4\d|5[0-5])\.|\[?(?:::1|f[cd][0-9a-f]{2}:|fe[89ab][0-9a-f]:))/iu;
 const DISALLOWED_CONFIG_KEY_RE = /(?:jar|spider|ext|parse|player|script)/iu;
 
+function stripJsonComments(value) {
+  let output = '';
+  let inString = false;
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  const text = String(value || '');
+  for (let index = 0; index < text.length; index += 1) {
+    const current = text[index];
+    const next = text[index + 1];
+    if (lineComment) {
+      if (current === '\n') {
+        lineComment = false;
+        output += current;
+      }
+      continue;
+    }
+    if (blockComment) {
+      if (current === '*' && next === '/') {
+        blockComment = false;
+        index += 1;
+      } else if (current === '\n') {
+        output += current;
+      }
+      continue;
+    }
+    if (inString) {
+      output += current;
+      if (escaped) escaped = false;
+      else if (current === '\\') escaped = true;
+      else if (current === '"') inString = false;
+      continue;
+    }
+    if (current === '"') {
+      inString = true;
+      output += current;
+      continue;
+    }
+    if (current === '/' && next === '/') {
+      lineComment = true;
+      index += 1;
+      continue;
+    }
+    if (current === '/' && next === '*') {
+      blockComment = true;
+      index += 1;
+      continue;
+    }
+    output += current;
+  }
+  return output;
+}
+
+export function parseJsonLike(value) {
+  const text = String(value || '').replace(/^\uFEFF/u, '').trim();
+  if (/^\s*#EXTM3U/iu.test(text)) return text;
+  try {
+    return JSON.parse(stripJsonComments(text));
+  } catch {
+    return null;
+  }
+}
+
 export function isPublicHttpUrl(value) {
   try {
     const url = new URL(String(value));

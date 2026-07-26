@@ -16,12 +16,12 @@ import {
   sourceDisplayName,
   tvSite,
 } from './registry.mjs';
-import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from './discovery.mjs';
+import { dedupeCandidates, extractCandidates, isPublicHttpUrl, parseJsonLike } from './discovery.mjs';
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 import { decodeSourceBytes, encodingEvidence } from './encoding.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.2.1';
+const VERSION = 'tvbox-source-registry-v8.2.2';
 const REGISTRY_MODE = 'validated-direct-source-registry-v8.2';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
@@ -47,7 +47,7 @@ const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
   'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
 ];
-const UA = 'tvbox-source-registry-v8.2.1-health/1.0';
+const UA = 'tvbox-source-registry-v8.2.2-health/1.0';
 
 function responseJson(value, status = 200, maxAge = 60, extraHeaders = {}) {
   const headers = new Headers({
@@ -701,17 +701,8 @@ async function discoverOne(state) {
       continue;
     }
 
-    let payload = document.text;
-    let parseError = false;
-    if (!/^\s*#EXTM3U/iu.test(payload)) {
-      try {
-        payload = JSON.parse(payload.replace(/^\uFEFF/u, '').trim());
-      } catch {
-        payload = null;
-        parseError = true;
-      }
-    }
-    if (parseError) {
+    const payload = parseJsonLike(document.text);
+    if (payload === null) {
       errors.push(`${feed}: feed is not a supported TVBox JSON or M3U document`);
       continue;
     }
