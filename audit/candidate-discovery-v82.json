@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T05:29:53.510Z",
+  "generatedAt": "2026-07-26T08:22:49.173Z",
   "feeds": [
     {
       "url": "https://szyyds.cn/tv/x.json",
@@ -38,8 +38,8 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
-      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/c.txt",
+      "finalUrl": "https://jihulab.com/duomv/apps/-/raw/main/c.txt",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -52,25 +52,7 @@
       "parseType": "json",
       "ok": true,
       "status": 200,
-      "bytes": 18001,
-      "error": ""
-    },
-    {
-      "url": "https://jihulab.com/duomv/apps/-/raw/main/a.txt",
-      "finalUrl": "https://jihulab.com/duomv/apps/-/raw/main/a.txt",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 2259,
+      "bytes": 1633,
       "error": ""
     },
     {
@@ -92,24 +74,6 @@
       "error": ""
     },
     {
-      "url": "https://jihulab.com/duomv/apps/-/raw/main/c.txt",
-      "finalUrl": "https://jihulab.com/duomv/apps/-/raw/main/c.txt",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 1633,
-      "error": ""
-    },
-    {
       "url": "https://jihulab.com/duomv/apps/-/raw/main/b.txt",
       "finalUrl": "https://jihulab.com/duomv/apps/-/raw/main/b.txt",
       "contentType": "text/plain; charset=utf-8",
@@ -128,8 +92,8 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/XYQTVBox.json",
-      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/XYQTVBox.json",
+      "url": "https://jihulab.com/duomv/apps/-/raw/main/a.txt",
+      "finalUrl": "https://jihulab.com/duomv/apps/-/raw/main/a.txt",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -139,87 +103,11 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 2259,
       "error": ""
-    },
-    {
-      "url": "https://pan.shangui.cc/f/v68xuk/xm.json",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/liu673cn/box/main/a.json",
-      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/a.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json",
-      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/dongman.json",
-      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/dongman.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://pan.shangui.cc/f/eoVMFQ/ppa.json",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
     },
     {
       "url": "https://jihulab.com/duomv/apps/-/raw/main/fast.json",
@@ -240,26 +128,44 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "contentType": "text/plain; charset=utf-8",
+      "url": "https://play.iptv365.org/api.json",
+      "finalUrl": "https://play.iptv365.org/api.json",
+      "contentType": "",
       "encoding": {
         "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
         "replacementCount": 0,
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 45597,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 0,
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/4k.json",
-      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/4k.json",
+      "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymz",
+      "finalUrl": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymz",
+      "contentType": "image/bmp",
+      "encoding": {
+        "encoding": "utf-16le",
+        "declaredCharset": null,
+        "confidence": "fallback-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": false
+      },
+      "parseType": "unknown",
+      "ok": true,
+      "status": 200,
+      "bytes": 56026,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/dongman.json",
+      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/dongman.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -294,8 +200,62 @@
       "error": ""
     },
     {
-      "url": "https://play.iptv365.org/api.json",
-      "finalUrl": "https://play.iptv365.org/api.json",
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 18001,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 45597,
+      "error": ""
+    },
+    {
+      "url": "https://raw.liucn.cc/box/m.json",
+      "finalUrl": "https://raw.liucn.cc/box/m.json",
+      "contentType": "application/json; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 50584,
+      "error": ""
+    },
+    {
+      "url": "https://d.kstore.dev/download/7213/",
+      "finalUrl": "https://d.kstore.dev/download/7213/",
       "contentType": "",
       "encoding": {
         "encoding": "utf-8",
@@ -330,8 +290,8 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/duanju.json",
-      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/duanju.json",
+      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/XYQTVBox.json",
+      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/XYQTVBox.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -346,125 +306,6 @@
       "status": 404,
       "bytes": 14,
       "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
-      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 50584,
-      "error": ""
-    },
-    {
-      "url": "https://raw.liucn.cc/box/m.json",
-      "finalUrl": "https://raw.liucn.cc/box/m.json",
-      "contentType": "application/json; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 50584,
-      "error": ""
-    },
-    {
-      "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymz",
-      "finalUrl": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymz",
-      "contentType": "image/bmp",
-      "encoding": {
-        "encoding": "utf-16le",
-        "declaredCharset": null,
-        "confidence": "fallback-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": false
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 56026,
-      "error": ""
-    },
-    {
-      "url": "https://jihulab.com/bh666/YGBH/-/raw/main/ygbox.json",
-      "finalUrl": "https://jihulab.com/bh666/YGBH/-/raw/main/ygbox.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 109167,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/liu673cn/box/main/b.json",
-      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/b.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://d.kstore.dev/download/7213/",
-      "finalUrl": "https://d.kstore.dev/download/7213/",
-      "contentType": "",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 0,
-      "error": ""
-    },
-    {
-      "url": "https://tvbox.cainisi.cf/",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
     },
     {
       "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
@@ -485,9 +326,20 @@
       "error": ""
     },
     {
-      "url": "https://dxawi.github.io/0/0.json",
-      "finalUrl": "https://dxawi.github.io/0/0.json",
-      "contentType": "application/json; charset=utf-8",
+      "url": "https://pan.shangui.cc/f/v68xuk/xm.json",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/duanju.json",
+      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/duanju.json",
+      "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
         "declaredCharset": "utf-8",
@@ -496,14 +348,14 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 17548,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
       "error": ""
     },
     {
-      "url": "https://xhdwc.tk/0",
+      "url": "http://meowtv.cn/tv",
       "finalUrl": "",
       "contentType": "",
       "encoding": null,
@@ -512,35 +364,6 @@
       "status": 0,
       "bytes": 0,
       "error": "fetch failed"
-    },
-    {
-      "url": "https://weixine.net/ysc.json",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
-    },
-    {
-      "url": "http://xn--z7x900a.live/",
-      "finalUrl": "http://xn--z7x900a.live/",
-      "contentType": "text/html",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 677,
-      "error": ""
     },
     {
       "url": "https://freed.yuanhsing.cf/TVBox/meowcf.json",
@@ -554,8 +377,8 @@
       "error": "fetch failed"
     },
     {
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/a.json",
+      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/a.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -565,15 +388,26 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "m3u",
-      "ok": true,
-      "status": 200,
-      "bytes": 2144,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "url": "http://www.dmtv.ml/mao/single.json",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/4k.json",
+      "finalUrl": "https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/4k.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -583,10 +417,10 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "m3u",
-      "ok": true,
-      "status": 200,
-      "bytes": 22781,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
       "error": ""
     },
     {
@@ -608,8 +442,8 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -622,133 +456,25 @@
       "parseType": "m3u",
       "ok": true,
       "status": 200,
-      "bytes": 34429,
+      "bytes": 19321,
       "error": ""
     },
     {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
-      "contentType": "text/plain; charset=utf-8",
+      "url": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json",
+      "finalUrl": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json",
+      "contentType": "text/html",
       "encoding": {
         "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 2001,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "m3u",
-      "ok": true,
-      "status": 200,
-      "bytes": 23982,
-      "error": ""
-    },
-    {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 18001,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv4.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv4.m3u",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
         "replacementCount": 0,
         "mojibakeCount": 0,
         "clean": true
       },
       "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "m3u",
       "ok": true,
       "status": 200,
-      "bytes": 5583,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "finalUrl": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 85560,
-      "error": ""
-    },
-    {
-      "url": "https://pastebin.com/raw/5NHaxyGR",
-      "finalUrl": "https://pastebin.com/raw/5NHaxyGR",
-      "contentType": "text/html; charset=UTF-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 474,
+      "bytes": 114,
       "error": ""
     },
     {
@@ -770,26 +496,8 @@
       "error": ""
     },
     {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 14,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -802,135 +510,12 @@
       "parseType": "m3u",
       "ok": true,
       "status": 200,
-      "bytes": 44468,
+      "bytes": 3445,
       "error": ""
     },
     {
-      "url": "http://xn--sss604efuw.top/tv",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
-    },
-    {
-      "url": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
-      "finalUrl": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 14565,
-      "error": ""
-    },
-    {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 85560,
-      "error": ""
-    },
-    {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "json",
-      "ok": true,
-      "status": 200,
-      "bytes": 45597,
-      "error": ""
-    },
-    {
-      "url": "http://www.dmtv.ml/mao/single.json",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
-    },
-    {
-      "url": "http://meowtv.cn/tv",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
-    },
-    {
-      "url": "https://agit.ai/cyl518/yl/raw/branch/master/ml.json",
-      "finalUrl": "https://agit.ai/cyl518/yl/raw/branch/master/ml.json",
-      "contentType": "text/html",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 114,
-      "error": ""
-    },
-    {
-      "url": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
-      "finalUrl": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
-      "contentType": "text/plain;charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": false,
-      "status": 404,
-      "bytes": 11,
-      "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -943,77 +528,12 @@
       "parseType": "m3u",
       "ok": true,
       "status": 200,
-      "bytes": 19321,
+      "bytes": 25855,
       "error": ""
-    },
-    {
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "m3u",
-      "ok": true,
-      "status": 200,
-      "bytes": 1234,
-      "error": ""
-    },
-    {
-      "url": "http://itvbox.cc/tvbox/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0/1.m3u8",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
     },
     {
       "url": "https://agit.ai/kvymin/TV/raw/branch/master/Box.json",
       "finalUrl": "https://agit.ai/kvymin/TV/raw/branch/master/Box.json",
-      "contentType": "text/html",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 114,
-      "error": ""
-    },
-    {
-      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
-      "finalUrl": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
-      "contentType": "text/html",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "unknown",
-      "ok": true,
-      "status": 200,
-      "bytes": 114,
-      "error": ""
-    },
-    {
-      "url": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json",
-      "finalUrl": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json",
       "contentType": "text/html",
       "encoding": {
         "encoding": "utf-8",
@@ -1048,8 +568,26 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "url": "https://agit.ai/cyl518/yl/raw/branch/master/ml.json",
+      "finalUrl": "https://agit.ai/cyl518/yl/raw/branch/master/ml.json",
+      "contentType": "text/html",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -1062,23 +600,66 @@
       "parseType": "m3u",
       "ok": true,
       "status": 200,
-      "bytes": 175869,
+      "bytes": 2144,
       "error": ""
     },
     {
-      "url": "http://8.210.232.168/xc.json",
-      "finalUrl": "",
-      "contentType": "",
-      "encoding": null,
-      "parseType": "unknown",
-      "ok": false,
-      "status": 0,
-      "bytes": 0,
-      "error": "fetch failed"
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 1234,
+      "error": ""
     },
     {
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json",
-      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 34429,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 23982,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json",
+      "finalUrl": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -1092,6 +673,24 @@
       "ok": false,
       "status": 404,
       "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 22781,
       "error": ""
     },
     {
@@ -1110,6 +709,42 @@
       "ok": false,
       "status": 404,
       "bytes": 7907,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/b.json",
+      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/b.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv4.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv4.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 14,
       "error": ""
     },
     {
@@ -1149,7 +784,7 @@
       "error": ""
     },
     {
-      "url": "https://ju.binghe.ga/4.txt",
+      "url": "http://itvbox.cc/tvbox/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0/1.m3u8",
       "finalUrl": "",
       "contentType": "",
       "encoding": null,
@@ -1158,6 +793,143 @@
       "status": 0,
       "bytes": 0,
       "error": "fetch failed"
+    },
+    {
+      "url": "https://pan.shangui.cc/f/eoVMFQ/ppa.json",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://dxawi.github.io/0/0.json",
+      "finalUrl": "https://dxawi.github.io/0/0.json",
+      "contentType": "application/json; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 17548,
+      "error": ""
+    },
+    {
+      "url": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
+      "finalUrl": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
+      "contentType": "text/html; charset=UTF-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 5497,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 175869,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "finalUrl": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 50584,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "json",
+      "ok": true,
+      "status": 200,
+      "bytes": 85560,
+      "error": ""
+    },
+    {
+      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
+      "finalUrl": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
+      "contentType": "text/html",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": true,
+      "status": 200,
+      "bytes": 114,
+      "error": ""
+    },
+    {
+      "url": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
+      "finalUrl": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": true,
+      "status": 200,
+      "bytes": 14565,
+      "error": ""
     },
     {
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xianyuyimu/TVBOX-/main/TVBox/%E4%B8%80%E6%9C%A8%E8%87%AA%E7%94%A8.json",
@@ -1171,10 +943,46 @@
         "mojibakeCount": 0,
         "clean": true
       },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 429,
+      "bytes": 199,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/kebedd69/TVbox-interface/main/%E7%94%9C%E8%9C%9C.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 429,
+      "bytes": 199,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
       "parseType": "json",
       "ok": true,
       "status": 200,
-      "bytes": 28120,
+      "bytes": 45597,
       "error": ""
     },
     {
@@ -1196,9 +1004,9 @@
       "error": ""
     },
     {
-      "url": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
-      "finalUrl": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
-      "contentType": "text/html; charset=UTF-8",
+      "url": "https://jihulab.com/bh666/YGBH/-/raw/main/ygbox.json",
+      "finalUrl": "https://jihulab.com/bh666/YGBH/-/raw/main/ygbox.json",
+      "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
         "declaredCharset": "utf-8",
@@ -1207,15 +1015,44 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "json",
+      "parseType": "unknown",
       "ok": true,
       "status": 200,
-      "bytes": 5496,
+      "bytes": 109167,
       "error": ""
     },
     {
-      "url": "http://yydsys.top/duo/v.json",
-      "finalUrl": "https://yydsys.top/duo/v.json",
+      "url": "https://ju.binghe.ga/4.txt",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
+      "finalUrl": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
+      "contentType": "text/plain;charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 11,
+      "error": ""
+    },
+    {
+      "url": "http://xn--z7x900a.live/",
+      "finalUrl": "http://xn--z7x900a.live/",
       "contentType": "text/html",
       "encoding": {
         "encoding": "utf-8",
@@ -1226,9 +1063,161 @@
         "clean": true
       },
       "parseType": "unknown",
+      "ok": true,
+      "status": 200,
+      "bytes": 677,
+      "error": ""
+    },
+    {
+      "url": "https://tvbox.cainisi.cf/",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://xhdwc.tk/0",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "http://8.210.232.168/xc.json",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://weixine.net/ysc.json",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://pastebin.com/raw/5NHaxyGR",
+      "finalUrl": "https://pastebin.com/raw/5NHaxyGR",
+      "contentType": "text/html; charset=UTF-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
       "ok": false,
       "status": 404,
-      "bytes": 1076,
+      "bytes": 474,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 429,
+      "bytes": 199,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 429,
+      "bytes": 199,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 44468,
+      "error": ""
+    },
+    {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
+      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "m3u",
+      "ok": true,
+      "status": 200,
+      "bytes": 5583,
+      "error": ""
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "contentType": "text/plain; charset=utf-8",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 429,
+      "bytes": 199,
       "error": ""
     },
     {
@@ -1250,26 +1239,19 @@
       "error": ""
     },
     {
-      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
-      "contentType": "text/plain; charset=utf-8",
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": "utf-8",
-        "confidence": "declared",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "parseType": "m3u",
-      "ok": true,
-      "status": 200,
-      "bytes": 25855,
-      "error": ""
+      "url": "http://xn--sss604efuw.top/tv",
+      "finalUrl": "",
+      "contentType": "",
+      "encoding": null,
+      "parseType": "unknown",
+      "ok": false,
+      "status": 0,
+      "bytes": 0,
+      "error": "fetch failed"
     },
     {
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
-      "finalUrl": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "finalUrl": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
       "contentType": "text/plain; charset=utf-8",
       "encoding": {
         "encoding": "utf-8",
@@ -1279,10 +1261,10 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "parseType": "m3u",
+      "parseType": "json",
       "ok": true,
       "status": 200,
-      "bytes": 3445,
+      "bytes": 85560,
       "error": ""
     },
     {
@@ -1301,6 +1283,24 @@
       "ok": true,
       "status": 200,
       "bytes": 266,
+      "error": ""
+    },
+    {
+      "url": "http://yydsys.top/duo/v.json",
+      "finalUrl": "https://yydsys.top/duo/v.json",
+      "contentType": "text/html",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "parseType": "unknown",
+      "ok": false,
+      "status": 404,
+      "bytes": 1076,
       "error": ""
     },
     {
@@ -1330,10 +1330,10 @@
       "ok": false,
       "status": 0,
       "bytes": 0,
-      "error": "fetch failed"
+      "error": "timeout"
     }
   ],
-  "extractedCount": 102,
+  "extractedCount": 101,
   "candidateCount": 60,
   "candidates": [
     {
@@ -1484,7 +1484,7 @@
       "kind": "vod",
       "api": "http://c.xn--yetu07f.icu/api.php/provide/vod/",
       "name": "👒┃小胡┃资源┃",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "c.xn--yetu07f.icu",
       "state": "CANDIDATE"
     },
@@ -1492,7 +1492,7 @@
       "kind": "vod",
       "api": "https://taopianapi.com/cjapi/mc/vod/json.html",
       "name": "🕹️淘片┃采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "taopianapi.com",
       "state": "CANDIDATE"
     },
@@ -1500,7 +1500,7 @@
       "kind": "vod",
       "api": "http://ffzy1.tv/api.php/provide/vod/",
       "name": "🥗┃非凡┃资源",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "ffzy1.tv",
       "state": "CANDIDATE"
     },
@@ -1508,7 +1508,7 @@
       "kind": "vod",
       "api": "https://lzizy1.com/api.php/provide/vod/",
       "name": "🥑┃量子┃资源",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "lzizy1.com",
       "state": "CANDIDATE"
     },
@@ -1516,7 +1516,7 @@
       "kind": "vod",
       "api": "https://49zy1.com/api.php/provide/vod/?ac=list",
       "name": "🦁┃四九┃资源",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "49zy1.com",
       "state": "CANDIDATE"
     },
@@ -1524,7 +1524,7 @@
       "kind": "vod",
       "api": "https://www.feisuzyapi.com/api.php/provide/vod/?ac=list",
       "name": "🛰️飞速┃采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "feisuzyapi.com",
       "state": "CANDIDATE"
     },
@@ -1532,7 +1532,7 @@
       "kind": "vod",
       "api": "https://caiji.qhzyapi.com/api.php/provide/vod/",
       "name": "🐯┃奇虎┃采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "caiji.qhzyapi.com",
       "state": "CANDIDATE"
     },
@@ -1540,7 +1540,7 @@
       "kind": "vod",
       "api": "https://kekezy1.com/api.php/provide/vod/?ac=list",
       "name": "⛱┃可可┃采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "kekezy1.com",
       "state": "CANDIDATE"
     },
@@ -1548,7 +1548,7 @@
       "kind": "vod",
       "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8",
       "name": "🐯虎牙采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "huyaapi.com",
       "state": "CANDIDATE"
     },
@@ -1556,7 +1556,7 @@
       "kind": "vod",
       "api": "https://hhzyapi.com/api.php/provide/vod/",
       "name": "🦊火狐采集",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "hhzyapi.com",
       "state": "CANDIDATE"
     },
@@ -1564,7 +1564,7 @@
       "kind": "vod",
       "api": "https://app.bfzyapi.com/api.php/provide/vod/",
       "name": "🌪️暴风影音",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "app.bfzyapi.com",
       "state": "CANDIDATE"
     },
@@ -1572,7 +1572,7 @@
       "kind": "vod",
       "api": "https://mv.wogg.link/mv/vod",
       "name": "🎶明星┃MV",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "mv.wogg.link",
       "state": "CANDIDATE"
     },
@@ -1580,8 +1580,88 @@
       "kind": "live",
       "api": "http://xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
       "name": "肥猫",
-      "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json",
+      "discoveredFrom": "https://raw.liucn.cc/box/m.json",
       "physicalKey": "xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "physicalKey": "raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "physicalKey": "raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
       "state": "CANDIDATE"
     },
     {
@@ -1626,158 +1706,6 @@
     },
     {
       "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-      "physicalKey": "raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "vod",
-      "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
-      "name": "♻️49资源",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "49zyw.com",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "vod",
-      "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
-      "name": "♻️快车.云播",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "caiji.kczyapi.com",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "vod",
-      "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
-      "name": "♻️卧龙.云播",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "collect.wolongzyw.com",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "vod",
-      "api": "https://xkanzy10.com/api.php/provide/vod",
-      "name": "♻️享看.云播",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "xkanzy10.com",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "vod",
-      "api": "https://api.tiankongapi.com/api.php/provide/vod/",
-      "name": "♻️天空.云播",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "api.tiankongapi.com",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
-      "name": "♻️live",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
-      "name": "♻️TV",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
-      "name": "♻️MTV",
-      "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
-      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "physicalKey": "raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
-      "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
-      "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
-      "physicalKey": "raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
-      "state": "CANDIDATE"
-    },
-    {
-      "kind": "live",
       "api": "https://a.nxog.top/m/tv/?ou=2d6",
       "name": "a",
       "discoveredFrom": "http://tv.nxog.top/m/111.php?jar=index2&mz=index2&ou=%E6%AC%A7%E6%AD%8C&xl=",
@@ -1794,18 +1722,90 @@
     },
     {
       "kind": "live",
-      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
       "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
-      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "discoveredFrom": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "physicalKey": "raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
+      "name": "♻️49资源",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "49zyw.com",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+      "name": "♻️快车.云播",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "caiji.kczyapi.com",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://collect.wolongzyw.com/api.php/provide/vod/",
+      "name": "♻️卧龙.云播",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "collect.wolongzyw.com",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://xkanzy10.com/api.php/provide/vod",
+      "name": "♻️享看.云播",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "xkanzy10.com",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "vod",
+      "api": "https://api.tiankongapi.com/api.php/provide/vod/",
+      "name": "♻️天空.云播",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "api.tiankongapi.com",
       "state": "CANDIDATE"
     },
     {
       "kind": "live",
-      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
+      "name": "♻️live",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
+      "name": "♻️TV",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
+      "name": "♻️MTV",
+      "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
+      "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
       "name": "",
-      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
-      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "discoveredFrom": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "physicalKey": "raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "state": "CANDIDATE"
+    },
+    {
+      "kind": "live",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
+      "name": "",
+      "discoveredFrom": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
+      "physicalKey": "raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u",
       "state": "CANDIDATE"
     },
     {

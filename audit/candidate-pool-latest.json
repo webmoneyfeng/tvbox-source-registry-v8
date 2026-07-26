@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-26T05:31:35.642Z",
+  "generatedAt": "2026-07-26T08:24:23.849Z",
   "registryVersion": "v8.2.0",
   "policy": "Candidate sources stay in PROBATION until repeated native contract, detail and direct-media checks pass. This report does not modify the production registry.",
   "input": {
     "file": "candidate-discovery-v82.json",
     "discoveredCount": 60,
     "selectedVod": 20,
-    "selectedLive": 23,
+    "selectedLive": 20,
     "categoryLimit": 8,
-    "detailSample": 4,
-    "channelSample": 12
+    "detailSample": 3,
+    "channelSample": 8
   },
   "summaries": {
     "vod": {
@@ -20,10 +20,10 @@
       "directPlayable": 0
     },
     "live": {
-      "candidateCount": 23,
+      "candidateCount": 20,
       "active": 0,
       "watch": 0,
-      "rejected": 23,
+      "rejected": 20,
       "directPlayable": 0
     }
   },
@@ -35,7 +35,7 @@
         "physicalKey": "c.xn--yetu07f.icu",
         "registryPhysicalKey": "c.xn--yetu07f.icu",
         "nativeName": "👒┃小胡┃资源┃",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_http_c_xn_yetu07f_icu_api_php_provide_vod_",
@@ -57,7 +57,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 618,
+      "latencyMs": 347,
       "directPlayable": false
     },
     {
@@ -89,7 +89,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 9992,
+      "latencyMs": 9798,
       "directPlayable": false
     },
     {
@@ -99,7 +99,7 @@
         "physicalKey": "ffzy1.tv",
         "registryPhysicalKey": "ffzy1.tv",
         "nativeName": "🥗┃非凡┃资源",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_http_ffzy1_tv_api_php_provide_vod_",
@@ -121,7 +121,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "timeout",
-      "latencyMs": 8011,
+      "latencyMs": 8003,
       "directPlayable": false
     },
     {
@@ -131,7 +131,7 @@
         "physicalKey": "49zy1.com",
         "registryPhysicalKey": "49zy1.com",
         "nativeName": "🦁┃四九┃资源",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_49zy1_com_api_php_provide_vod_ac_list",
@@ -152,8 +152,8 @@
       "rootCauses": [
         "PROBE_EXCEPTION"
       ],
-      "error": "fetch failed",
-      "latencyMs": 5745,
+      "error": "timeout",
+      "latencyMs": 21896,
       "directPlayable": false
     },
     {
@@ -163,7 +163,7 @@
         "physicalKey": "49zyw.com",
         "registryPhysicalKey": "49zyw.com",
         "nativeName": "♻️49资源",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_vod_https_49zyw_com_api_php_provide_vod_ac_list",
@@ -185,7 +185,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 3226,
+      "latencyMs": 3610,
       "directPlayable": false
     },
     {
@@ -195,7 +195,7 @@
         "physicalKey": "api.tiankongapi.com",
         "registryPhysicalKey": "api.tiankongapi.com",
         "nativeName": "♻️天空.云播",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_vod_https_api_tiankongapi_com_api_php_provide_vod_",
@@ -217,7 +217,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "timeout",
-      "latencyMs": 8015,
+      "latencyMs": 8010,
       "directPlayable": false
     },
     {
@@ -227,7 +227,7 @@
         "physicalKey": "app.bfzyapi.com",
         "registryPhysicalKey": "app.bfzyapi.com",
         "nativeName": "🌪️暴风影音",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_app_bfzyapi_com_api_php_provide_vod_",
@@ -337,7 +337,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 2531,
+      "latencyMs": 2685,
       "evidence": {
         "classListing": {
           "status": 404,
@@ -426,7 +426,7 @@
         "physicalKey": "caiji.kczyapi.com",
         "registryPhysicalKey": "caiji.kczyapi.com",
         "nativeName": "♻️快车.云播",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_vod_https_caiji_kczyapi_com_api_php_provide_vod_",
@@ -448,7 +448,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 753,
+      "latencyMs": 892,
       "directPlayable": false
     },
     {
@@ -458,7 +458,7 @@
         "physicalKey": "caiji.qhzyapi.com",
         "registryPhysicalKey": "caiji.qhzyapi.com",
         "nativeName": "🐯┃奇虎┃采集",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_caiji_qhzyapi_com_api_php_provide_vod_",
@@ -480,7 +480,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 509,
+      "latencyMs": 539,
       "directPlayable": false
     },
     {
@@ -490,7 +490,7 @@
         "physicalKey": "collect.wolongzyw.com",
         "registryPhysicalKey": "collect.wolongzyw.com",
         "nativeName": "♻️卧龙.云播",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_vod_https_collect_wolongzyw_com_api_php_provide_vod_",
@@ -600,7 +600,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 3002,
+      "latencyMs": 2383,
       "evidence": {
         "classListing": {
           "status": 200,
@@ -711,7 +711,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 1418,
+      "latencyMs": 1415,
       "directPlayable": false
     },
     {
@@ -743,7 +743,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 322,
+      "latencyMs": 316,
       "directPlayable": false
     },
     {
@@ -753,7 +753,7 @@
         "physicalKey": "kekezy1.com",
         "registryPhysicalKey": "kekezy1.com",
         "nativeName": "⛱┃可可┃采集",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_kekezy1_com_api_php_provide_vod_ac_list",
@@ -775,7 +775,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 261,
+      "latencyMs": 257,
       "directPlayable": false
     },
     {
@@ -785,7 +785,7 @@
         "physicalKey": "lzizy1.com",
         "registryPhysicalKey": "lzizy1.com",
         "nativeName": "🥑┃量子┃资源",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_lzizy1_com_api_php_provide_vod_",
@@ -800,14 +800,624 @@
       "ok": false,
       "admissionTier": "REJECTED",
       "hardFailures": [
-        "PROBE_EXCEPTION"
+        "SEARCH_UNAVAILABLE",
+        "SOURCE_DETAIL_GAP",
+        "SOURCE_PLAYBACK_GAP"
       ],
       "softWarnings": [],
       "rootCauses": [
-        "PROBE_EXCEPTION"
+        "SEARCH_UNAVAILABLE",
+        "SOURCE_DETAIL_GAP",
+        "SOURCE_PLAYBACK_GAP"
       ],
-      "error": "fetch failed",
-      "latencyMs": 9848,
+      "classCount": 44,
+      "categoryCount": 8,
+      "categoryOkCount": 8,
+      "emptyCategoryCount": 0,
+      "categoryCoverage": {
+        "total": 44,
+        "start": 0,
+        "requested": 8,
+        "audited": 8,
+        "complete": false,
+        "nextStart": 8
+      },
+      "categoryChecks": [
+        {
+          "id": "1",
+          "name": "电影片",
+          "status": 200,
+          "ok": true,
+          "count": 1,
+          "pageCount": 1,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 1,
+              "ok": true
+            }
+          ],
+          "latestAt": "2025-09-24 01:07:23"
+        },
+        {
+          "id": "2",
+          "name": "连续剧",
+          "status": 200,
+          "ok": true,
+          "count": 3,
+          "pageCount": 1,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 3,
+              "ok": true
+            }
+          ],
+          "latestAt": "2025-09-21 13:57:35"
+        },
+        {
+          "id": "3",
+          "name": "综艺片",
+          "status": 200,
+          "ok": true,
+          "count": 1,
+          "pageCount": 1,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 1,
+              "ok": true
+            }
+          ],
+          "latestAt": "2022-06-14 19:31:48"
+        },
+        {
+          "id": "4",
+          "name": "动漫片",
+          "status": 200,
+          "ok": true,
+          "count": 1,
+          "pageCount": 1,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 1,
+              "ok": true
+            }
+          ],
+          "latestAt": "2022-04-28 22:14:02"
+        },
+        {
+          "id": "6",
+          "name": "动作片",
+          "status": 200,
+          "ok": true,
+          "count": 20,
+          "pageCount": 246,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 2,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 246,
+              "status": 200,
+              "count": 17,
+              "ok": true
+            }
+          ],
+          "latestAt": "2026-07-26 05:28:44"
+        },
+        {
+          "id": "7",
+          "name": "喜剧片",
+          "status": 200,
+          "ok": true,
+          "count": 20,
+          "pageCount": 386,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 2,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 386,
+              "status": 200,
+              "count": 6,
+              "ok": true
+            }
+          ],
+          "latestAt": "2026-07-26 05:32:47"
+        },
+        {
+          "id": "8",
+          "name": "爱情片",
+          "status": 200,
+          "ok": true,
+          "count": 20,
+          "pageCount": 164,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 2,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 164,
+              "status": 200,
+              "count": 5,
+              "ok": true
+            }
+          ],
+          "latestAt": "2026-07-21 15:38:01"
+        },
+        {
+          "id": "9",
+          "name": "科幻片",
+          "status": 200,
+          "ok": true,
+          "count": 20,
+          "pageCount": 68,
+          "pages": [
+            {
+              "page": 1,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 2,
+              "status": 200,
+              "count": 20,
+              "ok": true
+            },
+            {
+              "page": 68,
+              "status": 200,
+              "count": 6,
+              "ok": true
+            }
+          ],
+          "latestAt": "2026-07-22 11:26:33"
+        }
+      ],
+      "listCount": 20,
+      "searchChecks": [
+        {
+          "term": "天道",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "遥远的救主",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "王志文",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "亮剑",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "甦环传",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "2026",
+          "status": 403,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        }
+      ],
+      "searchCapability": false,
+      "detailChecks": [
+        {
+          "id": "148311",
+          "title": "战争角落[电影解说]",
+          "status": 429,
+          "ok": false,
+          "branchCount": 0,
+          "directBranchCount": 0,
+          "invalidBranchCount": 0,
+          "media": [],
+          "playable": false,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        {
+          "id": "148310",
+          "title": "走出西柏坡[电影解说]",
+          "status": 429,
+          "ok": false,
+          "branchCount": 0,
+          "directBranchCount": 0,
+          "invalidBranchCount": 0,
+          "media": [],
+          "playable": false,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        {
+          "id": "148309",
+          "title": "英雄坦克手[电影解说]",
+          "status": 429,
+          "ok": false,
+          "branchCount": 0,
+          "directBranchCount": 0,
+          "invalidBranchCount": 0,
+          "media": [],
+          "playable": false,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        }
+      ],
+      "detailOkRate": 0,
+      "playableRate": 0,
+      "mediaPlayableRate": 0,
+      "mediaSampleCount": 0,
+      "mediaPlayableCount": 0,
+      "native": {
+        "filterable": false,
+        "sortable": false,
+        "filterKeys": [],
+        "sortKeys": [],
+        "filters": []
+      },
+      "latestAt": "2026-07-26 05:32:47",
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 10300,
+      "evidence": {
+        "classListing": {
+          "status": 200,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        "listing": {
+          "status": 200,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        "categoryCoverage": {
+          "total": 44,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "categories": [
+          {
+            "id": "1",
+            "name": "电影片",
+            "status": 200,
+            "ok": true,
+            "count": 1,
+            "pageCount": 1,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 1,
+                "ok": true
+              }
+            ],
+            "latestAt": "2025-09-24 01:07:23"
+          },
+          {
+            "id": "2",
+            "name": "连续剧",
+            "status": 200,
+            "ok": true,
+            "count": 3,
+            "pageCount": 1,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 3,
+                "ok": true
+              }
+            ],
+            "latestAt": "2025-09-21 13:57:35"
+          },
+          {
+            "id": "3",
+            "name": "综艺片",
+            "status": 200,
+            "ok": true,
+            "count": 1,
+            "pageCount": 1,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 1,
+                "ok": true
+              }
+            ],
+            "latestAt": "2022-06-14 19:31:48"
+          },
+          {
+            "id": "4",
+            "name": "动漫片",
+            "status": 200,
+            "ok": true,
+            "count": 1,
+            "pageCount": 1,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 1,
+                "ok": true
+              }
+            ],
+            "latestAt": "2022-04-28 22:14:02"
+          },
+          {
+            "id": "6",
+            "name": "动作片",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "pageCount": 246,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 2,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 246,
+                "status": 200,
+                "count": 17,
+                "ok": true
+              }
+            ],
+            "latestAt": "2026-07-26 05:28:44"
+          },
+          {
+            "id": "7",
+            "name": "喜剧片",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "pageCount": 386,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 2,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 386,
+                "status": 200,
+                "count": 6,
+                "ok": true
+              }
+            ],
+            "latestAt": "2026-07-26 05:32:47"
+          },
+          {
+            "id": "8",
+            "name": "爱情片",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "pageCount": 164,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 2,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 164,
+                "status": 200,
+                "count": 5,
+                "ok": true
+              }
+            ],
+            "latestAt": "2026-07-21 15:38:01"
+          },
+          {
+            "id": "9",
+            "name": "科幻片",
+            "status": 200,
+            "ok": true,
+            "count": 20,
+            "pageCount": 68,
+            "pages": [
+              {
+                "page": 1,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 2,
+                "status": 200,
+                "count": 20,
+                "ok": true
+              },
+              {
+                "page": 68,
+                "status": 200,
+                "count": 6,
+                "ok": true
+              }
+            ],
+            "latestAt": "2026-07-22 11:26:33"
+          }
+        ],
+        "search": [
+          {
+            "term": "天道",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 403,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detail": [
+          {
+            "id": "148311",
+            "status": 429,
+            "ok": false,
+            "playable": false
+          },
+          {
+            "id": "148310",
+            "status": 429,
+            "ok": false,
+            "playable": false
+          },
+          {
+            "id": "148309",
+            "status": 429,
+            "ok": false,
+            "playable": false
+          }
+        ],
+        "media": []
+      },
       "directPlayable": false
     },
     {
@@ -817,7 +1427,7 @@
         "physicalKey": "mv.wogg.link",
         "registryPhysicalKey": "mv.wogg.link",
         "nativeName": "🎶明星┃MV",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_mv_wogg_link_mv_vod",
@@ -832,14 +1442,181 @@
       "ok": false,
       "admissionTier": "REJECTED",
       "hardFailures": [
-        "PROBE_EXCEPTION"
+        "CATEGORY_SCHEMA_ERROR",
+        "API_UNAVAILABLE",
+        "SEARCH_UNAVAILABLE",
+        "SOURCE_DETAIL_GAP",
+        "SOURCE_PLAYBACK_GAP"
       ],
       "softWarnings": [],
       "rootCauses": [
-        "PROBE_EXCEPTION"
+        "CATEGORY_SCHEMA_ERROR",
+        "API_UNAVAILABLE",
+        "SEARCH_UNAVAILABLE",
+        "SOURCE_DETAIL_GAP",
+        "SOURCE_PLAYBACK_GAP"
       ],
-      "error": "timeout",
-      "latencyMs": 13702,
+      "classCount": 0,
+      "categoryCount": 0,
+      "categoryOkCount": 0,
+      "emptyCategoryCount": 0,
+      "categoryCoverage": {
+        "total": 0,
+        "start": 0,
+        "requested": 8,
+        "audited": 0,
+        "complete": true,
+        "nextStart": null
+      },
+      "categoryChecks": [],
+      "listCount": 0,
+      "searchChecks": [
+        {
+          "term": "天道",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "遥远的救主",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "王志文",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "亮剑",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "甦环传",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        },
+        {
+          "term": "2026",
+          "status": 200,
+          "ok": false,
+          "count": 0,
+          "exactTitleHits": 0
+        }
+      ],
+      "searchCapability": false,
+      "detailChecks": [],
+      "detailOkRate": 0,
+      "playableRate": 0,
+      "mediaPlayableRate": 0,
+      "mediaSampleCount": 0,
+      "mediaPlayableCount": 0,
+      "native": {
+        "filterable": false,
+        "sortable": false,
+        "filterKeys": [],
+        "sortKeys": [],
+        "filters": []
+      },
+      "latestAt": null,
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 6225,
+      "evidence": {
+        "classListing": {
+          "status": 200,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        "listing": {
+          "status": 200,
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          }
+        },
+        "categoryCoverage": {
+          "total": 0,
+          "start": 0,
+          "requested": 8,
+          "audited": 0,
+          "complete": true,
+          "nextStart": null
+        },
+        "categories": [],
+        "search": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detail": [],
+        "media": []
+      },
       "directPlayable": false
     },
     {
@@ -959,7 +1736,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 2499,
+      "latencyMs": 3682,
       "evidence": {
         "classListing": {
           "status": 200,
@@ -1048,7 +1825,7 @@
         "physicalKey": "taopianapi.com",
         "registryPhysicalKey": "taopianapi.com",
         "nativeName": "🕹️淘片┃采集",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_https_taopianapi_com_cjapi_mc_vod_json_html",
@@ -1384,7 +2161,7 @@
               "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-26/15/ab8004de4e62/fa78b0daa3dc/playlist.m3u8",
               "status": 0,
               "ok": false,
-              "latencyMs": 0,
+              "latencyMs": 1,
               "contentType": "",
               "encoding": null,
               "hardViolation": true,
@@ -1454,56 +2231,6 @@
               "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-26/15/7cab428aeb72/a8e7757fef60/playlist.m3u8",
               "status": 0,
               "ok": false,
-              "latencyMs": 1,
-              "contentType": "",
-              "encoding": null,
-              "hardViolation": true,
-              "segment": null
-            }
-          ],
-          "playable": false,
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": "utf-8",
-            "confidence": "declared",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          }
-        },
-        {
-          "id": "1539557",
-          "title": "兵自风中来",
-          "status": 200,
-          "ok": true,
-          "branchCount": 2,
-          "directBranchCount": 1,
-          "invalidBranchCount": 1,
-          "media": [
-            {
-              "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/079f630908fd/playlist.m3u8",
-              "status": 0,
-              "ok": false,
-              "latencyMs": 0,
-              "contentType": "",
-              "encoding": null,
-              "hardViolation": true,
-              "segment": null
-            },
-            {
-              "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/055b05e51778/playlist.m3u8",
-              "status": 0,
-              "ok": false,
-              "latencyMs": 0,
-              "contentType": "",
-              "encoding": null,
-              "hardViolation": true,
-              "segment": null
-            },
-            {
-              "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/901708d5441e/playlist.m3u8",
-              "status": 0,
-              "ok": false,
               "latencyMs": 0,
               "contentType": "",
               "encoding": null,
@@ -1525,7 +2252,7 @@
       "detailOkRate": 1,
       "playableRate": 0,
       "mediaPlayableRate": 0,
-      "mediaSampleCount": 7,
+      "mediaSampleCount": 4,
       "mediaPlayableCount": 0,
       "native": {
         "filterable": false,
@@ -1543,7 +2270,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 27114,
+      "latencyMs": 17555,
       "evidence": {
         "classListing": {
           "status": 200,
@@ -1871,12 +2598,6 @@
             "status": 200,
             "ok": true,
             "playable": false
-          },
-          {
-            "id": "1539557",
-            "status": 200,
-            "ok": true,
-            "playable": false
           }
         ],
         "media": [
@@ -1884,7 +2605,7 @@
             "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-26/15/ab8004de4e62/fa78b0daa3dc/playlist.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 0,
+            "latencyMs": 1,
             "segment": null
           },
           {
@@ -1905,27 +2626,6 @@
             "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-26/15/7cab428aeb72/a8e7757fef60/playlist.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 1,
-            "segment": null
-          },
-          {
-            "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/079f630908fd/playlist.m3u8",
-            "status": 0,
-            "ok": false,
-            "latencyMs": 0,
-            "segment": null
-          },
-          {
-            "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/055b05e51778/playlist.m3u8",
-            "status": 0,
-            "ok": false,
-            "latencyMs": 0,
-            "segment": null
-          },
-          {
-            "url": "https://sd8.taopianplay1.com:43333/c56b1bc09da3/HD/2026-07-25/15/c8f1a76dc0cd/901708d5441e/playlist.m3u8",
-            "status": 0,
-            "ok": false,
             "latencyMs": 0,
             "segment": null
           }
@@ -1940,7 +2640,7 @@
         "physicalKey": "feisuzyapi.com",
         "registryPhysicalKey": "feisuzyapi.com",
         "nativeName": "🛰️飞速┃采集",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod_s_www_feisuzyapi_com_api_php_provide_vod_ac_list",
@@ -1962,7 +2662,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 3280,
+      "latencyMs": 3375,
       "directPlayable": false
     },
     {
@@ -1972,7 +2672,7 @@
         "physicalKey": "huyaapi.com",
         "registryPhysicalKey": "huyaapi.com",
         "nativeName": "🐯虎牙采集",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_vod__www_huyaapi_com_api_php_provide_vod_from_hym3u8",
@@ -2082,7 +2782,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 5157,
+      "latencyMs": 5169,
       "evidence": {
         "classListing": {
           "status": 403,
@@ -2171,7 +2871,7 @@
         "physicalKey": "xkanzy10.com",
         "registryPhysicalKey": "xkanzy10.com",
         "nativeName": "♻️享看.云播",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_vod_https_xkanzy10_com_api_php_provide_vod",
@@ -2193,7 +2893,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 277,
+      "latencyMs": 246,
       "directPlayable": false
     },
     {
@@ -2239,7 +2939,7 @@
           "url": "http://192.151.150.154/live/cctv4k.m3u8",
           "status": 0,
           "ok": false,
-          "latencyMs": 1229,
+          "latencyMs": 532,
           "contentType": "",
           "encoding": null,
           "hardViolation": true,
@@ -2251,7 +2951,7 @@
           "url": "http://192.151.150.154/live/cctv8k.m3u8",
           "status": 0,
           "ok": false,
-          "latencyMs": 521,
+          "latencyMs": 1505,
           "contentType": "",
           "encoding": null,
           "hardViolation": true,
@@ -2263,7 +2963,7 @@
           "url": "http://192.151.150.154/live/gfjs.m3u8",
           "status": 0,
           "ok": false,
-          "latencyMs": 1228,
+          "latencyMs": 525,
           "contentType": "",
           "encoding": null,
           "hardViolation": true,
@@ -2275,7 +2975,7 @@
           "url": "http://192.151.150.154/live/wsjk.m3u8",
           "status": 0,
           "ok": false,
-          "latencyMs": 1545,
+          "latencyMs": 518,
           "contentType": "",
           "encoding": null,
           "hardViolation": true,
@@ -2290,7 +2990,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 2310,
+      "latencyMs": 1794,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2312,7 +3012,7 @@
             "url": "http://192.151.150.154/live/cctv4k.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 1229,
+            "latencyMs": 532,
             "contentType": "",
             "encoding": null,
             "hardViolation": true,
@@ -2324,7 +3024,7 @@
             "url": "http://192.151.150.154/live/cctv8k.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 521,
+            "latencyMs": 1505,
             "contentType": "",
             "encoding": null,
             "hardViolation": true,
@@ -2336,7 +3036,7 @@
             "url": "http://192.151.150.154/live/gfjs.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 1228,
+            "latencyMs": 525,
             "contentType": "",
             "encoding": null,
             "hardViolation": true,
@@ -2348,7 +3048,7 @@
             "url": "http://192.151.150.154/live/wsjk.m3u8",
             "status": 0,
             "ok": false,
-            "latencyMs": 1545,
+            "latencyMs": 518,
             "contentType": "",
             "encoding": null,
             "hardViolation": true,
@@ -2365,7 +3065,7 @@
         "physicalKey": "xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
         "registryPhysicalKey": "xn--ihqu10cn4c.xn--z7x900a.live/TV/tvzb.txt",
         "nativeName": "肥猫",
-        "discoveredFrom": "https://raw.githubusercontent.com/liu673cn/box/main/m.json"
+        "discoveredFrom": "https://raw.liucn.cc/box/m.json"
       },
       "source": {
         "slug": "discovered_live_http_xn_ihqu10cn4c_xn_z7x900a_live_tv_tvzb_txt",
@@ -2406,7 +3106,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 381,
+      "latencyMs": 312,
       "evidence": {
         "playlist": {
           "status": 404,
@@ -2473,7 +3173,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 709,
+      "latencyMs": 732,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2521,7 +3221,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "timeout",
-      "latencyMs": 8010,
+      "latencyMs": 8005,
       "directPlayable": false
     },
     {
@@ -2553,7 +3253,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 47,
+      "latencyMs": 106,
       "directPlayable": false
     },
     {
@@ -2648,8 +3348,8 @@
       "rootCauses": [
         "PROBE_EXCEPTION"
       ],
-      "error": "timeout",
-      "latencyMs": 8001,
+      "error": "fetch failed",
+      "latencyMs": 93,
       "directPlayable": false
     },
     {
@@ -2659,7 +3359,7 @@
         "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
         "registryPhysicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/live.txt",
         "nativeName": "♻️live",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_live_hulab_com_yydfys_yydf_raw_main_yydf_lib_live_txt",
@@ -2700,7 +3400,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 499,
+      "latencyMs": 416,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2726,7 +3426,7 @@
         "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
         "registryPhysicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/MTV.txt",
         "nativeName": "♻️MTV",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_live_ihulab_com_yydfys_yydf_raw_main_yydf_lib_mtv_txt",
@@ -2767,7 +3467,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 428,
+      "latencyMs": 403,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2793,7 +3493,7 @@
         "physicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
         "registryPhysicalKey": "jihulab.com/yydfys/yydf/-/raw/main/yydf/lib/zhibo.txt",
         "nativeName": "♻️TV",
-        "discoveredFrom": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "discoveredFrom": "https://gh-proxy.com/https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
       },
       "source": {
         "slug": "discovered_live_ulab_com_yydfys_yydf_raw_main_yydf_lib_zhibo_txt",
@@ -2834,7 +3534,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 227,
+      "latencyMs": 235,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2894,7 +3594,7 @@
           "url": "https://vd2.bdstatic.com/mda-sctj0f6r4u1bpebc/1080p/cae_h264/1774706523506678171/mda-sctj0f6r4u1bpebc.mp4",
           "status": 200,
           "ok": true,
-          "latencyMs": 396,
+          "latencyMs": 348,
           "contentType": "video/mp4",
           "encoding": {
             "encoding": "utf-16le",
@@ -2916,7 +3616,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 1695,
+      "latencyMs": 2548,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -2938,7 +3638,7 @@
             "url": "https://vd2.bdstatic.com/mda-sctj0f6r4u1bpebc/1080p/cae_h264/1774706523506678171/mda-sctj0f6r4u1bpebc.mp4",
             "status": 200,
             "ok": true,
-            "latencyMs": 396,
+            "latencyMs": 348,
             "contentType": "video/mp4",
             "encoding": {
               "encoding": "utf-16le",
@@ -3003,7 +3703,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 1082,
+      "latencyMs": 996,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -3053,7 +3753,7 @@
       "channelCount": 130,
       "groupCount": 7,
       "duplicateRate": 0.3122,
-      "sampleCount": 12,
+      "sampleCount": 8,
       "playableCount": 0,
       "playableRate": 0,
       "channelChecks": [
@@ -3063,7 +3763,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/6000000001000029752/1.m3u8?channel-id=wasusyt&Contentid=6000000001000029752&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 695,
+          "latencyMs": 712,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3082,7 +3782,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/1000000001000023315/1.m3u8?channel-id=ystenlive&Contentid=1000000001000023315&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 735,
+          "latencyMs": 747,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3101,7 +3801,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/6000000001000022313/1.m3u8?channel-id=wasusyt&Contentid=6000000001000022313&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 699,
+          "latencyMs": 726,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3120,7 +3820,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031102/1.m3u8?channel-id=bestzb&Contentid=5000000011000031102&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 627,
+          "latencyMs": 612,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3139,7 +3839,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/6000000001000020451/1.m3u8?channel-id=wasusyt&Contentid=6000000001000020451&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 311,
+          "latencyMs": 298,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3158,7 +3858,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/1000000001000030159/1.m3u8?channel-id=ystenlive&Contentid=1000000001000030159&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 299,
+          "latencyMs": 279,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3177,7 +3877,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/5000000004000010584/1.m3u8?channel-id=bestzb&Contentid=5000000004000010584&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 531,
+          "latencyMs": 510,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3196,83 +3896,7 @@
           "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031121/1.m3u8?channel-id=bestzb&Contentid=5000000011000031121&livemode=1&stbId=3",
           "status": 403,
           "ok": false,
-          "latencyMs": 511,
-          "contentType": "application/json; charset=utf-8",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": "utf-8",
-            "confidence": "declared",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "hardViolation": false,
-          "segment": null
-        },
-        {
-          "channel": "北京纪实科教",
-          "group": "地方",
-          "url": "http://gslbserv.itv.cmvideo.cn/1000000001000001910/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001910&livemode=1&stbId=3",
-          "status": 403,
-          "ok": false,
-          "latencyMs": 303,
-          "contentType": "application/json; charset=utf-8",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": "utf-8",
-            "confidence": "declared",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "hardViolation": false,
-          "segment": null
-        },
-        {
-          "channel": "卡酷少儿",
-          "group": "地方",
-          "url": "http://gslbserv.itv.cmvideo.cn/7851974109718180595/1.m3u8?channel-id=bestzb&Contentid=7851974109718180595&livemode=1&stbId=3",
-          "status": 403,
-          "ok": false,
-          "latencyMs": 329,
-          "contentType": "application/json; charset=utf-8",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": "utf-8",
-            "confidence": "declared",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "hardViolation": false,
-          "segment": null
-        },
-        {
-          "channel": "金鹰纪实",
-          "group": "地方",
-          "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031203/1.m3u8?channel-id=bestzb&Contentid=5000000011000031203&livemode=1&stbId=3",
-          "status": 403,
-          "ok": false,
-          "latencyMs": 325,
-          "contentType": "application/json; charset=utf-8",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": "utf-8",
-            "confidence": "declared",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "hardViolation": false,
-          "segment": null
-        },
-        {
-          "channel": "快乐垂钓",
-          "group": "地方",
-          "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3",
-          "status": 403,
-          "ok": false,
-          "latencyMs": 297,
+          "latencyMs": 503,
           "contentType": "application/json; charset=utf-8",
           "encoding": {
             "encoding": "utf-8",
@@ -3294,7 +3918,7 @@
         "mojibakeCount": 0,
         "clean": true
       },
-      "latencyMs": 3003,
+      "latencyMs": 2668,
       "evidence": {
         "playlist": {
           "status": 200,
@@ -3316,7 +3940,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/6000000001000029752/1.m3u8?channel-id=wasusyt&Contentid=6000000001000029752&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 695,
+            "latencyMs": 712,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3335,7 +3959,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/1000000001000023315/1.m3u8?channel-id=ystenlive&Contentid=1000000001000023315&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 735,
+            "latencyMs": 747,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3354,7 +3978,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/6000000001000022313/1.m3u8?channel-id=wasusyt&Contentid=6000000001000022313&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 699,
+            "latencyMs": 726,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3373,7 +3997,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031102/1.m3u8?channel-id=bestzb&Contentid=5000000011000031102&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 627,
+            "latencyMs": 612,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3392,7 +4016,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/6000000001000020451/1.m3u8?channel-id=wasusyt&Contentid=6000000001000020451&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 311,
+            "latencyMs": 298,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3411,7 +4035,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/1000000001000030159/1.m3u8?channel-id=ystenlive&Contentid=1000000001000030159&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 299,
+            "latencyMs": 279,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3430,7 +4054,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/5000000004000010584/1.m3u8?channel-id=bestzb&Contentid=5000000004000010584&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 531,
+            "latencyMs": 510,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3449,83 +4073,7 @@
             "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031121/1.m3u8?channel-id=bestzb&Contentid=5000000011000031121&livemode=1&stbId=3",
             "status": 403,
             "ok": false,
-            "latencyMs": 511,
-            "contentType": "application/json; charset=utf-8",
-            "encoding": {
-              "encoding": "utf-8",
-              "declaredCharset": "utf-8",
-              "confidence": "declared",
-              "replacementCount": 0,
-              "mojibakeCount": 0,
-              "clean": true
-            },
-            "hardViolation": false,
-            "segment": null
-          },
-          {
-            "channel": "北京纪实科教",
-            "group": "地方",
-            "url": "http://gslbserv.itv.cmvideo.cn/1000000001000001910/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001910&livemode=1&stbId=3",
-            "status": 403,
-            "ok": false,
-            "latencyMs": 303,
-            "contentType": "application/json; charset=utf-8",
-            "encoding": {
-              "encoding": "utf-8",
-              "declaredCharset": "utf-8",
-              "confidence": "declared",
-              "replacementCount": 0,
-              "mojibakeCount": 0,
-              "clean": true
-            },
-            "hardViolation": false,
-            "segment": null
-          },
-          {
-            "channel": "卡酷少儿",
-            "group": "地方",
-            "url": "http://gslbserv.itv.cmvideo.cn/7851974109718180595/1.m3u8?channel-id=bestzb&Contentid=7851974109718180595&livemode=1&stbId=3",
-            "status": 403,
-            "ok": false,
-            "latencyMs": 329,
-            "contentType": "application/json; charset=utf-8",
-            "encoding": {
-              "encoding": "utf-8",
-              "declaredCharset": "utf-8",
-              "confidence": "declared",
-              "replacementCount": 0,
-              "mojibakeCount": 0,
-              "clean": true
-            },
-            "hardViolation": false,
-            "segment": null
-          },
-          {
-            "channel": "金鹰纪实",
-            "group": "地方",
-            "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031203/1.m3u8?channel-id=bestzb&Contentid=5000000011000031203&livemode=1&stbId=3",
-            "status": 403,
-            "ok": false,
-            "latencyMs": 325,
-            "contentType": "application/json; charset=utf-8",
-            "encoding": {
-              "encoding": "utf-8",
-              "declaredCharset": "utf-8",
-              "confidence": "declared",
-              "replacementCount": 0,
-              "mojibakeCount": 0,
-              "clean": true
-            },
-            "hardViolation": false,
-            "segment": null
-          },
-          {
-            "channel": "快乐垂钓",
-            "group": "地方",
-            "url": "http://gslbserv.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3",
-            "status": 403,
-            "ok": false,
-            "latencyMs": 297,
+            "latencyMs": 503,
             "contentType": "application/json; charset=utf-8",
             "encoding": {
               "encoding": "utf-8",
@@ -3571,7 +4119,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "timeout",
-      "latencyMs": 10113,
+      "latencyMs": 8882,
       "directPlayable": false
     },
     {
@@ -3603,7 +4151,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "timeout",
-      "latencyMs": 8258,
+      "latencyMs": 8214,
       "directPlayable": false
     },
     {
@@ -3635,7 +4183,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 1077,
+      "latencyMs": 1039,
       "directPlayable": false
     },
     {
@@ -3667,7 +4215,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 1933,
+      "latencyMs": 1142,
       "directPlayable": false
     },
     {
@@ -3699,7 +4247,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 453,
+      "latencyMs": 488,
       "directPlayable": false
     },
     {
@@ -3731,208 +4279,7 @@
         "PROBE_EXCEPTION"
       ],
       "error": "fetch failed",
-      "latencyMs": 2269,
-      "directPlayable": false
-    },
-    {
-      "candidate": {
-        "kind": "live",
-        "api": "https://szyyds.cn/tv/live/x.txt",
-        "physicalKey": "szyyds.cn/tv/live/x.txt",
-        "registryPhysicalKey": "szyyds.cn/tv/live/x.txt",
-        "nativeName": "手动不知何时更新",
-        "discoveredFrom": "https://szyyds.cn/tv/x.json"
-      },
-      "source": {
-        "slug": "discovered_live_https_szyyds_cn_tv_live_x_txt",
-        "provider": "手动不知何时更新",
-        "api": "https://szyyds.cn/tv/live/x.txt"
-      },
-      "state": "PROBATION",
-      "kind": "live",
-      "slug": "discovered_live_https_szyyds_cn_tv_live_x_txt",
-      "name": "手动不知何时更新",
-      "api": "https://szyyds.cn/tv/live/x.txt",
-      "ok": false,
-      "admissionTier": "REJECTED",
-      "hardFailures": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE"
-      ],
-      "softWarnings": [
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "rootCauses": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE",
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "channelCount": 0,
-      "groupCount": 0,
-      "duplicateRate": 1,
-      "sampleCount": 0,
-      "playableCount": 0,
-      "playableRate": 0,
-      "channelChecks": [],
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "latencyMs": 432,
-      "evidence": {
-        "playlist": {
-          "status": 200,
-          "contentType": "text/plain",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": null,
-            "confidence": "utf8-strict",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "bytes": 679692
-        },
-        "channels": []
-      },
-      "directPlayable": false
-    },
-    {
-      "candidate": {
-        "kind": "live",
-        "api": "https://szyyds.cn/tv/live/yy.txt",
-        "physicalKey": "szyyds.cn/tv/live/yy.txt",
-        "registryPhysicalKey": "szyyds.cn/tv/live/yy.txt",
-        "nativeName": "音乐所",
-        "discoveredFrom": "https://szyyds.cn/tv/x.json"
-      },
-      "source": {
-        "slug": "discovered_live_https_szyyds_cn_tv_live_yy_txt",
-        "provider": "音乐所",
-        "api": "https://szyyds.cn/tv/live/yy.txt"
-      },
-      "state": "PROBATION",
-      "kind": "live",
-      "slug": "discovered_live_https_szyyds_cn_tv_live_yy_txt",
-      "name": "音乐所",
-      "api": "https://szyyds.cn/tv/live/yy.txt",
-      "ok": false,
-      "admissionTier": "REJECTED",
-      "hardFailures": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE"
-      ],
-      "softWarnings": [
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "rootCauses": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE",
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "channelCount": 0,
-      "groupCount": 0,
-      "duplicateRate": 1,
-      "sampleCount": 0,
-      "playableCount": 0,
-      "playableRate": 0,
-      "channelChecks": [],
-      "encoding": {
-        "encoding": "utf-16le",
-        "declaredCharset": null,
-        "confidence": "fallback-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "latencyMs": 2053,
-      "evidence": {
-        "playlist": {
-          "status": 200,
-          "contentType": "text/plain",
-          "encoding": {
-            "encoding": "utf-16le",
-            "declaredCharset": null,
-            "confidence": "fallback-strict",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "bytes": 4194304
-        },
-        "channels": []
-      },
-      "directPlayable": false
-    },
-    {
-      "candidate": {
-        "kind": "live",
-        "api": "https://z.szyyds.cn/iptv",
-        "physicalKey": "z.szyyds.cn/iptv",
-        "registryPhysicalKey": "z.szyyds.cn/iptv",
-        "nativeName": "自动更新",
-        "discoveredFrom": "https://szyyds.cn/tv/x.json"
-      },
-      "source": {
-        "slug": "discovered_live_https_z_szyyds_cn_iptv",
-        "provider": "自动更新",
-        "api": "https://z.szyyds.cn/iptv"
-      },
-      "state": "PROBATION",
-      "kind": "live",
-      "slug": "discovered_live_https_z_szyyds_cn_iptv",
-      "name": "自动更新",
-      "api": "https://z.szyyds.cn/iptv",
-      "ok": false,
-      "admissionTier": "REJECTED",
-      "hardFailures": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE"
-      ],
-      "softWarnings": [
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "rootCauses": [
-        "PLAYLIST_SCHEMA_ERROR",
-        "PLAYLIST_UNAVAILABLE",
-        "DUPLICATE_RATE_HIGH"
-      ],
-      "channelCount": 0,
-      "groupCount": 0,
-      "duplicateRate": 1,
-      "sampleCount": 0,
-      "playableCount": 0,
-      "playableRate": 0,
-      "channelChecks": [],
-      "encoding": {
-        "encoding": "utf-8",
-        "declaredCharset": null,
-        "confidence": "utf8-strict",
-        "replacementCount": 0,
-        "mojibakeCount": 0,
-        "clean": true
-      },
-      "latencyMs": 494,
-      "evidence": {
-        "playlist": {
-          "status": 200,
-          "contentType": "application/vnd.apple.mpegurl",
-          "encoding": {
-            "encoding": "utf-8",
-            "declaredCharset": null,
-            "confidence": "utf8-strict",
-            "replacementCount": 0,
-            "mojibakeCount": 0,
-            "clean": true
-          },
-          "bytes": 18588
-        },
-        "channels": []
-      },
+      "latencyMs": 3920,
       "directPlayable": false
     }
   ]
