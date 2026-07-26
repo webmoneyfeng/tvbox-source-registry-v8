@@ -1,4 +1,4 @@
-export const REGISTRY_VERSION = 'v8.2.0';
+export const REGISTRY_VERSION = 'v8.2.1';
 
 const RAW_SOURCES = [
   { slug: 'hhzy-m3u8', displayName: '\u8c6a\u534e\u76f4\u8fde', provider: 'hhzy', api: 'https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/', seedStatus: 'ACTIVE', priority: 120 },

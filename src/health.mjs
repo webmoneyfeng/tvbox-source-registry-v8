@@ -62,6 +62,7 @@ export function emptyHealthState(generatedAt = null) {
     liveCatalog: [],
     liveCatalogBySource: {},
     lastDiscoveryAt: null,
+    lastDiscoverySuccessAt: null,
     discoveryCursor: 0,
     lastDiscoveryFeed: null,
     lastDiscoveryError: null,
@@ -90,6 +91,7 @@ export function normalizeHealthState(value) {
       ? value.liveCatalogBySource
       : {},
     lastDiscoveryAt: value.lastDiscoveryAt || null,
+    lastDiscoverySuccessAt: value.lastDiscoverySuccessAt || null,
     discoveryCursor: Number.isInteger(value.discoveryCursor) ? value.discoveryCursor : 0,
     lastDiscoveryFeed: value.lastDiscoveryFeed || null,
     lastDiscoveryError: value.lastDiscoveryError || null,

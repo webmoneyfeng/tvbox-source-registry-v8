@@ -21,7 +21,7 @@ import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 import { decodeSourceBytes, encodingEvidence } from './encoding.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.2.0';
+const VERSION = 'tvbox-source-registry-v8.2.1';
 const REGISTRY_MODE = 'validated-direct-source-registry-v8.2';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
@@ -33,6 +33,8 @@ const TARGET_VOD_SOURCES = 10;
 const MIN_LIVE_SOURCES = 10;
 const PERSIST_HEARTBEAT_MS = 30 * 60 * 1000;
 const DISCOVERY_INTERVAL_MS = 6 * 60 * 60 * 1000;
+const DISCOVERY_RETRY_INTERVAL_MS = 30 * 60 * 1000;
+const MAX_DISCOVERY_FEEDS_PER_RUN = 3;
 const SEARCH_TERMS = ['\u5929\u9053', '\u4eae\u5251', '\u7504\u5b1b\u4f20', '\u6d41\u6d6a\u5730\u7403', '\u54ea\u5412'];
 const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json',
@@ -45,7 +47,7 @@ const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
   'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
 ];
-const UA = 'tvbox-source-registry-v8.2-health/1.0';
+const UA = 'tvbox-source-registry-v8.2.1-health/1.0';
 
 function responseJson(value, status = 200, maxAge = 60, extraHeaders = {}) {
   const headers = new Headers({
@@ -670,41 +672,83 @@ function selectionBatch(registry, state) {
 async function discoverOne(state) {
   const last = Date.parse(state.lastDiscoveryAt || '');
   const now = Date.now();
-  if (Number.isFinite(last) && now - last < DISCOVERY_INTERVAL_MS) return { state, discovered: 0 };
-  const index = Number(state.discoveryCursor || 0) % DISCOVERY_FEEDS.length;
-  const feed = DISCOVERY_FEEDS[index];
-  let document;
-  try {
-    document = await fetchDocument(feed, MAX_PLAYLIST_BYTES);
-  } catch (error) {
-    return {
-      state: { ...state, discoveryCursor: (index + 1) % DISCOVERY_FEEDS.length, lastDiscoveryAt: new Date(now).toISOString(), lastDiscoveryFeed: feed, lastDiscoveryError: String(error?.message || error).slice(0, 240) },
-      discovered: 0,
-    };
-  }
-  if (!document.ok) {
-    return {
-      state: { ...state, discoveryCursor: (index + 1) % DISCOVERY_FEEDS.length, lastDiscoveryAt: new Date(now).toISOString(), lastDiscoveryFeed: feed, lastDiscoveryError: document.error || `feed status ${document.status}` },
-      discovered: 0,
-    };
-  }
-  let payload = document.text;
-  let parseError = false;
-  if (!/^\s*#EXTM3U/iu.test(payload)) {
-    try { payload = JSON.parse(payload.replace(/^\uFEFF/u, '').trim()); } catch { payload = null; parseError = true; }
-  }
-  if (parseError) {
-    return {
-      state: { ...state, discoveryCursor: (index + 1) % DISCOVERY_FEEDS.length, lastDiscoveryAt: new Date(now).toISOString(), lastDiscoveryFeed: feed, lastDiscoveryError: 'feed is not a supported TVBox JSON or M3U document' },
-      discovered: 0,
-    };
-  }
-  const candidates = dedupeCandidates(extractCandidates(payload, feed));
+  const interval = state.lastDiscoveryError ? DISCOVERY_RETRY_INTERVAL_MS : DISCOVERY_INTERVAL_MS;
+  if (Number.isFinite(last) && now - last < interval) return { state, discovered: 0, attempts: 0 };
+
+  const timestamp = new Date(now).toISOString();
   const existing = dedupeCandidates(state.discoveredSources || []);
-  const merged = dedupeCandidates([...existing, ...candidates]).slice(0, 100);
+  let merged = existing;
+  let cursor = Number(state.discoveryCursor || 0) % DISCOVERY_FEEDS.length;
+  let supportedFeed = '';
+  const errors = [];
+  let attempts = 0;
+
+  while (attempts < Math.min(MAX_DISCOVERY_FEEDS_PER_RUN, DISCOVERY_FEEDS.length)) {
+    const index = cursor;
+    const feed = DISCOVERY_FEEDS[index];
+    cursor = (index + 1) % DISCOVERY_FEEDS.length;
+    attempts += 1;
+
+    let document;
+    try {
+      document = await fetchDocument(feed, MAX_PLAYLIST_BYTES);
+    } catch (error) {
+      errors.push(`${feed}: ${String(error?.message || error).slice(0, 120)}`);
+      continue;
+    }
+    if (!document.ok) {
+      errors.push(`${feed}: ${document.error || `feed status ${document.status}`}`);
+      continue;
+    }
+
+    let payload = document.text;
+    let parseError = false;
+    if (!/^\s*#EXTM3U/iu.test(payload)) {
+      try {
+        payload = JSON.parse(payload.replace(/^\uFEFF/u, '').trim());
+      } catch {
+        payload = null;
+        parseError = true;
+      }
+    }
+    if (parseError) {
+      errors.push(`${feed}: feed is not a supported TVBox JSON or M3U document`);
+      continue;
+    }
+
+    supportedFeed = feed;
+    const candidates = dedupeCandidates(extractCandidates(payload, feed));
+    merged = dedupeCandidates([...merged, ...candidates]).slice(0, 100);
+    if (candidates.length > 0) break;
+  }
+
+  const discovered = Math.max(0, merged.length - existing.length);
+  if (supportedFeed) {
+    return {
+      state: {
+        ...state,
+        discoveredSources: merged,
+        discoveryCursor: cursor,
+        lastDiscoveryAt: timestamp,
+        lastDiscoverySuccessAt: timestamp,
+        lastDiscoveryFeed: supportedFeed,
+        lastDiscoveryError: null,
+      },
+      discovered,
+      attempts,
+    };
+  }
+
   return {
-    state: { ...state, discoveredSources: merged, discoveryCursor: (index + 1) % DISCOVERY_FEEDS.length, lastDiscoveryAt: new Date(now).toISOString(), lastDiscoveryFeed: feed, lastDiscoveryError: null },
-    discovered: Math.max(0, merged.length - existing.length),
+    state: {
+      ...state,
+      discoveryCursor: cursor,
+      lastDiscoveryAt: timestamp,
+      lastDiscoveryFeed: attempts ? DISCOVERY_FEEDS[(cursor + DISCOVERY_FEEDS.length - 1) % DISCOVERY_FEEDS.length] : null,
+      lastDiscoveryError: errors.join(' | ').slice(0, 240) || 'no discovery feed attempted',
+    },
+    discovered: 0,
+    attempts,
   };
 }
 
@@ -743,6 +787,7 @@ async function scheduled(env) {
   next.cursor = (Number(stateForProbe.cursor || 0) + Math.max(1, batch.length)) % Math.max(1, registry.length);
   next.discoveryCursor = stateForProbe.discoveryCursor || 0;
   next.lastDiscoveryAt = stateForProbe.lastDiscoveryAt || null;
+  next.lastDiscoverySuccessAt = stateForProbe.lastDiscoverySuccessAt || null;
   next.lastDiscoveryFeed = stateForProbe.lastDiscoveryFeed || null;
   next.lastDiscoveryError = stateForProbe.lastDiscoveryError || null;
   next.discoveredSources = stateForProbe.discoveredSources || [];
@@ -812,7 +857,13 @@ async function status(request, env) {
     configUrl: new URL('/config.json', request.url).toString(),
     vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, active: countTier(vod, 'ACTIVE'), watch: countTier(vod, 'WATCH'), unprobed: countUnprobed(vod), providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
     live: { registered: kindRegistry(registry, 'live').length, visible: live.length, active: countTier(live, 'ACTIVE'), watch: countTier(live, 'WATCH'), unprobed: countUnprobed(live), providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
-    discovery: { lastAt: state.lastDiscoveryAt, feed: state.lastDiscoveryFeed, error: state.lastDiscoveryError, candidates: state.discoveredSources.length },
+    discovery: {
+      lastAt: state.lastDiscoveryAt,
+      lastSuccessAt: state.lastDiscoverySuccessAt,
+      feed: state.lastDiscoveryFeed,
+      error: state.lastDiscoveryError,
+      candidates: state.discoveredSources.length,
+    },
     policy: 'Direct source registry only; upstream categories, filters and ordering are passed through unchanged. No category whitelist, video proxy, full catalogue snapshot, or adult filtering.',
     sources: publicSourceRows(registry, state),
   }, 200, 0, { 'cache-control': 'no-store, no-cache, must-revalidate' });
@@ -880,4 +931,5 @@ export {
   rowsOf,
   selectionBatch,
   sourceUrl,
+  discoverOne,
 };

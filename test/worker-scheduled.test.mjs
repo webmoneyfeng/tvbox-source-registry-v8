@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import worker, { playlistHardViolation, probeLiveSource, probeVodSource } from '../src/worker.mjs';
+import worker, { discoverOne, playlistHardViolation, probeLiveSource, probeVodSource } from '../src/worker.mjs';
 import { mediaLooksPlayable } from '../src/deep-audit.mjs';
 import { parseM3U } from '../src/live.mjs';
 
@@ -37,6 +37,43 @@ test('scheduled harness probes VOD and LIVE in bounded batches and persists heal
     assert.ok(Object.keys(state.sources).length > 0);
     assert.ok(state.revision);
     assert.match(state.revision, /\|live:/u);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('discovery skips an unsupported feed and accepts the next supported feed in the same run', async () => {
+  const originalFetch = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    calls.push(url.toString());
+    if (url.pathname.endsWith('/gao/master/js.json')) {
+      return new Response('not a TVBox document', {
+        status: 200,
+        headers: { 'content-type': 'text/plain; charset=utf-8' },
+      });
+    }
+    if (url.pathname.endsWith('/gao/master/XYQ.json')) {
+      return jsonResponse({
+        sites: [{ type: 1, name: 'fallback source', api: 'https://candidate.example.test/api' }],
+      });
+    }
+    return new Response('', { status: 404 });
+  };
+  try {
+    const result = await discoverOne({
+      discoveredSources: [],
+      discoveryCursor: 0,
+      lastDiscoveryAt: null,
+      lastDiscoveryError: null,
+    });
+    assert.equal(result.discovered, 1);
+    assert.equal(result.state.lastDiscoveryError, null);
+    assert.equal(result.state.lastDiscoveryFeed, 'https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json');
+    assert.equal(result.state.discoveryCursor, 2);
+    assert.equal(result.state.discoveredSources[0].api, 'https://candidate.example.test/api');
+    assert.equal(calls.length, 2);
   } finally {
     globalThis.fetch = originalFetch;
   }
