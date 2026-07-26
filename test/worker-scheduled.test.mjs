@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import worker, { probeVodSource } from '../src/worker.mjs';
+import worker, { playlistHardViolation, probeLiveSource, probeVodSource } from '../src/worker.mjs';
+import { mediaLooksPlayable } from '../src/deep-audit.mjs';
+import { parseM3U } from '../src/live.mjs';
 
 function jsonResponse(value) {
   return new Response(JSON.stringify(value), { status: 200, headers: { 'content-type': 'application/json' } });
@@ -47,6 +49,118 @@ test('probe rejects a redirect to a private address as a hard violation', async 
     const probe = await probeVodSource({ slug: 'unsafe', kind: 'vod', api: 'https://public.example.test/api' });
     assert.equal(probe.ok, false);
     assert.equal(probe.hardViolation, true);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('probe accepts a direct media response identified by video content type', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    if (url.hostname === 'media.example.test') {
+      return new Response(new Uint8Array([0, 1, 2, 3]), {
+        status: 200,
+        headers: { 'content-type': 'video/mp4' },
+      });
+    }
+    if (url.searchParams.get('ac') === 'detail') {
+      return jsonResponse({ list: [{ vod_id: '1', vod_play_url: '高清$https://media.example.test/movie.mp4' }] });
+    }
+    if (url.searchParams.has('wd')) return jsonResponse({ list: [{ vod_id: '1', vod_name: '测试节目' }] });
+    return jsonResponse({
+      class: [{ type_id: 1, type_name: '电影' }],
+      list: [{ vod_id: '1', vod_name: '测试节目', vod_time: '2026-07-19 12:00:00' }],
+    });
+  };
+  try {
+    const probe = await probeVodSource({ slug: 'mp4', kind: 'vod', api: 'https://public.example.test/api' });
+    assert.equal(probe.playOk, true);
+    assert.equal(probe.directPlaybackEligible, true);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('deep audit does not treat an HTML response at a media-looking URL as playable', () => {
+  assert.equal(mediaLooksPlayable({
+    status: 200,
+    text: '<html><body>not a media file</body></html>',
+    contentType: 'text/html',
+  }), false);
+  assert.equal(mediaLooksPlayable({
+    status: 200,
+    text: '#EXTM3U\n#EXT-X-TARGETDURATION:6\n',
+    contentType: 'application/octet-stream',
+  }), true);
+});
+
+test('live probe keeps a valid playlist that only contains removable infrastructure lines', () => {
+  const text = [
+    '#EXTM3U',
+    '#EXTINF:-1 group-title="News",News 1',
+    'https://media.example.test/1.m3u8',
+    '#EXTINF:-1 group-title="News",\u516c\u4f17\u53f7\u52a0\u7fa4',
+    'https://example.test/ad.m3u8',
+    '#EXTINF:-1 group-title="News",News 2',
+    'https://media.example.test/2.m3u8',
+    '#EXTINF:-1 group-title="News",News 3',
+    'https://media.example.test/3.m3u8',
+    '#EXTINF:-1 group-title="News",News 4',
+    'https://media.example.test/4.m3u8',
+    '#EXTINF:-1 group-title="News",News 5',
+    'https://media.example.test/5.m3u8',
+  ].join('\n');
+  const parsed = parseM3U(text);
+  assert.equal(parsed.channels.length, 5);
+  assert.equal(playlistHardViolation({
+    text,
+    hardViolation: true,
+  }, parsed), false);
+  assert.equal(playlistHardViolation({
+    text: '<html><body>\u5e7f\u544a\u9875</body></html>',
+    hardViolation: true,
+  }, { channels: [] }), true);
+});
+
+test('live probe downgrades isolated bad channel media to a soft warning', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    if (url.hostname === 'playlist.example.test') {
+      const lines = Array.from({ length: 5 }, (_, index) => [
+        `#EXTINF:-1 group-title="G${index}",Channel ${index}`,
+        `https://media.example.test/${index === 0 ? 'ad' : index}.m3u8`,
+      ]).flat();
+      return new Response(`#EXTM3U\n${lines.join('\n')}\n`, {
+        status: 200,
+        headers: { 'content-type': 'audio/x-mpegurl' },
+      });
+    }
+    if (url.hostname === 'media.example.test' && url.pathname.includes('/ad.')) {
+      return new Response('<html><body>\u5e7f\u544a\u9875</body></html>', {
+        status: 200,
+        headers: { 'content-type': 'text/html' },
+      });
+    }
+    if (url.hostname === 'media.example.test') {
+      return new Response('#EXTM3U\n#EXT-X-TARGETDURATION:6\n', {
+        status: 200,
+        headers: { 'content-type': 'application/vnd.apple.mpegurl' },
+      });
+    }
+    return new Response('', { status: 404 });
+  };
+  try {
+    const probe = await probeLiveSource({
+      slug: 'partial-live',
+      kind: 'live',
+      api: 'https://playlist.example.test/live.m3u',
+    });
+    assert.equal(probe.ok, true);
+    assert.equal(probe.hardViolation, false);
+    assert.ok(probe.softWarnings.some((value) => value.startsWith('AD_OR_PARSE_CHANNEL:')));
+    assert.equal(probe.playableCount, 4);
   } finally {
     globalThis.fetch = originalFetch;
   }

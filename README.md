@@ -1,9 +1,9 @@
-# TVBox Source Registry v8.1
+# TVBox Source Registry v8.2
 
-## v8.1.4 native-source admission
+## v8.2 native-source admission
 
-The registry currently contains 14 independently-addressed VOD CMS endpoints
-and 18 independently-addressed live playlists. Admission reports keep separate
+The registry currently contains 16 independently-addressed VOD CMS endpoints
+and 23 independently-addressed live playlists. Admission reports keep separate
 `ACTIVE`, `WATCH` and `REJECTED` tiers. `WATCH` entries have passed the hard
 contract but carry a soft warning such as an upstream empty category, partial
 channel failure or unknown freshness. They can fill the usable-source target;
@@ -27,10 +27,10 @@ existing `tvbox-source-hub-v73` project.
 Import the full source configuration:
 
 ```text
-https://tvbox-source-registry-v8.feng-yang.workers.dev/config.json
+https://tvbox-source-registry-v8-canary.feng-yang.workers.dev/config.json
 ```
 
-The configuration contains validated direct CMS source links. The TV client
+The canary configuration contains validated direct CMS source links. The TV client
 queries those sources directly, so new episodes are visible when the upstream
 source publishes them. Live playlists are exposed directly after their source
 contract passes; `/live.txt` remains a compatibility endpoint.
@@ -40,8 +40,9 @@ build a full catalogue snapshot, or promise that every public source is complete
 Native capability rules are deliberately conservative: `filterable` is `1`
 only when the upstream response exposes usable filter options; otherwise it is
 `0`. No categories whitelist, synthetic sort, title rewrite or filter adapter
-is added. `changeable` is `1` only when a direct playback probe permits client
-fallback, and otherwise is the standard `0` value.
+is added. `searchable` is `1` only after a live search probe succeeds;
+`changeable` is `1` only when a direct playback probe permits client fallback;
+unprobed sources do not advertise either capability.
 
 ## Maintenance model
 
@@ -53,6 +54,8 @@ fallback, and otherwise is the standard `0` value.
 - Scripts, JARs, parsers, ad pages and invalid media endpoints are excluded.
 - GitHub runs deterministic CI only; it is not the runtime update path.
 - KV stores health state, last-known-good source links and a bounded live channel list.
+- Registry seed entries are marked as `PREAUDITED_SEED` until their first live KV
+  probe; this state is visible in `/status.json` but never appears in TVBox names.
 
 ## Validation contract
 
@@ -71,6 +74,9 @@ Useful reports:
 - `audit/source-naming-latest.json`: unique names and provider/domain traceability.
 - `audit/deployment-truth-latest.json`: endpoint, revision and cache-header checks.
 - `audit/free-budget-latest.json`: Worker/KV free-tier estimate and traffic boundary.
+- `audit/v82-stage-progress-summary.md`: canary progress and formal-release gates.
+- `audit/source-admission-v82.json`: full candidate deep audit plus the explicit
+  candidate/usable/strict/published target gate.
 
 ## Free-tier boundary
 

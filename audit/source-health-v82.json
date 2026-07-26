@@ -1,0 +1,1023 @@
+{
+  "generatedAt": "2026-07-26T05:16:14.080Z",
+  "registryVersion": "v8.2.0",
+  "admission": {
+    "vod": {
+      "kind": "vod",
+      "candidateCount": 16,
+      "active": 0,
+      "watch": 14,
+      "rejected": 2,
+      "corePlayable": 14,
+      "categoryAuditComplete": 16,
+      "categoryAuditPartial": 0,
+      "generatedAt": "2026-07-26T05:28:35.694Z",
+      "target": 10,
+      "candidateTargetMet": true,
+      "usableTargetMet": true,
+      "strictTargetMet": false
+    },
+    "live": {
+      "kind": "live",
+      "candidateCount": 23,
+      "active": 7,
+      "watch": 5,
+      "rejected": 11,
+      "corePlayable": 12,
+      "categoryAuditComplete": null,
+      "categoryAuditPartial": null,
+      "generatedAt": "2026-07-26T05:28:35.694Z",
+      "target": 10,
+      "candidateTargetMet": true,
+      "usableTargetMet": true,
+      "strictTargetMet": false
+    }
+  },
+  "degraded": true,
+  "targetGate": {
+    "vod": {
+      "target": 10,
+      "active": 0,
+      "watch": 14,
+      "corePlayable": 14,
+      "candidateTargetMet": true,
+      "usableTargetMet": true,
+      "strictTargetMet": false
+    },
+    "live": {
+      "target": 10,
+      "active": 7,
+      "watch": 5,
+      "corePlayable": 12,
+      "candidateTargetMet": true,
+      "usableTargetMet": true,
+      "strictTargetMet": false
+    },
+    "publishedTargetVerified": false,
+    "publicationReady": false,
+    "degraded": true,
+    "blockers": [
+      "PUBLISHED_TARGET_NOT_VERIFIED"
+    ]
+  },
+  "scope": {
+    "sourceOffset": 0,
+    "sourceLimit": null,
+    "categoryStart": 0,
+    "categoryLimit": null,
+    "requireCompleteCategories": false,
+    "mergeExisting": false,
+    "kind": "both",
+    "selectedVod": 16,
+    "selectedLive": 23,
+    "auditedBatch": 39,
+    "mergedRows": 39
+  },
+  "rootCauses": {
+    "SOURCE_EMPTY_CATEGORY:3": 4,
+    "SOURCE_SEARCH_GAP": 15,
+    "SLOW_SOURCE": 16,
+    "SOURCE_EMPTY_CATEGORY:2": 4,
+    "SOURCE_EMPTY_CATEGORY:5": 1,
+    "SOURCE_EMPTY_CATEGORY:4": 1,
+    "SOURCE_EMPTY_CATEGORY:7": 3,
+    "SOURCE_EMPTY_CATEGORY:1": 1,
+    "SOURCE_EMPTY_CATEGORY:29": 1,
+    "SOURCE_EMPTY_CATEGORY:35": 1,
+    "SEARCH_UNAVAILABLE": 1,
+    "INVALID_PLAY_BRANCH": 1,
+    "PARTIAL_CHANNEL_FAILURE": 6,
+    "PROBE_EXCEPTION": 9,
+    "AD_OR_PARSE_ENDPOINT": 1,
+    "PLAYLIST_UNAVAILABLE": 1
+  },
+  "rows": [
+    {
+      "kind": "vod",
+      "slug": "hhzy-m3u8",
+      "name": "豪华直连",
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:3",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 39,
+        "start": 0,
+        "requested": 39,
+        "audited": 39,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "hongniu-m3u8",
+      "name": "红牛直连",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:3",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 31,
+        "start": 0,
+        "requested": 31,
+        "audited": 31,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "modu",
+      "name": "魔都动漫",
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:2",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 42,
+        "start": 0,
+        "requested": 42,
+        "audited": 42,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "lzi-m3u8",
+      "name": "量子直连",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:5",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 44,
+        "start": 0,
+        "requested": 44,
+        "audited": 44,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "ffzy-m3u8",
+      "name": "非凡直连",
+      "api": "https://ffzy.tv/api.php/provide/vod/from/ffm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:4",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 31,
+        "start": 0,
+        "requested": 31,
+        "audited": 31,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "jinying",
+      "name": "金鹰资源",
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:3",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 31,
+        "start": 0,
+        "requested": 31,
+        "audited": 31,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "zuida",
+      "name": "最大资源",
+      "api": "https://api.zuidapi.com/api.php/provide/vod/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:7",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 59,
+        "start": 0,
+        "requested": 59,
+        "audited": 59,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "subo-m3u8",
+      "name": "速播直连",
+      "api": "https://suboziyuan.net/api.php/provide/vod/from/subm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:1",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 31,
+        "start": 0,
+        "requested": 31,
+        "audited": 31,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "360zy-direct",
+      "name": "360直连",
+      "api": "https://360zy.com/api.php/provide/vod/from/360zy/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:7",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 51,
+        "start": 0,
+        "requested": 51,
+        "audited": 51,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "xinlang-m3u8",
+      "name": "新浪直连",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:2",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 28,
+        "start": 0,
+        "requested": 28,
+        "audited": 28,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "baidu",
+      "name": "百度资源",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:29",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 54,
+        "start": 0,
+        "requested": 54,
+        "audited": 54,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "bfzy",
+      "name": "暴风资源",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:2",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.8333333333333334,
+      "categoryCoverage": {
+        "total": 49,
+        "start": 0,
+        "requested": 49,
+        "audited": 49,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "jszy-m3u8",
+      "name": "极速直连",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:3",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 39,
+        "start": 0,
+        "requested": 39,
+        "audited": 39,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "lovedan",
+      "name": "爱旦资源",
+      "api": "https://www.lovedan.net/api.php/provide/vod/",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:35",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 70,
+        "start": 0,
+        "requested": 70,
+        "audited": 70,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "sdzy-vod",
+      "name": "闪电资源(切)",
+      "api": "http://sdzyapi.com/api.php/provide/vod/",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "SEARCH_UNAVAILABLE",
+        "SOURCE_EMPTY_CATEGORY:7",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 59,
+        "start": 0,
+        "requested": 59,
+        "audited": 59,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "vod",
+      "slug": "guangsu-vod",
+      "name": "光速资源(切)",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "INVALID_PLAY_BRANCH",
+        "SOURCE_EMPTY_CATEGORY:2",
+        "SOURCE_SEARCH_GAP",
+        "SLOW_SOURCE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": {
+        "total": 28,
+        "start": 0,
+        "requested": 28,
+        "audited": 28,
+        "complete": true,
+        "nextStart": null
+      },
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-ipv6",
+      "name": "范明明 IPv6",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.6666666666666666,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-cn",
+      "name": "IPTV-org 中国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-hk",
+      "name": "IPTV-org 香港",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.5,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-kr",
+      "name": "IPTV-org 韩国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-us",
+      "name": "IPTV-org 美国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.75,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-uk",
+      "name": "IPTV-org 英国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-de",
+      "name": "IPTV-org 德国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-ca",
+      "name": "IPTV-org 加拿大",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "suxuang-ipv4",
+      "name": "Suxuang IPv4",
+      "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-result",
+      "name": "Guovin 汇总",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-ipv4",
+      "name": "Guovin IPv4",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "AD_OR_PARSE_ENDPOINT",
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.5,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-th",
+      "name": "IPTV-org 泰国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.5,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-vn",
+      "name": "IPTV-org 越南",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/vn.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PLAYLIST_UNAVAILABLE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-it",
+      "name": "IPTV-org 意大利",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-in",
+      "name": "IPTV-org 印度",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.75,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-br",
+      "name": "IPTV-org 巴西",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "zbds-ipv4",
+      "name": "ZBDS IPv4",
+      "api": "https://live.zbds.org/tv/iptv4.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-index",
+      "name": "范明明全量",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "admissionTier": "REJECTED",
+      "ok": false,
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "encoding": null,
+      "playableRate": 0,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "migu-live",
+      "name": "咪咕直播",
+      "api": "https://develop202.github.io/migu_video/interface.txt",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.6875,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-jp",
+      "name": "IPTV-org 日本",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 1,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-au",
+      "name": "IPTV-org 澳大利亚",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.75,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-fr",
+      "name": "IPTV-org 法国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "admissionTier": "ACTIVE",
+      "ok": true,
+      "rootCauses": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.75,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-sg",
+      "name": "IPTV-org 新加坡",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "admissionTier": "WATCH",
+      "ok": true,
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "playableRate": 0.5,
+      "categoryCoverage": null,
+      "lastDeepAuditAt": "2026-07-26T05:16:14.080Z"
+    }
+  ]
+}

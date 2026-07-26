@@ -24,11 +24,12 @@ export function normalizeCandidateUrl(value) {
   return url.toString();
 }
 
-export function physicalCandidateKey(value) {
+export function physicalCandidateKey(value, kind = 'vod') {
   const normalized = normalizeCandidateUrl(value);
   if (!normalized) return '';
   const url = new URL(normalized);
-  return `${url.hostname.replace(/^www\./u, '')}${url.port ? ':' + url.port : ''}${url.pathname}`;
+  const host = `${url.hostname.replace(/^www\./u, '')}${url.port ? ':' + url.port : ''}`;
+  return kind === 'live' ? host + url.pathname : host;
 }
 
 export function extractCandidates(payload, feedUrl = '') {
@@ -62,8 +63,9 @@ export function dedupeCandidates(candidates = []) {
     const api = normalizeCandidateUrl(candidate?.api);
     if (!api) continue;
     const kind = candidate.kind === 'live' ? 'live' : 'vod';
-    const key = `${kind}:${physicalCandidateKey(api)}`;
-    if (!result.has(key)) result.set(key, { ...candidate, kind, api, physicalKey: physicalCandidateKey(api), state: 'CANDIDATE' });
+    const physicalKey = physicalCandidateKey(api, kind);
+    const key = `${kind}:${physicalKey}`;
+    if (!result.has(key)) result.set(key, { ...candidate, kind, api, physicalKey, state: 'CANDIDATE' });
   }
   return [...result.values()];
 }

@@ -1,0 +1,69 @@
+# v8.2 深度源准入审计
+
+生成时间：2026-07-26T05:16:14.080Z
+
+## 汇总
+
+- 点播：0 ACTIVE / 14 WATCH / 2 REJECTED
+- 直播：7 ACTIVE / 5 WATCH / 11 REJECTED
+- 候选目标：VOD 达到 / LIVE 达到
+- 可用目标：VOD 达到 / LIVE 达到
+- 正式发布闸门：本报告不代替 Canary 线上验证，因此默认为未通过
+- 总候选：39
+- 点播完整分类审计：16/16
+
+## 点播根因
+
+| 源 | 准入 | 分类 | 搜索 | 详情率 | 播放率 | 根因 |
+|---|---|---:|---:|---:|---:|---|
+| 豪华直连 | WATCH | 36/39 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:3, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 红牛直连 | WATCH | 28/31 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:3, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 魔都动漫 | WATCH | 40/42 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:2, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 量子直连 | WATCH | 39/44 | 4/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:5, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 非凡直连 | WATCH | 27/31 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:4, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 金鹰资源 | WATCH | 28/31 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:3, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 最大资源 | WATCH | 52/59 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:7, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 速播直连 | WATCH | 30/31 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:1, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 360直连 | WATCH | 44/51 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:7, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 新浪直连 | WATCH | 26/28 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:2, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 百度资源 | WATCH | 25/54 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:29, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 暴风资源 | WATCH | 47/49 | 4/6 | 1.00 | 0.83 | SOURCE_EMPTY_CATEGORY:2, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 极速直连 | WATCH | 36/39 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:3, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 爱旦资源 | WATCH | 35/70 | 3/6 | 1.00 | 1.00 | SOURCE_EMPTY_CATEGORY:35, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+| 闪电资源(切) | REJECTED | 52/59 | 0/6 | 1.00 | 1.00 | SEARCH_UNAVAILABLE, SOURCE_EMPTY_CATEGORY:7, SLOW_SOURCE |
+| 光速资源(切) | REJECTED | 26/28 | 3/6 | 1.00 | 1.00 | INVALID_PLAY_BRANCH, SOURCE_EMPTY_CATEGORY:2, SOURCE_SEARCH_GAP, SLOW_SOURCE |
+
+## 直播根因
+
+| 源 | 准入 | 频道 | 分组 | 播放率 | 根因 |
+|---|---|---:|---:|---:|---|
+| 范明明 IPv6 | WATCH | 27 | 3 | 0.67 | PARTIAL_CHANNEL_FAILURE |
+| IPTV-org 中国 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| IPTV-org 香港 | WATCH | 18 | 1 | 0.50 | PARTIAL_CHANNEL_FAILURE |
+| IPTV-org 韩国 | ACTIVE | 64 | 1 | 1.00 | OK |
+| IPTV-org 美国 | ACTIVE | 836 | 1 | 0.75 | OK |
+| IPTV-org 英国 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| IPTV-org 德国 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| IPTV-org 加拿大 | ACTIVE | 147 | 1 | 1.00 | OK |
+| Suxuang IPv4 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| Guovin 汇总 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| Guovin IPv4 | REJECTED | 140 | 28 | 0.50 | AD_OR_PARSE_ENDPOINT, PARTIAL_CHANNEL_FAILURE |
+| IPTV-org 泰国 | WATCH | 62 | 1 | 0.50 | PARTIAL_CHANNEL_FAILURE |
+| IPTV-org 越南 | REJECTED | 74 | 1 | 0.00 | PLAYLIST_UNAVAILABLE |
+| IPTV-org 意大利 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| IPTV-org 印度 | ACTIVE | 585 | 1 | 0.75 | OK |
+| IPTV-org 巴西 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| ZBDS IPv4 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| 范明明全量 | REJECTED | 0 | 0 | 0.00 | PROBE_EXCEPTION |
+| 咪咕直播 | WATCH | 151 | 14 | 0.69 | PARTIAL_CHANNEL_FAILURE |
+| IPTV-org 日本 | ACTIVE | 16 | 1 | 1.00 | OK |
+| IPTV-org 澳大利亚 | ACTIVE | 49 | 1 | 0.75 | OK |
+| IPTV-org 法国 | ACTIVE | 181 | 1 | 0.75 | OK |
+| IPTV-org 新加坡 | WATCH | 16 | 1 | 0.50 | PARTIAL_CHANNEL_FAILURE |
+
+## 说明
+
+- ACTIVE/WATCH/REJECTED 仅表示本轮深度审计结果。
+- 源原生分类、筛选、排序和节目内容未被改写。
+- 候选深审、可见健康状态、正式发布分开记录；不用候选报告冒充线上可见数量。
+- 少于目标或线上目标未核验时保持 degraded，不使用未经验证的源补位。

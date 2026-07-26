@@ -1,0 +1,155 @@
+{
+  "generatedAt": "2026-07-26T07:21:12.904Z",
+  "scope": "v8.2 repository cleanup and stale-architecture reference audit",
+  "policy": "Generate evidence before deletion. No production resource or source file is deleted by this audit.",
+  "protected": [
+    "v8.1.4 formal Worker, KV and custom domains",
+    "v8.2 canary Worker and canary KV",
+    "current source registry and audit evidence"
+  ],
+  "repository": {
+    "sourceFiles": [
+      "src/admission.mjs",
+      "src/deep-audit.mjs",
+      "src/discovery.mjs",
+      "src/encoding.mjs",
+      "src/health.mjs",
+      "src/live.mjs",
+      "src/registry.mjs",
+      "src/scoring.mjs",
+      "src/worker.mjs"
+    ],
+    "workflows": [
+      ".github/workflows/ci.yml"
+    ],
+    "workflowCount": 1,
+    "sourceFileCount": 9
+  },
+  "references": [
+    {
+      "file": "README.md",
+      "patterns": [
+        "OLD_SNAPSHOT_TERMS"
+      ]
+    },
+    {
+      "file": "scripts/audit-canary-v82.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "scripts/audit-candidate-pool-v8.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "scripts/audit-cleanup-v82.mjs",
+      "patterns": [
+        "OLD_CATALOG_VERSION",
+        "OLD_V81_LABEL",
+        "OLD_SNAPSHOT_TERMS",
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "scripts/audit-native-capability-v8.mjs",
+      "patterns": [
+        "OLD_SNAPSHOT_TERMS"
+      ]
+    },
+    {
+      "file": "scripts/discover-public-candidates-v8.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "scripts/validate-online.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "SOURCE_DIRECTORY_DESIGN.md",
+      "patterns": [
+        "OLD_CATALOG_VERSION",
+        "OLD_SNAPSHOT_TERMS"
+      ]
+    },
+    {
+      "file": "src/deep-audit.mjs",
+      "patterns": [
+        "OLD_SNAPSHOT_TERMS"
+      ]
+    },
+    {
+      "file": "src/discovery.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "src/worker.mjs",
+      "patterns": [
+        "OLD_SNAPSHOT_TERMS",
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "test/discovery.test.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    },
+    {
+      "file": "test/worker-scheduled.test.mjs",
+      "patterns": [
+        "EXECUTABLE_SOURCE_FIELD"
+      ]
+    }
+  ],
+  "findings": {
+    "oldRuntimeCodeReferences": [
+      {
+        "file": "src/deep-audit.mjs",
+        "patterns": [
+          "OLD_SNAPSHOT_TERMS"
+        ]
+      },
+      {
+        "file": "src/discovery.mjs",
+        "patterns": [
+          "EXECUTABLE_SOURCE_FIELD"
+        ]
+      },
+      {
+        "file": "src/worker.mjs",
+        "patterns": [
+          "OLD_SNAPSHOT_TERMS",
+          "EXECUTABLE_SOURCE_FIELD"
+        ]
+      }
+    ],
+    "oldWorkflowCount": 0,
+    "destructiveCleanupRecommended": false
+  },
+  "decisions": {
+    "archiveOnly": [
+      "historical v7.3 documentation references",
+      "formal v8.1.4 audit evidence",
+      "v8.2 canary audit evidence"
+    ],
+    "retain": [
+      "src/worker.mjs",
+      "src/health.mjs",
+      "src/registry.mjs",
+      "src/deep-audit.mjs",
+      "scripts/audit-*.mjs",
+      "wrangler.canary.toml",
+      "wrangler.toml"
+    ],
+    "deleteNow": []
+  }
+}

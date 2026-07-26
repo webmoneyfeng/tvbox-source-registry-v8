@@ -1,10 +1,10 @@
 {
   "name": "tvbox-source-registry-v8",
-  "version": "8.1.4",
+  "version": "8.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/registry.mjs && node --check src/health.mjs && node --check src/live.mjs && node --check src/discovery.mjs && node --check src/scoring.mjs && node --check src/worker.mjs && node --check scripts/probe-sources.mjs && node --check scripts/probe-live-sources.mjs && node --check scripts/audit-candidate-pool-v8.mjs && node --check scripts/audit-quality-v8.mjs && node --check scripts/audit-full-source-quality-v8.mjs && node --check scripts/audit-free-budget.mjs && node --check scripts/audit-native-capability-v8.mjs && node --check scripts/audit-deployment-truth-v8.mjs && node --check scripts/audit-source-naming-v8.mjs && node --check scripts/validate-online.mjs && node --test",
+    "check": "node --check src/admission.mjs && node --check src/registry.mjs && node --check src/health.mjs && node --check src/live.mjs && node --check src/discovery.mjs && node --check src/encoding.mjs && node --check src/deep-audit.mjs && node --check src/scoring.mjs && node --check src/worker.mjs && node --check scripts/probe-sources.mjs && node --check scripts/probe-live-sources.mjs && node --check scripts/audit-candidate-pool-v8.mjs && node --check scripts/audit-candidate-pool-v82.mjs && node --check scripts/audit-quality-v8.mjs && node --check scripts/audit-full-source-quality-v8.mjs && node --check scripts/audit-free-budget.mjs && node --check scripts/audit-native-capability-v8.mjs && node --check scripts/audit-deployment-truth-v8.mjs && node --check scripts/audit-source-naming-v8.mjs && node --check scripts/discover-public-candidates-v8.mjs && node --check scripts/audit-deep-sources-v82.mjs && node --check scripts/audit-runtime-coherence-v82.mjs && node --check scripts/validate-online.mjs && node --test",
     "test": "node --test",
     "probe": "node scripts/probe-sources.mjs",
     "probe:live": "node scripts/probe-live-sources.mjs",
@@ -16,6 +16,12 @@
     "audit:native": "node scripts/audit-native-capability-v8.mjs",
     "audit:deployment": "node scripts/audit-deployment-truth-v8.mjs",
     "audit:naming": "node scripts/audit-source-naming-v8.mjs",
+    "audit:deep": "node scripts/audit-deep-sources-v82.mjs",
+    "audit:candidates:deep": "node scripts/audit-candidate-pool-v82.mjs",
+    "audit:runtime": "node scripts/audit-runtime-coherence-v82.mjs",
+    "audit:canary": "node scripts/audit-canary-v82.mjs",
+    "audit:cleanup": "node scripts/audit-cleanup-v82.mjs",
+    "seed:health": "node scripts/seed-health-from-deep-audit-v82.mjs",
     "validate:online": "node scripts/validate-online.mjs",
     "deploy": "wrangler deploy"
   },

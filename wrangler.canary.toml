@@ -1,0 +1,12 @@
+name = "tvbox-source-registry-v8-canary"
+main = "src/worker.mjs"
+compatibility_date = "2024-11-01"
+workers_dev = true
+preview_urls = true
+
+[[kv_namespaces]]
+binding = "SOURCE_HEALTH"
+id = "3ab5e2e82b1c4a689460841c3c1d0ab1"
+
+[triggers]
+crons = ["*/5 * * * *"]

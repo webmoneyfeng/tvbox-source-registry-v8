@@ -1,8 +1,10 @@
 import {
   emptyHealthState,
+  effectiveAdmissionTier,
   normalizeHealthState,
   sourceHealthKey,
   updateHealthState,
+  verificationState,
   visibleSources,
 } from './health.mjs';
 import {
@@ -17,8 +19,10 @@ import {
 import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from './discovery.mjs';
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
+import { decodeSourceBytes, encodingEvidence } from './encoding.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.1.4';
+const VERSION = 'tvbox-source-registry-v8.2.0';
+const REGISTRY_MODE = 'validated-direct-source-registry-v8.2';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
 const MAX_PROBE_SOURCES = 3;
@@ -31,8 +35,9 @@ const PERSIST_HEARTBEAT_MS = 30 * 60 * 1000;
 const DISCOVERY_INTERVAL_MS = 6 * 60 * 60 * 1000;
 const SEARCH_TERMS = ['\u5929\u9053', '\u4eae\u5251', '\u7504\u5b1b\u4f20', '\u6d41\u6d6a\u5730\u7403', '\u54ea\u5412'];
 const DISCOVERY_FEEDS = [
-  'https://raw.githubusercontent.com/liu673cn/box/main/m.json',
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json',
+  'https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json',
+  'https://raw.githubusercontent.com/liu673cn/box/main/m.json',
   'https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json',
   'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
   'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u',
@@ -40,7 +45,7 @@ const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
   'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
 ];
-const UA = 'tvbox-source-registry-v8.1-health/1.0';
+const UA = 'tvbox-source-registry-v8.2-health/1.0';
 
 function responseJson(value, status = 200, maxAge = 60, extraHeaders = {}) {
   const headers = new Headers({
@@ -77,15 +82,14 @@ async function writeHealth(env, state) {
   return true;
 }
 
-async function readTextLimited(response, maxBytes) {
+async function readBytesLimited(response, maxBytes) {
   if (!response.body || typeof response.body.getReader !== 'function') {
-    const value = await response.text();
-    return { text: value.slice(0, maxBytes), truncated: value.length > maxBytes };
+    const value = new Uint8Array(await response.arrayBuffer());
+    return { bytes: value.slice(0, maxBytes), truncated: value.byteLength > maxBytes };
   }
   const reader = response.body.getReader();
-  const decoder = new TextDecoder();
+  const chunks = [];
   let total = 0;
-  let text = '';
   let truncated = false;
   try {
     while (true) {
@@ -94,18 +98,23 @@ async function readTextLimited(response, maxBytes) {
       total += part.value.byteLength;
       if (total > maxBytes) {
         const allowed = Math.max(0, maxBytes - (total - part.value.byteLength));
-        text += decoder.decode(part.value.slice(0, allowed), { stream: true });
+        if (allowed) chunks.push(part.value.slice(0, allowed));
         truncated = true;
         await reader.cancel();
         break;
       }
-      text += decoder.decode(part.value, { stream: true });
+      chunks.push(part.value);
     }
-    text += decoder.decode();
   } finally {
     try { reader.releaseLock(); } catch {}
   }
-  return { text, truncated };
+  const bytes = new Uint8Array(chunks.reduce((sum, chunk) => sum + chunk.byteLength, 0));
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return { bytes, truncated };
 }
 
 function sourceUrl(source, params = {}) {
@@ -132,8 +141,22 @@ async function fetchDocument(url, maxBytes = MAX_BODY_BYTES) {
         currentUrl = new URL(location, currentUrl).toString();
         continue;
       }
-      const body = await readTextLimited(response, maxBytes);
-      return { ok: response.ok && !body.truncated, status: response.status, text: body.text, truncated: body.truncated, latencyMs: Date.now() - started, contentType: response.headers.get('content-type') || '', finalUrl: currentUrl, hardViolation: false, error: '' };
+      const contentType = response.headers.get('content-type') || '';
+      const body = await readBytesLimited(response, maxBytes);
+      const decoded = decodeSourceBytes(body.bytes, contentType);
+      return {
+        ok: response.ok && !body.truncated,
+        status: response.status,
+        text: decoded.text,
+        bytes: body.bytes,
+        truncated: body.truncated,
+        latencyMs: Date.now() - started,
+        contentType,
+        finalUrl: currentUrl,
+        encoding: encodingEvidence(decoded),
+        hardViolation: false,
+        error: '',
+      };
     } finally {
       clearTimeout(timer);
     }
@@ -185,8 +208,20 @@ function nativeFilterInfo(data) {
   }).filter((item) => item.optionCount > 0);
   const nativeFilterKeys = [...new Set(filters.flatMap((item) => item.keys))];
   const labels = filters.flatMap((item) => item.names).join(' ');
-  const sortable = /(?:sort|order|time|latest|\u6700\u65b0|\u6392\u5e8f|\u66f4\u65b0)/iu.test(`${nativeFilterKeys.join(' ')} ${labels}`);
-  return { filters, nativeFilterable: filters.some((item) => item.optionCount >= 2), nativeSortable: sortable, nativeFilterKeys };
+  const sortRaw = data?.sort ?? data?.sorts ?? data?.order ?? data?.data?.sort ?? data?.data?.sorts ?? {};
+  const sortEntries = Array.isArray(sortRaw) ? sortRaw : Object.entries(sortRaw || {}).map(([key, value]) => ({ key, value }));
+  const nativeSortKeys = sortEntries
+    .flatMap((item) => [item?.key, item?.value, item?.name, item?.field, item?.type])
+    .map((item) => String(item || '').trim())
+    .filter(Boolean);
+  const sortable = nativeSortKeys.length > 0;
+  return {
+    filters,
+    nativeFilterable: filters.some((item) => item.optionCount >= 2),
+    nativeSortable: sortable,
+    nativeFilterKeys,
+    nativeSortKeys: [...new Set(nativeSortKeys)],
+  };
 }
 
 function directMediaUrls(row) {
@@ -308,7 +343,21 @@ export async function probeVodSource(source) {
       nativeFilterable: native.nativeFilterable,
       nativeSortable: native.nativeSortable,
       nativeFilterKeys: native.nativeFilterKeys,
+      nativeSortKeys: native.nativeSortKeys,
+      emptyCategoryCount,
+      searchCapability: evidence.some((item) => item.ok),
+      detailCapability: detailOk,
       directPlaybackEligible: playOk && playContract.invalidBranchCount === 0,
+      playableRate: playOk ? 1 : 0,
+      encoding: classListing.encoding || listing.encoding || detail?.encoding || null,
+      rootCauses: [...hardFailures, ...softWarnings],
+      evidence: {
+        classListing: { status: classListing.status, encoding: classListing.encoding || null },
+        listing: { status: listing.status, encoding: listing.encoding || null },
+        search: evidence,
+        detail: { status: detail?.status || 0, encoding: detail?.encoding || null },
+        media: { status: mediaCheck.status, latencyMs: mediaCheck.latencyMs },
+      },
       error: hardFailures.join('; '),
     };
     return { ...probe, score: scoreVodProbe(probe) };
@@ -318,7 +367,9 @@ export async function probeVodSource(source) {
       hardFailures: ['PROBE_EXCEPTION'], softWarnings: [], hardViolation: false, httpStatus: 0,
       classCount: 0, categoryCount: 0, categoryOkCount: 0, categoryChecks: [], listCount: 0,
       searchEvidence: [], searchCount: 0, detailOk: false, playOk: false, directPlaybackEligible: false,
-      nativeFilterable: false, nativeSortable: false, nativeFilterKeys: [], latencyMs: Date.now() - started,
+      nativeFilterable: false, nativeSortable: false, nativeFilterKeys: [], nativeSortKeys: [],
+      emptyCategoryCount: 0, searchCapability: false, detailCapability: false, playableRate: 0,
+      encoding: null, rootCauses: ['PROBE_EXCEPTION'], evidence: {}, latencyMs: Date.now() - started,
       error: String(error?.message || error).slice(0, 240),
     };
   }
@@ -326,13 +377,24 @@ export async function probeVodSource(source) {
 
 async function probeMediaUrl(url) {
   const normalized = normalizeLiveUrl(url);
-  if (!normalized) return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
+  if (!normalized) return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '', contentType: '' };
   try {
     const result = await fetchDocument(normalized, 96 * 1024);
-    const contentType = result.text.slice(0, 256).includes('#EXTM3U') || /mpegurl|video\//iu.test(result.text.slice(0, 256));
-    return { ok: Boolean(result.status >= 200 && result.status < 400 && contentType), status: result.status, latencyMs: result.latencyMs, hardViolation: Boolean(result.hardViolation), text: result.text };
+    const preview = result.text.slice(0, 512);
+    const mediaContentType = /(?:mpegurl|vnd\.apple\.mpegurl|video\/|audio\/)/iu.test(result.contentType || '');
+    const manifestBody = /^\s*#EXTM3U\b/iu.test(preview);
+    const rejectedBody = /(?:<html\b|<iframe\b|player\.html|解析|广告|发布页|公众号|加群)/iu.test(preview);
+    const directMedia = mediaContentType || manifestBody;
+    return {
+      ok: Boolean(result.status >= 200 && result.status < 400 && directMedia && !rejectedBody),
+      status: result.status,
+      latencyMs: result.latencyMs,
+      hardViolation: Boolean(result.hardViolation || rejectedBody),
+      text: result.text,
+      contentType: result.contentType || '',
+    };
   } catch {
-    return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '' };
+    return { ok: false, status: 0, latencyMs: null, hardViolation: false, text: '', contentType: '' };
   }
 }
 
@@ -352,6 +414,16 @@ function liveGroupSamples(channels, limit = 8) {
   return selected;
 }
 
+function playlistHardViolation(document, parsed) {
+  const preview = String(document?.text || '').slice(0, 4096);
+  const pageLike = /(?:<html\b|<iframe\b|player\.html|解析页|发布页)/iu.test(preview);
+  if (pageLike) return true;
+  // A valid M3U may contain an infrastructure/ad line which parseM3U removes.
+  // Do not reject the whole source when enough real channels remain.
+  if (document?.hardViolation && Number(parsed?.channels?.length || 0) < 5) return true;
+  return false;
+}
+
 export async function probeLiveSource(source) {
   const started = Date.now();
   try {
@@ -364,12 +436,15 @@ export async function probeLiveSource(source) {
     const mediaResults = [];
     for (const channel of samples) mediaResults.push(await probeMediaUrl(channel.url));
     const playable = mediaResults.filter((item) => item.ok).length;
-    const hardViolation = Boolean(document.hardViolation || mediaResults.some((item) => item.hardViolation));
+    const playlistViolation = playlistHardViolation(document, parsed);
+    const invalidMediaCount = mediaResults.filter((item) => item.hardViolation).length;
+    const hardViolation = Boolean(playlistViolation);
     const hardFailures = [];
     const softWarnings = [];
     if (!document.ok || !contract.ok || contract.channelCount < 5 || contract.groupCount < 1) hardFailures.push('LIVE_PLAYLIST_SCHEMA_UNAVAILABLE');
     if (playable < Math.min(2, samples.length)) hardFailures.push('LIVE_PLAYBACK_UNAVAILABLE');
     if (hardViolation) hardFailures.push('AD_OR_PARSE_CONTENT');
+    if (invalidMediaCount) softWarnings.push(`AD_OR_PARSE_CHANNEL:${invalidMediaCount}`);
     const playableRate = samples.length ? playable / samples.length : 0;
     const qualityRate = playable ? mediaResults.filter((item) => item.ok && /(?:4k|2160p?|uhd|1080p?|fhd|hd\b)/iu.test(`${item.text || ''}`)).length / playable : 0;
     if (playableRate < 0.75) softWarnings.push('PARTIAL_CHANNEL_FAILURE');
@@ -383,7 +458,12 @@ export async function probeLiveSource(source) {
       httpStatus: document.status, channelCount: contract.channelCount,
       groupCount: contract.groupCount, duplicateRate: contract.duplicateRate, playableCount: playable,
       sampleCount: samples.length, channels: ok ? parsed.channels.slice(0, 800) : [],
-      latencyMs: Date.now() - started, hardViolation, directPlaybackEligible: playable > 0,
+      latencyMs: Date.now() - started, hardViolation, directPlaybackEligible: playable >= 2,
+      playableRate, encoding: document.encoding || null, rootCauses: [...hardFailures, ...softWarnings],
+      evidence: {
+        playlist: { status: document.status, encoding: document.encoding || null, bytes: document.bytes?.byteLength || null },
+        samples: mediaResults.map((item, index) => ({ index, status: item.status, ok: item.ok, latencyMs: item.latencyMs })),
+      },
       error: hardFailures.join('; '),
     };
     return { ...probe, score: scoreLiveProbe(probe) };
@@ -392,7 +472,8 @@ export async function probeLiveSource(source) {
       kind: 'live', slug: source.slug, ok: false, admissionTier: 'REJECTED', hardFailure: true,
       hardFailures: ['PROBE_EXCEPTION'], softWarnings: [], hardViolation: false, httpStatus: 0,
       channelCount: 0, groupCount: 0, duplicateRate: 1, playableCount: 0, sampleCount: 0, channels: [],
-      directPlaybackEligible: false, latencyMs: Date.now() - started, error: String(error?.message || error).slice(0, 240),
+      directPlaybackEligible: false, playableRate: 0, encoding: null, rootCauses: ['PROBE_EXCEPTION'], evidence: {},
+      latencyMs: Date.now() - started, error: String(error?.message || error).slice(0, 240),
     };
   }
 }
@@ -469,6 +550,32 @@ function buildLiveText(channels = []) {
   return lines.join('\n') + '\n';
 }
 
+async function liveText(request, env) {
+  const state = await readHealth(env);
+  const registry = allRegistry(state);
+  const live = publishedFor(registry, state, 'live');
+  const cache = globalThis.caches?.default;
+  const cacheUrl = new URL('/live.txt', request.url);
+  cacheUrl.searchParams.set('rev', state.revision || state.liveRevision || 'seed');
+  const cacheKey = new Request(cacheUrl.toString(), { method: 'GET' });
+  if (cache) {
+    try {
+      const cached = await cache.match(cacheKey);
+      if (cached) return cached;
+    } catch {}
+  }
+  const response = responseText(
+    buildLiveText(live.length ? state.liveCatalog : []),
+    200,
+    300,
+    'audio/x-mpegurl; charset=utf-8',
+  );
+  if (cache) {
+    try { await cache.put(cacheKey, response.clone()); } catch {}
+  }
+  return response;
+}
+
 function effectiveSources(registry, state) {
   const kind = registry[0]?.kind || 'vod';
   const sources = publishedFor(registry, normalizeHealthState(state), kind);
@@ -487,19 +594,21 @@ export function buildConfig(origin, state = emptyHealthState()) {
     spider: '',
     wallPaper: '',
     sites,
-    lives: live.length >= MIN_LIVE_SOURCES ? live.map((source) => ({ name: sourceDisplayName(source, kindRegistry(registry, 'live').indexOf(source)), type: 0, url: source.api })) : [],
+    lives: live.map((source) => ({ name: sourceDisplayName(source, kindRegistry(registry, 'live').indexOf(source)), type: 0, url: source.api })),
     registry: {
       version: REGISTRY_VERSION,
-      mode: 'validated-direct-source-registry',
+      mode: REGISTRY_MODE,
       revision: state.revision,
       updatedAt: state.generatedAt,
       vodCount: vod.length,
       liveCount: live.length,
       liveChannelCount: state.liveCatalog.length,
-      strictVodCount: vod.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'ACTIVE').length,
-      watchVodCount: vod.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'WATCH').length,
-      strictLiveCount: live.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'ACTIVE').length,
-      watchLiveCount: live.filter((source) => (state.sources[sourceHealthKey(source)] || {}).admissionTier === 'WATCH').length,
+      strictVodCount: vod.filter((source) => effectiveAdmissionTier(source, state.sources[sourceHealthKey(source)] || state.sources[source.slug]) === 'ACTIVE').length,
+      watchVodCount: vod.filter((source) => effectiveAdmissionTier(source, state.sources[sourceHealthKey(source)] || state.sources[source.slug]) === 'WATCH').length,
+      strictLiveCount: live.filter((source) => effectiveAdmissionTier(source, state.sources[sourceHealthKey(source)] || state.sources[source.slug]) === 'ACTIVE').length,
+      watchLiveCount: live.filter((source) => effectiveAdmissionTier(source, state.sources[sourceHealthKey(source)] || state.sources[source.slug]) === 'WATCH').length,
+      unprobedVodCount: vod.filter((source) => !state.sources[sourceHealthKey(source)] && !state.sources[source.slug]).length,
+      unprobedLiveCount: live.filter((source) => !state.sources[sourceHealthKey(source)] && !state.sources[source.slug]).length,
       degraded: Object.keys(state.sources || {}).length === 0 || vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
       health: origin + '/status.json',
       policy: 'Full source set. Adult content is not filtered; scripts, parsers, ad pages and invalid media endpoints are excluded.',
@@ -520,7 +629,8 @@ function publicSourceRows(registry, state) {
       provider: source.provider,
       qualityTier: source.qualityTier,
       seedStatus: source.seedStatus,
-      admissionTier: row?.admissionTier || (source.seedStatus === 'ACTIVE' ? 'ACTIVE' : 'WATCH'),
+      admissionTier: effectiveAdmissionTier(source, row),
+      verification: verificationState(source, row),
       visible: visibleSources([source], state).length > 0,
       physicalSource: source.physicalKey,
       api: source.api,
@@ -528,7 +638,10 @@ function publicSourceRows(registry, state) {
         filterable: Boolean(row?.nativeFilterable || source.nativeFilterable),
         sortable: Boolean(row?.nativeSortable || source.nativeSortable),
         filterKeys: row?.nativeFilterKeys || source.nativeFilterKeys || [],
+        sortKeys: row?.nativeSortKeys || source.nativeSortKeys || [],
       },
+      rootCauses: row?.rootCauses || [],
+      encoding: row?.encoding || null,
       health: row,
     };
   });
@@ -536,12 +649,22 @@ function publicSourceRows(registry, state) {
 
 function selectionBatch(registry, state) {
   if (!registry.length) return [];
-  return [...registry].sort((a, b) => {
+  const sorted = [...registry].sort((a, b) => {
     const aChecked = Date.parse((state.sources[sourceHealthKey(a)] || {}).checkedAt || '') || 0;
     const bChecked = Date.parse((state.sources[sourceHealthKey(b)] || {}).checkedAt || '') || 0;
     if (aChecked !== bChecked) return aChecked - bChecked;
     return b.priority - a.priority;
-  }).slice(0, MAX_PROBE_SOURCES);
+  });
+  const output = [];
+  for (const kind of ['vod', 'live']) {
+    const source = sorted.find((item) => item.kind === kind && !output.includes(item));
+    if (source) output.push(source);
+  }
+  for (const source of sorted) {
+    if (output.length >= MAX_PROBE_SOURCES) break;
+    if (!output.includes(source)) output.push(source);
+  }
+  return output;
 }
 
 async function discoverOne(state) {
@@ -678,15 +801,19 @@ async function status(request, env) {
   const live = publishedFor(registry, state, 'live');
   const vodRows = kindRegistry(registry, 'vod').map((source) => state.sources[sourceHealthKey(source)] || {}).filter(Boolean);
   const liveRows = kindRegistry(registry, 'live').map((source) => state.sources[sourceHealthKey(source)] || {}).filter(Boolean);
-  const countTier = (rows, tier) => rows.filter((row) => row.admissionTier === tier).length;
+  const countTier = (sources, tier) => sources.filter((source) => {
+    const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug] || null;
+    return effectiveAdmissionTier(source, row) === tier;
+  }).length;
+  const countUnprobed = (sources) => sources.filter((source) => !state.sources[sourceHealthKey(source)] && !state.sources[source.slug]).length;
   return responseJson({
     ok: true, version: VERSION, registryVersion: REGISTRY_VERSION, checkedAt: state.checkedAt || state.generatedAt, updatedAt: state.generatedAt,
     persistedAt: state.persistedAt, revision: state.revision, degraded: Object.keys(state.sources || {}).length === 0 || vod.length < TARGET_VOD_SOURCES || live.length < MIN_LIVE_SOURCES,
     configUrl: new URL('/config.json', request.url).toString(),
-    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, active: countTier(vodRows, 'ACTIVE'), watch: countTier(vodRows, 'WATCH'), providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
-    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, active: countTier(liveRows, 'ACTIVE'), watch: countTier(liveRows, 'WATCH'), providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
+    vod: { registered: kindRegistry(registry, 'vod').length, visible: vod.length, active: countTier(vod, 'ACTIVE'), watch: countTier(vod, 'WATCH'), unprobed: countUnprobed(vod), providers: new Set(vod.map((source) => source.provider)).size, target: '10+' },
+    live: { registered: kindRegistry(registry, 'live').length, visible: live.length, active: countTier(live, 'ACTIVE'), watch: countTier(live, 'WATCH'), unprobed: countUnprobed(live), providers: new Set(live.map((source) => source.provider)).size, channels: state.liveCatalog.length, target: '10+' },
     discovery: { lastAt: state.lastDiscoveryAt, feed: state.lastDiscoveryFeed, error: state.lastDiscoveryError, candidates: state.discoveredSources.length },
-    policy: 'Direct source registry only; upstream categories and filters are passed through unchanged. No category whitelist, video proxy, full catalogue snapshot, or adult filtering.',
+    policy: 'Direct source registry only; upstream categories, filters and ordering are passed through unchanged. No category whitelist, video proxy, full catalogue snapshot, or adult filtering.',
     sources: publicSourceRows(registry, state),
   }, 200, 0, { 'cache-control': 'no-store, no-cache, must-revalidate' });
 }
@@ -699,7 +826,7 @@ async function sourceStatus(request, env) {
 
 function root(request) {
   const origin = new URL(request.url).origin;
-  return responseText(['TVBox Source Registry v8.1', 'Config: ' + origin + '/config.json', 'Live: ' + origin + '/live.txt', 'Status: ' + origin + '/status.json', 'Sources: ' + origin + '/sources.json'].join('\n') + '\n', 200, 300);
+  return responseText(['TVBox Source Registry v8.2', 'Config: ' + origin + '/config.json', 'Live: ' + origin + '/live.txt', 'Status: ' + origin + '/status.json', 'Sources: ' + origin + '/sources.json'].join('\n') + '\n', 200, 300);
 }
 
 export default {
@@ -724,10 +851,7 @@ export default {
       if (request.method === 'OPTIONS') return responseText('', 204, 86400);
       if (url.pathname === '/config.json' || url.pathname === '/config') return config(request, env);
       if (url.pathname === '/live.txt' || url.pathname === '/live') {
-        const state = await readHealth(env);
-        const registry = allRegistry(state);
-        const live = publishedFor(registry, state, 'live');
-        return responseText(buildLiveText(live.length >= MIN_LIVE_SOURCES ? state.liveCatalog : []), 200, 300, 'audio/x-mpegurl; charset=utf-8');
+        return liveText(request, env);
       }
       if (url.pathname === '/status.json' || url.pathname === '/status') return status(request, env);
       if (url.pathname === '/sources.json' || url.pathname === '/sources' || url.pathname === '/health') return sourceStatus(request, env);
@@ -741,7 +865,19 @@ export default {
 export {
   allRegistry,
   buildLiveText,
+  liveText,
+  classesOf,
+  classId,
+  className,
+  directMediaUrls,
   effectiveSources,
+  fetchDocument,
+  fetchJson,
+  nativeFilterInfo,
+  playBranchContract,
+  playlistHardViolation,
   publishedFor,
+  rowsOf,
   selectionBatch,
+  sourceUrl,
 };

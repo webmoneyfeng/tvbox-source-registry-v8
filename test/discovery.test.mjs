@@ -27,6 +27,7 @@ test('discovery deduplicates same physical path', () => {
   const result = dedupeCandidates([
     { kind: 'vod', api: 'https://www.example.com/api' },
     { kind: 'vod', api: 'https://example.com/api' },
+    { kind: 'vod', api: 'https://example.com/other-api' },
     { kind: 'live', api: 'https://example.com/live.m3u' },
   ]);
   assert.equal(result.length, 2);

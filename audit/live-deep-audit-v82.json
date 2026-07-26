@@ -1,0 +1,4606 @@
+{
+  "generatedAt": "2026-07-26T05:28:35.694Z",
+  "kind": "live",
+  "candidateCount": 23,
+  "active": 7,
+  "watch": 5,
+  "rejected": 11,
+  "corePlayable": 12,
+  "categoryAuditComplete": null,
+  "categoryAuditPartial": null,
+  "target": 10,
+  "candidateTargetMet": true,
+  "usableTargetMet": true,
+  "strictTargetMet": false,
+  "scope": {
+    "sourceOffset": 0,
+    "sourceLimit": null,
+    "categoryStart": 0,
+    "categoryLimit": null,
+    "requireCompleteCategories": false,
+    "mergeExisting": false,
+    "kind": "both",
+    "selectedVod": 16,
+    "selectedLive": 23,
+    "auditedBatch": 39,
+    "mergedRows": 39
+  },
+  "rows": [
+    {
+      "kind": "live",
+      "slug": "fanmingming-ipv6",
+      "name": "范明明 IPv6",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "ok": true,
+      "admissionTier": "WATCH",
+      "hardFailures": [],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 27,
+      "groupCount": 3,
+      "duplicateRate": 0,
+      "sampleCount": 12,
+      "playableCount": 8,
+      "playableRate": 0.6666666666666666,
+      "channelChecks": [
+        {
+          "channel": "浙江公共新闻",
+          "group": "浙江频道",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 430,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p/0/000090a46776d57b_2ccd608_173808.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 413
+          }
+        },
+        {
+          "channel": "浙江国际",
+          "group": "浙江频道",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 437,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p/0/000090a465c672f3_519b164_1ca1cc.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 245
+          }
+        },
+        {
+          "channel": "浙江少儿",
+          "group": "浙江频道",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 615,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p/0/000090a465c6a435_5a17bc4_16cc14.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 238
+          }
+        },
+        {
+          "channel": "浙江教科影视",
+          "group": "浙江频道",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 84,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p/0/000090a466bbd6b5_4f0b850_18d28c.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 473
+          }
+        },
+        {
+          "channel": "内蒙古综合",
+          "group": "内蒙频道",
+          "url": "https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=b4373417a82ed64e52b0982a66da8df2&txTime=771E8800",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 335,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "内蒙古经济生活",
+          "group": "内蒙频道",
+          "url": "https://livestream-bt.nmtv.cn/nmtv/2317general.m3u8?txSecret=112b2c4c872de52b0f37aff6ead63ef0&txTime=771E8800",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 314,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "内蒙古少儿",
+          "group": "内蒙频道",
+          "url": "https://livestream-bt.nmtv.cn/nmtv/2318general.m3u8?txSecret=a2c948908728a0733cecbe1fadea23dc&txTime=771E8800",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 132,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "内蒙古文体娱乐",
+          "group": "内蒙频道",
+          "url": "https://livestream-bt.nmtv.cn/nmtv/2319general.m3u8?txSecret=c7b5c515d2bb6df442492d54955329a3&txTime=771E8800",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 40,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "CGTN",
+          "group": "央视频道",
+          "url": "https://0472.org/hls/cgtn.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 764,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 383
+          }
+        },
+        {
+          "channel": "CGTN纪录",
+          "group": "央视频道",
+          "url": "https://0472.org/hls/cgtnd.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 712,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 482
+          }
+        },
+        {
+          "channel": "CGTN俄语",
+          "group": "央视频道",
+          "url": "https://0472.org/hls/cgtne.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 653,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://russian-livews.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 290
+          }
+        },
+        {
+          "channel": "CGTN法语",
+          "group": "央视频道",
+          "url": "https://0472.org/hls/cgtnf.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 217,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://francais-livews.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 207
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 3599,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 25215
+        },
+        "channels": [
+          {
+            "channel": "浙江公共新闻",
+            "group": "浙江频道",
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 430,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p/0/000090a46776d57b_2ccd608_173808.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 413
+            }
+          },
+          {
+            "channel": "浙江国际",
+            "group": "浙江频道",
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 437,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p/0/000090a465c672f3_519b164_1ca1cc.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 245
+            }
+          },
+          {
+            "channel": "浙江少儿",
+            "group": "浙江频道",
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 615,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ali-m-l.cztv.com/channels/lantian/channel008/1080p/0/000090a465c6a435_5a17bc4_16cc14.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 238
+            }
+          },
+          {
+            "channel": "浙江教科影视",
+            "group": "浙江频道",
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 84,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ali-m-l.cztv.com/channels/lantian/channel004/1080p/0/000090a466bbd6b5_4f0b850_18d28c.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 473
+            }
+          },
+          {
+            "channel": "内蒙古综合",
+            "group": "内蒙频道",
+            "url": "https://livestream-bt.nmtv.cn/nmtv/2316general.m3u8?txSecret=b4373417a82ed64e52b0982a66da8df2&txTime=771E8800",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 335,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "内蒙古经济生活",
+            "group": "内蒙频道",
+            "url": "https://livestream-bt.nmtv.cn/nmtv/2317general.m3u8?txSecret=112b2c4c872de52b0f37aff6ead63ef0&txTime=771E8800",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 314,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "内蒙古少儿",
+            "group": "内蒙频道",
+            "url": "https://livestream-bt.nmtv.cn/nmtv/2318general.m3u8?txSecret=a2c948908728a0733cecbe1fadea23dc&txTime=771E8800",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 132,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "内蒙古文体娱乐",
+            "group": "内蒙频道",
+            "url": "https://livestream-bt.nmtv.cn/nmtv/2319general.m3u8?txSecret=c7b5c515d2bb6df442492d54955329a3&txTime=771E8800",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 40,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "CGTN",
+            "group": "央视频道",
+            "url": "https://0472.org/hls/cgtn.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 764,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 383
+            }
+          },
+          {
+            "channel": "CGTN纪录",
+            "group": "央视频道",
+            "url": "https://0472.org/hls/cgtnd.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 712,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 482
+            }
+          },
+          {
+            "channel": "CGTN俄语",
+            "group": "央视频道",
+            "url": "https://0472.org/hls/cgtne.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 653,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://russian-livews.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 290
+            }
+          },
+          {
+            "channel": "CGTN法语",
+            "group": "央视频道",
+            "url": "https://0472.org/hls/cgtnf.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 217,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://francais-livews.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 207
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-cn",
+      "name": "IPTV-org 中国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "timeout",
+      "latencyMs": 9108
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-hk",
+      "name": "IPTV-org 香港",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/hk.m3u",
+      "ok": true,
+      "admissionTier": "WATCH",
+      "hardFailures": [],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 18,
+      "groupCount": 1,
+      "duplicateRate": 0,
+      "sampleCount": 4,
+      "playableCount": 2,
+      "playableRate": 0.5,
+      "channelChecks": [
+        {
+          "channel": "Bloomberg TV Asia (720p)",
+          "group": "其他",
+          "url": "https://bloomberg.com/media-manifest/streams/asia.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 2578,
+          "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://liveprodapnortheast.global.ssl.fastly.net/ap1/Channel-APTVqvs-AWS-Tokyo-2/Source-APTVqvs-10000-1-swyg20-BP-HD-4-VmYRYIYETkuD_live.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1352
+          }
+        },
+        {
+          "channel": "Bloomberg TV Asia Live Event (720p)",
+          "group": "其他",
+          "url": "https://bloomberg.com/media-manifest/streams/asia-event.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 2723,
+          "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://live-prod-asia-event-primary.global.ssl.fastly.net/evt1/Channel-APEVTqvs-AWS-Tokyo-2/Source-APEVTqvs-10000-1-sx9ve2-BP-HD-4-N9L71TzQs0u6_live.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1763
+          }
+        },
+        {
+          "channel": "HOY Infotainment (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://hoytv-live-stream.hoy.tv/ch78/index.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1572,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "HOY International Business Channel (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1031,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 4763,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 2663
+        },
+        "channels": [
+          {
+            "channel": "Bloomberg TV Asia (720p)",
+            "group": "其他",
+            "url": "https://bloomberg.com/media-manifest/streams/asia.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2578,
+            "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://liveprodapnortheast.global.ssl.fastly.net/ap1/Channel-APTVqvs-AWS-Tokyo-2/Source-APTVqvs-10000-1-swyg20-BP-HD-4-VmYRYIYETkuD_live.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 1352
+            }
+          },
+          {
+            "channel": "Bloomberg TV Asia Live Event (720p)",
+            "group": "其他",
+            "url": "https://bloomberg.com/media-manifest/streams/asia-event.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2723,
+            "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://live-prod-asia-event-primary.global.ssl.fastly.net/evt1/Channel-APEVTqvs-AWS-Tokyo-2/Source-APEVTqvs-10000-1-sx9ve2-BP-HD-4-N9L71TzQs0u6_live.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 1763
+            }
+          },
+          {
+            "channel": "HOY Infotainment (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://hoytv-live-stream.hoy.tv/ch78/index.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1572,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "HOY International Business Channel (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1031,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-kr",
+      "name": "IPTV-org 韩国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/kr.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 64,
+      "groupCount": 1,
+      "duplicateRate": 0.1579,
+      "sampleCount": 4,
+      "playableCount": 4,
+      "playableRate": 1,
+      "channelChecks": [
+        {
+          "channel": "ABN TV (720p)",
+          "group": "其他",
+          "url": "https://vod2.abn.co.kr/IPHONE/abn.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1221,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://vod2.abn.co.kr/IPHONE/abn-44932.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1782
+          }
+        },
+        {
+          "channel": "Arirang Radio (720p)",
+          "group": "其他",
+          "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1960,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/chunklist_b656000_sleng.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 480
+          }
+        },
+        {
+          "channel": "Arirang TV (1080p)",
+          "group": "其他",
+          "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1995,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b656000_sleng.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 507
+          }
+        },
+        {
+          "channel": "Arirang TV (720p)",
+          "group": "其他",
+          "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1338,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b656000_sleng.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 506
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 5211,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 11942
+        },
+        "channels": [
+          {
+            "channel": "ABN TV (720p)",
+            "group": "其他",
+            "url": "https://vod2.abn.co.kr/IPHONE/abn.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1221,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://vod2.abn.co.kr/IPHONE/abn-44932.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 1782
+            }
+          },
+          {
+            "channel": "Arirang Radio (720p)",
+            "group": "其他",
+            "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1960,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/chunklist_b656000_sleng.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 480
+            }
+          },
+          {
+            "channel": "Arirang TV (1080p)",
+            "group": "其他",
+            "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1995,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b656000_sleng.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 507
+            }
+          },
+          {
+            "channel": "Arirang TV (720p)",
+            "group": "其他",
+            "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1338,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://amdlive-ch02.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b656000_sleng.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 506
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-us",
+      "name": "IPTV-org 美国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 836,
+      "groupCount": 1,
+      "duplicateRate": 0.1504,
+      "sampleCount": 4,
+      "playableCount": 3,
+      "playableRate": 0.75,
+      "channelChecks": [
+        {
+          "channel": "48 Hours (1080p)",
+          "group": "其他",
+          "url": "https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 3077,
+          "contentType": "application/x-mpegURL; charset=UTF-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://dai.google.com/linear/hls/pa/event/JUr94WL2QAiVpGNHY5n5dA/stream/ea2ecda5-d4a5-4e15-ba99-4732df941f46:TUL/variant/e4d6f26662448010dc810f7a40b209fd/bandwidth/426734.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 398
+          }
+        },
+        {
+          "channel": "A&E (720p)",
+          "group": "其他",
+          "url": "http://206.212.244.63/1/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 586,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://206.212.244.63/1/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 320
+          }
+        },
+        {
+          "channel": "A&E Latin America Brazil (720p)",
+          "group": "其他",
+          "url": "http://45.190.28.50/AE_HD/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 746,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://45.190.28.50/AE_HD/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 370
+          }
+        },
+        {
+          "channel": "ABC (720p)",
+          "group": "其他",
+          "url": "http://41.205.93.154/ABC/index.m3u8",
+          "status": 404,
+          "ok": false,
+          "latencyMs": 672,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 4742,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 163939
+        },
+        "channels": [
+          {
+            "channel": "48 Hours (1080p)",
+            "group": "其他",
+            "url": "https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 3077,
+            "contentType": "application/x-mpegURL; charset=UTF-8",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://dai.google.com/linear/hls/pa/event/JUr94WL2QAiVpGNHY5n5dA/stream/ea2ecda5-d4a5-4e15-ba99-4732df941f46:TUL/variant/e4d6f26662448010dc810f7a40b209fd/bandwidth/426734.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 398
+            }
+          },
+          {
+            "channel": "A&E (720p)",
+            "group": "其他",
+            "url": "http://206.212.244.63/1/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 586,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://206.212.244.63/1/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 320
+            }
+          },
+          {
+            "channel": "A&E Latin America Brazil (720p)",
+            "group": "其他",
+            "url": "http://45.190.28.50/AE_HD/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 746,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://45.190.28.50/AE_HD/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 370
+            }
+          },
+          {
+            "channel": "ABC (720p)",
+            "group": "其他",
+            "url": "http://41.205.93.154/ABC/index.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 672,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-uk",
+      "name": "IPTV-org 英国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "fetch failed",
+      "latencyMs": 1978
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-de",
+      "name": "IPTV-org 德国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "fetch failed",
+      "latencyMs": 4229
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-ca",
+      "name": "IPTV-org 加拿大",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ca.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 147,
+      "groupCount": 1,
+      "duplicateRate": 0.0068,
+      "sampleCount": 4,
+      "playableCount": 4,
+      "playableRate": 1,
+      "channelChecks": [
+        {
+          "channel": "Amazing Discoveries TV (720p)",
+          "group": "其他",
+          "url": "https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 2072,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/chunklist_w289684440.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2136
+          }
+        },
+        {
+          "channel": "Amazing Discoveries TV (270p)",
+          "group": "其他",
+          "url": "https://rpn.bozztv.com/gfaith/gfaith-amazing/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 2418,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://rpn.bozztv.com/gfaith/gfaith-amazing/tracks-v1a1/mono.m3u8?nimblesessionid=1726439315",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2431
+          }
+        },
+        {
+          "channel": "Az Star TV (1080p)",
+          "group": "其他",
+          "url": "http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1153,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://live.azstartv.com/azstar/smil:azstar.smil/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 321
+          }
+        },
+        {
+          "channel": "Az Star TV (240p)",
+          "group": "其他",
+          "url": "https://live.livestreamtv.ca/azstar/ngrp:azstar/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1189,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://live.livestreamtv.ca/azstar/ngrp:azstar/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 308
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 5135,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 22377
+        },
+        "channels": [
+          {
+            "channel": "Amazing Discoveries TV (720p)",
+            "group": "其他",
+            "url": "https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2072,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://uni01rtmp.tulix.tv/amazingdtv/amazingdtv/chunklist_w289684440.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 2136
+            }
+          },
+          {
+            "channel": "Amazing Discoveries TV (270p)",
+            "group": "其他",
+            "url": "https://rpn.bozztv.com/gfaith/gfaith-amazing/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2418,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://rpn.bozztv.com/gfaith/gfaith-amazing/tracks-v1a1/mono.m3u8?nimblesessionid=1726439315",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 2431
+            }
+          },
+          {
+            "channel": "Az Star TV (1080p)",
+            "group": "其他",
+            "url": "http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1153,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://live.azstartv.com/azstar/smil:azstar.smil/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 321
+            }
+          },
+          {
+            "channel": "Az Star TV (240p)",
+            "group": "其他",
+            "url": "https://live.livestreamtv.ca/azstar/ngrp:azstar/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1189,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://live.livestreamtv.ca/azstar/ngrp:azstar/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 308
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "suxuang-ipv4",
+      "name": "Suxuang IPv4",
+      "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "timeout",
+      "latencyMs": 9275
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-result",
+      "name": "Guovin 汇总",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "fetch failed",
+      "latencyMs": 4936
+    },
+    {
+      "kind": "live",
+      "slug": "guovin-ipv4",
+      "name": "Guovin IPv4",
+      "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "AD_OR_PARSE_ENDPOINT"
+      ],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "AD_OR_PARSE_ENDPOINT",
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 140,
+      "groupCount": 28,
+      "duplicateRate": 0.2965,
+      "sampleCount": 16,
+      "playableCount": 8,
+      "playableRate": 0.5,
+      "channelChecks": [
+        {
+          "channel": "CCTV-1",
+          "group": "🕘️更新时间",
+          "url": "http://198.204.228.26/live/cctv1hd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 508,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "CCTV-2",
+          "group": "📺央视频道",
+          "url": "http://198.204.228.26/live/cctv2hd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 504,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "CCTV-3",
+          "group": "📺央视频道",
+          "url": "http://198.204.228.26/live/cctv3hd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 508,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "CCTV-4",
+          "group": "📺央视频道",
+          "url": "http://107.150.60.122/live/cctv4hd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 255,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "CCTV-5",
+          "group": "📺央视频道",
+          "url": "http://198.204.228.26/live/cctv5p.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 258,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "文化精品",
+          "group": "💰央视付费频道",
+          "url": "https://live.264788.xyz/channel/yangshiwenhuajingpin?streamid=bc185d1ef1e528922e83efd845006277&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1038,
+          "contentType": "video/mp4",
+          "encoding": {
+            "encoding": "utf-16le",
+            "declaredCharset": null,
+            "confidence": "lossy-fallback",
+            "replacementCount": 4037,
+            "mojibakeCount": 0,
+            "clean": false
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "央视台球",
+          "group": "💰央视付费频道",
+          "url": "http://107.150.60.122/live/ystq.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 520,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "风云音乐",
+          "group": "💰央视付费频道",
+          "url": "https://live.264788.xyz/channel/fengyunyinyue?streamid=be37d16b874e7ba11dd383d7ecd75752&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1377,
+          "contentType": "video/mp4",
+          "encoding": {
+            "encoding": "utf-16le",
+            "declaredCharset": null,
+            "confidence": "lossy-fallback",
+            "replacementCount": 4037,
+            "mojibakeCount": 0,
+            "clean": false
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "第一剧场",
+          "group": "💰央视付费频道",
+          "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1295,
+          "contentType": "video/mp4",
+          "encoding": {
+            "encoding": "utf-16le",
+            "declaredCharset": null,
+            "confidence": "lossy-fallback",
+            "replacementCount": 4037,
+            "mojibakeCount": 0,
+            "clean": false
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "广东卫视",
+          "group": "📡卫视频道",
+          "url": "https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 522,
+          "contentType": "video/mp4",
+          "encoding": {
+            "encoding": "utf-16le",
+            "declaredCharset": null,
+            "confidence": "lossy-fallback",
+            "replacementCount": 140,
+            "mojibakeCount": 0,
+            "clean": false
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "浙江卫视",
+          "group": "📡卫视频道",
+          "url": "http://107.150.60.122/live/zjwshd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 883,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "湖南卫视",
+          "group": "📡卫视频道",
+          "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 189,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST-5025556-1-hls.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 148
+          }
+        },
+        {
+          "channel": "湖北卫视",
+          "group": "📡卫视频道",
+          "url": "http://198.204.228.26/live/hbwshd.m3u8",
+          "status": 0,
+          "ok": false,
+          "latencyMs": 263,
+          "contentType": "",
+          "encoding": null,
+          "hardViolation": true,
+          "segment": null
+        },
+        {
+          "channel": "广州综合",
+          "group": "☘️广东频道",
+          "url": "https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=439b0fd2cf766b363c93a59cbcbe1370&txTime=18d00acf488",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 374,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://tencentplay.gztv.com/live/zonghes-1783044252.ts?txspiseq=101757405558006942202",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 274
+          }
+        },
+        {
+          "channel": "浙江教育",
+          "group": "☘️浙江频道",
+          "url": "http://ali-m-l.cztv.com/channels/lantian/channel04/720p.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 300,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-m-l.cztv.com/channels/lantian/channel04/720p/0/00008ab1e62c1a1d_4f4275c_110974.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 296
+          }
+        },
+        {
+          "channel": "浙江新闻",
+          "group": "☘️浙江频道",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8?",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 243,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p/0/000090a46776d57b_2ccd608_173808.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 366
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 4635,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 92293
+        },
+        "channels": [
+          {
+            "channel": "CCTV-1",
+            "group": "🕘️更新时间",
+            "url": "http://198.204.228.26/live/cctv1hd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 508,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "CCTV-2",
+            "group": "📺央视频道",
+            "url": "http://198.204.228.26/live/cctv2hd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 504,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "CCTV-3",
+            "group": "📺央视频道",
+            "url": "http://198.204.228.26/live/cctv3hd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 508,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "CCTV-4",
+            "group": "📺央视频道",
+            "url": "http://107.150.60.122/live/cctv4hd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 255,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "CCTV-5",
+            "group": "📺央视频道",
+            "url": "http://198.204.228.26/live/cctv5p.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 258,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "文化精品",
+            "group": "💰央视付费频道",
+            "url": "https://live.264788.xyz/channel/yangshiwenhuajingpin?streamid=bc185d1ef1e528922e83efd845006277&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1038,
+            "contentType": "video/mp4",
+            "encoding": {
+              "encoding": "utf-16le",
+              "declaredCharset": null,
+              "confidence": "lossy-fallback",
+              "replacementCount": 4037,
+              "mojibakeCount": 0,
+              "clean": false
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "央视台球",
+            "group": "💰央视付费频道",
+            "url": "http://107.150.60.122/live/ystq.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 520,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "风云音乐",
+            "group": "💰央视付费频道",
+            "url": "https://live.264788.xyz/channel/fengyunyinyue?streamid=be37d16b874e7ba11dd383d7ecd75752&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1377,
+            "contentType": "video/mp4",
+            "encoding": {
+              "encoding": "utf-16le",
+              "declaredCharset": null,
+              "confidence": "lossy-fallback",
+              "replacementCount": 4037,
+              "mojibakeCount": 0,
+              "clean": false
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "第一剧场",
+            "group": "💰央视付费频道",
+            "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1295,
+            "contentType": "video/mp4",
+            "encoding": {
+              "encoding": "utf-16le",
+              "declaredCharset": null,
+              "confidence": "lossy-fallback",
+              "replacementCount": 4037,
+              "mojibakeCount": 0,
+              "clean": false
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "广东卫视",
+            "group": "📡卫视频道",
+            "url": "https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 522,
+            "contentType": "video/mp4",
+            "encoding": {
+              "encoding": "utf-16le",
+              "declaredCharset": null,
+              "confidence": "lossy-fallback",
+              "replacementCount": 140,
+              "mojibakeCount": 0,
+              "clean": false
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "浙江卫视",
+            "group": "📡卫视频道",
+            "url": "http://107.150.60.122/live/zjwshd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 883,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "湖南卫视",
+            "group": "📡卫视频道",
+            "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 189,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST-5025556-1-hls.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 148
+            }
+          },
+          {
+            "channel": "湖北卫视",
+            "group": "📡卫视频道",
+            "url": "http://198.204.228.26/live/hbwshd.m3u8",
+            "status": 0,
+            "ok": false,
+            "latencyMs": 263,
+            "contentType": "",
+            "encoding": null,
+            "hardViolation": true,
+            "segment": null
+          },
+          {
+            "channel": "广州综合",
+            "group": "☘️广东频道",
+            "url": "https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=439b0fd2cf766b363c93a59cbcbe1370&txTime=18d00acf488",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 374,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://tencentplay.gztv.com/live/zonghes-1783044252.ts?txspiseq=101757405558006942202",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 274
+            }
+          },
+          {
+            "channel": "浙江教育",
+            "group": "☘️浙江频道",
+            "url": "http://ali-m-l.cztv.com/channels/lantian/channel04/720p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 300,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-m-l.cztv.com/channels/lantian/channel04/720p/0/00008ab1e62c1a1d_4f4275c_110974.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 296
+            }
+          },
+          {
+            "channel": "浙江新闻",
+            "group": "☘️浙江频道",
+            "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8?",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 243,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ali-m-l.cztv.com/channels/lantian/channel007/1080p/0/000090a46776d57b_2ccd608_173808.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 366
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-th",
+      "name": "IPTV-org 泰国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/th.m3u",
+      "ok": true,
+      "admissionTier": "WATCH",
+      "hardFailures": [],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 62,
+      "groupCount": 1,
+      "duplicateRate": 0.1389,
+      "sampleCount": 4,
+      "playableCount": 2,
+      "playableRate": 0.5,
+      "channelChecks": [
+        {
+          "channel": "3HD",
+          "group": "其他",
+          "url": "https://live-us1.thaimomo.com/live-as/ch3hd-3/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 914,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://live-us1.thaimomo.com/live-as/ch3hd-3/chunklist_w1457898093.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 327
+          }
+        },
+        {
+          "channel": "13 Siam Thai (1080p)",
+          "group": "其他",
+          "url": "https://live.x2.co.th/live/13livetv-th.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1073,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://live.x2.co.th/live/13livetv-th_240p/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 861
+          }
+        },
+        {
+          "channel": "ALTV (1080p)",
+          "group": "其他",
+          "url": "https://thaipbs-ujxrch.cdn.byteark.com/live/playlist_1080p/index.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1370,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "ALTV 4 (1080p)",
+          "group": "其他",
+          "url": "https://thaipbs-ujxrch.cdn.byteark.com/live/playlist.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1134,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 2689,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 9417
+        },
+        "channels": [
+          {
+            "channel": "3HD",
+            "group": "其他",
+            "url": "https://live-us1.thaimomo.com/live-as/ch3hd-3/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 914,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://live-us1.thaimomo.com/live-as/ch3hd-3/chunklist_w1457898093.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 327
+            }
+          },
+          {
+            "channel": "13 Siam Thai (1080p)",
+            "group": "其他",
+            "url": "https://live.x2.co.th/live/13livetv-th.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1073,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://live.x2.co.th/live/13livetv-th_240p/index.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 861
+            }
+          },
+          {
+            "channel": "ALTV (1080p)",
+            "group": "其他",
+            "url": "https://thaipbs-ujxrch.cdn.byteark.com/live/playlist_1080p/index.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1370,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "ALTV 4 (1080p)",
+            "group": "其他",
+            "url": "https://thaipbs-ujxrch.cdn.byteark.com/live/playlist.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1134,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-vn",
+      "name": "IPTV-org 越南",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/vn.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PLAYLIST_UNAVAILABLE"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PLAYLIST_UNAVAILABLE"
+      ],
+      "channelCount": 74,
+      "groupCount": 1,
+      "duplicateRate": 0.2211,
+      "sampleCount": 4,
+      "playableCount": 0,
+      "playableRate": 0,
+      "channelChecks": [
+        {
+          "channel": "An Giang TV1 (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1509,
+          "contentType": "text/html; charset=iso-8859-1",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "An Giang TV2 (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1510,
+          "contentType": "text/html; charset=iso-8859-1",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "An Giang TV3 (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1504,
+          "contentType": "text/html; charset=iso-8859-1",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "ANTV (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 1567,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 3638,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 12253
+        },
+        "channels": [
+          {
+            "channel": "An Giang TV1 (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1509,
+            "contentType": "text/html; charset=iso-8859-1",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "An Giang TV2 (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1510,
+            "contentType": "text/html; charset=iso-8859-1",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "An Giang TV3 (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1504,
+            "contentType": "text/html; charset=iso-8859-1",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "ANTV (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 1567,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-it",
+      "name": "IPTV-org 意大利",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "fetch failed",
+      "latencyMs": 2415
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-in",
+      "name": "IPTV-org 印度",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 585,
+      "groupCount": 1,
+      "duplicateRate": 0.0816,
+      "sampleCount": 4,
+      "playableCount": 3,
+      "playableRate": 0.75,
+      "channelChecks": [
+        {
+          "channel": "7S Music (576p)",
+          "group": "其他",
+          "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1457,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 375
+          }
+        },
+        {
+          "channel": "9X Jalwa (1080p)",
+          "group": "其他",
+          "url": "https://b.jsrdn.com/strm/channels/9xjalwa/master.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1561,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://b.jsrdn.com/strm/channels/9xjalwa/m1.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 690
+          }
+        },
+        {
+          "channel": "9X Jalwa (576p)",
+          "group": "其他",
+          "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1376,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/tracks-v1a1/mono.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 322
+          }
+        },
+        {
+          "channel": "9X Jhakaas (1080p)",
+          "group": "其他",
+          "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 400,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 2956,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 121614
+        },
+        "channels": [
+          {
+            "channel": "7S Music (576p)",
+            "group": "其他",
+            "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1457,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 375
+            }
+          },
+          {
+            "channel": "9X Jalwa (1080p)",
+            "group": "其他",
+            "url": "https://b.jsrdn.com/strm/channels/9xjalwa/master.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1561,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://b.jsrdn.com/strm/channels/9xjalwa/m1.m3u8",
+              "status": 403,
+              "ok": false,
+              "latencyMs": 690
+            }
+          },
+          {
+            "channel": "9X Jalwa (576p)",
+            "group": "其他",
+            "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1376,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://mumt03.tangotv.in/Dsly5z3H9XJALWA/tracks-v1a1/mono.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 322
+            }
+          },
+          {
+            "channel": "9X Jhakaas (1080p)",
+            "group": "其他",
+            "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 400,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-br",
+      "name": "IPTV-org 巴西",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "timeout",
+      "latencyMs": 8431
+    },
+    {
+      "kind": "live",
+      "slug": "zbds-ipv4",
+      "name": "ZBDS IPv4",
+      "api": "https://live.zbds.org/tv/iptv4.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "terminated",
+      "latencyMs": 5078
+    },
+    {
+      "kind": "live",
+      "slug": "fanmingming-index",
+      "name": "范明明全量",
+      "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PROBE_EXCEPTION"
+      ],
+      "softWarnings": [],
+      "rootCauses": [
+        "PROBE_EXCEPTION"
+      ],
+      "error": "fetch failed",
+      "latencyMs": 1298
+    },
+    {
+      "kind": "live",
+      "slug": "migu-live",
+      "name": "咪咕直播",
+      "api": "https://develop202.github.io/migu_video/interface.txt",
+      "ok": true,
+      "admissionTier": "WATCH",
+      "hardFailures": [],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 151,
+      "groupCount": 14,
+      "duplicateRate": 0.2634,
+      "sampleCount": 16,
+      "playableCount": 11,
+      "playableRate": 0.6875,
+      "channelChecks": [
+        {
+          "channel": "CCTV1综合",
+          "group": "央视频道",
+          "url": "http://txycdn7.video.qq.com/1755328502.m3u8?time=1785035811&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIPZSQgiTpGzANPeADRPDfX9mL2iC_jkMbdvUetZ_bzjcELxlTJ0K5kmtixyI45WtHIUBcLGWBFyz3Q3OaUyIDMOKjkz2N5yVxd1Sz_u7Iha63EVL44v5kxeyozlwiRfZmG1wlkrAlTq3s15bEC3tTphPNWWsHKWKalOUn-g_Uijl4gUY6Q4hnxQjEukWOgMQkbvpDZvSgYvvn_eSMEGLxKrTAC9AZv7y0klIq1-tTWDgQ8RJ3IHc19cRw5N3qrRJ8o7aIlemDcHjSI_j4eQTC4kNa6tlnL3KlI2dh7FdxgkTkNCx9pzA2TZngNExLWl59wnLuT-s_svomrZzWIWlO1Bpkccgfjf33g7Ln0S136VuG9YKp3O5p7B6Gh6YhU0qYTV2VZodW1Dqz0cuDeu-ki6vsEjyL20JtBHlr4Y1dOFLA-Q6I4TgWuUc2Dd5Zg2gwBdXvsKHTX5jqac1vBQD_sE8JpjlEu2yjk3hmfO7PfunXU4iNwEWX2nuhbk8j7CYiiJxfiAnEcoo1x-K4IrixCuIwZrL9s5-g6yd4fFwMStA7pQK&drmtype=0",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 457,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://txycdn7.video.qq.com/1755328502-1784756787.ts?txspiseq=10457910402867994312&time=1785035811&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIPZSQgiTpGzANPeADRPDfX9mL2iC_jkMbdvUetZ_bzjcELxlTJ0K5kmtixyI45WtHIUBcLGWBFyz3Q3OaUyIDMOKjkz2N5yVxd1Sz_u7Iha63EVL44v5kxeyozlwiRfZmG1wlkrAlTq3s15bEC3tTphPNWWsHKWKalOUn-g_Uijl4gUY6Q4hnxQjEukWOgMQkbvpDZvSgYvvn_eSMEGLxKrTAC9AZv7y0klIq1-tTWDgQ8RJ3IHc19cRw5N3qrRJ8o7aIlemDcHjSI_j4eQTC4kNa6tlnL3KlI2dh7FdxgkTkNCx9pzA2TZngNExLWl59wnLuT-s_svomrZzWIWlO1Bpkccgfjf33g7Ln0S136VuG9YKp3O5p7B6Gh6YhU0qYTV2VZodW1Dqz0cuDeu-ki6vsEjyL20JtBHlr4Y1dOFLA-Q6I4TgWuUc2Dd5Zg2gwBdXvsKHTX5jqac1vBQD_sE8JpjlEu2yjk3hmfO7PfunXU4iNwEWX2nuhbk8j7CYiiJxfiAnEcoo1x-K4IrixCuIwZrL9s5-g6yd4fFwMStA7pQK&drmtype=0",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 356
+          }
+        },
+        {
+          "channel": "CCTV2财经",
+          "group": "央视频道",
+          "url": "http://txycdn7.video.qq.com/1370417302.m3u8?time=1785035771&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIHrvnj5TOBZu27LlqbatHJ1hZakny2lVCNiJvV6duaPyEOvxUPhTDEbMsPnFy2aXFLABcNmaP2NjclSLMCQXl-4d9StPPDE5uV94Beki5d0kOUxyduyQNCaVF8b1hw8e1bo1mnQpNlzx4r9mEyuXHP8Dqz2MLDItfbL9mU8x8KCUIwfQHUjviGtvVrk0yrkl_35H0Gzo-8dXVOv_tLD4iEfJnkvOOPcJ8dzbq2B2jhohx9jbuUZEoZeZQ7tTDQEFeabFjLG5o1MQsW4iORW2Bk2caf70B6oyIBA_NUB1-EihDP4LhnGvoMcWChcu5Jm5Pf9nbhvP9hfRHZm0wYtni2HMR-p9l1QeMbwcCWExJ47n8M_Csdcf7_VcqKTfI9ok0tyEj_3vueuiQ0_2NW9QVpYQK9e8_CB1HeP9l2G5wlrQXzm8zzajx6su1K0zLJVqwZq2I26Ew-4UzMvcyFgNMenUrxgbn7n_40GlnCOLCbpjA3Boh46pT44FKRe4bYYwr9_SpspBw1objlO9L3mSnbBWUOsrdAd2VoezaqNu4QEtgoq5&drmtype=0",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 497,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://txycdn7.video.qq.com/1370417302-1781558679.ts?drmtype=0&time=1785035771&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIHrvnj5TOBZu27LlqbatHJ1hZakny2lVCNiJvV6duaPyEOvxUPhTDEbMsPnFy2aXFLABcNmaP2NjclSLMCQXl-4d9StPPDE5uV94Beki5d0kOUxyduyQNCaVF8b1hw8e1bo1mnQpNlzx4r9mEyuXHP8Dqz2MLDItfbL9mU8x8KCUIwfQHUjviGtvVrk0yrkl_35H0Gzo-8dXVOv_tLD4iEfJnkvOOPcJ8dzbq2B2jhohx9jbuUZEoZeZQ7tTDQEFeabFjLG5o1MQsW4iORW2Bk2caf70B6oyIBA_NUB1-EihDP4LhnGvoMcWChcu5Jm5Pf9nbhvP9hfRHZm0wYtni2HMR-p9l1QeMbwcCWExJ47n8M_Csdcf7_VcqKTfI9ok0tyEj_3vueuiQ0_2NW9QVpYQK9e8_CB1HeP9l2G5wlrQXzm8zzajx6su1K0zLJVqwZq2I26Ew-4UzMvcyFgNMenUrxgbn7n_40GlnCOLCbpjA3Boh46pT44FKRe4bYYwr9_SpspBw1objlO9L3mSnbBWUOsrdAd2VoezaqNu4QEtgoq5&drmtype=0",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 331
+          }
+        },
+        {
+          "channel": "湖南卫视",
+          "group": "卫视频道",
+          "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 407,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST-5025558-1-hls.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 198
+          }
+        },
+        {
+          "channel": "浙江卫视",
+          "group": "卫视频道",
+          "url": "http://ali-xwl.cztv.com/live/channel011080Plxw.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 301,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-xwl.cztv.com/live/channel011080Plxw/2026072613/1785043645057.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 345
+          }
+        },
+        {
+          "channel": "江苏卫视",
+          "group": "卫视频道",
+          "url": "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jswshd265/55/20200407/01.m3u8?&HlsSubType=&encrypt=",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 397,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "山东卫视",
+          "group": "卫视频道",
+          "url": "https://hlsbkmgsplive.miguvideo.com/wd_r4/yg/shandongwshd/3000/01.m3u8?&HlsSubType=&encrypt=",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 403,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "广东影视",
+          "group": "广东地区",
+          "url": "https://hlsbkmgsplive.miguvideo.com/wd_r1/2018/nfmedia/nfys/1000/01.m3u8?&HlsSubType=&encrypt=",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 158,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "长沙县新闻综合",
+          "group": "湖南地区",
+          "url": "https://liveplay-srs.voc.com.cn/hls/tv/203_10cdf5.m3u8",
+          "status": 404,
+          "ok": false,
+          "latencyMs": 314,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "衡山综合",
+          "group": "湖南地区",
+          "url": "https://liveplay-srs.voc.com.cn/hls/tv/161_8d2e76.m3u8",
+          "status": 404,
+          "ok": false,
+          "latencyMs": 558,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "龙山综合",
+          "group": "湖南地区",
+          "url": "https://liveplay-srs.voc.com.cn/hls/tv/146_f067fe.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 461,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "146_f067fe-24606.ts",
+            "status": 0,
+            "ok": false,
+            "latencyMs": null
+          }
+        },
+        {
+          "channel": "平江综合",
+          "group": "湖南地区",
+          "url": "https://liveplay-srs.voc.com.cn/hls/tv/168_ce2a0c.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 263,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "168_ce2a0c-30209.ts",
+            "status": 0,
+            "ok": false,
+            "latencyMs": null
+          }
+        },
+        {
+          "channel": "浙江少儿",
+          "group": "浙江地区",
+          "url": "http://ali-xwl.cztv.com/live/channel081080Plxw.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 140,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-xwl.cztv.com/live/channel081080Plxw/2026072613/1785043648084.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 229
+          }
+        },
+        {
+          "channel": "浙江钱江都市",
+          "group": "浙江地区",
+          "url": "http://ali-xwl.cztv.com/live/channel021080Plxw.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 76,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-xwl.cztv.com/live/channel021080Plxw/2026072613/1785043660245.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 293
+          }
+        },
+        {
+          "channel": "浙江经济生活",
+          "group": "浙江地区",
+          "url": "http://ali-xwl.cztv.com/live/channel031080Plxw.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 67,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-xwl.cztv.com/live/channel031080Plxw/2026072613/1785043657474.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 175
+          }
+        },
+        {
+          "channel": "浙江民生休闲",
+          "group": "浙江地区",
+          "url": "http://ali-xwl.cztv.com/live/channel061080Plxw.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 97,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://ali-xwl.cztv.com/live/channel061080Plxw/2026072613/1785043662093.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 159
+          }
+        },
+        {
+          "channel": "南京新闻综合",
+          "group": "江苏地区",
+          "url": "http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 199,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index1099245.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 196
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 11836,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 90201
+        },
+        "channels": [
+          {
+            "channel": "CCTV1综合",
+            "group": "央视频道",
+            "url": "http://txycdn7.video.qq.com/1755328502.m3u8?time=1785035811&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIPZSQgiTpGzANPeADRPDfX9mL2iC_jkMbdvUetZ_bzjcELxlTJ0K5kmtixyI45WtHIUBcLGWBFyz3Q3OaUyIDMOKjkz2N5yVxd1Sz_u7Iha63EVL44v5kxeyozlwiRfZmG1wlkrAlTq3s15bEC3tTphPNWWsHKWKalOUn-g_Uijl4gUY6Q4hnxQjEukWOgMQkbvpDZvSgYvvn_eSMEGLxKrTAC9AZv7y0klIq1-tTWDgQ8RJ3IHc19cRw5N3qrRJ8o7aIlemDcHjSI_j4eQTC4kNa6tlnL3KlI2dh7FdxgkTkNCx9pzA2TZngNExLWl59wnLuT-s_svomrZzWIWlO1Bpkccgfjf33g7Ln0S136VuG9YKp3O5p7B6Gh6YhU0qYTV2VZodW1Dqz0cuDeu-ki6vsEjyL20JtBHlr4Y1dOFLA-Q6I4TgWuUc2Dd5Zg2gwBdXvsKHTX5jqac1vBQD_sE8JpjlEu2yjk3hmfO7PfunXU4iNwEWX2nuhbk8j7CYiiJxfiAnEcoo1x-K4IrixCuIwZrL9s5-g6yd4fFwMStA7pQK&drmtype=0",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 457,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://txycdn7.video.qq.com/1755328502-1784756787.ts?txspiseq=10457910402867994312&time=1785035811&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIPZSQgiTpGzANPeADRPDfX9mL2iC_jkMbdvUetZ_bzjcELxlTJ0K5kmtixyI45WtHIUBcLGWBFyz3Q3OaUyIDMOKjkz2N5yVxd1Sz_u7Iha63EVL44v5kxeyozlwiRfZmG1wlkrAlTq3s15bEC3tTphPNWWsHKWKalOUn-g_Uijl4gUY6Q4hnxQjEukWOgMQkbvpDZvSgYvvn_eSMEGLxKrTAC9AZv7y0klIq1-tTWDgQ8RJ3IHc19cRw5N3qrRJ8o7aIlemDcHjSI_j4eQTC4kNa6tlnL3KlI2dh7FdxgkTkNCx9pzA2TZngNExLWl59wnLuT-s_svomrZzWIWlO1Bpkccgfjf33g7Ln0S136VuG9YKp3O5p7B6Gh6YhU0qYTV2VZodW1Dqz0cuDeu-ki6vsEjyL20JtBHlr4Y1dOFLA-Q6I4TgWuUc2Dd5Zg2gwBdXvsKHTX5jqac1vBQD_sE8JpjlEu2yjk3hmfO7PfunXU4iNwEWX2nuhbk8j7CYiiJxfiAnEcoo1x-K4IrixCuIwZrL9s5-g6yd4fFwMStA7pQK&drmtype=0",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 356
+            }
+          },
+          {
+            "channel": "CCTV2财经",
+            "group": "央视频道",
+            "url": "http://txycdn7.video.qq.com/1370417302.m3u8?time=1785035771&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIHrvnj5TOBZu27LlqbatHJ1hZakny2lVCNiJvV6duaPyEOvxUPhTDEbMsPnFy2aXFLABcNmaP2NjclSLMCQXl-4d9StPPDE5uV94Beki5d0kOUxyduyQNCaVF8b1hw8e1bo1mnQpNlzx4r9mEyuXHP8Dqz2MLDItfbL9mU8x8KCUIwfQHUjviGtvVrk0yrkl_35H0Gzo-8dXVOv_tLD4iEfJnkvOOPcJ8dzbq2B2jhohx9jbuUZEoZeZQ7tTDQEFeabFjLG5o1MQsW4iORW2Bk2caf70B6oyIBA_NUB1-EihDP4LhnGvoMcWChcu5Jm5Pf9nbhvP9hfRHZm0wYtni2HMR-p9l1QeMbwcCWExJ47n8M_Csdcf7_VcqKTfI9ok0tyEj_3vueuiQ0_2NW9QVpYQK9e8_CB1HeP9l2G5wlrQXzm8zzajx6su1K0zLJVqwZq2I26Ew-4UzMvcyFgNMenUrxgbn7n_40GlnCOLCbpjA3Boh46pT44FKRe4bYYwr9_SpspBw1objlO9L3mSnbBWUOsrdAd2VoezaqNu4QEtgoq5&drmtype=0",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 497,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://txycdn7.video.qq.com/1370417302-1781558679.ts?drmtype=0&time=1785035771&from=player&cdn=tcloud&sdtfrom=v401010931632&platform=4010603&butype=31&HLSP2P=1&vkey=nvkey_AQQgIHrvnj5TOBZu27LlqbatHJ1hZakny2lVCNiJvV6duaPyEOvxUPhTDEbMsPnFy2aXFLABcNmaP2NjclSLMCQXl-4d9StPPDE5uV94Beki5d0kOUxyduyQNCaVF8b1hw8e1bo1mnQpNlzx4r9mEyuXHP8Dqz2MLDItfbL9mU8x8KCUIwfQHUjviGtvVrk0yrkl_35H0Gzo-8dXVOv_tLD4iEfJnkvOOPcJ8dzbq2B2jhohx9jbuUZEoZeZQ7tTDQEFeabFjLG5o1MQsW4iORW2Bk2caf70B6oyIBA_NUB1-EihDP4LhnGvoMcWChcu5Jm5Pf9nbhvP9hfRHZm0wYtni2HMR-p9l1QeMbwcCWExJ47n8M_Csdcf7_VcqKTfI9ok0tyEj_3vueuiQ0_2NW9QVpYQK9e8_CB1HeP9l2G5wlrQXzm8zzajx6su1K0zLJVqwZq2I26Ew-4UzMvcyFgNMenUrxgbn7n_40GlnCOLCbpjA3Boh46pT44FKRe4bYYwr9_SpspBw1objlO9L3mSnbBWUOsrdAd2VoezaqNu4QEtgoq5&drmtype=0",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 331
+            }
+          },
+          {
+            "channel": "湖南卫视",
+            "group": "卫视频道",
+            "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 407,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST-5025558-1-hls.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 198
+            }
+          },
+          {
+            "channel": "浙江卫视",
+            "group": "卫视频道",
+            "url": "http://ali-xwl.cztv.com/live/channel011080Plxw.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 301,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-xwl.cztv.com/live/channel011080Plxw/2026072613/1785043645057.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 345
+            }
+          },
+          {
+            "channel": "江苏卫视",
+            "group": "卫视频道",
+            "url": "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jswshd265/55/20200407/01.m3u8?&HlsSubType=&encrypt=",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 397,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "山东卫视",
+            "group": "卫视频道",
+            "url": "https://hlsbkmgsplive.miguvideo.com/wd_r4/yg/shandongwshd/3000/01.m3u8?&HlsSubType=&encrypt=",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 403,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "广东影视",
+            "group": "广东地区",
+            "url": "https://hlsbkmgsplive.miguvideo.com/wd_r1/2018/nfmedia/nfys/1000/01.m3u8?&HlsSubType=&encrypt=",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 158,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "长沙县新闻综合",
+            "group": "湖南地区",
+            "url": "https://liveplay-srs.voc.com.cn/hls/tv/203_10cdf5.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 314,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "衡山综合",
+            "group": "湖南地区",
+            "url": "https://liveplay-srs.voc.com.cn/hls/tv/161_8d2e76.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 558,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "龙山综合",
+            "group": "湖南地区",
+            "url": "https://liveplay-srs.voc.com.cn/hls/tv/146_f067fe.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 461,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "146_f067fe-24606.ts",
+              "status": 0,
+              "ok": false,
+              "latencyMs": null
+            }
+          },
+          {
+            "channel": "平江综合",
+            "group": "湖南地区",
+            "url": "https://liveplay-srs.voc.com.cn/hls/tv/168_ce2a0c.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 263,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "168_ce2a0c-30209.ts",
+              "status": 0,
+              "ok": false,
+              "latencyMs": null
+            }
+          },
+          {
+            "channel": "浙江少儿",
+            "group": "浙江地区",
+            "url": "http://ali-xwl.cztv.com/live/channel081080Plxw.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 140,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-xwl.cztv.com/live/channel081080Plxw/2026072613/1785043648084.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 229
+            }
+          },
+          {
+            "channel": "浙江钱江都市",
+            "group": "浙江地区",
+            "url": "http://ali-xwl.cztv.com/live/channel021080Plxw.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 76,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-xwl.cztv.com/live/channel021080Plxw/2026072613/1785043660245.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 293
+            }
+          },
+          {
+            "channel": "浙江经济生活",
+            "group": "浙江地区",
+            "url": "http://ali-xwl.cztv.com/live/channel031080Plxw.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 67,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-xwl.cztv.com/live/channel031080Plxw/2026072613/1785043657474.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 175
+            }
+          },
+          {
+            "channel": "浙江民生休闲",
+            "group": "浙江地区",
+            "url": "http://ali-xwl.cztv.com/live/channel061080Plxw.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 97,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://ali-xwl.cztv.com/live/channel061080Plxw/2026072613/1785043662093.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 159
+            }
+          },
+          {
+            "channel": "南京新闻综合",
+            "group": "江苏地区",
+            "url": "http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 199,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "http://nklive.nbs.cn/hls/d511bc9d-a694-4453-b3a2-4fc842cc97a1/index1099245.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 196
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-jp",
+      "name": "IPTV-org 日本",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 16,
+      "groupCount": 1,
+      "duplicateRate": 0.1111,
+      "sampleCount": 4,
+      "playableCount": 4,
+      "playableRate": 1,
+      "channelChecks": [
+        {
+          "channel": "CGNTV Japan (1080p)",
+          "group": "其他",
+          "url": "https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 739,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP_1.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 505
+          }
+        },
+        {
+          "channel": "Gaki no Tsukai (English Subs) (720p)",
+          "group": "其他",
+          "url": "https://hamada.gaki-no-tsukai.stream/hls/test.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1415,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://hamada.gaki-no-tsukai.stream/hls/test-258688.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1435
+          }
+        },
+        {
+          "channel": "GSTV (720p)",
+          "group": "其他",
+          "url": "https://japaneast.av.mk.io/mediakindcdn-mediakind/ca01a143-f823-4432-b670-c22ff9643ce4/index.qfm/manifest(format=m3u8-cmaf)",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1193,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://japaneast.av.mk.io/mediakindcdn-mediakind/ca01a143-f823-4432-b670-c22ff9643ce4/index.qfm/stream_H264.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 224
+          }
+        },
+        {
+          "channel": "JOAX-DTV",
+          "group": "其他",
+          "url": "https://ntv5.mov3.co/hls/ntv.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1476,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://ntv5.mov3.co/hls/ntv-6453.ts",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2430
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 5578,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 2144
+        },
+        "channels": [
+          {
+            "channel": "CGNTV Japan (1080p)",
+            "group": "其他",
+            "url": "https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 739,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP_1.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 505
+            }
+          },
+          {
+            "channel": "Gaki no Tsukai (English Subs) (720p)",
+            "group": "其他",
+            "url": "https://hamada.gaki-no-tsukai.stream/hls/test.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1415,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://hamada.gaki-no-tsukai.stream/hls/test-258688.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 1435
+            }
+          },
+          {
+            "channel": "GSTV (720p)",
+            "group": "其他",
+            "url": "https://japaneast.av.mk.io/mediakindcdn-mediakind/ca01a143-f823-4432-b670-c22ff9643ce4/index.qfm/manifest(format=m3u8-cmaf)",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1193,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://japaneast.av.mk.io/mediakindcdn-mediakind/ca01a143-f823-4432-b670-c22ff9643ce4/index.qfm/stream_H264.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 224
+            }
+          },
+          {
+            "channel": "JOAX-DTV",
+            "group": "其他",
+            "url": "https://ntv5.mov3.co/hls/ntv.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1476,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://ntv5.mov3.co/hls/ntv-6453.ts",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 2430
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-au",
+      "name": "IPTV-org 澳大利亚",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 49,
+      "groupCount": 1,
+      "duplicateRate": 0.0392,
+      "sampleCount": 4,
+      "playableCount": 3,
+      "playableRate": 0.75,
+      "channelChecks": [
+        {
+          "channel": "2GB Sydney (1080p)",
+          "group": "其他",
+          "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1447,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/2GB1080P/chunklist.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 210
+          }
+        },
+        {
+          "channel": "3AW Melbourne (1080p)",
+          "group": "其他",
+          "url": "https://3awlive.akamaized.net/hls/live/2032295/3AW/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1735,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://3awlive.akamaized.net/hls/live/2032295/3AW/3AW1080P/chunklist.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 478
+          }
+        },
+        {
+          "channel": "6PR Perth (1080p)",
+          "group": "其他",
+          "url": "https://6prlive.akamaized.net/hls/live/2033806/6PR/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 2133,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://6prlive.akamaized.net/hls/live/2033806/6PR/6PR1080P/chunklist.m3u8",
+            "status": 404,
+            "ok": false,
+            "latencyMs": 453
+          }
+        },
+        {
+          "channel": "9Gem (720p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://9now-livestreams.akamaized.net/hls/live/2008311/gem-syd/master.m3u8",
+          "status": 400,
+          "ok": false,
+          "latencyMs": 1167,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 4096,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 6658
+        },
+        "channels": [
+          {
+            "channel": "2GB Sydney (1080p)",
+            "group": "其他",
+            "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1447,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/2GB1080P/chunklist.m3u8",
+              "status": 404,
+              "ok": false,
+              "latencyMs": 210
+            }
+          },
+          {
+            "channel": "3AW Melbourne (1080p)",
+            "group": "其他",
+            "url": "https://3awlive.akamaized.net/hls/live/2032295/3AW/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1735,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://3awlive.akamaized.net/hls/live/2032295/3AW/3AW1080P/chunklist.m3u8",
+              "status": 404,
+              "ok": false,
+              "latencyMs": 478
+            }
+          },
+          {
+            "channel": "6PR Perth (1080p)",
+            "group": "其他",
+            "url": "https://6prlive.akamaized.net/hls/live/2033806/6PR/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 2133,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://6prlive.akamaized.net/hls/live/2033806/6PR/6PR1080P/chunklist.m3u8",
+              "status": 404,
+              "ok": false,
+              "latencyMs": 453
+            }
+          },
+          {
+            "channel": "9Gem (720p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://9now-livestreams.akamaized.net/hls/live/2008311/gem-syd/master.m3u8",
+            "status": 400,
+            "ok": false,
+            "latencyMs": 1167,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-fr",
+      "name": "IPTV-org 法国",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
+      "ok": true,
+      "admissionTier": "ACTIVE",
+      "hardFailures": [],
+      "softWarnings": [],
+      "rootCauses": [],
+      "channelCount": 181,
+      "groupCount": 1,
+      "duplicateRate": 0.1697,
+      "sampleCount": 4,
+      "playableCount": 3,
+      "playableRate": 0.75,
+      "channelChecks": [
+        {
+          "channel": "20 Minutes TV (1080p)",
+          "group": "其他",
+          "url": "https://live-20minutestv.digiteka.com/1961167769/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1333,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://live-20minutestv.digiteka.com/1961167769/tracks-v5a1/mono.ts.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 552
+          }
+        },
+        {
+          "channel": "Action HD (720p)",
+          "group": "其他",
+          "url": "http://rezofoot.tv/Action/index.m3u8",
+          "status": 400,
+          "ok": false,
+          "latencyMs": 1701,
+          "contentType": "",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "ADN TV+ (720p)",
+          "group": "其他",
+          "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1076,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/94351d94-a82d-462c-a85a-cd916befea12/0.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 800
+          }
+        },
+        {
+          "channel": "Africa 24 (1080p)",
+          "group": "其他",
+          "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 6742,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://edge19.vedge.infomaniak.com/livecast/ik:africa24/chunklist_w1960987997.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 279
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 9151,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 34453
+        },
+        "channels": [
+          {
+            "channel": "20 Minutes TV (1080p)",
+            "group": "其他",
+            "url": "https://live-20minutestv.digiteka.com/1961167769/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1333,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://live-20minutestv.digiteka.com/1961167769/tracks-v5a1/mono.ts.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 552
+            }
+          },
+          {
+            "channel": "Action HD (720p)",
+            "group": "其他",
+            "url": "http://rezofoot.tv/Action/index.m3u8",
+            "status": 400,
+            "ok": false,
+            "latencyMs": 1701,
+            "contentType": "",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "ADN TV+ (720p)",
+            "group": "其他",
+            "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1076,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/94351d94-a82d-462c-a85a-cd916befea12/0.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 800
+            }
+          },
+          {
+            "channel": "Africa 24 (1080p)",
+            "group": "其他",
+            "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 6742,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://edge19.vedge.infomaniak.com/livecast/ik:africa24/chunklist_w1960987997.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 279
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "live",
+      "slug": "iptv-org-sg",
+      "name": "IPTV-org 新加坡",
+      "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u",
+      "ok": true,
+      "admissionTier": "WATCH",
+      "hardFailures": [],
+      "softWarnings": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "rootCauses": [
+        "PARTIAL_CHANNEL_FAILURE"
+      ],
+      "channelCount": 16,
+      "groupCount": 1,
+      "duplicateRate": 0.0588,
+      "sampleCount": 4,
+      "playableCount": 2,
+      "playableRate": 0.5,
+      "channelChecks": [
+        {
+          "channel": "Animax Asia India (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 447,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "Aniplus Asia (720p)",
+          "group": "其他",
+          "url": "https://amg18481-amg18481c1-amgplt0352.playout.now3.amagi.tv/playlist/amg18481-amg18481c1-amgplt0352/playlist.m3u8",
+          "status": 403,
+          "ok": false,
+          "latencyMs": 774,
+          "contentType": "text/html",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": null
+        },
+        {
+          "channel": "CNA (1080p) [Geo-blocked]",
+          "group": "其他",
+          "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 847,
+          "contentType": "application/x-mpegURL",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_1.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 249
+          }
+        },
+        {
+          "channel": "CNA Originals (1080p)",
+          "group": "其他",
+          "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8",
+          "status": 200,
+          "ok": true,
+          "latencyMs": 1588,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "hardViolation": false,
+          "segment": {
+            "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist360p.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 615
+          }
+        }
+      ],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": "utf-8",
+        "confidence": "declared",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 3080,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": "utf-8",
+            "confidence": "declared",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 3445
+        },
+        "channels": [
+          {
+            "channel": "Animax Asia India (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 447,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "Aniplus Asia (720p)",
+            "group": "其他",
+            "url": "https://amg18481-amg18481c1-amgplt0352.playout.now3.amagi.tv/playlist/amg18481-amg18481c1-amgplt0352/playlist.m3u8",
+            "status": 403,
+            "ok": false,
+            "latencyMs": 774,
+            "contentType": "text/html",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": null
+          },
+          {
+            "channel": "CNA (1080p) [Geo-blocked]",
+            "group": "其他",
+            "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 847,
+            "contentType": "application/x-mpegURL",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_1.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 249
+            }
+          },
+          {
+            "channel": "CNA Originals (1080p)",
+            "group": "其他",
+            "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8",
+            "status": 200,
+            "ok": true,
+            "latencyMs": 1588,
+            "contentType": "application/vnd.apple.mpegurl",
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": null,
+              "confidence": "utf8-strict",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            },
+            "hardViolation": false,
+            "segment": {
+              "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist360p.m3u8",
+              "status": 200,
+              "ok": true,
+              "latencyMs": 615
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

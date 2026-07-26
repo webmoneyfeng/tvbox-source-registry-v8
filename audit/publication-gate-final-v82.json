@@ -1,0 +1,86 @@
+{
+    "generatedAt":  "2026-07-26T07:41:35.6220062Z",
+    "project":  "tvbox-source-registry-v8 / v8.2.0",
+    "deployment":  {
+                       "formalWorkerVersionId":  "7221f929-d6b1-472b-8ae1-bccec8909a05",
+                       "canaryWorker":  "tvbox-source-registry-v8-canary.feng-yang.workers.dev",
+                       "formalWorker":  "tvbox-source-registry-v8.feng-yang.workers.dev",
+                       "customDomains":  [
+                                             "tv.webhome.eu.org",
+                                             "tv.webclound.eu.org"
+                                         ],
+                       "rollbackBaselineTag":  "v8.1.4-baseline",
+                       "rollbackBaselineCommit":  "393d9ddb2aa716dc7a85f72cbac78a41c06a85b2",
+                       "previousFormalVersion":  "843878ec-652c-4860-8c8f-1f78a374135c",
+                       "formalKvBackup":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\formal-health-backup-v814-20260726.json"
+                   },
+    "gates":  {
+                  "localTests":  {
+                                     "pass":  true,
+                                     "testCount":  53,
+                                     "evidence":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\check-final-v82.log"
+                                 },
+                  "canary":  {
+                                 "pass":  true,
+                                 "vodVisible":  14,
+                                 "liveVisible":  12,
+                                 "revisionStable":  true,
+                                 "evidence":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\canary-deployment-v82.json"
+                             },
+                  "formalRuntime":  {
+                                        "pass":  true,
+                                        "endpoints":  [
+                                                          {
+                                                              "base":  "https://tv.webhome.eu.org",
+                                                              "version":  "v8.2.0",
+                                                              "revision":  "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|vod:bfzy|vod:jszy-m3u8|vod:lovedan|live:fanmingming-ipv6|live:iptv-org-hk|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-ca|live:iptv-org-th|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:21a92",
+                                                              "siteCount":  14,
+                                                              "liveCount":  12,
+                                                              "cleanNames":  true
+                                                          },
+                                                          {
+                                                              "base":  "https://tv.webclound.eu.org",
+                                                              "version":  "v8.2.0",
+                                                              "revision":  "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|vod:bfzy|vod:jszy-m3u8|vod:lovedan|live:fanmingming-ipv6|live:iptv-org-hk|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-ca|live:iptv-org-th|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:21a92",
+                                                              "siteCount":  14,
+                                                              "liveCount":  12,
+                                                              "cleanNames":  true
+                                                          },
+                                                          {
+                                                              "base":  "https://tvbox-source-registry-v8.feng-yang.workers.dev",
+                                                              "version":  "v8.2.0",
+                                                              "revision":  "vod:hhzy-m3u8|vod:hongniu-m3u8|vod:modu|vod:lzi-m3u8|vod:ffzy-m3u8|vod:jinying|vod:zuida|vod:subo-m3u8|vod:360zy-direct|vod:xinlang-m3u8|vod:baidu|vod:bfzy|vod:jszy-m3u8|vod:lovedan|live:fanmingming-ipv6|live:iptv-org-hk|live:iptv-org-kr|live:iptv-org-us|live:iptv-org-ca|live:iptv-org-th|live:iptv-org-in|live:migu-live|live:iptv-org-jp|live:iptv-org-au|live:iptv-org-fr|live:iptv-org-sg|live:21a92",
+                                                              "siteCount":  14,
+                                                              "liveCount":  12,
+                                                              "cleanNames":  true
+                                                          }
+                                                      ],
+                                        "sameRevision":  true,
+                                        "sameVersion":  true,
+                                        "namesClean":  true,
+                                        "evidence":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\deployment-truth-formal-post-seed-fix-v82.json"
+                                    },
+                  "sourceCoverage":  {
+                                         "vodCorePlayable":  14,
+                                         "liveCorePlayable":  12,
+                                         "publishedVod":  14,
+                                         "publishedLive":  12,
+                                         "sourceAuditEvidence":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\source-admission-v82.json"
+                                     },
+                  "freeBudget":  {
+                                     "verdict":  "PASS_WITH_TRAFFIC_BOUNDARY",
+                                     "userTrafficCapacityKnown":  false,
+                                     "evidence":  "C:\\Users\\Ten\\.config\\superpowers\\worktrees\\tvbox-source-registry-v8\\v8.2-native-audit\\audit\\free-budget-latest.json"
+                                 }
+              },
+    "finalDecision":  {
+                          "publicationGate":  true,
+                          "formalPublished":  true,
+                          "degraded":  false,
+                          "remainingWarnings":  [
+                                                    "部分源属于 WATCH；点播严格 ACTIVE 数未达到 10，但均有深度可播放证据。",
+                                                    "自动发现最近一次轮询记录了一个不支持的配置 feed，未影响已发布目录；后续继续轮询其它 feed。",
+                                                    "免费预算无法从静态审计推导真实用户流量承载，不能据此承诺商业并发 SLA。"
+                                                ]
+                      }
+}

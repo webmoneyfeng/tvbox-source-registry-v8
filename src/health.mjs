@@ -1,5 +1,6 @@
-export const HEALTH_SCHEMA_VERSION = 'v8-health-3';
+export const HEALTH_SCHEMA_VERSION = 'v8-health-4';
 export const FAILURES_TO_HIDE = 3;
+export const DEEP_AUDIT_FAILURES_TO_HIDE = 6;
 export const SUCCESSES_TO_RECOVER = 2;
 export const FAILURES_TO_QUARANTINE = 6;
 export const PROBATION_SAMPLE_COUNT = 12;
@@ -24,6 +25,27 @@ export function sourceHealthKey(source) {
   return `${source.kind || 'vod'}:${source.slug}`;
 }
 
+export function effectiveAdmissionTier(source, healthRow) {
+  if (
+    healthRow?.admissionTier === 'REJECTED'
+    && healthRow?.deepAuditOk === true
+    && Number(healthRow?.consecutiveFailures || 0) < DEEP_AUDIT_FAILURES_TO_HIDE
+  ) {
+    const baseline = String(healthRow.deepAuditTier || source?.seedStatus || '').toUpperCase();
+    if (baseline === 'ACTIVE' || baseline === 'WATCH') return baseline;
+  }
+  if (healthRow?.admissionTier === 'ACTIVE' || healthRow?.admissionTier === 'WATCH' || healthRow?.admissionTier === 'REJECTED') {
+    return healthRow.admissionTier;
+  }
+  return source?.seedStatus === 'ACTIVE' ? 'ACTIVE' : 'WATCH';
+}
+
+export function verificationState(source, healthRow) {
+  if (healthRow) return 'PROBED';
+  if (source?.seedStatus === 'ACTIVE') return 'PREAUDITED_SEED';
+  return 'UNVERIFIED';
+}
+
 export function emptyHealthState(generatedAt = null) {
   return {
     schemaVersion: HEALTH_SCHEMA_VERSION,
@@ -43,6 +65,7 @@ export function emptyHealthState(generatedAt = null) {
     discoveryCursor: 0,
     lastDiscoveryFeed: null,
     lastDiscoveryError: null,
+    lastDeepAuditAt: null,
   };
 }
 
@@ -71,6 +94,7 @@ export function normalizeHealthState(value) {
     lastDiscoveryFeed: value.lastDiscoveryFeed || null,
     lastDiscoveryError: value.lastDiscoveryError || null,
     discoveryCount: Number(value.discoveryCount || 0),
+    lastDeepAuditAt: value.lastDeepAuditAt || null,
   };
 }
 
@@ -92,10 +116,22 @@ export function applyProbe(previous, source, probe, checkedAt) {
   const deepOk = source.kind === 'live'
     ? Number(probe.playableCount || 0) >= 2
     : Boolean(probe.detailOk && probe.playOk);
+  const deepAuditOk = Object.prototype.hasOwnProperty.call(before, 'deepAuditOk')
+    ? Boolean(before.deepAuditOk)
+    : before.lastDeepAuditAt
+      ? (before.deepOk !== undefined ? Boolean(before.deepOk) : deepOk)
+      : null;
+  const verifiedQuarantineRecovery = previousState === 'QUARANTINED'
+    && ok
+    && !hardFailure
+    && deepOk
+    && (source.seedStatus === 'ACTIVE' || before.lastDeepAuditAt);
   let state = previousState;
   if (hardFailure || consecutiveFailures >= FAILURES_TO_QUARANTINE) state = 'QUARANTINED';
   else if (consecutiveFailures >= FAILURES_TO_HIDE) state = 'WATCH';
-  else if (previousState === 'QUARANTINED') state = consecutiveSuccesses >= SUCCESSES_TO_RECOVER ? 'WATCH' : 'QUARANTINED';
+  else if (previousState === 'QUARANTINED') {
+    state = verifiedQuarantineRecovery || consecutiveSuccesses >= SUCCESSES_TO_RECOVER ? 'WATCH' : 'QUARANTINED';
+  }
   else if (ok && source.seedStatus === 'WATCH' && previousState !== 'ACTIVE' && previousState !== 'WATCH') {
     state = probationWindow.length >= PROBATION_SAMPLE_COUNT
       && probationSuccesses >= PROBATION_SUCCESS_COUNT
@@ -119,15 +155,23 @@ export function applyProbe(previous, source, probe, checkedAt) {
     categoryCount: Number(probe.categoryCount || 0),
     categoryOkCount: Number(probe.categoryOkCount || 0),
     categoryChecks: Array.isArray(probe.categoryChecks) ? probe.categoryChecks : [],
+    emptyCategoryCount: Number(probe.emptyCategoryCount || 0),
     listCount: Number(probe.listCount || 0),
     searchCount: Number(probe.searchCount || 0),
     searchEvidence: Array.isArray(probe.searchEvidence) ? probe.searchEvidence : [],
+    searchCapability: probe.searchCapability !== undefined ? Boolean(probe.searchCapability) : before.searchCapability,
+    detailCapability: probe.detailCapability !== undefined
+      ? Boolean(probe.detailCapability)
+      : probe.detailOk !== undefined ? Boolean(probe.detailOk) : before.detailCapability,
     nativeFilterable: Boolean(probe.nativeFilterable),
     nativeSortable: Boolean(probe.nativeSortable),
     nativeFilterKeys: list(probe.nativeFilterKeys),
-    directPlaybackEligible: Boolean(probe.directPlaybackEligible ?? probe.playOk),
-    detailOk: Boolean(probe.detailOk),
-    playOk: Boolean(probe.playOk),
+    nativeSortKeys: list(probe.nativeSortKeys),
+    directPlaybackEligible: probe.directPlaybackEligible !== undefined
+      ? Boolean(probe.directPlaybackEligible)
+      : probe.playOk !== undefined ? Boolean(probe.playOk) : before.directPlaybackEligible,
+    detailOk: probe.detailOk !== undefined ? Boolean(probe.detailOk) : before.detailOk,
+    playOk: probe.playOk !== undefined ? Boolean(probe.playOk) : before.playOk,
     playBranchCount: Number(probe.playBranchCount || 0),
     directBranchCount: Number(probe.directBranchCount || 0),
     invalidBranchCount: Number(probe.invalidBranchCount || 0),
@@ -136,6 +180,11 @@ export function applyProbe(previous, source, probe, checkedAt) {
     groupCount: Number(probe.groupCount || 0),
     playableCount: Number(probe.playableCount || 0),
     sampleCount: Number(probe.sampleCount || 0),
+    playableRate: Number(probe.playableRate || 0),
+    encoding: probe.encoding || null,
+    rootCauses: list(probe.rootCauses || [...hardFailures, ...softWarnings]),
+    evidence: probe.evidence && typeof probe.evidence === 'object' ? probe.evidence : {},
+    lastDeepAuditAt: probe.lastDeepAuditAt || null,
     duplicateRate: Number(probe.duplicateRate || 0),
     httpStatus: Number(probe.httpStatus || 0),
     error: ok ? '' : String(probe.error || hardFailures.join('; ') || 'probe failed').slice(0, 240),
@@ -147,6 +196,8 @@ export function applyProbe(previous, source, probe, checkedAt) {
     samples,
     rollingSuccessRate: Number((samples.filter((sample) => sample.ok).length / samples.length).toFixed(4)),
     deepOk,
+    deepAuditOk,
+    deepAuditTier: before.deepAuditTier || (deepAuditOk ? before.admissionTier : null),
     consecutiveSuccesses,
     consecutiveFailures,
     lastSuccessAt: ok ? checkedAt : before.lastSuccessAt || null,
@@ -156,9 +207,33 @@ export function applyProbe(previous, source, probe, checkedAt) {
 
 export function sourceIsVisible(source, healthRow) {
   if (!healthRow) return source.seedStatus === 'ACTIVE';
-  if (healthRow.admissionTier === 'REJECTED' || healthRow.hardFailure || (healthRow.hardFailures || []).length) return false;
-  if (healthRow.state === 'QUARANTINED' || healthRow.state === 'PROBATION') return false;
-  if (healthRow.consecutiveFailures >= FAILURES_TO_HIDE) return false;
+  const consecutiveFailures = Number(healthRow.consecutiveFailures || 0);
+  const knownGood = Boolean(
+    healthRow.lastSuccessAt
+    || healthRow.ok === true
+    || healthRow.deepOk === true
+    || healthRow.lastDeepAuditAt,
+  );
+  const currentFailure = healthRow.ok === false
+    || healthRow.admissionTier === 'REJECTED'
+    || healthRow.hardFailure === true
+    || (healthRow.hardFailures || []).length > 0;
+  const deepBaselineGood = healthRow.deepAuditOk === true
+    || (!Object.prototype.hasOwnProperty.call(healthRow, 'deepAuditOk')
+      && Boolean(healthRow.lastDeepAuditAt)
+      && healthRow.admissionTier !== 'REJECTED');
+  const failureThreshold = deepBaselineGood ? DEEP_AUDIT_FAILURES_TO_HIDE : FAILURES_TO_HIDE;
+  const transientFailure = currentFailure
+    && knownGood
+    && consecutiveFailures < failureThreshold
+    && (deepBaselineGood || !healthRow.lastDeepAuditAt);
+  if (healthRow.admissionTier === 'REJECTED' && !transientFailure) return false;
+  if ((healthRow.hardFailure || (healthRow.hardFailures || []).length) && !transientFailure) return false;
+  if ((healthRow.state === 'QUARANTINED' || healthRow.state === 'PROBATION') && !transientFailure) return false;
+  if (consecutiveFailures >= failureThreshold) return false;
+  if ((source.kind || 'vod') === 'vod' && !transientFailure && (healthRow.detailOk === false || healthRow.playOk === false || healthRow.directPlaybackEligible === false)) return false;
+  if (source.kind === 'live' && !transientFailure && Object.prototype.hasOwnProperty.call(healthRow, 'playableCount') && Number(healthRow.playableCount || 0) < 2) return false;
+  if (transientFailure) return true;
   if (healthRow.state === 'ACTIVE') return Number(healthRow.consecutiveFailures || 0) < FAILURES_TO_HIDE;
   if (healthRow.state === 'WATCH') return Boolean(healthRow.lastSuccessAt || healthRow.ok === true);
   if (healthRow.admissionTier === 'ACTIVE' || healthRow.admissionTier === 'WATCH') return Boolean(healthRow.lastSuccessAt || healthRow.ok === true);

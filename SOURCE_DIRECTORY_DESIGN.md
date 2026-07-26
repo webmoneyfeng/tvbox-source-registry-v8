@@ -1,11 +1,11 @@
-# TVBox source directory v8.1
+# TVBox source directory v8.2
 
-## Scope (v8.1.4)
+## Scope (v8.2)
 
 This version publishes validated source links instead of building a second
 catalogue. The TV client queries each upstream source directly. The service does
 not proxy media, merge programme records, rewrite titles, or promise cross-source
-deduplication. The registry currently contains 14 VOD endpoints and 18 live
+deduplication. The registry currently contains 16 VOD endpoints and 23 live
 playlists; current admission reports distinguish strict `ACTIVE`, usable `WATCH`
 and hard-failed `REJECTED` entries.
 
@@ -50,6 +50,11 @@ recovery requires two successful probes and the probation rules.
   rebuild is required.
 - `checkedAt` describes the last probe. `updatedAt` changes only when the visible
   source set changes.
+- The deep audit records candidate and usable target counts separately from the
+  formal publication gate; a local candidate pass never substitutes for a
+  Canary target verification.
+- A registry seed that has not yet written a KV probe row is reported as
+  `PREAUDITED_SEED`; it is not silently presented as a newly verified probe.
 - Config, status and source responses use `no-store` and carry a stable registry revision.
 - On a failed probe cycle the previous valid directory remains active.
 - Live entries are exposed as direct upstream playlist URLs; `/live.txt` is a
@@ -66,6 +71,7 @@ calls the upstream sources directly.
 ## Migration rule
 
 The v7.3 catalogue Worker, Pages snapshot project, catalogue KV namespace, and
-scheduled GitHub workflows are retired only after a separately verified formal
-cutover. The v7.3 repository is archived rather than deleted so the last known
-implementation remains recoverable without continuing to execute.
+scheduled GitHub workflows remain outside this repository and are not used by
+the v8.2 canary. Formal cutover is a separate approval gate; the v7.3 repository
+is archived rather than deleted so the last known implementation remains
+recoverable without continuing to execute.

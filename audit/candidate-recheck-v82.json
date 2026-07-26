@@ -1,0 +1,2533 @@
+{
+  "generatedAt": "2026-07-26T04:16:17.512Z",
+  "kind": "vod",
+  "policy": "Repeated direct-source evidence only; complete search failure or any invalid playback branch is a hard admission failure; no candidate is promoted automatically.",
+  "rounds": 3,
+  "stable": false,
+  "rows": [
+    {
+      "round": 1,
+      "slug": "discovered_vod_http_sdzyapi_com_api_php_provide_vod_",
+      "name": "闪电资源(切)",
+      "api": "http://sdzyapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:4",
+        "SLOW_SOURCE",
+        "SEARCH_UNAVAILABLE"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-25 16:10:58",
+      "latencyMs": 17905,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 59,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "133395",
+            "title": "地平线边缘",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 2262,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 828
+                }
+              },
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1361,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 2539
+                }
+              },
+              {
+                "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1313,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 4650
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "31598",
+            "title": "认识的哥哥",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 2173,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1329
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 820,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1332
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 224,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 999
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134239",
+            "title": "四大元素之火之爱链",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 922,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 887
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 902,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 2184
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1172,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1922
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134327",
+            "title": "告白：第25年的秘密",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 237,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1670
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 241,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 962
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 220,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 2072
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    },
+    {
+      "round": 1,
+      "slug": "discovered_vod_https_api_guangsuapi_com_api_php_provide_vod_",
+      "name": "光速资源(切)",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:1",
+        "SLOW_SOURCE",
+        "SEARCH_UNAVAILABLE",
+        "INVALID_PLAY_BRANCH"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-26 12:14:22",
+      "latencyMs": 22892,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 28,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "170105",
+            "title": "花织同学转生后还是想干架",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/e1wG4Jmb/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1028,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274333/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNzKwza/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1030,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/920/20260719/4291325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bW6QEYWa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1131,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/923/20260726/4311173/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "169441",
+            "title": "穹庐下的魔女",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/bo2ZELja/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 983,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254893/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/egJpvzYd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1082,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254887/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dBBP63Yd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 353,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274315/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "166340",
+            "title": "东北超好吃",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/eER8NOva/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 946,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260526/4170161/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNj73wa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1032,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260530/4183325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bYE7lg9b/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 297,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/910/20260606/4196831/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "157349",
+            "title": "群英会2026",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/dL9gDqge/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 328,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954721/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bmZw65pd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 332,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954703/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/av2g51ra/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 346,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954697/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    },
+    {
+      "round": 2,
+      "slug": "discovered_vod_http_sdzyapi_com_api_php_provide_vod_",
+      "name": "闪电资源(切)",
+      "api": "http://sdzyapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:4",
+        "SLOW_SOURCE",
+        "SEARCH_UNAVAILABLE"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-25 16:10:58",
+      "latencyMs": 17158,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 59,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "133395",
+            "title": "地平线边缘",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1303,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 3571
+                }
+              },
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1516,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 820
+                }
+              },
+              {
+                "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1652,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 2164
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "31598",
+            "title": "认识的哥哥",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 962,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1634
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 3853,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1477
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 251,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1606
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134239",
+            "title": "四大元素之火之爱链",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 842,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1780
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1030,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 874
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 853,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1891
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134327",
+            "title": "告白：第25年的秘密",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 207,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1197
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 237,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1484
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 199,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1343
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    },
+    {
+      "round": 2,
+      "slug": "discovered_vod_https_api_guangsuapi_com_api_php_provide_vod_",
+      "name": "光速资源(切)",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:1",
+        "SEARCH_UNAVAILABLE",
+        "INVALID_PLAY_BRANCH"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-26 12:14:22",
+      "latencyMs": 9547,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 28,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "170105",
+            "title": "花织同学转生后还是想干架",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/e1wG4Jmb/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1027,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274333/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNzKwza/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1005,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/920/20260719/4291325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bW6QEYWa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1127,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/923/20260726/4311173/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "169441",
+            "title": "穹庐下的魔女",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/bo2ZELja/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1066,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254893/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/egJpvzYd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1044,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254887/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dBBP63Yd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 383,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274315/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "166340",
+            "title": "东北超好吃",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/eER8NOva/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1074,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260526/4170161/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNj73wa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1116,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260530/4183325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bYE7lg9b/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 337,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/910/20260606/4196831/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "157349",
+            "title": "群英会2026",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/dL9gDqge/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 386,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954721/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bmZw65pd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 382,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954703/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/av2g51ra/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 425,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954697/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    },
+    {
+      "round": 3,
+      "slug": "discovered_vod_http_sdzyapi_com_api_php_provide_vod_",
+      "name": "闪电资源(切)",
+      "api": "http://sdzyapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:4",
+        "SLOW_SOURCE",
+        "SEARCH_UNAVAILABLE"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-25 16:10:58",
+      "latencyMs": 15828,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 59,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "133395",
+            "title": "地平线边缘",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1424,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/20/tPc02uWMbn27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 2509
+                }
+              },
+              {
+                "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1446,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v6.qqqrst.com/yyv6/202606/27/5f6WB42px227/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1027
+                }
+              },
+              {
+                "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1222,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v1.qqqrst.com/yyv1/202607/04/WVCfr8Xgc127/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 3788
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "31598",
+            "title": "认识的哥哥",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 774,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/GiaryaY7rc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1443
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 919,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/WGfksJkERc1/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 832
+                }
+              },
+              {
+                "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 232,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v5.qqqrst.com/yyv5/202308/28/2fqwA3LYF31/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1437
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134239",
+            "title": "四大元素之火之爱链",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1039,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/13/iMNZc4wf8B27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1201
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 976,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/iy5c4FuW6k27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1584
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 631,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/cpbG7nidP327/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1432
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "134327",
+            "title": "告白：第25年的秘密",
+            "status": 200,
+            "ok": true,
+            "branchCount": 1,
+            "directBranchCount": 1,
+            "invalidBranchCount": 0,
+            "media": [
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 203,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/14/3GcWEkpvqA27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 1399
+                }
+              },
+              {
+                "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 935,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v14.qqqrst.com/yyv14/202607/19/KdUyLKUt6r27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 990
+                }
+              },
+              {
+                "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 201,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://v13.qqqrst.com/yyv13/202607/26/b8D9bhi16e27/video/2000k_1080/hls/index.m3u8",
+                  "status": 200,
+                  "ok": true,
+                  "latencyMs": 968
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    },
+    {
+      "round": 3,
+      "slug": "discovered_vod_https_api_guangsuapi_com_api_php_provide_vod_",
+      "name": "光速资源(切)",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "rootCauses": [
+        "SOURCE_EMPTY_CATEGORY:1",
+        "SLOW_SOURCE",
+        "SEARCH_UNAVAILABLE",
+        "INVALID_PLAY_BRANCH"
+      ],
+      "detailOkRate": 1,
+      "playableRate": 1,
+      "mediaPlayableRate": 1,
+      "latestAt": "2026-07-26 12:14:22",
+      "latencyMs": 21007,
+      "evidence": {
+        "categoryCoverage": {
+          "total": 28,
+          "start": 0,
+          "requested": 8,
+          "audited": 8,
+          "complete": false,
+          "nextStart": 8
+        },
+        "searchChecks": [
+          {
+            "term": "天道",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "遥远的救主",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "王志文",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "亮剑",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "甦环传",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          },
+          {
+            "term": "2026",
+            "status": 200,
+            "ok": false,
+            "count": 0,
+            "exactTitleHits": 0
+          }
+        ],
+        "detailChecks": [
+          {
+            "id": "170105",
+            "title": "花织同学转生后还是想干架",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/e1wG4Jmb/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1097,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274333/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNzKwza/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1030,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/920/20260719/4291325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bW6QEYWa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 398,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/923/20260726/4311173/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "169441",
+            "title": "穹庐下的魔女",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/bo2ZELja/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 979,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254893/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/egJpvzYd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1053,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260706/4254887/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dBBP63Yd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1035,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/918/20260712/4274315/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "166340",
+            "title": "东北超好吃",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/eER8NOva/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 1003,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260526/4170161/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/dPNj73wa/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 982,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/907/20260530/4183325/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bYE7lg9b/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 289,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/910/20260606/4196831/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          },
+          {
+            "id": "157349",
+            "title": "群英会2026",
+            "status": 200,
+            "ok": true,
+            "branchCount": 2,
+            "directBranchCount": 1,
+            "invalidBranchCount": 1,
+            "media": [
+              {
+                "url": "https://v.gsuus.com/play/dL9gDqge/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 371,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954721/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/bmZw65pd/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 359,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954703/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              },
+              {
+                "url": "https://v.gsuus.com/play/av2g51ra/index.m3u8",
+                "status": 200,
+                "ok": true,
+                "latencyMs": 341,
+                "contentType": "application/vnd.apple.mpegurl",
+                "encoding": {
+                  "encoding": "utf-8",
+                  "declaredCharset": null,
+                  "confidence": "utf8-strict",
+                  "replacementCount": 0,
+                  "mojibakeCount": 0,
+                  "clean": true
+                },
+                "hardViolation": false,
+                "segment": {
+                  "url": "https://gs.gszyi.com:999/hls/899/20260513/3954697/plist0.ts",
+                  "status": 0,
+                  "ok": false,
+                  "latencyMs": 0
+                }
+              }
+            ],
+            "playable": true,
+            "encoding": {
+              "encoding": "utf-8",
+              "declaredCharset": "utf-8",
+              "confidence": "declared",
+              "replacementCount": 0,
+              "mojibakeCount": 0,
+              "clean": true
+            }
+          }
+        ],
+        "mediaSampleCount": 12,
+        "mediaPlayableCount": 12
+      }
+    }
+  ],
+  "stableObservation": true,
+  "stablePositiveAdmission": false
+}

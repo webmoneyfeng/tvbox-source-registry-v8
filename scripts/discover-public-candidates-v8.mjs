@@ -1,7 +1,8 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dedupeCandidates, isPublicHttpUrl, normalizeCandidateUrl, physicalCandidateKey } from '../src/discovery.mjs';
+import { decodeSourceBytes, encodingEvidence } from '../src/encoding.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TIMEOUT_MS = Number(process.env.DISCOVERY_TIMEOUT_MS || 15000);
@@ -12,6 +13,12 @@ const FEEDS = [
   'https://raw.githubusercontent.com/liu673cn/box/main/a.json',
   'https://raw.githubusercontent.com/liu673cn/box/main/b.json',
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/drpy.json',
+  'https://raw.githubusercontent.com/gaotianliuyun/gao/master/m.json',
+  'https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json',
+  'https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/XYQTVBox.json',
+  'https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/4k.json',
+  'https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/duanju.json',
+  'https://raw.githubusercontent.com/keluo8824-cell/tvbox/main/dongman.json',
   'https://raw.githubusercontent.com/szyyds/TVBox/main/x.json',
   'https://raw.liucn.cc/box/m.json',
   'https://szyyds.cn/tv/x.json',
@@ -28,6 +35,22 @@ const FEEDS = [
   'http://yydsys.top/duo/v.json',
   'http://yydsys.top/duo',
   'https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json',
+  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u',
+  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv4.m3u',
+  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u',
+  'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/au.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/sg.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/my.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mo.m3u',
+  'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
+  'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
+  'https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u',
+  'https://live.zbds.org/tv/iptv6.m3u',
+  'https://m3u.ibert.me/txt/fmml_ipv6.txt',
 ];
 const DISALLOWED_KEY_RE = /(?:jar|spider|ext|parse|player|script)/iu;
 
@@ -69,10 +92,21 @@ async function fetchFeed(url) {
   const timer = setTimeout(() => controller.abort('timeout'), TIMEOUT_MS);
   try {
     const response = await fetch(url, { signal: controller.signal, headers: { accept: 'application/json,text/plain,*/*', 'user-agent': 'tvbox-source-registry-candidate-discovery/1.0' } });
-    const text = await response.text();
-    return { url, ok: response.ok, status: response.status, text, error: '' };
+    const contentType = response.headers.get('content-type') || '';
+    const decoded = decodeSourceBytes(new Uint8Array(await response.arrayBuffer()), contentType);
+    const text = decoded.text;
+    return {
+      url,
+      finalUrl: response.url || url,
+      contentType,
+      encoding: encodingEvidence(decoded),
+      ok: response.ok,
+      status: response.status,
+      text,
+      error: '',
+    };
   } catch (error) {
-    return { url, ok: false, status: 0, text: '', error: String(error?.message || error).slice(0, 240) };
+    return { url, finalUrl: '', contentType: '', encoding: null, ok: false, status: 0, text: '', error: String(error?.message || error).slice(0, 240) };
   } finally {
     clearTimeout(timer);
   }
@@ -107,32 +141,49 @@ const visited = new Set();
 const feeds = [];
 async function walk(url, depth = 0) {
   const normalized = normalizeCandidateUrl(url);
-  if (!normalized || visited.has(normalized) || visited.size >= 120) return;
+  if (!normalized || visited.has(normalized) || visited.size >= 240) return;
   visited.add(normalized);
   const feed = await fetchFeed(normalized);
   feeds.push(feed);
-  if (!feed.ok || depth >= 2) return;
+  if (!feed.ok || depth >= 3) return;
   const payload = parsePayload(feed.text);
   if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return;
   const references = [];
   for (const row of Array.isArray(payload.urls) ? payload.urls : []) references.push(row?.url);
   for (const row of Array.isArray(payload.storeHouse) ? payload.storeHouse : []) references.push(row?.sourceUrl || row?.url);
-  await Promise.all(references.filter((row) => isPublicHttpUrl(row)).slice(0, 80).map((row) => walk(row, depth + 1)));
+  await Promise.all(references.filter((row) => isPublicHttpUrl(row)).slice(0, 120).map((row) => walk(row, depth + 1)));
 }
 await Promise.all(FEEDS.map((feed) => walk(feed)));
 const extracted = feeds.flatMap((feed) => feed.ok ? directCandidates(parsePayload(feed.text), feed.url) : []);
 const candidates = dedupeCandidates(extracted);
 const report = {
   generatedAt: new Date().toISOString(),
-  feeds: feeds.map(({ url, ok, status, error, text }) => ({ url, ok, status, bytes: text.length, error })),
+  feeds: feeds.map(({ url, finalUrl, contentType, encoding, ok, status, error, text }) => ({
+    url,
+    finalUrl,
+    contentType,
+    encoding,
+    parseType: /^\s*#EXTM3U/iu.test(text) ? 'm3u' : parsePayload(text) ? 'json' : 'unknown',
+    ok,
+    status,
+    bytes: text.length,
+    error,
+  })),
   extractedCount: extracted.length,
   candidateCount: candidates.length,
   candidates: candidates.map((candidate) => ({
     ...candidate,
-    physicalKey: physicalCandidateKey(candidate.api),
+    physicalKey: physicalCandidateKey(candidate.api, candidate.kind),
   })),
 };
 await mkdir(path.join(ROOT, 'audit'), { recursive: true });
-await writeFile(path.join(ROOT, 'audit', 'candidate-discovery-latest.json'), JSON.stringify(report, null, 2) + '\n', 'utf8');
+const serialized = JSON.stringify(report, null, 2) + '\n';
+for (const name of ['candidate-discovery-latest.json', 'candidate-discovery-v82.json']) {
+  const target = path.join(ROOT, 'audit', name);
+  const temporary = `${target}.tmp-${process.pid}`;
+  await writeFile(temporary, serialized, 'utf8');
+  JSON.parse(await (await import('node:fs/promises')).readFile(temporary, 'utf8'));
+  await rename(temporary, target);
+}
 console.log(JSON.stringify({ generatedAt: report.generatedAt, extractedCount: report.extractedCount, candidateCount: report.candidateCount, byKind: { vod: candidates.filter((row) => row.kind === 'vod').length, live: candidates.filter((row) => row.kind === 'live').length } }, null, 2));
 for (const candidate of candidates) console.log(`${candidate.kind}\t${candidate.name || '-'}\t${candidate.api}\t${candidate.discoveredFrom}`);
