@@ -1,7 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SOURCE_REGISTRY, LIVE_SOURCE_REGISTRY } from '../src/registry.mjs';
+import { LIVE_SOURCE_REGISTRY, REGISTRY_VERSION, SOURCE_REGISTRY } from '../src/registry.mjs';
 import { auditLiveSource, auditVodSource } from '../src/deep-audit.mjs';
 import { evaluatePublicationGate, summarizeTarget } from '../src/admission.mjs';
 
@@ -151,7 +151,7 @@ const targetGate = evaluatePublicationGate({
 const auditedKeySet = new Set(combinedRows.map(rowKey));
 const combined = {
   generatedAt,
-  registryVersion: 'v8.2.0',
+  registryVersion: REGISTRY_VERSION,
   target: { vod: 10, live: 10 },
   summaries: { vod: vodSummary, live: liveSummary },
   targetGate,
@@ -179,7 +179,7 @@ await writeJsonAtomic('live-deep-audit-v82.json', { generatedAt, ...liveSummary,
 await writeJsonAtomic('source-admission-v82.json', combined);
 await writeJsonAtomic('source-health-v82.json', {
   generatedAt,
-  registryVersion: 'v8.2.0',
+  registryVersion: REGISTRY_VERSION,
   admission: combined.summaries,
   degraded: combined.degraded,
   targetGate: combined.targetGate,

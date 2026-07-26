@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { SOURCE_REGISTRY, LIVE_SOURCE_REGISTRY } from '../src/registry.mjs';
+import { LIVE_SOURCE_REGISTRY, REGISTRY_VERSION, SOURCE_REGISTRY } from '../src/registry.mjs';
 import {
   HEALTH_SCHEMA_VERSION,
   emptyHealthState,
@@ -147,7 +147,7 @@ state.revision = `${state.revision}|live:${state.liveRevision}`;
 
 const payload = {
   generatedAt,
-  registryVersion: 'v8.2.0',
+  registryVersion: REGISTRY_VERSION,
   source: AUDIT_FILE,
   vodVisible: visibleVod.length,
   liveVisible: visibleLive.length,

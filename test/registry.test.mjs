@@ -64,3 +64,18 @@ test('TV sites do not advertise switching or filtering before live evidence exis
   assert.equal(probed.filterable, 1);
   assert.equal(probed.changeable, 1);
 });
+
+
+test('v8.2 audit scripts inherit the canonical registry version', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const files = [
+    'scripts/audit-candidate-pool-v82.mjs',
+    'scripts/audit-deep-sources-v82.mjs',
+    'scripts/seed-health-from-deep-audit-v82.mjs',
+  ];
+  for (const file of files) {
+    const text = await readFile(file, 'utf8');
+    assert.match(text, /REGISTRY_VERSION/u, `${file} should import the registry version constant`);
+    assert.doesNotMatch(text, /registryVersion:\s*['"]v8\.2\.0['"]/u, `${file} must not hard-code a stale v8.2.0 report version`);
+  }
+});

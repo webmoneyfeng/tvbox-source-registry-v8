@@ -1,7 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { LIVE_SOURCE_REGISTRY, SOURCE_REGISTRY, candidateToRegistrySource } from '../src/registry.mjs';
+import { LIVE_SOURCE_REGISTRY, REGISTRY_VERSION, SOURCE_REGISTRY, candidateToRegistrySource } from '../src/registry.mjs';
 import { dedupeCandidates, isPublicHttpUrl } from '../src/discovery.mjs';
 import { auditLiveSource, auditVodSource } from '../src/deep-audit.mjs';
 
@@ -11,6 +11,9 @@ const INPUT = process.env.CANDIDATE_INPUT || 'candidate-discovery-v82.json';
 const CONCURRENCY = Math.max(1, Number(process.env.CANDIDATE_CONCURRENCY || 2));
 const MAX_VOD = Math.max(0, Number(process.env.CANDIDATE_MAX_VOD || 20));
 const MAX_LIVE = Math.max(0, Number(process.env.CANDIDATE_MAX_LIVE || 20));
+const VOD_OFFSET = Math.max(0, Number(process.env.CANDIDATE_OFFSET_VOD || process.env.CANDIDATE_OFFSET || 0));
+const LIVE_OFFSET = Math.max(0, Number(process.env.CANDIDATE_OFFSET_LIVE || process.env.CANDIDATE_OFFSET || 0));
+const AUDIT_LABEL = String(process.env.CANDIDATE_AUDIT_LABEL || '').replace(/[^a-z0-9_-]+/giu, '-').replace(/^-+|-+$/gu, '');
 const CATEGORY_LIMIT = Number(process.env.CANDIDATE_CATEGORY_LIMIT || 8);
 const DETAIL_SAMPLE = Number(process.env.CANDIDATE_DETAIL_SAMPLE || 4);
 const CHANNEL_SAMPLE = Number(process.env.CANDIDATE_CHANNEL_SAMPLE || 12);
@@ -88,8 +91,10 @@ const selected = [...uniqueAgainstRegistry.values()]
     ? !liveKeys.has(`live:${candidate.registryPhysicalKey}`)
     : !vodKeys.has(`vod:${candidate.registryPhysicalKey}`))
   .sort((a, b) => `${a.kind}:${a.api}`.localeCompare(`${b.kind}:${b.api}`));
-const selectedVod = selected.filter((candidate) => candidate.kind === 'vod').slice(0, MAX_VOD);
-const selectedLive = selected.filter((candidate) => candidate.kind === 'live').slice(0, MAX_LIVE);
+const eligibleVod = selected.filter((candidate) => candidate.kind === 'vod');
+const eligibleLive = selected.filter((candidate) => candidate.kind === 'live');
+const selectedVod = eligibleVod.slice(VOD_OFFSET, MAX_VOD > 0 ? VOD_OFFSET + MAX_VOD : VOD_OFFSET);
+const selectedLive = eligibleLive.slice(LIVE_OFFSET, MAX_LIVE > 0 ? LIVE_OFFSET + MAX_LIVE : LIVE_OFFSET);
 
 async function auditCandidate(candidate) {
   const source = candidateSource(candidate);
@@ -121,11 +126,15 @@ async function auditCandidate(candidate) {
 const audited = await mapWithConcurrency([...selectedVod, ...selectedLive], CONCURRENCY, auditCandidate);
 const report = {
   generatedAt: new Date().toISOString(),
-  registryVersion: 'v8.2.0',
+  registryVersion: REGISTRY_VERSION,
   policy: 'Candidate sources stay in PROBATION until repeated native contract, detail and direct-media checks pass. This report does not modify the production registry.',
   input: {
     file: INPUT,
     discoveredCount: discovered.length,
+    eligibleVod: eligibleVod.length,
+    eligibleLive: eligibleLive.length,
+    vodOffset: VOD_OFFSET,
+    liveOffset: LIVE_OFFSET,
     selectedVod: selectedVod.length,
     selectedLive: selectedLive.length,
     categoryLimit: CATEGORY_LIMIT || null,
@@ -139,7 +148,8 @@ const report = {
   rows: audited,
 };
 await mkdir(AUDIT_DIR, { recursive: true });
-await writeJsonAtomic('candidate-pool-v82.json', report);
+const reportFile = AUDIT_LABEL ? `candidate-pool-v82-${AUDIT_LABEL}.json` : 'candidate-pool-v82.json';
+await writeJsonAtomic(reportFile, report);
 await writeJsonAtomic('candidate-pool-latest.json', report);
 console.log(JSON.stringify({
   generatedAt: report.generatedAt,

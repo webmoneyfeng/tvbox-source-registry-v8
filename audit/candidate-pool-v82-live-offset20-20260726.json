@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-07-26T10:04:25.073Z",
+  "registryVersion": "v8.2.3",
+  "policy": "Candidate sources stay in PROBATION until repeated native contract, detail and direct-media checks pass. This report does not modify the production registry.",
+  "input": {
+    "file": "candidate-discovery-v82.json",
+    "discoveredCount": 59,
+    "eligibleVod": 20,
+    "eligibleLive": 22,
+    "vodOffset": 0,
+    "liveOffset": 20,
+    "selectedVod": 0,
+    "selectedLive": 2,
+    "categoryLimit": 8,
+    "detailSample": 4,
+    "channelSample": 6
+  },
+  "summaries": {
+    "vod": {
+      "candidateCount": 0,
+      "active": 0,
+      "watch": 0,
+      "rejected": 0,
+      "directPlayable": 0
+    },
+    "live": {
+      "candidateCount": 2,
+      "active": 0,
+      "watch": 0,
+      "rejected": 2,
+      "directPlayable": 0
+    }
+  },
+  "rows": [
+    {
+      "candidate": {
+        "kind": "live",
+        "api": "https://szyyds.cn/tv/live/yy.txt",
+        "physicalKey": "szyyds.cn/tv/live/yy.txt",
+        "registryPhysicalKey": "szyyds.cn/tv/live/yy.txt",
+        "nativeName": "音乐所",
+        "discoveredFrom": "https://szyyds.cn/tv/x.json"
+      },
+      "source": {
+        "slug": "discovered_live_https_szyyds_cn_tv_live_yy_txt",
+        "provider": "音乐所",
+        "api": "https://szyyds.cn/tv/live/yy.txt"
+      },
+      "state": "PROBATION",
+      "kind": "live",
+      "slug": "discovered_live_https_szyyds_cn_tv_live_yy_txt",
+      "name": "音乐所",
+      "api": "https://szyyds.cn/tv/live/yy.txt",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PLAYLIST_SCHEMA_ERROR",
+        "PLAYLIST_UNAVAILABLE"
+      ],
+      "softWarnings": [
+        "DUPLICATE_RATE_HIGH"
+      ],
+      "rootCauses": [
+        "PLAYLIST_SCHEMA_ERROR",
+        "PLAYLIST_UNAVAILABLE",
+        "DUPLICATE_RATE_HIGH"
+      ],
+      "channelCount": 0,
+      "groupCount": 0,
+      "duplicateRate": 1,
+      "sampleCount": 0,
+      "playableCount": 0,
+      "playableRate": 0,
+      "channelChecks": [],
+      "encoding": {
+        "encoding": "utf-16le",
+        "declaredCharset": null,
+        "confidence": "fallback-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 2122,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "text/plain",
+          "encoding": {
+            "encoding": "utf-16le",
+            "declaredCharset": null,
+            "confidence": "fallback-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 4194304
+        },
+        "channels": []
+      },
+      "directPlayable": false
+    },
+    {
+      "candidate": {
+        "kind": "live",
+        "api": "https://z.szyyds.cn/iptv",
+        "physicalKey": "z.szyyds.cn/iptv",
+        "registryPhysicalKey": "z.szyyds.cn/iptv",
+        "nativeName": "自动更新",
+        "discoveredFrom": "https://szyyds.cn/tv/x.json"
+      },
+      "source": {
+        "slug": "discovered_live_https_z_szyyds_cn_iptv",
+        "provider": "自动更新",
+        "api": "https://z.szyyds.cn/iptv"
+      },
+      "state": "PROBATION",
+      "kind": "live",
+      "slug": "discovered_live_https_z_szyyds_cn_iptv",
+      "name": "自动更新",
+      "api": "https://z.szyyds.cn/iptv",
+      "ok": false,
+      "admissionTier": "REJECTED",
+      "hardFailures": [
+        "PLAYLIST_SCHEMA_ERROR",
+        "PLAYLIST_UNAVAILABLE"
+      ],
+      "softWarnings": [
+        "DUPLICATE_RATE_HIGH"
+      ],
+      "rootCauses": [
+        "PLAYLIST_SCHEMA_ERROR",
+        "PLAYLIST_UNAVAILABLE",
+        "DUPLICATE_RATE_HIGH"
+      ],
+      "channelCount": 0,
+      "groupCount": 0,
+      "duplicateRate": 1,
+      "sampleCount": 0,
+      "playableCount": 0,
+      "playableRate": 0,
+      "channelChecks": [],
+      "encoding": {
+        "encoding": "utf-8",
+        "declaredCharset": null,
+        "confidence": "utf8-strict",
+        "replacementCount": 0,
+        "mojibakeCount": 0,
+        "clean": true
+      },
+      "latencyMs": 472,
+      "evidence": {
+        "playlist": {
+          "status": 200,
+          "contentType": "application/vnd.apple.mpegurl",
+          "encoding": {
+            "encoding": "utf-8",
+            "declaredCharset": null,
+            "confidence": "utf8-strict",
+            "replacementCount": 0,
+            "mojibakeCount": 0,
+            "clean": true
+          },
+          "bytes": 18588
+        },
+        "channels": []
+      },
+      "directPlayable": false
+    }
+  ]
+}

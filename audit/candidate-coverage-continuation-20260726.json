@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-07-26T10:07:25.592Z",
+  "purpose": "Continuation coverage summary for v8.2 candidate pool. This is read-only evidence and does not modify production registry.",
+  "inputs": [
+    {
+      "file": "audit/candidate-pool-v82.json",
+      "generatedAt": "2026-07-26T08:24:23.849Z",
+      "input": {
+        "file": "candidate-discovery-v82.json",
+        "discoveredCount": 60,
+        "selectedVod": 20,
+        "selectedLive": 20,
+        "categoryLimit": 8,
+        "detailSample": 3,
+        "channelSample": 8
+      },
+      "summaries": {
+        "vod": {
+          "candidateCount": 20,
+          "active": 0,
+          "watch": 0,
+          "rejected": 20,
+          "directPlayable": 0
+        },
+        "live": {
+          "candidateCount": 20,
+          "active": 0,
+          "watch": 0,
+          "rejected": 20,
+          "directPlayable": 0
+        }
+      }
+    },
+    {
+      "file": "audit/candidate-pool-v82-live-offset20-20260726.json",
+      "generatedAt": "2026-07-26T10:04:25.073Z",
+      "input": {
+        "file": "candidate-discovery-v82.json",
+        "discoveredCount": 59,
+        "eligibleVod": 20,
+        "eligibleLive": 22,
+        "vodOffset": 0,
+        "liveOffset": 20,
+        "selectedVod": 0,
+        "selectedLive": 2,
+        "categoryLimit": 8,
+        "detailSample": 4,
+        "channelSample": 6
+      },
+      "summaries": {
+        "vod": {
+          "candidateCount": 0,
+          "active": 0,
+          "watch": 0,
+          "rejected": 0,
+          "directPlayable": 0
+        },
+        "live": {
+          "candidateCount": 2,
+          "active": 0,
+          "watch": 0,
+          "rejected": 2,
+          "directPlayable": 0
+        }
+      }
+    }
+  ],
+  "discoveredCount": 60,
+  "eligibleVod": null,
+  "eligibleLive": 22,
+  "auditedUnique": 42,
+  "summaries": {
+    "vod": {
+      "audited": 20,
+      "active": 0,
+      "watch": 0,
+      "rejected": 20,
+      "directPlayable": 0,
+      "rootCauses": {
+        "PROBE_EXCEPTION": 13,
+        "CATEGORY_SCHEMA_ERROR": 5,
+        "API_UNAVAILABLE": 5,
+        "SEARCH_UNAVAILABLE": 6,
+        "SOURCE_DETAIL_GAP": 6,
+        "SOURCE_PLAYBACK_GAP": 7,
+        "INVALID_PLAY_BRANCH": 1,
+        "AD_OR_PARSE_ENDPOINT": 1,
+        "SOURCE_SEARCH_GAP": 1,
+        "SLOW_SOURCE": 1
+      }
+    },
+    "live": {
+      "audited": 22,
+      "active": 0,
+      "watch": 0,
+      "rejected": 22,
+      "directPlayable": 0,
+      "rootCauses": {
+        "PLAYLIST_UNAVAILABLE": 10,
+        "AD_OR_PARSE_ENDPOINT": 1,
+        "PLAYLIST_SCHEMA_ERROR": 9,
+        "DUPLICATE_RATE_HIGH": 8,
+        "PROBE_EXCEPTION": 11
+      }
+    }
+  },
+  "conclusion": "No new candidate from the current discovery file qualifies for publication. The final two previously unaudited live candidates were rejected due to playlist schema/unavailable failures."
+}
