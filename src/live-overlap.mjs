@@ -55,3 +55,8 @@ export function compareLiveProfiles(left, right) {
     rightUrlCoverage: ratio(sharedUrls, rightUrls.length),
   };
 }
+
+export function isHighOverlap(comparison, { nameCoverage = 0.9, urlCoverage = 0.7 } = {}) {
+  return Number(comparison?.leftNameCoverage || 0) >= nameCoverage
+    && Number(comparison?.leftUrlCoverage || 0) >= urlCoverage;
+}

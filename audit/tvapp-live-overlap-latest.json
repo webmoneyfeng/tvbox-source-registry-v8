@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T05:49:01.159Z",
+  "generatedAt": "2026-08-01T06:20:54.635Z",
   "source": {
     "admissionGeneratedAt": "2026-08-01T05:36:31.925Z",
     "stabilityGeneratedAt": "2026-08-01T05:43:04.431Z"
@@ -12,8 +12,9 @@
   },
   "counts": {
     "activeCandidates": 5,
-    "canaryRecommended": 4,
+    "canaryRecommended": 3,
     "exactDuplicates": 1,
+    "highOverlaps": 1,
     "incompleteAudits": 0
   },
   "candidates": [
@@ -25,7 +26,7 @@
         "status": 200,
         "bytes": 63185,
         "truncated": false,
-        "latencyMs": 1154,
+        "latencyMs": 1150,
         "error": ""
       },
       "profile": {
@@ -34,7 +35,7 @@
         "uniqueUrls": 454,
         "fingerprint": "017d3b5203344d35f1dddd86168cff9fa73f51a2faad6b43a3217b0e39929792"
       },
-      "recommendation": "CANARY_RECOMMENDED",
+      "recommendation": "WATCH_HIGH_OVERLAP",
       "exactDuplicateOf": null,
       "topOverlaps": [
         {
@@ -117,7 +118,7 @@
         "status": 200,
         "bytes": 55736,
         "truncated": false,
-        "latencyMs": 1616,
+        "latencyMs": 1171,
         "error": ""
       },
       "profile": {
@@ -209,7 +210,7 @@
         "status": 200,
         "bytes": 98484,
         "truncated": false,
-        "latencyMs": 1980,
+        "latencyMs": 1108,
         "error": ""
       },
       "profile": {
@@ -305,7 +306,7 @@
         "status": 200,
         "bytes": 21945,
         "truncated": false,
-        "latencyMs": 1429,
+        "latencyMs": 1026,
         "error": ""
       },
       "profile": {
@@ -383,7 +384,7 @@
         "status": 200,
         "bytes": 2907995,
         "truncated": false,
-        "latencyMs": 3582,
+        "latencyMs": 2716,
         "error": ""
       },
       "profile": {

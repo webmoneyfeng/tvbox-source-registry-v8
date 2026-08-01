@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isPublicHttpUrl } from '../src/discovery.mjs';
-import { compareLiveProfiles, profileLiveChannels, summarizeLiveProfile } from '../src/live-overlap.mjs';
+import { compareLiveProfiles, isHighOverlap, profileLiveChannels, summarizeLiveProfile } from '../src/live-overlap.mjs';
 import { normalizeLiveUrl, parseM3U } from '../src/live.mjs';
 import { LIVE_SOURCE_REGISTRY } from '../src/registry.mjs';
 
@@ -123,12 +123,13 @@ const candidates = candidateProfiles.map((candidate) => {
   })).filter((comparison) => comparison.sharedNames || comparison.sharedUrls || comparison.sameFingerprint)
     .sort((left, right) => Number(right.sameFingerprint) - Number(left.sameFingerprint) || right.urlJaccard - left.urlJaccard || right.nameJaccard - left.nameJaccard);
   const exact = comparisons.find((comparison) => comparison.sameFingerprint);
+  const highOverlap = comparisons.find((comparison) => isHighOverlap(comparison));
   return {
     name: candidate.name,
     api: candidate.api,
     fetch: { ok: candidate.ok, status: candidate.status, bytes: candidate.bytes, truncated: candidate.truncated, latencyMs: candidate.latencyMs, error: candidate.error },
     profile: summarizeLiveProfile(candidate.profile),
-    recommendation: !candidate.ok || candidate.truncated ? 'WATCH_INCOMPLETE_AUDIT' : exact ? 'REJECTED_DUPLICATE_EXISTING' : 'CANARY_RECOMMENDED',
+    recommendation: !candidate.ok || candidate.truncated ? 'WATCH_INCOMPLETE_AUDIT' : exact ? 'REJECTED_DUPLICATE_EXISTING' : highOverlap ? 'WATCH_HIGH_OVERLAP' : 'CANARY_RECOMMENDED',
     exactDuplicateOf: exact ? { slug: exact.slug, name: exact.name, api: exact.api } : null,
     topOverlaps: comparisons.slice(0, 5),
   };
@@ -142,6 +143,7 @@ const report = {
     activeCandidates: candidates.length,
     canaryRecommended: candidates.filter((row) => row.recommendation === 'CANARY_RECOMMENDED').length,
     exactDuplicates: candidates.filter((row) => row.recommendation === 'REJECTED_DUPLICATE_EXISTING').length,
+    highOverlaps: candidates.filter((row) => row.recommendation === 'WATCH_HIGH_OVERLAP').length,
     incompleteAudits: candidates.filter((row) => row.recommendation === 'WATCH_INCOMPLETE_AUDIT').length,
   },
   candidates,
@@ -158,6 +160,7 @@ const md = [
   `- ACTIVE candidates: ${report.counts.activeCandidates}`,
   `- Canary recommended: ${report.counts.canaryRecommended}`,
   `- Exact duplicates of existing sources: ${report.counts.exactDuplicates}`,
+  `- High-overlap candidates held for review: ${report.counts.highOverlaps}`,
   `- Incomplete audits: ${report.counts.incompleteAudits}`,
   '',
   '## Candidates',
