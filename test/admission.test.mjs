@@ -48,3 +48,13 @@ test('LIVE stability separates full pass, partial pass and failure', () => {
     { ok: true, playableCount: 0, rootCauses: ['MEDIA_SEGMENT_UNAVAILABLE'] },
   ])).tier, 'REJECTED');
 });
+
+test('LIVE stability keeps a truncated playlist in watch even when sampled media passes', () => {
+  const result = classifyLiveStability(summarizeAttempts([
+    { ok: false, playableCount: 2, rootCauses: ['PLAYLIST_TRUNCATED'] },
+    { ok: false, playableCount: 2, rootCauses: ['PLAYLIST_TRUNCATED'] },
+    { ok: false, playableCount: 2, rootCauses: ['PLAYLIST_TRUNCATED'] },
+  ]));
+  assert.equal(result.tier, 'WATCH');
+  assert.equal(result.reason, 'PARTIAL_CHANNEL_FAILURE');
+});

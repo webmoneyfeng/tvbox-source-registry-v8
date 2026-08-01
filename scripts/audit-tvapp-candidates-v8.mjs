@@ -14,6 +14,7 @@ const MAX_VOD_PROBES = Number(process.env.TVAPP_MAX_VOD_PROBES || 40);
 const MAX_LIVE_SHAPE = Number(process.env.TVAPP_MAX_LIVE_SHAPE || 40);
 const MAX_LIVE_MEDIA = Number(process.env.TVAPP_MAX_LIVE_MEDIA || 14);
 const MAX_MEDIA_PER_PLAYLIST = Number(process.env.TVAPP_MAX_MEDIA_PER_PLAYLIST || 8);
+const MAX_LIVE_PLAYLIST_BYTES = Number(process.env.TVAPP_MAX_LIVE_PLAYLIST_BYTES || 3_500_000);
 const MAX_CONFIG_DEPTH = Math.max(0, Math.min(2, Number(process.env.TVAPP_MAX_CONFIG_DEPTH || 2)));
 const MAX_CONFIG_DOCUMENTS = Math.max(1, Number(process.env.TVAPP_MAX_CONFIG_DOCUMENTS || 100));
 const DISALLOWED_DIRECT_SITE_RE = /(?:jar|spider|ext|parse|player|script)/iu;
@@ -30,21 +31,32 @@ async function fetchLimited(url, maxBytes = 1_200_000) {
     const reader = response.body?.getReader?.();
     const chunks = [];
     let total = 0;
+    let complete = false;
     if (reader) {
       while (total < maxBytes) {
         const { done, value } = await reader.read();
-        if (done) break;
+        if (done) { complete = true; break; }
+        const remaining = maxBytes - total;
+        if (value.byteLength > remaining) {
+          chunks.push(Buffer.from(value.subarray(0, remaining)));
+          total += remaining;
+          await reader.cancel();
+          break;
+        }
         chunks.push(Buffer.from(value));
         total += value.byteLength;
       }
     }
-    const body = Buffer.concat(chunks, Math.min(total, maxBytes)).toString('utf8');
+    const declaredBytes = Number(response.headers.get('content-length') || 0);
+    const truncated = declaredBytes > 0 ? declaredBytes > maxBytes : !complete;
+    const body = Buffer.concat(chunks, total).toString('utf8');
     return {
       ok: response.ok,
       status: response.status,
       finalUrl: response.url,
       contentType: response.headers.get('content-type') || '',
-      bytes: Buffer.byteLength(body),
+      bytes: total,
+      truncated,
       latencyMs: Date.now() - started,
       text: body,
       error: '',
@@ -56,6 +68,7 @@ async function fetchLimited(url, maxBytes = 1_200_000) {
       finalUrl: url,
       contentType: '',
       bytes: 0,
+      truncated: false,
       latencyMs: Date.now() - started,
       text: '',
       error: String(error?.message || error).slice(0, 240),
@@ -314,7 +327,7 @@ const vodProbes = await mapWithConcurrency(vodProbeTargets, 4, async (candidate)
 
 const uniqueLiveIndexes = dedupeBy(liveIndexes, (entry) => `live:${physicalCandidateKey(entry.url)}`);
 const liveDocuments = await mapWithConcurrency(uniqueLiveIndexes.slice(0, MAX_LIVE_SHAPE), 5, async (entry) => {
-  const fetched = await fetchLimited(entry.url, 1_200_000);
+  const fetched = await fetchLimited(entry.url, MAX_LIVE_PLAYLIST_BYTES);
   const contract = fetched.ok ? liveContract(fetched.text) : { ok: false, channelCount: 0, groupCount: 0, duplicateRate: 0, sample: [] };
   const channels = fetched.ok ? playlistChannels(fetched.text) : [];
   return {
@@ -324,6 +337,7 @@ const liveDocuments = await mapWithConcurrency(uniqueLiveIndexes.slice(0, MAX_LI
     status: fetched.status,
     finalUrl: fetched.finalUrl,
     bytes: fetched.bytes,
+    truncated: fetched.truncated,
     latencyMs: fetched.latencyMs,
     format: /^\s*#EXTM3U/iu.test(fetched.text) ? 'm3u' : (channels.length ? 'txt' : 'unknown'),
     channelCount: contract.channelCount || channels.length,
@@ -351,7 +365,10 @@ const liveMedia = await mapWithConcurrency(liveMediaTargets, 3, async (row) => {
   const rootCauses = [];
   if (!row.ok) rootCauses.push('PLAYLIST_UNAVAILABLE');
   if (row.ok && row.channelCount < 5) rootCauses.push('PLAYLIST_SCHEMA_ERROR');
-  if (row.ok && row.channelCount >= 5 && playableCount >= 2) recommendedTier = 'PROBATION';
+  if (row.truncated) {
+    recommendedTier = 'WATCH';
+    rootCauses.push('PLAYLIST_TRUNCATED');
+  } else if (row.ok && row.channelCount >= 5 && playableCount >= 2) recommendedTier = 'PROBATION';
   else if (row.ok && row.channelCount >= 5 && playableCount >= 1) {
     recommendedTier = 'WATCH';
     rootCauses.push('PARTIAL_CHANNEL_FAILURE');
@@ -394,6 +411,7 @@ const report = {
       maxDepth: MAX_CONFIG_DEPTH,
       maxDocuments: MAX_CONFIG_DOCUMENTS,
     },
+    maxLivePlaylistBytes: MAX_LIVE_PLAYLIST_BYTES,
     approvalRequiredBeforeRegistryChange: true,
   },
   counts: {

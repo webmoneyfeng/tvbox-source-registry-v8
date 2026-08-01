@@ -13,6 +13,7 @@ const ROUNDS = Number(process.env.TVAPP_STABILITY_ROUNDS || 3);
 const MAX_VOD = Number(process.env.TVAPP_STABILITY_MAX_VOD || 12);
 const MAX_LIVE = Number(process.env.TVAPP_STABILITY_MAX_LIVE || 10);
 const MAX_MEDIA_PER_LIVE = Number(process.env.TVAPP_STABILITY_MEDIA_SAMPLES || 6);
+const MAX_LIVE_PLAYLIST_BYTES = Number(process.env.TVAPP_STABILITY_MAX_LIVE_PLAYLIST_BYTES || 3_500_000);
 const TIMEOUT_MS = Number(process.env.TVAPP_STABILITY_TIMEOUT_MS || 12000);
 
 async function fetchLimited(url, maxBytes = 1_000_000) {
@@ -26,22 +27,33 @@ async function fetchLimited(url, maxBytes = 1_000_000) {
     const reader = response.body?.getReader?.();
     const chunks = [];
     let total = 0;
+    let complete = false;
     if (reader) {
       while (total < maxBytes) {
         const { done, value } = await reader.read();
-        if (done) break;
+        if (done) { complete = true; break; }
+        const remaining = maxBytes - total;
+        if (value.byteLength > remaining) {
+          chunks.push(Buffer.from(value.subarray(0, remaining)));
+          total += remaining;
+          await reader.cancel();
+          break;
+        }
         chunks.push(Buffer.from(value));
         total += value.byteLength;
       }
     }
-    const body = Buffer.concat(chunks, Math.min(total, maxBytes)).toString('utf8');
+    const declaredBytes = Number(response.headers.get('content-length') || 0);
+    const truncated = declaredBytes > 0 ? declaredBytes > maxBytes : !complete;
+    const body = Buffer.concat(chunks, total).toString('utf8');
     return {
       ok: response.ok,
       status: response.status,
       finalUrl: response.url,
       contentType: response.headers.get('content-type') || '',
       latencyMs: Date.now() - started,
-      bytes: Buffer.byteLength(body),
+      bytes: total,
+      truncated,
       text: body,
       error: '',
     };
@@ -53,6 +65,7 @@ async function fetchLimited(url, maxBytes = 1_000_000) {
       contentType: '',
       latencyMs: Date.now() - started,
       bytes: 0,
+      truncated: false,
       text: '',
       error: String(error?.message || error).slice(0, 240),
     };
@@ -140,7 +153,7 @@ async function probeVod(candidate, round) {
 }
 
 async function probeLive(candidate, round) {
-  const playlist = await fetchLimited(candidate.api, 1_000_000);
+  const playlist = await fetchLimited(candidate.api, MAX_LIVE_PLAYLIST_BYTES);
   if (!playlist.ok) {
     return {
       round,
@@ -168,16 +181,18 @@ async function probeLive(candidate, round) {
   const groupCount = contract.groupCount || new Set(channels.map((channel) => channel.group || '未分组')).size;
   const shapeOk = channels.length >= 5 && groupCount >= 1;
   if (!shapeOk) rootCauses.push('PLAYLIST_SCHEMA_ERROR');
+  if (playlist.truncated) rootCauses.push('PLAYLIST_TRUNCATED');
   if (playableCount < 2) rootCauses.push('MEDIA_SEGMENT_UNAVAILABLE');
   if (media.some((row) => row.rootCause === 'AD_OR_PARSE_ENDPOINT')) rootCauses.push('AD_OR_PARSE_ENDPOINT');
   return {
     round,
-    ok: shapeOk && playableCount >= 2,
+    ok: shapeOk && playableCount >= 2 && !playlist.truncated,
     status: playlist.status,
     latencyMs: playlist.latencyMs,
     channelCount: contract.channelCount || channels.length,
     groupCount,
     duplicateRate: contract.duplicateRate || 0,
+    truncated: playlist.truncated,
     playableCount,
     sampleCount: media.length,
     media,
@@ -244,6 +259,7 @@ const report = {
   policy: {
     productionMutation: false,
     rounds: ROUNDS,
+    maxLivePlaylistBytes: MAX_LIVE_PLAYLIST_BYTES,
     approvalRequiredBeforeRegistryChange: true,
     noCategoryRewrite: true,
     noFilterRewrite: true,

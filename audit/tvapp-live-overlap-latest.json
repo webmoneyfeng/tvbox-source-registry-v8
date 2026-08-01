@@ -1,0 +1,471 @@
+{
+  "generatedAt": "2026-08-01T05:49:01.159Z",
+  "source": {
+    "admissionGeneratedAt": "2026-08-01T05:36:31.925Z",
+    "stabilityGeneratedAt": "2026-08-01T05:43:04.431Z"
+  },
+  "policy": {
+    "productionMutation": false,
+    "maxPlaylistBytes": 3500000,
+    "approvalRequiredBeforeRegistryChange": true,
+    "exactDuplicateOnly": true
+  },
+  "counts": {
+    "activeCandidates": 5,
+    "canaryRecommended": 4,
+    "exactDuplicates": 1,
+    "incompleteAudits": 0
+  },
+  "candidates": [
+    {
+      "name": "ZBDS IPv4 TXT",
+      "api": "https://live.zbds.top/tv/iptv4.txt",
+      "fetch": {
+        "ok": true,
+        "status": 200,
+        "bytes": 63185,
+        "truncated": false,
+        "latencyMs": 1154,
+        "error": ""
+      },
+      "profile": {
+        "channelCount": 469,
+        "uniqueNames": 347,
+        "uniqueUrls": 454,
+        "fingerprint": "017d3b5203344d35f1dddd86168cff9fa73f51a2faad6b43a3217b0e39929792"
+      },
+      "recommendation": "CANARY_RECOMMENDED",
+      "exactDuplicateOf": null,
+      "topOverlaps": [
+        {
+          "slug": "zbds-ipv4",
+          "name": "ZBDS IPv4",
+          "api": "https://live.zbds.org/tv/iptv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 334,
+          "sharedUrls": 334,
+          "nameJaccard": 0.9625,
+          "urlJaccard": 0.7357,
+          "leftNameCoverage": 0.9625,
+          "rightNameCoverage": 1,
+          "leftUrlCoverage": 0.7357,
+          "rightUrlCoverage": 1
+        },
+        {
+          "slug": "guovin-result",
+          "name": "Guovin 汇总",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 196,
+          "sharedUrls": 157,
+          "nameJaccard": 0.3058,
+          "urlJaccard": 0.1995,
+          "leftNameCoverage": 0.5648,
+          "rightNameCoverage": 0.4,
+          "leftUrlCoverage": 0.3458,
+          "rightUrlCoverage": 0.3204
+        },
+        {
+          "slug": "guovin-ipv4",
+          "name": "Guovin IPv4",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 88,
+          "sharedUrls": 83,
+          "nameJaccard": 0.2206,
+          "urlJaccard": 0.1624,
+          "leftNameCoverage": 0.2536,
+          "rightNameCoverage": 0.6286,
+          "leftUrlCoverage": 0.1828,
+          "rightUrlCoverage": 0.5929
+        },
+        {
+          "slug": "suxuang-ipv4",
+          "name": "Suxuang IPv4",
+          "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 125,
+          "sharedUrls": 86,
+          "nameJaccard": 0.1584,
+          "urlJaccard": 0.092,
+          "leftNameCoverage": 0.3602,
+          "rightNameCoverage": 0.2205,
+          "leftUrlCoverage": 0.1894,
+          "rightUrlCoverage": 0.1517
+        },
+        {
+          "slug": "fanmingming-ipv6",
+          "name": "范明明 IPv6",
+          "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 14,
+          "sharedUrls": 14,
+          "nameJaccard": 0.0389,
+          "urlJaccard": 0.03,
+          "leftNameCoverage": 0.0403,
+          "rightNameCoverage": 0.5185,
+          "leftUrlCoverage": 0.0308,
+          "rightUrlCoverage": 0.5185
+        }
+      ]
+    },
+    {
+      "name": "咪咕 IPTV",
+      "api": "https://develop202.github.io/migu_video/interface.txt",
+      "fetch": {
+        "ok": true,
+        "status": 200,
+        "bytes": 55736,
+        "truncated": false,
+        "latencyMs": 1616,
+        "error": ""
+      },
+      "profile": {
+        "channelCount": 148,
+        "uniqueNames": 148,
+        "uniqueUrls": 148,
+        "fingerprint": "7dd8319ba746cf5398e84d5a887ffc5059ffaade9df2c142aef85525ff60d30b"
+      },
+      "recommendation": "CANARY_RECOMMENDED",
+      "exactDuplicateOf": null,
+      "topOverlaps": [
+        {
+          "slug": "zbds-ipv4",
+          "name": "ZBDS IPv4",
+          "api": "https://live.zbds.org/tv/iptv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 37,
+          "sharedUrls": 26,
+          "nameJaccard": 0.0831,
+          "urlJaccard": 0.057,
+          "leftNameCoverage": 0.25,
+          "rightNameCoverage": 0.1108,
+          "leftUrlCoverage": 0.1757,
+          "rightUrlCoverage": 0.0778
+        },
+        {
+          "slug": "guovin-ipv4",
+          "name": "Guovin IPv4",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 18,
+          "sharedUrls": 9,
+          "nameJaccard": 0.0667,
+          "urlJaccard": 0.0323,
+          "leftNameCoverage": 0.1216,
+          "rightNameCoverage": 0.1286,
+          "leftUrlCoverage": 0.0608,
+          "rightUrlCoverage": 0.0643
+        },
+        {
+          "slug": "guovin-result",
+          "name": "Guovin 汇总",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 46,
+          "sharedUrls": 18,
+          "nameJaccard": 0.0777,
+          "urlJaccard": 0.029,
+          "leftNameCoverage": 0.3108,
+          "rightNameCoverage": 0.0939,
+          "leftUrlCoverage": 0.1216,
+          "rightUrlCoverage": 0.0367
+        },
+        {
+          "slug": "suxuang-ipv4",
+          "name": "Suxuang IPv4",
+          "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 24,
+          "sharedUrls": 6,
+          "nameJaccard": 0.0347,
+          "urlJaccard": 0.0085,
+          "leftNameCoverage": 0.1622,
+          "rightNameCoverage": 0.0423,
+          "leftUrlCoverage": 0.0405,
+          "rightUrlCoverage": 0.0106
+        },
+        {
+          "slug": "iptv-org-cn",
+          "name": "IPTV-org 中国",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 3,
+          "sharedUrls": 2,
+          "nameJaccard": 0.0069,
+          "urlJaccard": 0.0046,
+          "leftNameCoverage": 0.0203,
+          "rightNameCoverage": 0.0105,
+          "leftUrlCoverage": 0.0135,
+          "rightUrlCoverage": 0.007
+        }
+      ]
+    },
+    {
+      "name": "ZBDS IPv4 M3U",
+      "api": "https://live.zbds.top/tv/iptv4.m3u",
+      "fetch": {
+        "ok": true,
+        "status": 200,
+        "bytes": 98484,
+        "truncated": false,
+        "latencyMs": 1980,
+        "error": ""
+      },
+      "profile": {
+        "channelCount": 334,
+        "uniqueNames": 334,
+        "uniqueUrls": 334,
+        "fingerprint": "c72e98de799e0dd8b6e332747dfe5b6825a790080edcbfcfbaf017e45d31a047"
+      },
+      "recommendation": "REJECTED_DUPLICATE_EXISTING",
+      "exactDuplicateOf": {
+        "slug": "zbds-ipv4",
+        "name": "ZBDS IPv4",
+        "api": "https://live.zbds.org/tv/iptv4.m3u"
+      },
+      "topOverlaps": [
+        {
+          "slug": "zbds-ipv4",
+          "name": "ZBDS IPv4",
+          "api": "https://live.zbds.org/tv/iptv4.m3u",
+          "sameFingerprint": true,
+          "sharedNames": 334,
+          "sharedUrls": 334,
+          "nameJaccard": 1,
+          "urlJaccard": 1,
+          "leftNameCoverage": 1,
+          "rightNameCoverage": 1,
+          "leftUrlCoverage": 1,
+          "rightUrlCoverage": 1
+        },
+        {
+          "slug": "guovin-result",
+          "name": "Guovin 汇总",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 186,
+          "sharedUrls": 125,
+          "nameJaccard": 0.2915,
+          "urlJaccard": 0.1788,
+          "leftNameCoverage": 0.5569,
+          "rightNameCoverage": 0.3796,
+          "leftUrlCoverage": 0.3743,
+          "rightUrlCoverage": 0.2551
+        },
+        {
+          "slug": "guovin-ipv4",
+          "name": "Guovin IPv4",
+          "api": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 82,
+          "sharedUrls": 70,
+          "nameJaccard": 0.2092,
+          "urlJaccard": 0.1733,
+          "leftNameCoverage": 0.2455,
+          "rightNameCoverage": 0.5857,
+          "leftUrlCoverage": 0.2096,
+          "rightUrlCoverage": 0.5
+        },
+        {
+          "slug": "suxuang-ipv4",
+          "name": "Suxuang IPv4",
+          "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 118,
+          "sharedUrls": 74,
+          "nameJaccard": 0.1507,
+          "urlJaccard": 0.0895,
+          "leftNameCoverage": 0.3533,
+          "rightNameCoverage": 0.2081,
+          "leftUrlCoverage": 0.2216,
+          "rightUrlCoverage": 0.1305
+        },
+        {
+          "slug": "fanmingming-ipv6",
+          "name": "范明明 IPv6",
+          "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 14,
+          "sharedUrls": 9,
+          "nameJaccard": 0.0403,
+          "urlJaccard": 0.0256,
+          "leftNameCoverage": 0.0419,
+          "rightNameCoverage": 0.5185,
+          "leftUrlCoverage": 0.0269,
+          "rightUrlCoverage": 0.3333
+        }
+      ]
+    },
+    {
+      "name": "Kimentanm IPTV",
+      "api": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "fetch": {
+        "ok": true,
+        "status": 200,
+        "bytes": 21945,
+        "truncated": false,
+        "latencyMs": 1429,
+        "error": ""
+      },
+      "profile": {
+        "channelCount": 9,
+        "uniqueNames": 9,
+        "uniqueUrls": 9,
+        "fingerprint": "e7de8ab307d8158d5d493ae7b6918dba651fa002280e4f73438a730bc42d7c58"
+      },
+      "recommendation": "CANARY_RECOMMENDED",
+      "exactDuplicateOf": null,
+      "topOverlaps": [
+        {
+          "slug": "fanmingming-ipv6",
+          "name": "范明明 IPv6",
+          "api": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 6,
+          "sharedUrls": 4,
+          "nameJaccard": 0.2,
+          "urlJaccard": 0.125,
+          "leftNameCoverage": 0.6667,
+          "rightNameCoverage": 0.2222,
+          "leftUrlCoverage": 0.4444,
+          "rightUrlCoverage": 0.1481
+        },
+        {
+          "slug": "zbds-ipv4",
+          "name": "ZBDS IPv4",
+          "api": "https://live.zbds.org/tv/iptv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 7,
+          "sharedUrls": 5,
+          "nameJaccard": 0.0208,
+          "urlJaccard": 0.0148,
+          "leftNameCoverage": 0.7778,
+          "rightNameCoverage": 0.021,
+          "leftUrlCoverage": 0.5556,
+          "rightUrlCoverage": 0.015
+        },
+        {
+          "slug": "iptv-org-cn",
+          "name": "IPTV-org 中国",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 0,
+          "sharedUrls": 1,
+          "nameJaccard": 0,
+          "urlJaccard": 0.0034,
+          "leftNameCoverage": 0,
+          "rightNameCoverage": 0,
+          "leftUrlCoverage": 0.1111,
+          "rightUrlCoverage": 0.0035
+        },
+        {
+          "slug": "suxuang-ipv4",
+          "name": "Suxuang IPv4",
+          "api": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 6,
+          "sharedUrls": 1,
+          "nameJaccard": 0.0105,
+          "urlJaccard": 0.0017,
+          "leftNameCoverage": 0.6667,
+          "rightNameCoverage": 0.0106,
+          "leftUrlCoverage": 0.1111,
+          "rightUrlCoverage": 0.0018
+        }
+      ]
+    },
+    {
+      "name": "IPTV-org 全量",
+      "api": "https://iptv-org.github.io/iptv/index.m3u",
+      "fetch": {
+        "ok": true,
+        "status": 200,
+        "bytes": 2907995,
+        "truncated": false,
+        "latencyMs": 3582,
+        "error": ""
+      },
+      "profile": {
+        "channelCount": 10421,
+        "uniqueNames": 10421,
+        "uniqueUrls": 10421,
+        "fingerprint": "910df5315a04c33b56aee6bf49eb787b93ddc8d7f34a6dba479b0e2412aebc04"
+      },
+      "recommendation": "CANARY_RECOMMENDED",
+      "exactDuplicateOf": null,
+      "topOverlaps": [
+        {
+          "slug": "iptv-org-us",
+          "name": "IPTV-org 美国",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 693,
+          "sharedUrls": 665,
+          "nameJaccard": 0.0656,
+          "urlJaccard": 0.0628,
+          "leftNameCoverage": 0.0665,
+          "rightNameCoverage": 0.8319,
+          "leftUrlCoverage": 0.0638,
+          "rightUrlCoverage": 0.7983
+        },
+        {
+          "slug": "iptv-org-in",
+          "name": "IPTV-org 印度",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 405,
+          "sharedUrls": 406,
+          "nameJaccard": 0.0382,
+          "urlJaccard": 0.0383,
+          "leftNameCoverage": 0.0389,
+          "rightNameCoverage": 0.6983,
+          "leftUrlCoverage": 0.039,
+          "rightUrlCoverage": 0.7
+        },
+        {
+          "slug": "iptv-org-br",
+          "name": "IPTV-org 巴西",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 257,
+          "sharedUrls": 258,
+          "nameJaccard": 0.0246,
+          "urlJaccard": 0.0247,
+          "leftNameCoverage": 0.0247,
+          "rightNameCoverage": 0.8595,
+          "leftUrlCoverage": 0.0248,
+          "rightUrlCoverage": 0.8629
+        },
+        {
+          "slug": "iptv-org-cn",
+          "name": "IPTV-org 中国",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 245,
+          "sharedUrls": 245,
+          "nameJaccard": 0.0234,
+          "urlJaccard": 0.0234,
+          "leftNameCoverage": 0.0235,
+          "rightNameCoverage": 0.8537,
+          "leftUrlCoverage": 0.0235,
+          "rightUrlCoverage": 0.8537
+        },
+        {
+          "slug": "iptv-org-it",
+          "name": "IPTV-org 意大利",
+          "api": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/it.m3u",
+          "sameFingerprint": false,
+          "sharedNames": 202,
+          "sharedUrls": 213,
+          "nameJaccard": 0.0193,
+          "urlJaccard": 0.0204,
+          "leftNameCoverage": 0.0194,
+          "rightNameCoverage": 0.8112,
+          "leftUrlCoverage": 0.0204,
+          "rightUrlCoverage": 0.8554
+        }
+      ]
+    }
+  ]
+}
