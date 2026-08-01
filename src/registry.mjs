@@ -1,4 +1,4 @@
-export const REGISTRY_VERSION = 'v8.2.3';
+export const REGISTRY_VERSION = 'v8.2.4';
 
 const RAW_SOURCES = [
   { slug: 'hhzy-m3u8', displayName: '\u8c6a\u534e\u76f4\u8fde', provider: 'hhzy', api: 'https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/', seedStatus: 'ACTIVE', priority: 120 },
@@ -130,7 +130,7 @@ export function sourceDisplayName(source, index = (source.kind === 'live' ? LIVE
   catch { return source.slug || `source-${index + 1}`; }
 }
 
-export function tvSite(source, index, { quickSearch = false, health = null } = {}) {
+export function tvSite(source, index, { quickSearch = false, health = null, api = source.api } = {}) {
   const nativeFilterable = health?.nativeFilterable === true || source.nativeFilterable === true;
   const changeable = health?.directPlaybackEligible === true || source.directPlaybackEligible === true;
   const searchable = health?.searchCapability === true || source.searchable === true;
@@ -138,7 +138,7 @@ export function tvSite(source, index, { quickSearch = false, health = null } = {
     key: source.key,
     name: sourceDisplayName(source, index),
     type: 1,
-    api: source.api,
+    api,
     searchable: searchable ? 1 : 0,
     quickSearch: quickSearch && searchable ? 1 : 0,
     filterable: nativeFilterable ? 1 : 0,

@@ -111,3 +111,21 @@ test('seed admission is explicit when a source has not yet been probed in KV', (
   assert.equal(effectiveAdmissionTier({ ...active, seedStatus: 'WATCH' }, null), 'WATCH');
   assert.equal(verificationState({ ...active, seedStatus: 'WATCH' }, null), 'UNVERIFIED');
 });
+
+test('health row preserves native category manifest for VOD sources', () => {
+  const row = applyProbe(null, { slug: 'sample', kind: 'vod', seedStatus: 'ACTIVE' }, {
+    ok: true,
+    admissionTier: 'ACTIVE',
+    detailOk: true,
+    playOk: true,
+    nativeCategoryManifest: {
+      schemaVersion: 'native-category-1',
+      checkedAt: '2026-08-01T00:00:00.000Z',
+      visibleCount: 1,
+      hiddenCount: 1,
+      rows: [{ id: '2', name: 'Leaf', visible: true, nativeClass: { type_id: '2', type_name: 'Leaf' } }],
+    },
+  }, '2026-08-01T00:00:00.000Z');
+
+  assert.equal(row.nativeCategoryManifest.visibleCount, 1);
+});

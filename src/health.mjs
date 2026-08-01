@@ -157,6 +157,9 @@ export function applyProbe(previous, source, probe, checkedAt) {
     categoryCount: Number(probe.categoryCount || 0),
     categoryOkCount: Number(probe.categoryOkCount || 0),
     categoryChecks: Array.isArray(probe.categoryChecks) ? probe.categoryChecks : [],
+    nativeCategoryManifest: probe.nativeCategoryManifest && typeof probe.nativeCategoryManifest === 'object'
+      ? probe.nativeCategoryManifest
+      : before.nativeCategoryManifest || null,
     emptyCategoryCount: Number(probe.emptyCategoryCount || 0),
     listCount: Number(probe.listCount || 0),
     searchCount: Number(probe.searchCount || 0),

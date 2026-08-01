@@ -20,8 +20,9 @@ import { dedupeCandidates, extractCandidates, isPublicHttpUrl, parseJsonLike } f
 import { channelSample, dedupeChannels, liveContract, normalizeLiveUrl, parseM3U } from './live.mjs';
 import { scoreLiveProbe, scoreVodProbe } from './scoring.mjs';
 import { decodeSourceBytes, encodingEvidence } from './encoding.mjs';
+import { buildCategoryManifest, chooseCategoryManifest, visibleClassesFromManifest } from './native-category.mjs';
 
-const VERSION = 'tvbox-source-registry-v8.2.3';
+const VERSION = 'tvbox-source-registry-v8.2.4';
 const REGISTRY_MODE = 'validated-direct-source-registry-v8.2';
 const HEALTH_KEY = 'registry:health:v3';
 const PROBE_TIMEOUT_MS = 8000;
@@ -35,6 +36,7 @@ const PERSIST_HEARTBEAT_MS = 30 * 60 * 1000;
 const DISCOVERY_INTERVAL_MS = 6 * 60 * 60 * 1000;
 const DISCOVERY_RETRY_INTERVAL_MS = 30 * 60 * 1000;
 const MAX_DISCOVERY_FEEDS_PER_RUN = 3;
+const MAX_CATEGORY_PROBES_PER_VOD_SOURCE = 12;
 const SEARCH_TERMS = ['\u5929\u9053', '\u4eae\u5251', '\u7504\u5b1b\u4f20', '\u6d41\u6d6a\u5730\u7403', '\u54ea\u5412'];
 const DISCOVERY_FEEDS = [
   'https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json',
@@ -177,10 +179,22 @@ async function fetchDocument(url, maxBytes = MAX_BODY_BYTES) {
 }
 
 async function fetchJson(source, params) {
-  const result = await fetchDocument(sourceUrl(source, params));
+  return fetchJsonUrl(sourceUrl(source, params));
+}
+
+async function fetchJsonUrl(url) {
+  const result = await fetchDocument(url);
   let data = null;
   try { data = JSON.parse(result.text.replace(/^\uFEFF/u, '').trim()); } catch {}
   return { ...result, data, ok: Boolean(result.ok && data && typeof data === 'object') };
+}
+
+function sourceRequestUrl(source, requestUrl) {
+  const upstream = new URL(source.api);
+  const incoming = new URL(requestUrl);
+  for (const key of new Set(incoming.searchParams.keys())) upstream.searchParams.delete(key);
+  for (const [key, value] of incoming.searchParams) upstream.searchParams.append(key, value);
+  return upstream.toString();
 }
 
 function hardDocumentViolation(document) {
@@ -278,7 +292,55 @@ function latestSourceTime(rows) {
   return latest ? new Date(latest).toISOString() : null;
 }
 
-export async function probeVodSource(source) {
+export async function probeNativeCategories(source, classes, previousManifest = null, existingChecks = [], upstreamListing = null) {
+  const probes = new Map();
+  for (const item of previousManifest?.rows || []) {
+    const probe = {
+      ok: item.probe?.ok,
+      count: item.probe?.count,
+      total: item.probe?.total,
+      status: item.probe?.status,
+      error: item.probe?.error,
+    };
+    if (probe.ok || Number(probe.status) > 0 || probe.error) probes.set(item.id, probe);
+  }
+  for (const [id, probe] of existingChecks.map((item) => [item.id, {
+    ok: item.ok,
+    count: item.count,
+    total: item.total,
+    status: item.status,
+    error: item.error,
+  }])) probes.set(id, probe);
+  const total = (classes || []).length;
+  const start = total ? Number(previousManifest?.probeCursor || 0) % total : 0;
+  const targets = total
+    ? Array.from({ length: Math.min(MAX_CATEGORY_PROBES_PER_VOD_SOURCE, total) }, (_, offset) => classes[(start + offset) % total])
+    : [];
+  const missing = targets.filter((category) => !probes.has(classId(category)));
+  const results = await mapWithConcurrency(missing, 4, async (category) => {
+    const id = classId(category);
+    const result = await fetchJson(source, { ac: 'videolist', t: id, pg: 1 });
+    const rows = rowsOf(result.data);
+    return [id, {
+      ok: Boolean(result.ok && rows.length),
+      count: rows.length,
+      total: Number(result.data?.total || rows.length),
+      status: result.status,
+      error: result.error || '',
+    }];
+  });
+  for (const [id, probe] of results) probes.set(id, probe);
+  const current = buildCategoryManifest(classes, probes, new Date().toISOString(), upstreamListing);
+  const nextProbeIndex = total ? (start + targets.length) % total : 0;
+  const enriched = {
+    ...current,
+    probeCursor: nextProbeIndex,
+    probedCount: current.rows.filter((row) => row.probe.ok || row.probe.status > 0).length,
+  };
+  return chooseCategoryManifest(enriched, previousManifest);
+}
+
+export async function probeVodSource(source, previousHealth = null) {
   const started = Date.now();
   try {
     const classListing = await fetchJson(source, { ac: 'list' });
@@ -305,6 +367,13 @@ export async function probeVodSource(source) {
         error: result.error || '',
       };
     });
+    const nativeCategoryManifest = await probeNativeCategories(
+      source,
+      classes,
+      previousHealth?.nativeCategoryManifest || null,
+      categoryChecks,
+      classListing.data,
+    );
     const evidence = [];
     const searchResults = [];
     let sample = listingRows[0] || null;
@@ -347,6 +416,7 @@ export async function probeVodSource(source) {
       kind: 'vod', slug: source.slug, ok, admissionTier, hardFailure: hardFailures.length > 0, hardFailures, softWarnings, hardViolation,
       httpStatus: listing.status || detail?.status || 0,
       classCount: classes.length, categoryCount: classes.length, categoryOkCount: categoryChecks.filter((item) => item.ok).length, categoryChecks,
+      nativeCategoryManifest,
       listCount: listingRows.length, searchEvidence: evidence,
       searchCount: evidence.reduce((sum, item) => sum + item.count, 0), detailOk, playOk,
       playBranchCount: playContract.branchCount, directBranchCount: playContract.directBranchCount, invalidBranchCount: playContract.invalidBranchCount,
@@ -381,6 +451,7 @@ export async function probeVodSource(source) {
       searchEvidence: [], searchCount: 0, detailOk: false, playOk: false, directPlaybackEligible: false,
       nativeFilterable: false, nativeSortable: false, nativeFilterKeys: [], nativeSortKeys: [],
       emptyCategoryCount: 0, searchCapability: false, detailCapability: false, playableRate: 0,
+      nativeCategoryManifest: previousHealth?.nativeCategoryManifest || null,
       encoding: null, rootCauses: ['PROBE_EXCEPTION'], evidence: {}, latencyMs: Date.now() - started,
       error: String(error?.message || error).slice(0, 240),
     };
@@ -490,8 +561,8 @@ export async function probeLiveSource(source) {
   }
 }
 
-export async function probeSource(source) {
-  return source.kind === 'live' ? probeLiveSource(source) : probeVodSource(source);
+export async function probeSource(source, previousHealth = null) {
+  return source.kind === 'live' ? probeLiveSource(source) : probeVodSource(source, previousHealth);
 }
 
 async function mapWithConcurrency(items, limit, callback) {
@@ -603,13 +674,54 @@ function effectiveSources(registry, state) {
   return { sources, degraded: sources.length === 0 };
 }
 
+function sourceBySiteKey(registry, key) {
+  return registry.find((source) => source.key === key || source.slug === key) || null;
+}
+
+function listWithVisibleClasses(upstreamData, manifest) {
+  const visibleClasses = visibleClassesFromManifest(manifest);
+  if (!visibleClasses.length) return upstreamData;
+  return { ...upstreamData, class: visibleClasses };
+}
+
+async function sourceAdapter(request, env, sourceKey) {
+  const state = await readHealth(env);
+  const source = sourceBySiteKey(allRegistry(state), sourceKey);
+  if (!source || source.kind !== 'vod') return responseJson({ ok: false, error: 'source not found' }, 404, 0);
+
+  const input = new URL(request.url);
+  const isClassListing = (input.searchParams.get('ac') || '').toLowerCase() === 'list';
+  const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug] || {};
+  const manifest = row.nativeCategoryManifest;
+  if (isClassListing && manifest?.visibleCount > 0) {
+    return responseJson({
+      ...(manifest.nativeListing || {}),
+      class: visibleClassesFromManifest(manifest),
+    }, 200, 60);
+  }
+
+  const upstream = await fetchJsonUrl(sourceRequestUrl(source, input.toString()));
+  if (isClassListing && upstream.ok) {
+    return responseJson(listWithVisibleClasses(upstream.data, manifest), upstream.status || 200, 60);
+  }
+  if (isClassListing && manifest?.visibleCount > 0) {
+    return responseJson({ class: visibleClassesFromManifest(manifest) }, 200, 60);
+  }
+  if (upstream.ok) return responseJson(upstream.data, upstream.status || 200, 60);
+  return responseJson({ code: upstream.status || 502, msg: upstream.error || 'upstream request failed', list: [] }, upstream.status || 502, 0);
+}
+
 export function buildConfig(origin, state = emptyHealthState()) {
   const registry = allRegistry(state);
   const vod = publishedFor(registry, state, 'vod');
   const live = publishedFor(registry, state, 'live');
   const sites = vod.map((source, index) => {
     const row = state.sources[sourceHealthKey(source)] || state.sources[source.slug] || null;
-    return tvSite(source, kindRegistry(registry, 'vod').indexOf(source), { quickSearch: index === 0, health: row });
+    return tvSite(source, kindRegistry(registry, 'vod').indexOf(source), {
+      quickSearch: index === 0,
+      health: row,
+      api: `${origin}/source/${encodeURIComponent(source.key)}`,
+    });
   });
   return {
     spider: '',
@@ -788,7 +900,10 @@ async function scheduled(env) {
   const registry = allRegistry(stateForProbe);
   const batch = selectionBatch(registry, stateForProbe);
   const checkedAt = new Date().toISOString();
-  const rows = await mapWithConcurrency(batch, MAX_PROBE_SOURCES, probeSource);
+  const rows = await mapWithConcurrency(batch, MAX_PROBE_SOURCES, (source) => {
+    const previousHealth = stateForProbe.sources[sourceHealthKey(source)] || stateForProbe.sources[source.slug] || null;
+    return probeSource(source, previousHealth);
+  });
   const next = updateHealthState(registry, stateForProbe, rows, checkedAt);
   next.lastKnownGoodVOD = stateForProbe.lastKnownGoodVOD || [];
   next.lastKnownGoodLIVE = stateForProbe.lastKnownGoodLIVE || [];
@@ -910,6 +1025,8 @@ export default {
     try {
       const url = new URL(request.url);
       if (request.method === 'OPTIONS') return responseText('', 204, 86400);
+      const sourceMatch = url.pathname.match(/^\/source\/([^/]+)$/u);
+      if (sourceMatch) return sourceAdapter(request, env, decodeURIComponent(sourceMatch[1]));
       if (url.pathname === '/config.json' || url.pathname === '/config') return config(request, env);
       if (url.pathname === '/live.txt' || url.pathname === '/live') {
         return liveText(request, env);

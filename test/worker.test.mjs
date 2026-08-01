@@ -214,3 +214,61 @@ test('visible source names are unique and do not expose health tiers', () => {
   assert.equal(new Set(names).size, names.length);
   assert.ok(!names.some((name) => /(?:WATCH|ACTIVE|REJECTED|\u89c2\u5bdf|\u5907\u7528)/iu.test(name)));
 });
+
+test('source adapter returns visible native classes for ac=list and preserves class ids', async () => {
+  const state = emptyHealthState('2026-08-01T00:00:00.000Z');
+  state.sources['vod:hhzy-m3u8'] = {
+    nativeCategoryManifest: {
+      visibleCount: 1,
+      rows: [
+        { id: '1', name: 'Parent', visible: false, nativeClass: { type_id: '1', type_name: 'Parent' } },
+        { id: '9', name: 'Action', visible: true, nativeClass: { type_id: '9', type_name: 'Action' } },
+      ],
+    },
+  };
+  const env = {
+    SOURCE_HEALTH: {
+      get: async () => state,
+      put: async () => {},
+    },
+  };
+  const response = await worker.fetch(new Request('https://example.com/source/registry_vod_hhzy_m3u8?ac=list'), env);
+  const json = await response.json();
+
+  assert.equal(response.status, 200);
+  assert.deepEqual(json.class, [{ type_id: '9', type_name: 'Action' }]);
+});
+
+test('source adapter forwards non-list requests without changing query semantics', async () => {
+  const originalFetch = globalThis.fetch;
+  const seen = [];
+  globalThis.fetch = async (request) => {
+    seen.push(String(request.url || request));
+    return new Response(JSON.stringify({ list: [] }), { status: 200, headers: { 'content-type': 'application/json' } });
+  };
+  const env = { SOURCE_HEALTH: { get: async () => emptyHealthState(), put: async () => {} } };
+  try {
+    await worker.fetch(new Request('https://example.com/source/registry_vod_hhzy_m3u8?ac=videolist&t=9&pg=2&f=%7B%22class%22%3A%22x%22%7D'), env);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+
+  const url = new URL(seen[0]);
+  assert.equal(url.searchParams.get('ac'), 'videolist');
+  assert.equal(url.searchParams.get('t'), '9');
+  assert.equal(url.searchParams.get('pg'), '2');
+  assert.equal(url.searchParams.get('f'), '{"class":"x"}');
+});
+
+test('config publishes worker adapter API while sources endpoint keeps original upstream API', async () => {
+  const env = { SOURCE_HEALTH: { get: async () => emptyHealthState(), put: async () => {} } };
+  const configResponse = await worker.fetch(new Request('https://example.com/config.json'), env);
+  const config = await configResponse.json();
+  assert.match(config.sites[0].api, /^https:\/\/example\.com\/source\/registry_vod_/u);
+
+  const sourcesResponse = await worker.fetch(new Request('https://example.com/sources.json'), env);
+  const sources = await sourcesResponse.json();
+  const vod = sources.sources.find((row) => row.kind === 'vod');
+  assert.match(vod.api, /^https?:\/\//u);
+  assert.doesNotMatch(vod.api, /\/source\/registry_vod_/u);
+});
