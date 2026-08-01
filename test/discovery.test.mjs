@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { dedupeCandidates, extractCandidates, isPublicHttpUrl } from '../src/discovery.mjs';
+import { dedupeCandidates, extractCandidates, extractConfigReferences, isPublicHttpUrl } from '../src/discovery.mjs';
 import { candidateToRegistrySource } from '../src/registry.mjs';
 
 test('discovery accepts only public HTTP URLs', () => {
@@ -21,6 +21,21 @@ test('discovery extracts type 1 CMS and live candidates but ignores scripts', ()
   }, 'https://feed.example.com/config.json');
   assert.equal(candidates.length, 2);
   assert.equal(candidates[0].kind, 'vod');
+});
+
+test('discovery extracts only public non-script storehouse references', () => {
+  const references = extractConfigReferences({
+    urls: [
+      { name: 'catalog', url: 'https://example.com/catalog.json' },
+      { name: 'script', url: 'https://example.com/spider.jar' },
+      'https://example.com/second.json',
+      { name: 'private', url: 'http://127.0.0.1/internal.json' },
+    ],
+  }, 'https://feed.example.com/storehouse.json');
+  assert.deepEqual(references.map((reference) => [reference.name, reference.api]), [
+    ['catalog', 'https://example.com/catalog.json'],
+    ['', 'https://example.com/second.json'],
+  ]);
 });
 
 test('discovery deduplicates same physical path', () => {

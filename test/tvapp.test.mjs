@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { parseTvappReadmeSources, tvappKnownNameForUrl } from '../src/tvapp.mjs';
+import { parseTvappPayload, parseTvappReadmeSources, tvappKnownNameForUrl } from '../src/tvapp.mjs';
 
 test('TVAPP parser extracts only source sections and preserves labels', () => {
   const markdown = `# Demo
@@ -20,6 +20,14 @@ https://example.com/not-a-source.json
   assert.deepEqual(entries.map((entry) => entry.kind), ['vod_index', 'live']);
   assert.equal(entries[0].label, '示例点播');
   assert.equal(entries[1].label, '示例直播');
+});
+
+test('TVAPP payload parser accepts comments and trailing commas without altering URLs', () => {
+  const payload = parseTvappPayload(`
+    // comment
+    { "urls": [{ "name": "catalog", "url": "https://example.com/config.json" },], }
+  `);
+  assert.equal(payload.urls[0].url, 'https://example.com/config.json');
 });
 
 test('TVAPP known source names avoid raw host fallback', () => {

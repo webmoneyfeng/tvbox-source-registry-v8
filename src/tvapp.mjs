@@ -2,6 +2,71 @@ const SOURCE_SECTION_RE = /^##\s*(接口源|直播源)/u;
 const NEXT_SECTION_RE = /^##\s+/u;
 const URL_RE = /https?:\/\/[^\s\t)\]<>`]+/giu;
 
+export function stripJsonComments(value) {
+  let output = '';
+  let inString = false;
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  for (let index = 0; index < value.length; index += 1) {
+    const current = value[index];
+    const next = value[index + 1];
+    if (lineComment) {
+      if (current === '\n') { lineComment = false; output += current; }
+      continue;
+    }
+    if (blockComment) {
+      if (current === '*' && next === '/') { blockComment = false; index += 1; }
+      else if (current === '\n') output += current;
+      continue;
+    }
+    if (inString) {
+      output += current;
+      if (escaped) escaped = false;
+      else if (current === '\\') escaped = true;
+      else if (current === '"') inString = false;
+      continue;
+    }
+    if (current === '"') { inString = true; output += current; continue; }
+    if (current === '/' && next === '/') { lineComment = true; index += 1; continue; }
+    if (current === '/' && next === '*') { blockComment = true; index += 1; continue; }
+    output += current;
+  }
+  return output;
+}
+
+export function stripTrailingJsonCommas(value) {
+  let output = '';
+  let inString = false;
+  let escaped = false;
+  for (let index = 0; index < value.length; index += 1) {
+    const current = value[index];
+    if (inString) {
+      output += current;
+      if (escaped) escaped = false;
+      else if (current === '\\') escaped = true;
+      else if (current === '"') inString = false;
+      continue;
+    }
+    if (current === '"') { inString = true; output += current; continue; }
+    if (current === ',') {
+      let cursor = index + 1;
+      while (/\s/u.test(value[cursor] || '')) cursor += 1;
+      if (value[cursor] === '}' || value[cursor] === ']') continue;
+    }
+    output += current;
+  }
+  return output;
+}
+
+export function parseTvappPayload(text) {
+  const value = String(text || '').replace(/^\uFEFF/u, '').trim();
+  if (!value) return null;
+  if (/^#EXTM3U/iu.test(value)) return value;
+  try { return JSON.parse(stripTrailingJsonCommas(stripJsonComments(value))); }
+  catch { return null; }
+}
+
 function cleanUrl(value) {
   return String(value || '')
     .trim()

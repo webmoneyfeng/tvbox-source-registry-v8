@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-01T04:42:53.859Z",
+  "generatedAt": "2026-08-01T05:08:24.893Z",
   "input": {
-    "generatedAt": "2026-08-01T04:39:46.564Z",
+    "generatedAt": "2026-08-01T05:05:00.871Z",
     "source": {
       "repository": "https://github.com/youhunwl/TVAPP",
       "readme": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
@@ -14,18 +14,25 @@
       "directSourceOnly": true,
       "noCategoryRewrite": true,
       "noFilterRewrite": true,
+      "configTraversal": {
+        "maxDepth": 2,
+        "maxDocuments": 100
+      },
       "approvalRequiredBeforeRegistryChange": true
     },
     "counts": {
       "readmeSourceUrls": 80,
       "vodIndexUrls": 41,
       "liveUrls": 39,
-      "vodDocuments": 41,
-      "extractedVodCandidates": 61,
+      "vodDocuments": 56,
+      "nestedVodDocuments": 16,
+      "configReferenceUrls": 25,
+      "configTraversalTruncated": false,
+      "extractedVodCandidates": 64,
       "newVodProbeTargets": 40,
-      "vodProbation": 2,
-      "vodWatch": 7,
-      "vodRejected": 31,
+      "vodProbation": 4,
+      "vodWatch": 4,
+      "vodRejected": 32,
       "liveDocuments": 37,
       "liveShapeOk": 27,
       "liveMediaTargets": 14,
@@ -602,14 +609,17 @@
         "kind": "vod_index",
         "label": "<p>详细教程：<a href=\" target=\"_blank\">帮助中心</a></p>",
         "url": "https://app.iyouhun.com/help\"",
+        "depth": 0,
         "ok": false,
         "status": 404,
         "finalUrl": "https://app.iyouhun.com/help%22",
         "bytes": 3699,
-        "latencyMs": 222,
+        "latencyMs": 262,
         "documentType": "html",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -618,14 +628,17 @@
         "kind": "vod_index",
         "label": "饭太硬接口",
         "url": "http://www.饭太硬.net/tv",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://www.xn--sss604efuw.net/tv",
         "bytes": 21966,
-        "latencyMs": 691,
+        "latencyMs": 711,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -634,14 +647,17 @@
         "kind": "vod_index",
         "label": "肥猫接口",
         "url": "http://肥猫.net",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xn--z7x900a.net/",
         "bytes": 40846,
-        "latencyMs": 893,
+        "latencyMs": 959,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -650,14 +666,17 @@
         "kind": "vod_index",
         "label": "摸鱼儿接口",
         "url": "http://我不是.摸鱼儿.top",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://我不是.摸鱼儿.top",
         "bytes": 0,
-        "latencyMs": 10595,
+        "latencyMs": 10566,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -666,14 +685,17 @@
         "kind": "vod_index",
         "label": "王小二放牛娃接口",
         "url": "http://tvbox.王二小放牛娃.top",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://tvbox.王二小放牛娃.top",
         "bytes": 0,
-        "latencyMs": 547,
+        "latencyMs": 432,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -682,14 +704,17 @@
         "kind": "vod_index",
         "label": "王小二放牛娃新接口",
         "url": "https://9280.kstore.vip/newwex.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://9280.kstore.vip/newwex.json",
         "bytes": 25421,
-        "latencyMs": 456,
+        "latencyMs": 383,
         "documentType": "tvbox_config",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -698,13 +723,15 @@
         "kind": "vod_index",
         "label": "哈基米",
         "url": "https://17264.kstore.space/哈基米.png",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://17264.kstore.space/%E5%93%88%E5%9F%BA%E7%B1%B3.png",
         "bytes": 68325,
-        "latencyMs": 450,
+        "latencyMs": 486,
         "documentType": "tvbox_config",
         "extractedVodCount": 42,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -959,6 +986,7 @@
             "discoveredFrom": "https://17264.kstore.space/哈基米.png"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -967,30 +995,17 @@
         "kind": "vod_index",
         "label": "动漫城接口",
         "url": "https://www.yingm.cc/dm/dm.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://www.yingm.cc/dm/dm.json",
         "bytes": 8737,
-        "latencyMs": 1420,
+        "latencyMs": 1248,
         "documentType": "tvbox_config",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
-        "error": ""
-      },
-      {
-        "line": 148,
-        "section": "接口源",
-        "kind": "vod_index",
-        "label": "俊佬接口",
-        "url": "http://home.jundie.top:81/top98.json",
-        "ok": true,
-        "status": 200,
-        "finalUrl": "http://home.jundie.top:81/top98.json",
-        "bytes": 16543,
-        "latencyMs": 268,
-        "documentType": "tvbox_config",
-        "extractedVodCount": 0,
-        "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -999,14 +1014,17 @@
         "kind": "vod_index",
         "label": "巧记",
         "url": "http://cdn.qiaoji8.com/tvbox.json",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://cdn.qiaoji8.com/tvbox.json",
         "bytes": 0,
-        "latencyMs": 94,
+        "latencyMs": 163,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1015,14 +1033,17 @@
         "kind": "vod_index",
         "label": "OK影视内部接口 暂时不可用",
         "url": "http://ok213.top/tv",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://ok213.top/tv",
         "bytes": 0,
-        "latencyMs": 9,
+        "latencyMs": 6,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1031,14 +1052,17 @@
         "kind": "vod_index",
         "label": "OK影视公开接口 暂时不可用",
         "url": "http://ok213.top/ok",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://ok213.top/ok",
         "bytes": 0,
-        "latencyMs": 7,
+        "latencyMs": 6,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1047,14 +1071,17 @@
         "kind": "vod_index",
         "label": "道长接口",
         "url": "https://cdn.gitmirror.com/bb/xduo/libs/master/index.json",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "https://cdn.gitmirror.com/bb/xduo/libs/master/index.json",
         "bytes": 0,
-        "latencyMs": 106,
+        "latencyMs": 95,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1063,14 +1090,17 @@
         "kind": "vod_index",
         "label": "T4接口",
         "url": "https://gitee.com/free-kingdom/dc/raw/main/T4.json",
+        "depth": 0,
         "ok": false,
         "status": 451,
         "finalUrl": "https://gitee.com/free-kingdom/dc/raw/main/T4.json",
         "bytes": 45,
-        "latencyMs": 445,
+        "latencyMs": 822,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1079,14 +1109,17 @@
         "kind": "vod_index",
         "label": "南风接口",
         "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
         "bytes": 120233,
-        "latencyMs": 542,
+        "latencyMs": 700,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1095,14 +1128,17 @@
         "kind": "vod_index",
         "label": "菜妮丝接口",
         "url": "https://tv.菜妮丝.top",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "https://tv.菜妮丝.top",
         "bytes": 0,
-        "latencyMs": 344,
+        "latencyMs": 386,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1111,14 +1147,17 @@
         "kind": "vod_index",
         "label": "HG接口",
         "url": "https://api.hgyx.vip/hgyx.json",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "https://api.hgyx.vip/hgyx.json",
         "bytes": 0,
-        "latencyMs": 575,
+        "latencyMs": 674,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1127,13 +1166,15 @@
         "kind": "vod_index",
         "label": "dxawi",
         "url": "https://dxawi.github.io/0/0.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://dxawi.github.io/0/0.json",
         "bytes": 18598,
-        "latencyMs": 865,
+        "latencyMs": 892,
         "documentType": "tvbox_config",
         "extractedVodCount": 6,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -1172,6 +1213,7 @@
             "discoveredFrom": "https://dxawi.github.io/0/0.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1180,14 +1222,17 @@
         "kind": "vod_index",
         "label": "小盒子单仓",
         "url": "http://xhztv.top/xhz",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xhztv.top/xhz/",
         "bytes": 19728,
-        "latencyMs": 901,
+        "latencyMs": 1269,
         "documentType": "tvbox_config",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1196,14 +1241,17 @@
         "kind": "vod_index",
         "label": "小盒子4K",
         "url": "http://xhztv.top/4k.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xhztv.top/4k.json",
         "bytes": 30612,
-        "latencyMs": 431,
+        "latencyMs": 716,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1212,14 +1260,17 @@
         "kind": "vod_index",
         "label": "潇洒接口",
         "url": "https://9877.kstore.space/ONE/one.json",
+        "depth": 0,
         "ok": false,
         "status": 404,
         "finalUrl": "https://9877.kstore.space/ONE/one.json",
         "bytes": 0,
-        "latencyMs": 314,
+        "latencyMs": 865,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1228,13 +1279,15 @@
         "kind": "vod_index",
         "label": "香雅情",
         "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
         "bytes": 24820,
-        "latencyMs": 322,
+        "latencyMs": 336,
         "documentType": "tvbox_config",
         "extractedVodCount": 2,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -1249,6 +1302,7 @@
             "discoveredFrom": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1257,13 +1311,15 @@
         "kind": "vod_index",
         "label": "小苹果接口",
         "url": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
         "bytes": 54423,
-        "latencyMs": 1705,
+        "latencyMs": 1151,
         "documentType": "tvbox_config",
         "extractedVodCount": 46,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -1542,6 +1598,7 @@
             "discoveredFrom": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1550,14 +1607,17 @@
         "kind": "vod_index",
         "label": "宝盒VIP",
         "url": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
         "bytes": 45331,
-        "latencyMs": 982,
+        "latencyMs": 1157,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1566,13 +1626,15 @@
         "kind": "vod_index",
         "label": "欧歌",
         "url": "https://xn--anna-wn6lw489o.v.nxog.top/m/",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://xn--anna-wn6lw489o.v.nxog.top/m/",
-        "bytes": 37747,
-        "latencyMs": 291,
+        "bytes": 37741,
+        "latencyMs": 335,
         "documentType": "tvbox_config",
         "extractedVodCount": 2,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -1587,6 +1649,7 @@
             "discoveredFrom": "https://xn--anna-wn6lw489o.v.nxog.top/m/"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1595,13 +1658,15 @@
         "kind": "vod_index",
         "label": "真心",
         "url": "https://www.252035.xyz/z/FongMi.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://www.252035.xyz/z/FongMi.json",
         "bytes": 18346,
-        "latencyMs": 429,
+        "latencyMs": 564,
         "documentType": "tvbox_config",
         "extractedVodCount": 6,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -1640,6 +1705,7 @@
             "discoveredFrom": "https://www.252035.xyz/z/FongMi.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1648,14 +1714,17 @@
         "kind": "vod_index",
         "label": "喵影视",
         "url": "http://www.meowtv.vip/tvbox.json",
+        "depth": 0,
         "ok": false,
         "status": 0,
         "finalUrl": "http://www.meowtv.vip/tvbox.json",
         "bytes": 0,
-        "latencyMs": 9,
+        "latencyMs": 10,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": "fetch failed"
       },
       {
@@ -1664,14 +1733,17 @@
         "kind": "vod_index",
         "label": "驸马",
         "url": "http://fmys.top/fmys.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://fmys.top/fmys.json",
         "bytes": 45446,
-        "latencyMs": 628,
+        "latencyMs": 472,
         "documentType": "tvbox_config",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -1680,13 +1752,15 @@
         "kind": "vod_index",
         "label": "分享",
         "url": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
         "bytes": 85276,
-        "latencyMs": 325,
+        "latencyMs": 330,
         "documentType": "tvbox_config",
         "extractedVodCount": 62,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -2061,6 +2135,7 @@
             "discoveredFrom": "https://raw.githubusercontent.com/maoystv/6/main/000.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2069,14 +2144,17 @@
         "kind": "vod_index",
         "label": "短剧",
         "url": "https://cnb.cool/fish2018/duanju/-/git/raw/main/tvbox.json",
+        "depth": 0,
         "ok": false,
         "status": 403,
         "finalUrl": "https://cnb.cool/fish2018/duanju/-/git/raw/main/tvbox.json",
         "bytes": 67,
-        "latencyMs": 247,
+        "latencyMs": 212,
         "documentType": "json_other",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2085,13 +2163,15 @@
         "kind": "vod_index",
         "label": "东篱线路",
         "url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
         "bytes": 54884,
-        "latencyMs": 310,
+        "latencyMs": 1090,
         "documentType": "tvbox_config",
         "extractedVodCount": 8,
+        "configReferenceCount": 0,
         "candidates": [
           {
             "kind": "vod",
@@ -2142,6 +2222,7 @@
             "discoveredFrom": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json"
           }
         ],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2150,14 +2231,17 @@
         "kind": "vod_index",
         "label": "嗷呜线路",
         "url": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/config",
+        "depth": 0,
         "ok": false,
         "status": 404,
         "finalUrl": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/config",
         "bytes": 39,
-        "latencyMs": 221,
+        "latencyMs": 144,
         "documentType": "json_other",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2166,14 +2250,17 @@
         "kind": "vod_index",
         "label": "L佬线路",
         "url": "https://android.lushunming.qzz.io/json/index.json",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://android.lushunming.qzz.io/json/index.json",
         "bytes": 25215,
-        "latencyMs": 2505,
+        "latencyMs": 1905,
         "documentType": "tvbox_config",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2182,14 +2269,17 @@
         "kind": "vod_index",
         "label": "天神IY",
         "url": "https://gitee.com/cpu-iy/iy/raw/master/%E5%A4%A9%E7%A5%9EIY.json",
+        "depth": 0,
         "ok": false,
         "status": 423,
         "finalUrl": "https://gitee.com/cpu-iy/iy/raw/master/%E5%A4%A9%E7%A5%9EIY.json",
         "bytes": 97,
-        "latencyMs": 122,
+        "latencyMs": 210,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2198,14 +2288,17 @@
         "kind": "vod_index",
         "label": "苹果CMS资源站",
         "url": "https://pastebin.com/raw/gtbKvnE1",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://pastebin.com/raw/gtbKvnE1",
         "bytes": 14306,
-        "latencyMs": 754,
+        "latencyMs": 753,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2214,14 +2307,17 @@
         "kind": "vod_index",
         "label": "游魂多仓",
         "url": "https://www.iyouhun.com/tv/dc",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://www.xn--s6wu47g.com/",
         "bytes": 18774,
-        "latencyMs": 2456,
+        "latencyMs": 960,
         "documentType": "html",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2230,14 +2326,17 @@
         "kind": "vod_index",
         "label": "游魂多仓（备）",
         "url": "https://www.iyouhun.com/tv/yh",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "https://www.xn--s6wu47g.com/",
         "bytes": 18774,
-        "latencyMs": 825,
+        "latencyMs": 1449,
         "documentType": "html",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2246,14 +2345,17 @@
         "kind": "vod_index",
         "label": "潇洒单仓",
         "url": "https://9877.kstore.space/AnotherDS/api.json",
+        "depth": 0,
         "ok": false,
         "status": 404,
         "finalUrl": "https://9877.kstore.space/AnotherDS/api.json",
         "bytes": 0,
-        "latencyMs": 91,
+        "latencyMs": 98,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
         "error": ""
       },
       {
@@ -2262,14 +2364,108 @@
         "kind": "vod_index",
         "label": "小盒子多仓",
         "url": "http://xhztv.top/dc/",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xhztv.top/dc/",
         "bytes": 1312,
-        "latencyMs": 418,
+        "latencyMs": 465,
         "documentType": "storehouse",
         "extractedVodCount": 0,
+        "configReferenceCount": 15,
         "candidates": [],
+        "configReferences": [
+          {
+            "kind": "config",
+            "api": "http://xhztv.top/xhz",
+            "name": "🚀小盒子",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+            "name": "🐔肥猫",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "http://xn--ihqu10cn4c.xn--v4q818bf34b.top/",
+            "name": "🐟 摸 鱼",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://xn--8owq8u.com/tv",
+            "name": "🍯毒盒",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://git.acwing.com/iduoduo/orange/-/raw/main/jsm.json",
+            "name": "🍯PG线路",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://download.kstore.space/download/2883/nzk/nzk0722.json",
+            "name": "🍯影视仓",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "http://bp.tvbox.cam/",
+            "name": "😹影视资源",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+            "name": "😹玄珠",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://www.yingm.cc/dm/dm.json",
+            "name": "😹动漫城",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "http://meowtv.cn/tv",
+            "name": "🚀喵影视",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "http://xn--ihqu10cn4c.xn--v4q818bf34b.top/",
+            "name": "🚀摸鱼",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://szyyds.cn/tv/x.json",
+            "name": "🚀小马",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://100km.top/0",
+            "name": "🦉飘零",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://dxawi.github.io/0/0.json",
+            "name": "🐹dxawi",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          },
+          {
+            "kind": "config",
+            "api": "https://api.hgyx.vip/hgyx.json",
+            "name": "🍯HG",
+            "discoveredFrom": "http://xhztv.top/dc/"
+          }
+        ],
         "error": ""
       },
       {
@@ -2278,14 +2474,90 @@
         "kind": "vod_index",
         "label": "小盒子多仓（备）",
         "url": "http://xhztv.top/DC.txt",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xhztv.top/DC.txt",
         "bytes": 1949,
-        "latencyMs": 2330,
+        "latencyMs": 584,
         "documentType": "storehouse",
         "extractedVodCount": 0,
+        "configReferenceCount": 12,
         "candidates": [],
+        "configReferences": [
+          {
+            "kind": "config",
+            "api": "https://tv.xn--yhqu5zs87a.top/",
+            "name": "🚀小盒子",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://www.xn--sss604efuw.com/tv",
+            "name": "饭太硬",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://xn--z7x900a.com/",
+            "name": "肥猫",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+            "name": "寳盒",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://tvbox.xn--4kq62z5rby2qupq9ub.top/",
+            "name": "王二小",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+            "name": "盒子迷",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "https://tv.xn--yhqu5zs87a.top/",
+            "name": "菜妮丝线路",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://cdn.qiaoji8.com/tvbox.json",
+            "name": "巧技",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://www.xn--sss604efuw.net/tv",
+            "name": "饭太硬2",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://www.xn--sss604efuw.art/tv",
+            "name": "饭太硬3",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://fty.xxooo.cf/tv",
+            "name": "饭太硬4",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          },
+          {
+            "kind": "config",
+            "api": "http://fty.888484.xyz/tv",
+            "name": "饭太硬5",
+            "discoveredFrom": "http://xhztv.top/DC.txt"
+          }
+        ],
         "error": ""
       },
       {
@@ -2294,14 +2566,418 @@
         "kind": "vod_index",
         "label": "拾光多仓",
         "url": "http://xmbjm.fh4u.org/dc.txt",
+        "depth": 0,
         "ok": true,
         "status": 200,
         "finalUrl": "http://xmbjm.fh4u.org/dc.txt",
         "bytes": 6075,
-        "latencyMs": 500,
+        "latencyMs": 516,
         "documentType": "text",
         "extractedVodCount": 0,
+        "configReferenceCount": 0,
         "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "name": "🐔肥猫",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "depth": 1,
+        "ok": false,
+        "status": 404,
+        "finalUrl": "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "bytes": 863,
+        "latencyMs": 603,
+        "documentType": "html",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "https://xn--8owq8u.com/tv",
+        "name": "🍯毒盒",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://xn--8owq8u.com/tv",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "https://xn--8owq8u.com/tv",
+        "bytes": 0,
+        "latencyMs": 93,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "https://git.acwing.com/iduoduo/orange/-/raw/main/jsm.json",
+        "name": "🍯PG线路",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://git.acwing.com/iduoduo/orange/-/raw/main/jsm.json",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://git.acwing.com/users/sign_in",
+        "bytes": 28012,
+        "latencyMs": 478,
+        "documentType": "html",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "https://download.kstore.space/download/2883/nzk/nzk0722.json",
+        "name": "🍯影视仓",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://download.kstore.space/download/2883/nzk/nzk0722.json",
+        "depth": 1,
+        "ok": false,
+        "status": 401,
+        "finalUrl": "https://download.kstore.space/download/2883/nzk/nzk0722.json",
+        "bytes": 22,
+        "latencyMs": 299,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "http://bp.tvbox.cam/",
+        "name": "😹影视资源",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "http://bp.tvbox.cam/",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "http://bp.tvbox.cam/",
+        "bytes": 1589,
+        "latencyMs": 1003,
+        "documentType": "html",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "name": "😹玄珠",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "bytes": 29481,
+        "latencyMs": 463,
+        "documentType": "tvbox_config",
+        "extractedVodCount": 16,
+        "configReferenceCount": 0,
+        "candidates": [
+          {
+            "kind": "vod",
+            "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
+            "name": "49Z｜影视",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+            "name": "红牛｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "http://api.guangsuapi.com/api.php/provide/vod/",
+            "name": "光速｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://jszyapi.com/api.php/provide/vod/",
+            "name": "极速｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+            "name": "快车｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://suoniapi.com/api.php/provide/vod/",
+            "name": "索尼｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/",
+            "name": "量子｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "http://cj.ffzyapi.com/api.php/provide/vod/",
+            "name": "非凡｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
+            "name": "49Z｜影视",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+            "name": "红牛｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "http://api.guangsuapi.com/api.php/provide/vod/",
+            "name": "光速｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://jszyapi.com/api.php/provide/vod/",
+            "name": "极速｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+            "name": "快车｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://suoniapi.com/api.php/provide/vod/",
+            "name": "索尼｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "https://cj.lziapi.com/api.php/provide/vod/",
+            "name": "量子｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          },
+          {
+            "kind": "vod",
+            "api": "http://cj.ffzyapi.com/api.php/provide/vod/",
+            "name": "非凡｜资源",
+            "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json"
+          }
+        ],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "http://meowtv.cn/tv",
+        "name": "🚀喵影视",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "http://meowtv.cn/tv",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "http://meowtv.cn/tv",
+        "bytes": 0,
+        "latencyMs": 6,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "https://szyyds.cn/tv/x.json",
+        "name": "🚀小马",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://szyyds.cn/tv/x.json",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "https://szyyds.cn/tv/x.json",
+        "bytes": 0,
+        "latencyMs": 208,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "https://100km.top/0",
+        "name": "🦉飘零",
+        "discoveredFrom": "http://xhztv.top/dc/",
+        "url": "https://100km.top/0",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "https://100km.top/0",
+        "bytes": 0,
+        "latencyMs": 9,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "http://www.xn--sss604efuw.com/tv",
+        "name": "饭太硬",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "http://www.xn--sss604efuw.com/tv",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "http://www.xn--sss604efuw.com/tv",
+        "bytes": 0,
+        "latencyMs": 10125,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "http://xn--z7x900a.com/",
+        "name": "肥猫",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "http://xn--z7x900a.com/",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "http://xn--z7x900a.com/",
+        "bytes": 0,
+        "latencyMs": 10096,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+        "name": "寳盒",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+        "bytes": 31134,
+        "latencyMs": 1012,
+        "documentType": "tvbox_config",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "name": "盒子迷",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "depth": 1,
+        "ok": false,
+        "status": 0,
+        "finalUrl": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+        "bytes": 0,
+        "latencyMs": 491,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": "fetch failed"
+      },
+      {
+        "kind": "config",
+        "api": "http://www.xn--sss604efuw.art/tv",
+        "name": "饭太硬3",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "http://www.xn--sss604efuw.art/tv",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "http://www.xn--sss604efuw.art/tv",
+        "bytes": 21966,
+        "latencyMs": 574,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "http://fty.xxooo.cf/tv",
+        "name": "饭太硬4",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "http://fty.xxooo.cf/tv",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "http://fty.xxooo.cf/tv",
+        "bytes": 21966,
+        "latencyMs": 904,
+        "documentType": "text",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
+        "error": ""
+      },
+      {
+        "kind": "config",
+        "api": "http://fty.888484.xyz/tv",
+        "name": "饭太硬5",
+        "discoveredFrom": "http://xhztv.top/DC.txt",
+        "url": "http://fty.888484.xyz/tv",
+        "depth": 1,
+        "ok": true,
+        "status": 200,
+        "finalUrl": "http://fty.888484.xyz/",
+        "bytes": 14964,
+        "latencyMs": 939,
+        "documentType": "html",
+        "extractedVodCount": 0,
+        "configReferenceCount": 0,
+        "candidates": [],
+        "configReferences": [],
         "error": ""
       }
     ],
@@ -2854,6 +3530,33 @@
         "physicalKey": "p2100.net/api.php/provide/vod/",
         "state": "CANDIDATE",
         "alreadyInRegistry": false
+      },
+      {
+        "kind": "vod",
+        "api": "https://49zyw.com/api.php/provide/vod/?ac=list",
+        "name": "49Z｜影视",
+        "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "physicalKey": "49zyw.com/api.php/provide/vod/",
+        "state": "CANDIDATE",
+        "alreadyInRegistry": false
+      },
+      {
+        "kind": "vod",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+        "name": "红牛｜资源",
+        "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "physicalKey": "hongniuzy2.com/api.php/provide/vod/",
+        "state": "CANDIDATE",
+        "alreadyInRegistry": true
+      },
+      {
+        "kind": "vod",
+        "api": "https://caiji.kczyapi.com/api.php/provide/vod/",
+        "name": "快车｜资源",
+        "discoveredFrom": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+        "physicalKey": "caiji.kczyapi.com/api.php/provide/vod/",
+        "state": "CANDIDATE",
+        "alreadyInRegistry": false
       }
     ],
     "vodProbes": [
@@ -2865,22 +3568,21 @@
         "discoveredFrom": "https://17264.kstore.space/哈基米.png",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 73,
+        "score": 96,
         "httpStatus": 200,
-        "latencyMs": 6196,
+        "latencyMs": 12294,
         "categoryCount": 31,
         "listCount": 20,
-        "searchCount": 0,
+        "searchCount": 27,
         "detailOk": true,
         "playOk": true,
         "invalidBranchCount": 1,
-        "recommendedTier": "WATCH",
+        "recommendedTier": "PROBATION",
         "rootCauses": [
-          "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-          "SOURCE_SEARCH_GAP",
+          "DIRECT_PLAYBACK_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
         ],
-        "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+        "error": "DIRECT_PLAYBACK_UNAVAILABLE"
       },
       {
         "kind": "vod",
@@ -2890,9 +3592,9 @@
         "discoveredFrom": "https://17264.kstore.space/哈基米.png",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 73,
+        "score": 74.5,
         "httpStatus": 200,
-        "latencyMs": 5087,
+        "latencyMs": 4133,
         "categoryCount": 60,
         "listCount": 20,
         "searchCount": 0,
@@ -2916,7 +3618,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 8003,
+        "latencyMs": 8015,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -2941,22 +3643,21 @@
         "discoveredFrom": "https://17264.kstore.space/哈基米.png",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 73,
+        "score": 96,
         "httpStatus": 200,
-        "latencyMs": 6058,
+        "latencyMs": 10133,
         "categoryCount": 28,
         "listCount": 20,
-        "searchCount": 0,
+        "searchCount": 27,
         "detailOk": true,
         "playOk": true,
         "invalidBranchCount": 1,
-        "recommendedTier": "WATCH",
+        "recommendedTier": "PROBATION",
         "rootCauses": [
-          "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-          "SOURCE_SEARCH_GAP",
+          "DIRECT_PLAYBACK_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
         ],
-        "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+        "error": "DIRECT_PLAYBACK_UNAVAILABLE"
       },
       {
         "kind": "vod",
@@ -2995,7 +3696,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 200,
-        "latencyMs": 2272,
+        "latencyMs": 1893,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3020,9 +3721,9 @@
         "discoveredFrom": "https://17264.kstore.space/哈基米.png",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 97.5,
+        "score": 96,
         "httpStatus": 200,
-        "latencyMs": 3907,
+        "latencyMs": 7703,
         "categoryCount": 39,
         "listCount": 20,
         "searchCount": 26,
@@ -3046,7 +3747,7 @@
         "ok": false,
         "score": 73,
         "httpStatus": 200,
-        "latencyMs": 9905,
+        "latencyMs": 9983,
         "categoryCount": 49,
         "listCount": 20,
         "searchCount": 0,
@@ -3071,7 +3772,7 @@
         "ok": false,
         "score": 73,
         "httpStatus": 200,
-        "latencyMs": 11758,
+        "latencyMs": 10754,
         "categoryCount": 50,
         "listCount": 20,
         "searchCount": 0,
@@ -3096,7 +3797,7 @@
         "ok": true,
         "score": 96,
         "httpStatus": 200,
-        "latencyMs": 12215,
+        "latencyMs": 11604,
         "categoryCount": 42,
         "listCount": 20,
         "searchCount": 27,
@@ -3115,19 +3816,20 @@
         "discoveredFrom": "https://17264.kstore.space/哈基米.png",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 73,
+        "score": 52,
         "httpStatus": 200,
-        "latencyMs": 5816,
+        "latencyMs": 6429,
         "categoryCount": 32,
         "listCount": 20,
         "searchCount": 0,
         "detailOk": true,
-        "playOk": true,
+        "playOk": false,
         "invalidBranchCount": 1,
-        "recommendedTier": "WATCH",
+        "recommendedTier": "REJECTED",
         "rootCauses": [
           "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
           "SOURCE_SEARCH_GAP",
+          "SOURCE_PLAYBACK_GAP",
           "AD_OR_PARSE_ENDPOINT"
         ],
         "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
@@ -3142,7 +3844,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 1016,
+        "latencyMs": 737,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3169,7 +3871,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 740,
+        "latencyMs": 483,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3196,7 +3898,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 12,
+        "latencyMs": 10,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3223,7 +3925,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 12,
+        "latencyMs": 9,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3250,7 +3952,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 297,
+        "latencyMs": 160,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3277,7 +3979,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 418,
+        "latencyMs": 400,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3304,7 +4006,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 403,
-        "latencyMs": 2754,
+        "latencyMs": 2348,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3356,9 +4058,9 @@
         "discoveredFrom": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 9,
+        "score": 6,
         "httpStatus": 0,
-        "latencyMs": 2410,
+        "latencyMs": 9341,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3385,7 +4087,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 8002,
+        "latencyMs": 8014,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3412,7 +4114,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 128,
+        "latencyMs": 123,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3437,9 +4139,9 @@
         "discoveredFrom": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 6,
+        "score": 7.5,
         "httpStatus": 200,
-        "latencyMs": 7819,
+        "latencyMs": 4662,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3466,7 +4168,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 403,
-        "latencyMs": 2310,
+        "latencyMs": 2074,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3493,7 +4195,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 129,
+        "latencyMs": 214,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3520,7 +4222,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 9,
+        "latencyMs": 7,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3547,7 +4249,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 10,
+        "latencyMs": 9,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3574,7 +4276,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 8015,
+        "latencyMs": 8000,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3626,9 +4328,9 @@
         "discoveredFrom": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 9,
+        "score": 10,
         "httpStatus": 404,
-        "latencyMs": 2029,
+        "latencyMs": 1223,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3655,7 +4357,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 200,
-        "latencyMs": 1806,
+        "latencyMs": 2978,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3682,7 +4384,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 200,
-        "latencyMs": 1895,
+        "latencyMs": 1736,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3709,7 +4411,7 @@
         "ok": false,
         "score": 73,
         "httpStatus": 200,
-        "latencyMs": 6592,
+        "latencyMs": 5924,
         "categoryCount": 31,
         "listCount": 20,
         "searchCount": 0,
@@ -3734,7 +4436,7 @@
         "ok": false,
         "score": 54,
         "httpStatus": 200,
-        "latencyMs": 6382,
+        "latencyMs": 5921,
         "categoryCount": 8,
         "listCount": 0,
         "searchCount": 299,
@@ -3759,7 +4461,7 @@
         "ok": false,
         "score": 76.5,
         "httpStatus": 200,
-        "latencyMs": 3662,
+        "latencyMs": 3302,
         "categoryCount": 8,
         "listCount": 20,
         "searchCount": 27,
@@ -3784,7 +4486,7 @@
         "ok": false,
         "score": 75,
         "httpStatus": 200,
-        "latencyMs": 7820,
+        "latencyMs": 7664,
         "categoryCount": 7,
         "listCount": 40,
         "searchCount": 59,
@@ -3807,24 +4509,22 @@
         "discoveredFrom": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
         "alreadyInRegistry": false,
         "ok": false,
-        "score": 0,
-        "httpStatus": 0,
-        "latencyMs": 18748,
-        "categoryCount": 0,
-        "listCount": 0,
-        "searchCount": 0,
-        "detailOk": false,
+        "score": 57,
+        "httpStatus": 200,
+        "latencyMs": 19309,
+        "categoryCount": 13,
+        "listCount": 21,
+        "searchCount": 18,
+        "detailOk": true,
         "playOk": false,
-        "invalidBranchCount": 0,
+        "invalidBranchCount": 1,
         "recommendedTier": "REJECTED",
         "rootCauses": [
-          "timeout",
-          "NO_LIST_OR_CATEGORY",
-          "SOURCE_SEARCH_GAP",
-          "SOURCE_DETAIL_GAP",
-          "SOURCE_PLAYBACK_GAP"
+          "DIRECT_PLAYBACK_UNAVAILABLE",
+          "SOURCE_PLAYBACK_GAP",
+          "AD_OR_PARSE_ENDPOINT"
         ],
-        "error": "timeout"
+        "error": "DIRECT_PLAYBACK_UNAVAILABLE"
       },
       {
         "kind": "vod",
@@ -3836,7 +4536,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 149,
+        "latencyMs": 8,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3863,7 +4563,7 @@
         "ok": false,
         "score": 0,
         "httpStatus": 0,
-        "latencyMs": 74,
+        "latencyMs": 63,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3890,7 +4590,7 @@
         "ok": false,
         "score": 9,
         "httpStatus": 200,
-        "latencyMs": 1716,
+        "latencyMs": 1815,
         "categoryCount": 0,
         "listCount": 0,
         "searchCount": 0,
@@ -3920,7 +4620,7 @@
         "status": 200,
         "finalUrl": "https://www.iyouhun.com/tv/zb",
         "bytes": 313864,
-        "latencyMs": 1509,
+        "latencyMs": 1154,
         "format": "txt",
         "channelCount": 2922,
         "groupCount": 1,
@@ -3980,10 +4680,10 @@
         "ok": true,
         "status": 200,
         "finalUrl": "https://live.zbds.top/tv/iptv4.txt",
-        "bytes": 62621,
-        "latencyMs": 2303,
+        "bytes": 63185,
+        "latencyMs": 1230,
         "format": "txt",
-        "channelCount": 463,
+        "channelCount": 469,
         "groupCount": 1,
         "duplicateRate": 1,
         "sampleChannels": [
@@ -4025,7 +4725,7 @@
           {
             "name": "CCTV第一剧场",
             "group": "未分组",
-            "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
+            "url": "https://live.264788.xyz/channel/diyijuchang?streamid=d81e188b59ece96b7e8f1ce34aea3ef8&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
           }
         ],
         "alreadyInRegistry": false,
@@ -4042,7 +4742,7 @@
         "status": 200,
         "finalUrl": "https://develop202.github.io/migu_video/interface.txt",
         "bytes": 55736,
-        "latencyMs": 1206,
+        "latencyMs": 899,
         "format": "m3u",
         "channelCount": 148,
         "groupCount": 13,
@@ -4119,7 +4819,7 @@
         "status": 404,
         "finalUrl": "https://raw.githubusercontent.com/PizazzGY/TV/master/output/user_result.txt",
         "bytes": 14,
-        "latencyMs": 2969,
+        "latencyMs": 936,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -4139,7 +4839,7 @@
         "status": 404,
         "finalUrl": "https://raw.githubusercontent.com/PizazzGY/TV/master/output/user_result.m3u",
         "bytes": 14,
-        "latencyMs": 4671,
+        "latencyMs": 930,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -4159,7 +4859,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
         "bytes": 451112,
-        "latencyMs": 1803,
+        "latencyMs": 1586,
         "format": "m3u",
         "channelCount": 490,
         "groupCount": 40,
@@ -4236,7 +4936,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
         "bytes": 92293,
-        "latencyMs": 1319,
+        "latencyMs": 1067,
         "format": "m3u",
         "channelCount": 140,
         "groupCount": 28,
@@ -4313,7 +5013,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv6/result.m3u",
         "bytes": 433635,
-        "latencyMs": 1643,
+        "latencyMs": 1336,
         "format": "m3u",
         "channelCount": 434,
         "groupCount": 37,
@@ -4390,7 +5090,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
         "bytes": 268671,
-        "latencyMs": 961,
+        "latencyMs": 598,
         "format": "m3u",
         "channelCount": 567,
         "groupCount": 35,
@@ -4467,7 +5167,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv6.m3u",
         "bytes": 200521,
-        "latencyMs": 1638,
+        "latencyMs": 483,
         "format": "m3u",
         "channelCount": 415,
         "groupCount": 16,
@@ -4543,12 +5243,12 @@
         "ok": true,
         "status": 200,
         "finalUrl": "https://live.zbds.top/tv/iptv4.m3u",
-        "bytes": 97747,
-        "latencyMs": 641,
+        "bytes": 98484,
+        "latencyMs": 626,
         "format": "m3u",
-        "channelCount": 328,
+        "channelCount": 334,
         "groupCount": 10,
-        "duplicateRate": 0.0209,
+        "duplicateRate": 0.0205,
         "sampleChannels": [
           {
             "name": "CCTV4",
@@ -4583,21 +5283,21 @@
             "group": "央视频道",
             "logo": "https://tb.zbds.top/logo/CCTV第一剧场.png",
             "tvgId": "第一剧场",
-            "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
+            "url": "https://live.264788.xyz/channel/diyijuchang?streamid=d81e188b59ece96b7e8f1ce34aea3ef8&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk"
           },
           {
             "name": "CGTN",
             "group": "央视频道",
             "logo": "https://tb.zbds.top/logo/CGTN.png",
             "tvgId": "CGTN",
-            "url": "https://0472.org/hls/cgtn.m3u8"
+            "url": "http://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8"
           },
           {
             "name": "CGTN俄语",
             "group": "央视频道",
             "logo": "https://tb.zbds.top/logo/CGTN俄语.png",
             "tvgId": "CGTN俄语",
-            "url": "http://russian-livews.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd.m3u8"
+            "url": "https://0472.org/hls/cgtne.m3u8"
           },
           {
             "name": "CGTN法语",
@@ -4621,7 +5321,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u",
         "bytes": 8021,
-        "latencyMs": 385,
+        "latencyMs": 266,
         "format": "m3u",
         "channelCount": 58,
         "groupCount": 1,
@@ -4698,7 +5398,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/vamoschuck/TV/main/M3U",
         "bytes": 147124,
-        "latencyMs": 533,
+        "latencyMs": 429,
         "format": "m3u",
         "channelCount": 335,
         "groupCount": 8,
@@ -4775,14 +5475,14 @@
         "status": 200,
         "finalUrl": "https://live.zbds.top/tv/iptv6.txt",
         "bytes": 268,
-        "latencyMs": 1021,
+        "latencyMs": 988,
         "format": "txt",
         "channelCount": 2,
         "groupCount": 1,
         "duplicateRate": 1,
         "sampleChannels": [
           {
-            "name": "2026-08-01 06:42:33",
+            "name": "2026-08-01 12:43:22",
             "group": "未分组",
             "url": "https://vd2.bdstatic.com/mda-sctj0f6r4u1bpebc/1080p/cae_h264/1774706523506678171/mda-sctj0f6r4u1bpebc.mp4"
           },
@@ -4806,14 +5506,14 @@
         "status": 200,
         "finalUrl": "https://live.zbds.top/tv/iptv6.m3u",
         "bytes": 282,
-        "latencyMs": 1209,
+        "latencyMs": 750,
         "format": "m3u",
         "channelCount": 1,
         "groupCount": 1,
         "duplicateRate": 0,
         "sampleChannels": [
           {
-            "name": "2026-08-01 06:42:33",
+            "name": "2026-08-01 12:43:22",
             "group": "更新时间",
             "logo": "",
             "tvgId": "更新时间",
@@ -4834,7 +5534,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
         "bytes": 25215,
-        "latencyMs": 438,
+        "latencyMs": 277,
         "format": "m3u",
         "channelCount": 27,
         "groupCount": 3,
@@ -4911,7 +5611,7 @@
         "status": 0,
         "finalUrl": "https://live.fanmingming.cn/tv/m3u/ipv6.m3u",
         "bytes": 0,
-        "latencyMs": 10497,
+        "latencyMs": 10570,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -4931,7 +5631,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
         "bytes": 36497,
-        "latencyMs": 378,
+        "latencyMs": 265,
         "format": "m3u",
         "channelCount": 0,
         "groupCount": 0,
@@ -4951,7 +5651,7 @@
         "status": 404,
         "finalUrl": "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy",
         "bytes": 47,
-        "latencyMs": 546,
+        "latencyMs": 429,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -4971,7 +5671,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
         "bytes": 21945,
-        "latencyMs": 269,
+        "latencyMs": 198,
         "format": "m3u",
         "channelCount": 9,
         "groupCount": 3,
@@ -5048,7 +5748,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u",
         "bytes": 329793,
-        "latencyMs": 945,
+        "latencyMs": 446,
         "format": "m3u",
         "channelCount": 1600,
         "groupCount": 24,
@@ -5125,7 +5825,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
         "bytes": 29341,
-        "latencyMs": 450,
+        "latencyMs": 290,
         "format": "m3u",
         "channelCount": 81,
         "groupCount": 3,
@@ -5202,7 +5902,7 @@
         "status": 200,
         "finalUrl": "https://php.946985.filegear-sg.me/jackTV.m3u",
         "bytes": 37770,
-        "latencyMs": 1115,
+        "latencyMs": 1172,
         "format": "m3u",
         "channelCount": 91,
         "groupCount": 2,
@@ -5279,7 +5979,7 @@
         "status": 200,
         "finalUrl": "https://iptv-org.github.io/iptv/index.m3u",
         "bytes": 1200000,
-        "latencyMs": 3578,
+        "latencyMs": 2315,
         "format": "m3u",
         "channelCount": 4344,
         "groupCount": 120,
@@ -5356,7 +6056,7 @@
         "status": 0,
         "finalUrl": "https://web.utako.moe/jp.m3u",
         "bytes": 0,
-        "latencyMs": 2385,
+        "latencyMs": 968,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -5376,7 +6076,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels.m3u",
         "bytes": 750602,
-        "latencyMs": 1656,
+        "latencyMs": 1549,
         "format": "m3u",
         "channelCount": 894,
         "groupCount": 11,
@@ -5453,7 +6153,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels_hong_kong.m3u",
         "bytes": 14064,
-        "latencyMs": 796,
+        "latencyMs": 643,
         "format": "m3u",
         "channelCount": 22,
         "groupCount": 7,
@@ -5530,7 +6230,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels_macau.m3u",
         "bytes": 6134,
-        "latencyMs": 764,
+        "latencyMs": 647,
         "format": "m3u",
         "channelCount": 8,
         "groupCount": 4,
@@ -5607,7 +6307,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels_taiwan.m3u",
         "bytes": 42866,
-        "latencyMs": 392,
+        "latencyMs": 1196,
         "format": "m3u",
         "channelCount": 58,
         "groupCount": 9,
@@ -5684,7 +6384,7 @@
         "status": 200,
         "finalUrl": "https://iptv-org.github.io/iptv/countries/tw.m3u",
         "bytes": 4800,
-        "latencyMs": 3359,
+        "latencyMs": 1112,
         "format": "m3u",
         "channelCount": 21,
         "groupCount": 7,
@@ -5761,7 +6461,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels_singapore.m3u",
         "bytes": 4377,
-        "latencyMs": 475,
+        "latencyMs": 489,
         "format": "m3u",
         "channelCount": 9,
         "groupCount": 4,
@@ -5838,7 +6538,7 @@
         "status": 200,
         "finalUrl": "https://epg.pw/test_channels_malaysia.m3u",
         "bytes": 5468,
-        "latencyMs": 334,
+        "latencyMs": 218,
         "format": "m3u",
         "channelCount": 12,
         "groupCount": 6,
@@ -5915,7 +6615,7 @@
         "status": 200,
         "finalUrl": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
         "bytes": 530377,
-        "latencyMs": 981,
+        "latencyMs": 393,
         "format": "m3u",
         "channelCount": 1660,
         "groupCount": 91,
@@ -5992,7 +6692,7 @@
         "status": 0,
         "finalUrl": "https://live.freetv.top/huyayqk.m3u",
         "bytes": 0,
-        "latencyMs": 12014,
+        "latencyMs": 12008,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -6012,7 +6712,7 @@
         "status": 0,
         "finalUrl": "https://live.freetv.top/douyuyqk.m3u",
         "bytes": 0,
-        "latencyMs": 12011,
+        "latencyMs": 12002,
         "format": "unknown",
         "channelCount": 0,
         "groupCount": 0,
@@ -6032,7 +6732,7 @@
         "status": 200,
         "finalUrl": "https://gongdian.top/tv/Mursor/yylunbo.m3u",
         "bytes": 124828,
-        "latencyMs": 1031,
+        "latencyMs": 3677,
         "format": "m3u",
         "channelCount": 529,
         "groupCount": 3,
@@ -6109,7 +6809,7 @@
         "status": 200,
         "finalUrl": "https://gongdian.top/tv/Mursor/bililive.m3u",
         "bytes": 72195,
-        "latencyMs": 1026,
+        "latencyMs": 1271,
         "format": "m3u",
         "channelCount": 357,
         "groupCount": 10,
@@ -6185,7 +6885,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 1509,
+        "latencyMs": 1154,
         "channelCount": 2922,
         "groupCount": 1,
         "duplicateRate": 1,
@@ -6201,7 +6901,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/octet-stream",
-            "latencyMs": 1806,
+            "latencyMs": 1194,
             "bytes": 216727,
             "rootCause": "OK"
           },
@@ -6212,7 +6912,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/octet-stream",
-            "latencyMs": 977,
+            "latencyMs": 846,
             "bytes": 216727,
             "rootCause": "OK"
           }
@@ -6226,8 +6926,8 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 2303,
-        "channelCount": 463,
+        "latencyMs": 1230,
+        "channelCount": 469,
         "groupCount": 1,
         "duplicateRate": 1,
         "playableCount": 2,
@@ -6242,7 +6942,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 1331,
+            "latencyMs": 938,
             "bytes": 426,
             "rootCause": "OK"
           },
@@ -6253,7 +6953,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 979,
+            "latencyMs": 1005,
             "bytes": 227,
             "rootCause": "OK"
           }
@@ -6267,7 +6967,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 1206,
+        "latencyMs": 899,
         "channelCount": 148,
         "groupCount": 13,
         "duplicateRate": 0.2673,
@@ -6283,7 +6983,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 814,
+            "latencyMs": 246,
             "bytes": 255,
             "rootCause": "OK"
           },
@@ -6294,7 +6994,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 607,
+            "latencyMs": 296,
             "bytes": 231,
             "rootCause": "OK"
           }
@@ -6308,7 +7008,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 1643,
+        "latencyMs": 1336,
         "channelCount": 434,
         "groupCount": 37,
         "duplicateRate": 0.7011,
@@ -6326,7 +7026,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10371,
+            "latencyMs": 10549,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6337,7 +7037,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10597,
+            "latencyMs": 10633,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6348,7 +7048,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10637,
+            "latencyMs": 10616,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6359,7 +7059,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 1585,
+            "latencyMs": 899,
             "bytes": 426,
             "rootCause": "OK"
           },
@@ -6370,7 +7070,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10564,
+            "latencyMs": 10227,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6381,7 +7081,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10629,
+            "latencyMs": 10592,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6392,7 +7092,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10650,
+            "latencyMs": 10635,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6403,7 +7103,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10651,
+            "latencyMs": 10611,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
@@ -6417,7 +7117,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 961,
+        "latencyMs": 598,
         "channelCount": 567,
         "groupCount": 35,
         "duplicateRate": 0.2777,
@@ -6433,7 +7133,7 @@
             "ok": false,
             "status": 403,
             "contentType": "text/html",
-            "latencyMs": 107,
+            "latencyMs": 73,
             "bytes": 1322,
             "rootCause": "AD_OR_PARSE_ENDPOINT"
           },
@@ -6444,7 +7144,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegurl",
-            "latencyMs": 317,
+            "latencyMs": 236,
             "bytes": 852,
             "rootCause": "OK"
           },
@@ -6455,7 +7155,7 @@
             "ok": false,
             "status": 403,
             "contentType": "text/html",
-            "latencyMs": 50,
+            "latencyMs": 62,
             "bytes": 1322,
             "rootCause": "AD_OR_PARSE_ENDPOINT"
           },
@@ -6466,7 +7166,7 @@
             "ok": false,
             "status": 403,
             "contentType": "text/html",
-            "latencyMs": 57,
+            "latencyMs": 138,
             "bytes": 1322,
             "rootCause": "AD_OR_PARSE_ENDPOINT"
           },
@@ -6477,7 +7177,7 @@
             "ok": false,
             "status": 200,
             "contentType": "text/html; charset=utf-8",
-            "latencyMs": 619,
+            "latencyMs": 498,
             "bytes": 1793,
             "rootCause": "AD_OR_PARSE_ENDPOINT"
           },
@@ -6488,7 +7188,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 741,
+            "latencyMs": 428,
             "bytes": 302,
             "rootCause": "OK"
           }
@@ -6502,7 +7202,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 1638,
+        "latencyMs": 483,
         "channelCount": 415,
         "groupCount": 16,
         "duplicateRate": 0.0547,
@@ -6518,7 +7218,7 @@
             "ok": false,
             "status": 403,
             "contentType": "text/html; charset=utf-8",
-            "latencyMs": 383,
+            "latencyMs": 406,
             "bytes": 304,
             "rootCause": "AD_OR_PARSE_ENDPOINT"
           },
@@ -6529,7 +7229,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 4,
+            "latencyMs": 2,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6540,7 +7240,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 5,
+            "latencyMs": 3,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6551,7 +7251,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 3,
+            "latencyMs": 2,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6562,7 +7262,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 1330,
+            "latencyMs": 764,
             "bytes": 129,
             "rootCause": "OK"
           },
@@ -6573,7 +7273,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 284,
+            "latencyMs": 210,
             "bytes": 129,
             "rootCause": "OK"
           }
@@ -6587,10 +7287,10 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 641,
-        "channelCount": 328,
+        "latencyMs": 626,
+        "channelCount": 334,
         "groupCount": 10,
-        "duplicateRate": 0.0209,
+        "duplicateRate": 0.0205,
         "playableCount": 2,
         "sampleCount": 2,
         "recommendedTier": "PROBATION",
@@ -6603,7 +7303,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 471,
+            "latencyMs": 389,
             "bytes": 426,
             "rootCause": "OK"
           },
@@ -6614,7 +7314,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 414,
+            "latencyMs": 269,
             "bytes": 299,
             "rootCause": "OK"
           }
@@ -6628,7 +7328,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 385,
+        "latencyMs": 266,
         "channelCount": 58,
         "groupCount": 1,
         "duplicateRate": 0,
@@ -6646,7 +7346,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10536,
+            "latencyMs": 10205,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6657,7 +7357,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10613,
+            "latencyMs": 10623,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6668,7 +7368,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10626,
+            "latencyMs": 10624,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6679,7 +7379,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10637,
+            "latencyMs": 10604,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6690,7 +7390,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10634,
+            "latencyMs": 10598,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6701,7 +7401,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10655,
+            "latencyMs": 10638,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6712,7 +7412,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10646,
+            "latencyMs": 10610,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6723,7 +7423,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10646,
+            "latencyMs": 10624,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
@@ -6737,7 +7437,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 533,
+        "latencyMs": 429,
         "channelCount": 335,
         "groupCount": 8,
         "duplicateRate": 0.3149,
@@ -6755,7 +7455,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 251,
+            "latencyMs": 123,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6766,7 +7466,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 119,
+            "latencyMs": 70,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6777,7 +7477,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 91,
+            "latencyMs": 44,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6788,7 +7488,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 93,
+            "latencyMs": 183,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6799,7 +7499,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 171,
+            "latencyMs": 32,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6810,7 +7510,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 107,
+            "latencyMs": 38,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6821,7 +7521,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 100,
+            "latencyMs": 41,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6832,7 +7532,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 86,
+            "latencyMs": 28,
             "bytes": 42,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
@@ -6846,7 +7546,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 269,
+        "latencyMs": 198,
         "channelCount": 9,
         "groupCount": 3,
         "duplicateRate": 0.8269,
@@ -6862,7 +7562,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 454,
+            "latencyMs": 437,
             "bytes": 294,
             "rootCause": "OK"
           },
@@ -6873,7 +7573,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl",
-            "latencyMs": 350,
+            "latencyMs": 225,
             "bytes": 300,
             "rootCause": "OK"
           }
@@ -6887,7 +7587,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 945,
+        "latencyMs": 446,
         "channelCount": 1600,
         "groupCount": 24,
         "duplicateRate": 0.0196,
@@ -6916,7 +7616,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 8,
+            "latencyMs": 9,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6960,7 +7660,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 8,
+            "latencyMs": 7,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -6982,7 +7682,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 11,
+            "latencyMs": 6,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
@@ -6996,7 +7696,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 450,
+        "latencyMs": 290,
         "channelCount": 81,
         "groupCount": 3,
         "duplicateRate": 0.3468,
@@ -7014,7 +7714,7 @@
             "ok": false,
             "status": 403,
             "contentType": "application/json; charset=utf-8",
-            "latencyMs": 1083,
+            "latencyMs": 737,
             "bytes": 757,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7025,7 +7725,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 122,
+            "latencyMs": 249,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7036,7 +7736,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 8,
+            "latencyMs": 7,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7058,7 +7758,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 7,
+            "latencyMs": 8,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7069,7 +7769,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 11,
+            "latencyMs": 6,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7080,7 +7780,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 7,
+            "latencyMs": 8,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7091,7 +7791,7 @@
             "ok": false,
             "status": 0,
             "contentType": "",
-            "latencyMs": 10,
+            "latencyMs": 7,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
@@ -7105,7 +7805,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 1115,
+        "latencyMs": 1172,
         "channelCount": 91,
         "groupCount": 2,
         "duplicateRate": 0.0319,
@@ -7123,7 +7823,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
-            "latencyMs": 928,
+            "latencyMs": 754,
             "bytes": 426,
             "rootCause": "OK"
           },
@@ -7134,7 +7834,7 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 6070,
+            "latencyMs": 2247,
             "bytes": 120000,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7145,7 +7845,7 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 3592,
+            "latencyMs": 1831,
             "bytes": 120000,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7156,8 +7856,8 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 4083,
-            "bytes": 49790,
+            "latencyMs": 1342,
+            "bytes": 49169,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
           {
@@ -7167,8 +7867,8 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 1677,
-            "bytes": 21668,
+            "latencyMs": 1839,
+            "bytes": 22227,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
           {
@@ -7178,8 +7878,8 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 1865,
-            "bytes": 21861,
+            "latencyMs": 1301,
+            "bytes": 22231,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
           {
@@ -7189,8 +7889,8 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 1864,
-            "bytes": 18357,
+            "latencyMs": 1227,
+            "bytes": 18633,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
           {
@@ -7200,8 +7900,8 @@
             "ok": false,
             "status": 200,
             "contentType": "application/dash+xml",
-            "latencyMs": 2162,
-            "bytes": 16953,
+            "latencyMs": 1321,
+            "bytes": 16955,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           }
         ]
@@ -7214,7 +7914,7 @@
         "discoveredFrom": "https://raw.githubusercontent.com/youhunwl/TVAPP/main/README.md",
         "alreadyInRegistry": false,
         "status": 200,
-        "latencyMs": 3578,
+        "latencyMs": 2315,
         "channelCount": 4344,
         "groupCount": 120,
         "duplicateRate": 0.0652,
@@ -7230,7 +7930,7 @@
             "ok": false,
             "status": 400,
             "contentType": "",
-            "latencyMs": 2992,
+            "latencyMs": 2437,
             "bytes": 0,
             "rootCause": "MEDIA_FIRST_PACKET_FAIL"
           },
@@ -7241,7 +7941,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 1642,
+            "latencyMs": 994,
             "bytes": 426,
             "rootCause": "OK"
           },
@@ -7252,7 +7952,7 @@
             "ok": true,
             "status": 200,
             "contentType": "application/x-mpegURL",
-            "latencyMs": 702,
+            "latencyMs": 890,
             "bytes": 426,
             "rootCause": "OK"
           }
@@ -7268,10 +7968,10 @@
     "noFilterRewrite": true
   },
   "counts": {
-    "vodTargets": 9,
+    "vodTargets": 8,
     "liveTargets": 10,
     "vodActive": 0,
-    "vodWatch": 2,
+    "vodWatch": 1,
     "vodRejected": 7,
     "liveActive": 5,
     "liveWatch": 2,
@@ -7282,59 +7982,56 @@
       "kind": "vod",
       "name": "烂大街",
       "api": "https://www.huyaapi.com/api.php/provide/vod/",
-      "firstTier": "WATCH",
+      "firstTier": "PROBATION",
       "physicalKey": "huyaapi.com",
       "attempts": [
         {
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 7785,
+          "latencyMs": 11723,
           "categoryCount": 31,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         },
         {
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 6483,
+          "latencyMs": 2353,
           "categoryCount": 31,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         },
         {
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 5832,
+          "latencyMs": 1892,
           "categoryCount": 31,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         }
       ],
       "summary": {
@@ -7344,16 +8041,15 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 6700,
-        "p95LatencyMs": 7785,
+        "averageLatencyMs": 5323,
+        "p95LatencyMs": 11723,
         "rootCauses": [
-          "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-          "SOURCE_SEARCH_GAP",
+          "DIRECT_PLAYBACK_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
         ]
       },
       "finalTier": "REJECTED",
-      "finalReason": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+      "finalReason": "DIRECT_PLAYBACK_UNAVAILABLE"
     },
     {
       "kind": "vod",
@@ -7366,7 +8062,7 @@
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 6005,
+          "latencyMs": 4231,
           "categoryCount": 60,
           "listCount": 20,
           "searchCount": 0,
@@ -7382,7 +8078,7 @@
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 4473,
+          "latencyMs": 2597,
           "categoryCount": 60,
           "listCount": 20,
           "searchCount": 0,
@@ -7398,7 +8094,7 @@
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 7128,
+          "latencyMs": 2320,
           "categoryCount": 60,
           "listCount": 20,
           "searchCount": 0,
@@ -7418,8 +8114,8 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 5869,
-        "p95LatencyMs": 7128,
+        "averageLatencyMs": 3049,
+        "p95LatencyMs": 4231,
         "rootCauses": [
           "SEARCH_UNAVAILABLE",
           "SOURCE_SEARCH_GAP"
@@ -7432,59 +8128,56 @@
       "kind": "vod",
       "name": "🌼光速┃资源🌼",
       "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-      "firstTier": "WATCH",
+      "firstTier": "PROBATION",
       "physicalKey": "api.guangsuapi.com",
       "attempts": [
         {
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 7144,
+          "latencyMs": 4556,
           "categoryCount": 28,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         },
         {
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 6242,
+          "latencyMs": 1930,
           "categoryCount": 28,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         },
         {
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 6515,
+          "latencyMs": 2059,
           "categoryCount": 28,
           "listCount": 20,
-          "searchCount": 0,
+          "searchCount": 27,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [
-            "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-            "SOURCE_SEARCH_GAP",
+            "DIRECT_PLAYBACK_UNAVAILABLE",
             "AD_OR_PARSE_ENDPOINT"
           ],
-          "error": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+          "error": "DIRECT_PLAYBACK_UNAVAILABLE"
         }
       ],
       "summary": {
@@ -7494,16 +8187,15 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 6634,
-        "p95LatencyMs": 7144,
+        "averageLatencyMs": 2848,
+        "p95LatencyMs": 4556,
         "rootCauses": [
-          "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
-          "SOURCE_SEARCH_GAP",
+          "DIRECT_PLAYBACK_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
         ]
       },
       "finalTier": "REJECTED",
-      "finalReason": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
+      "finalReason": "DIRECT_PLAYBACK_UNAVAILABLE"
     },
     {
       "kind": "vod",
@@ -7516,7 +8208,7 @@
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 6965,
+          "latencyMs": 6729,
           "categoryCount": 39,
           "listCount": 20,
           "searchCount": 26,
@@ -7532,7 +8224,7 @@
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 5454,
+          "latencyMs": 5353,
           "categoryCount": 39,
           "listCount": 20,
           "searchCount": 26,
@@ -7548,7 +8240,7 @@
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 5717,
+          "latencyMs": 3258,
           "categoryCount": 39,
           "listCount": 20,
           "searchCount": 26,
@@ -7568,8 +8260,8 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 6045,
-        "p95LatencyMs": 6965,
+        "averageLatencyMs": 5113,
+        "p95LatencyMs": 6729,
         "rootCauses": [
           "DIRECT_PLAYBACK_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
@@ -7589,7 +8281,7 @@
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 11195,
+          "latencyMs": 10388,
           "categoryCount": 49,
           "listCount": 20,
           "searchCount": 0,
@@ -7606,7 +8298,7 @@
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 7535,
+          "latencyMs": 6148,
           "categoryCount": 49,
           "listCount": 20,
           "searchCount": 0,
@@ -7623,7 +8315,7 @@
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 7103,
+          "latencyMs": 8286,
           "categoryCount": 49,
           "listCount": 20,
           "searchCount": 0,
@@ -7644,8 +8336,8 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 8611,
-        "p95LatencyMs": 11195,
+        "averageLatencyMs": 8274,
+        "p95LatencyMs": 10388,
         "rootCauses": [
           "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
           "SOURCE_SEARCH_GAP",
@@ -7666,7 +8358,7 @@
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 11268,
+          "latencyMs": 10229,
           "categoryCount": 50,
           "listCount": 20,
           "searchCount": 0,
@@ -7683,7 +8375,7 @@
           "round": 2,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 9251,
+          "latencyMs": 9120,
           "categoryCount": 50,
           "listCount": 20,
           "searchCount": 0,
@@ -7700,7 +8392,7 @@
           "round": 3,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 12127,
+          "latencyMs": 9503,
           "categoryCount": 50,
           "listCount": 20,
           "searchCount": 0,
@@ -7721,16 +8413,16 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 10882,
-        "p95LatencyMs": 12127,
+        "averageLatencyMs": 9617,
+        "p95LatencyMs": 10229,
         "rootCauses": [
           "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
           "SOURCE_SEARCH_GAP",
           "AD_OR_PARSE_ENDPOINT"
         ]
       },
-      "finalTier": "WATCH",
-      "finalReason": "SLOW_SOURCE"
+      "finalTier": "REJECTED",
+      "finalReason": "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE"
     },
     {
       "kind": "vod",
@@ -7743,7 +8435,7 @@
           "round": 1,
           "ok": true,
           "httpStatus": 200,
-          "latencyMs": 18077,
+          "latencyMs": 13110,
           "categoryCount": 42,
           "listCount": 20,
           "searchCount": 27,
@@ -7756,10 +8448,10 @@
           "round": 2,
           "ok": true,
           "httpStatus": 200,
-          "latencyMs": 12337,
+          "latencyMs": 13453,
           "categoryCount": 42,
           "listCount": 20,
-          "searchCount": 27,
+          "searchCount": 26,
           "detailOk": true,
           "playOk": true,
           "rootCauses": [],
@@ -7769,7 +8461,7 @@
           "round": 3,
           "ok": true,
           "httpStatus": 200,
-          "latencyMs": 13290,
+          "latencyMs": 11004,
           "categoryCount": 42,
           "listCount": 20,
           "searchCount": 27,
@@ -7786,93 +8478,12 @@
         "detailOkRate": 1,
         "playOkRate": 1,
         "mediaOkRate": 0,
-        "averageLatencyMs": 14568,
-        "p95LatencyMs": 18077,
+        "averageLatencyMs": 12522,
+        "p95LatencyMs": 13453,
         "rootCauses": []
       },
       "finalTier": "WATCH",
       "finalReason": "SLOW_SOURCE"
-    },
-    {
-      "kind": "vod",
-      "name": "🌼电影┃天堂🌼",
-      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod",
-      "firstTier": "WATCH",
-      "physicalKey": "caiji.dyttzyapi.com",
-      "attempts": [
-        {
-          "round": 1,
-          "ok": false,
-          "httpStatus": 0,
-          "latencyMs": 6161,
-          "categoryCount": 0,
-          "listCount": 0,
-          "searchCount": 0,
-          "detailOk": false,
-          "playOk": false,
-          "rootCauses": [
-            "fetch failed",
-            "SOURCE_DETAIL_GAP",
-            "SOURCE_PLAYBACK_GAP",
-            "SOURCE_SEARCH_GAP"
-          ],
-          "error": "fetch failed"
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "httpStatus": 0,
-          "latencyMs": 655,
-          "categoryCount": 0,
-          "listCount": 0,
-          "searchCount": 0,
-          "detailOk": false,
-          "playOk": false,
-          "rootCauses": [
-            "fetch failed",
-            "SOURCE_DETAIL_GAP",
-            "SOURCE_PLAYBACK_GAP",
-            "SOURCE_SEARCH_GAP"
-          ],
-          "error": "fetch failed"
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "httpStatus": 0,
-          "latencyMs": 687,
-          "categoryCount": 0,
-          "listCount": 0,
-          "searchCount": 0,
-          "detailOk": false,
-          "playOk": false,
-          "rootCauses": [
-            "fetch failed",
-            "SOURCE_DETAIL_GAP",
-            "SOURCE_PLAYBACK_GAP",
-            "SOURCE_SEARCH_GAP"
-          ],
-          "error": "fetch failed"
-        }
-      ],
-      "summary": {
-        "total": 3,
-        "successCount": 0,
-        "successRate": 0,
-        "detailOkRate": 0,
-        "playOkRate": 0,
-        "mediaOkRate": 0,
-        "averageLatencyMs": 2501,
-        "p95LatencyMs": 6161,
-        "rootCauses": [
-          "fetch failed",
-          "SOURCE_DETAIL_GAP",
-          "SOURCE_PLAYBACK_GAP",
-          "SOURCE_SEARCH_GAP"
-        ]
-      },
-      "finalTier": "REJECTED",
-      "finalReason": "SOURCE_DETAIL_GAP"
     },
     {
       "kind": "vod",
@@ -7885,7 +8496,7 @@
           "round": 1,
           "ok": false,
           "httpStatus": 200,
-          "latencyMs": 5324,
+          "latencyMs": 5297,
           "categoryCount": 31,
           "listCount": 20,
           "searchCount": 0,
@@ -7902,7 +8513,7 @@
           "round": 2,
           "ok": false,
           "httpStatus": 0,
-          "latencyMs": 4033,
+          "latencyMs": 3926,
           "categoryCount": 0,
           "listCount": 0,
           "searchCount": 0,
@@ -7920,7 +8531,7 @@
           "round": 3,
           "ok": false,
           "httpStatus": 0,
-          "latencyMs": 800,
+          "latencyMs": 3649,
           "categoryCount": 0,
           "listCount": 0,
           "searchCount": 0,
@@ -7942,8 +8553,8 @@
         "detailOkRate": 0.3333,
         "playOkRate": 0.3333,
         "mediaOkRate": 0,
-        "averageLatencyMs": 3386,
-        "p95LatencyMs": 5324,
+        "averageLatencyMs": 4291,
+        "p95LatencyMs": 5297,
         "rootCauses": [
           "SEARCH_UNAVAILABLE; DIRECT_PLAYBACK_UNAVAILABLE",
           "SOURCE_SEARCH_GAP",
@@ -7969,7 +8580,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 3104,
+          "latencyMs": 3286,
           "channelCount": 2922,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -7982,7 +8593,7 @@
               "url": "https://gitlab.com/youhun/TVAPP/-/raw/main/abput1080.mp4",
               "ok": true,
               "status": 200,
-              "latencyMs": 1377,
+              "latencyMs": 1348,
               "contentType": "application/octet-stream",
               "rootCause": "OK"
             },
@@ -7992,7 +8603,7 @@
               "url": "http://38.64.72.148:80/hls/modn/list/4012/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1979,
+              "latencyMs": 714,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8002,7 +8613,7 @@
               "url": "https://hls-gateway.vpstv.net/streams/709489.m3u8",
               "ok": false,
               "status": 403,
-              "latencyMs": 1309,
+              "latencyMs": 791,
               "contentType": "text/html; charset=UTF-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -8012,7 +8623,7 @@
               "url": "https://stream1.freetv.fun/yan-dong-xin-wen-4.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10379,
+              "latencyMs": 10525,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8022,7 +8633,7 @@
               "url": "https://stream1.freetv.fun/zhe-jiang-jing-ji-sheng-huo-7.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10636,
+              "latencyMs": 10667,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8032,7 +8643,7 @@
               "url": "https://quehuamtyoutlive.ijntv.cn/qsrog5/0szz7q.m3u8",
               "ok": false,
               "status": 502,
-              "latencyMs": 1236,
+              "latencyMs": 573,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             }
@@ -8046,7 +8657,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 1605,
+          "latencyMs": 982,
           "channelCount": 2922,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -8059,7 +8670,7 @@
               "url": "https://gitlab.com/youhun/TVAPP/-/raw/main/abput1080.mp4",
               "ok": true,
               "status": 200,
-              "latencyMs": 996,
+              "latencyMs": 851,
               "contentType": "application/octet-stream",
               "rootCause": "OK"
             },
@@ -8069,7 +8680,7 @@
               "url": "http://38.64.72.148:80/hls/modn/list/4012/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 763,
+              "latencyMs": 570,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8079,7 +8690,7 @@
               "url": "https://hls-gateway.vpstv.net/streams/709489.m3u8",
               "ok": false,
               "status": 403,
-              "latencyMs": 1002,
+              "latencyMs": 702,
               "contentType": "text/html; charset=UTF-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -8089,7 +8700,7 @@
               "url": "https://stream1.freetv.fun/yan-dong-xin-wen-4.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10634,
+              "latencyMs": 10502,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8099,7 +8710,7 @@
               "url": "https://stream1.freetv.fun/zhe-jiang-jing-ji-sheng-huo-7.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10631,
+              "latencyMs": 10652,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8109,7 +8720,7 @@
               "url": "https://quehuamtyoutlive.ijntv.cn/qsrog5/0szz7q.m3u8",
               "ok": false,
               "status": 502,
-              "latencyMs": 309,
+              "latencyMs": 403,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             }
@@ -8123,7 +8734,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 1068,
+          "latencyMs": 2615,
           "channelCount": 2922,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -8136,7 +8747,7 @@
               "url": "https://gitlab.com/youhun/TVAPP/-/raw/main/abput1080.mp4",
               "ok": true,
               "status": 200,
-              "latencyMs": 1062,
+              "latencyMs": 984,
               "contentType": "application/octet-stream",
               "rootCause": "OK"
             },
@@ -8146,7 +8757,7 @@
               "url": "http://38.64.72.148:80/hls/modn/list/4012/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 645,
+              "latencyMs": 495,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8156,7 +8767,7 @@
               "url": "https://hls-gateway.vpstv.net/streams/709489.m3u8",
               "ok": false,
               "status": 403,
-              "latencyMs": 793,
+              "latencyMs": 749,
               "contentType": "text/html; charset=UTF-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -8166,7 +8777,7 @@
               "url": "https://stream1.freetv.fun/yan-dong-xin-wen-4.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10287,
+              "latencyMs": 10426,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8176,7 +8787,7 @@
               "url": "https://stream1.freetv.fun/zhe-jiang-jing-ji-sheng-huo-7.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10655,
+              "latencyMs": 10638,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8186,7 +8797,7 @@
               "url": "https://quehuamtyoutlive.ijntv.cn/qsrog5/0szz7q.m3u8",
               "ok": false,
               "status": 502,
-              "latencyMs": 1503,
+              "latencyMs": 362,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             }
@@ -8204,8 +8815,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 1926,
-        "p95LatencyMs": 3104,
+        "averageLatencyMs": 2294,
+        "p95LatencyMs": 3286,
         "rootCauses": [
           "AD_OR_PARSE_ENDPOINT"
         ]
@@ -8224,7 +8835,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 1689,
+          "latencyMs": 796,
           "channelCount": 469,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -8237,7 +8848,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1100,
+              "latencyMs": 932,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8247,7 +8858,7 @@
               "url": "http://live.metshop.top/huya/880261?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 4186,
+              "latencyMs": 1883,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -8257,7 +8868,7 @@
               "url": "http://file.loulannews.cn/nmip-media/channellive/channel103824/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 790,
+              "latencyMs": 423,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8267,7 +8878,7 @@
               "url": "http://stream.thmz.com/wxtv3/sd/live.m3u8?zjiangsd#http://stream.thmz.com/wxtv3/sd/live.m3u8?_upt=978cd8731706199708#http://stream.thmz.com/wxtv3/playlist.m3u8#http://stream.thmz.com/wxtv3/playlist.m3u8?_upt=1758133b1706166861",
               "ok": true,
               "status": 200,
-              "latencyMs": 996,
+              "latencyMs": 605,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8277,7 +8888,7 @@
               "url": "http://ali-xwl.cztv.com/live/channel02720Plxw.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 600,
+              "latencyMs": 371,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8287,7 +8898,7 @@
               "url": "http://zjtv-wshls.homecdn.com/live/2aa16.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 565,
+              "latencyMs": 291,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             }
@@ -8299,7 +8910,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 1172,
+          "latencyMs": 938,
           "channelCount": 469,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -8312,7 +8923,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 2388,
+              "latencyMs": 1005,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8322,7 +8933,7 @@
               "url": "http://live.metshop.top/huya/880261?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 2535,
+              "latencyMs": 1885,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -8332,7 +8943,7 @@
               "url": "http://file.loulannews.cn/nmip-media/channellive/channel103824/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 463,
+              "latencyMs": 245,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8342,7 +8953,7 @@
               "url": "http://stream.thmz.com/wxtv3/sd/live.m3u8?zjiangsd#http://stream.thmz.com/wxtv3/sd/live.m3u8?_upt=978cd8731706199708#http://stream.thmz.com/wxtv3/playlist.m3u8#http://stream.thmz.com/wxtv3/playlist.m3u8?_upt=1758133b1706166861",
               "ok": true,
               "status": 200,
-              "latencyMs": 580,
+              "latencyMs": 429,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8352,7 +8963,7 @@
               "url": "http://ali-xwl.cztv.com/live/channel02720Plxw.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 453,
+              "latencyMs": 159,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8362,7 +8973,7 @@
               "url": "http://zjtv-wshls.homecdn.com/live/2aa16.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 432,
+              "latencyMs": 160,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             }
@@ -8374,7 +8985,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 1370,
+          "latencyMs": 243,
           "channelCount": 469,
           "groupCount": 1,
           "duplicateRate": 1,
@@ -8387,7 +8998,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1642,
+              "latencyMs": 281,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8397,7 +9008,7 @@
               "url": "http://live.metshop.top/huya/880261?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 2038,
+              "latencyMs": 1172,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -8407,7 +9018,7 @@
               "url": "http://file.loulannews.cn/nmip-media/channellive/channel103824/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 598,
+              "latencyMs": 99,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8417,7 +9028,7 @@
               "url": "http://stream.thmz.com/wxtv3/sd/live.m3u8?zjiangsd#http://stream.thmz.com/wxtv3/sd/live.m3u8?_upt=978cd8731706199708#http://stream.thmz.com/wxtv3/playlist.m3u8#http://stream.thmz.com/wxtv3/playlist.m3u8?_upt=1758133b1706166861",
               "ok": true,
               "status": 200,
-              "latencyMs": 652,
+              "latencyMs": 162,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8427,7 +9038,7 @@
               "url": "http://ali-xwl.cztv.com/live/channel02720Plxw.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 423,
+              "latencyMs": 32,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8437,7 +9048,7 @@
               "url": "http://zjtv-wshls.homecdn.com/live/2aa16.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 431,
+              "latencyMs": 92,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             }
@@ -8453,8 +9064,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 1410,
-        "p95LatencyMs": 1689,
+        "averageLatencyMs": 659,
+        "p95LatencyMs": 938,
         "rootCauses": []
       },
       "finalTier": "ACTIVE",
@@ -8471,7 +9082,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 1465,
+          "latencyMs": 2935,
           "channelCount": 148,
           "groupCount": 13,
           "duplicateRate": 0.2673,
@@ -8484,7 +9095,7 @@
               "url": "http://play.kankanlive.com/live/1698234869325962.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 366,
+              "latencyMs": 234,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8494,7 +9105,7 @@
               "url": "https://liveplay-srs.voc.com.cn/hls/tv/27_e9e1e5.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 566,
+              "latencyMs": 416,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8504,7 +9115,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 418,
+              "latencyMs": 372,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8514,7 +9125,7 @@
               "url": "http://dafeng-tv-hls.cm.jstv.com/dafeng-tv/dafenget.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 651,
+              "latencyMs": 347,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8524,7 +9135,7 @@
               "url": "https://masterpull.hljtv.com/live/6rx9bifO.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 799,
+              "latencyMs": 392,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8534,7 +9145,7 @@
               "url": "https://jwcdnqx.hebyun.com.cn/live/qxzhpd/1500k/tzwj_video.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 929,
+              "latencyMs": 563,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -8546,7 +9157,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 452,
+          "latencyMs": 268,
           "channelCount": 148,
           "groupCount": 13,
           "duplicateRate": 0.2673,
@@ -8559,7 +9170,7 @@
               "url": "http://play.kankanlive.com/live/1698234869325962.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 276,
+              "latencyMs": 36,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8569,7 +9180,7 @@
               "url": "https://liveplay-srs.voc.com.cn/hls/tv/27_e9e1e5.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 301,
+              "latencyMs": 48,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8579,7 +9190,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 238,
+              "latencyMs": 42,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8589,7 +9200,7 @@
               "url": "http://dafeng-tv-hls.cm.jstv.com/dafeng-tv/dafenget.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 603,
+              "latencyMs": 133,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8599,7 +9210,7 @@
               "url": "https://masterpull.hljtv.com/live/6rx9bifO.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 384,
+              "latencyMs": 78,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8609,7 +9220,7 @@
               "url": "https://jwcdnqx.hebyun.com.cn/live/qxzhpd/1500k/tzwj_video.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 227,
+              "latencyMs": 132,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -8621,7 +9232,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 447,
+          "latencyMs": 339,
           "channelCount": 148,
           "groupCount": 13,
           "duplicateRate": 0.2673,
@@ -8634,7 +9245,7 @@
               "url": "http://play.kankanlive.com/live/1698234869325962.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 213,
+              "latencyMs": 102,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8644,7 +9255,7 @@
               "url": "https://liveplay-srs.voc.com.cn/hls/tv/27_e9e1e5.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 226,
+              "latencyMs": 39,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8654,7 +9265,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXxinchang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 236,
+              "latencyMs": 129,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8664,7 +9275,7 @@
               "url": "http://dafeng-tv-hls.cm.jstv.com/dafeng-tv/dafenget.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 483,
+              "latencyMs": 103,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -8674,7 +9285,7 @@
               "url": "https://masterpull.hljtv.com/live/6rx9bifO.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 277,
+              "latencyMs": 146,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8684,7 +9295,7 @@
               "url": "https://jwcdnqx.hebyun.com.cn/live/qxzhpd/1500k/tzwj_video.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 222,
+              "latencyMs": 138,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -8700,8 +9311,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 788,
-        "p95LatencyMs": 1465,
+        "averageLatencyMs": 1181,
+        "p95LatencyMs": 2935,
         "rootCauses": []
       },
       "finalTier": "ACTIVE",
@@ -8718,7 +9329,7 @@
           "round": 1,
           "ok": false,
           "status": 200,
-          "latencyMs": 2322,
+          "latencyMs": 1281,
           "channelCount": 434,
           "groupCount": 37,
           "duplicateRate": 0.7011,
@@ -8731,7 +9342,7 @@
               "url": "http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 10333,
+              "latencyMs": 10279,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8741,7 +9352,7 @@
               "url": "https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv",
               "ok": false,
               "status": 0,
-              "latencyMs": 10645,
+              "latencyMs": 10663,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8751,7 +9362,7 @@
               "url": "https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 238,
+              "latencyMs": 127,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8761,7 +9372,7 @@
               "url": "http://ls.qingting.fm/live/4877.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 612,
+              "latencyMs": 241,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -8771,161 +9382,7 @@
               "url": "https://migu.188766.xyz/?migutoken=7d40a68b796018a8497749ac92fa61c8&id=%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93&type=yy",
               "ok": false,
               "status": 0,
-              "latencyMs": 1113,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "黑龙江少儿",
-              "group": "☘️黑龙江频道",
-              "url": "http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 3,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            }
-          ],
-          "rootCauses": [
-            "MEDIA_SEGMENT_UNAVAILABLE"
-          ],
-          "error": ""
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "status": 200,
-          "latencyMs": 1850,
-          "channelCount": 434,
-          "groupCount": 37,
-          "duplicateRate": 0.7011,
-          "playableCount": 1,
-          "sampleCount": 6,
-          "media": [
-            {
-              "name": "CCTV-1",
-              "group": "🕘️更新时间",
-              "url": "http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 10278,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "广州影视",
-              "group": "☘️广东频道",
-              "url": "https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 10635,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "东方影视",
-              "group": "☘️上海频道",
-              "url": "https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 178,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "长沙新闻综合",
-              "group": "☘️湖南频道",
-              "url": "http://ls.qingting.fm/live/4877.m3u8",
-              "ok": true,
-              "status": 200,
-              "latencyMs": 263,
-              "contentType": "application/vnd.apple.mpegurl",
-              "rootCause": "OK"
-            },
-            {
-              "name": "河南都市",
-              "group": "☘️河南频道",
-              "url": "https://migu.188766.xyz/?migutoken=7d40a68b796018a8497749ac92fa61c8&id=%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93&type=yy",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 1131,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "黑龙江少儿",
-              "group": "☘️黑龙江频道",
-              "url": "http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 2,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            }
-          ],
-          "rootCauses": [
-            "MEDIA_SEGMENT_UNAVAILABLE"
-          ],
-          "error": ""
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "status": 200,
-          "latencyMs": 348,
-          "channelCount": 434,
-          "groupCount": 37,
-          "duplicateRate": 0.7011,
-          "playableCount": 1,
-          "sampleCount": 6,
-          "media": [
-            {
-              "name": "CCTV-1",
-              "group": "🕘️更新时间",
-              "url": "http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 10113,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "广州影视",
-              "group": "☘️广东频道",
-              "url": "https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 10655,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "东方影视",
-              "group": "☘️上海频道",
-              "url": "https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 566,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
-            },
-            {
-              "name": "长沙新闻综合",
-              "group": "☘️湖南频道",
-              "url": "http://ls.qingting.fm/live/4877.m3u8",
-              "ok": true,
-              "status": 200,
-              "latencyMs": 528,
-              "contentType": "application/vnd.apple.mpegurl",
-              "rootCause": "OK"
-            },
-            {
-              "name": "河南都市",
-              "group": "☘️河南频道",
-              "url": "https://migu.188766.xyz/?migutoken=7d40a68b796018a8497749ac92fa61c8&id=%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93&type=yy",
-              "ok": false,
-              "status": 0,
-              "latencyMs": 274,
+              "latencyMs": 1208,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -8944,6 +9401,160 @@
             "MEDIA_SEGMENT_UNAVAILABLE"
           ],
           "error": ""
+        },
+        {
+          "round": 2,
+          "ok": false,
+          "status": 200,
+          "latencyMs": 1244,
+          "channelCount": 434,
+          "groupCount": 37,
+          "duplicateRate": 0.7011,
+          "playableCount": 1,
+          "sampleCount": 6,
+          "media": [
+            {
+              "name": "CCTV-1",
+              "group": "🕘️更新时间",
+              "url": "http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 10267,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "广州影视",
+              "group": "☘️广东频道",
+              "url": "https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 10653,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "东方影视",
+              "group": "☘️上海频道",
+              "url": "https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 119,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "长沙新闻综合",
+              "group": "☘️湖南频道",
+              "url": "http://ls.qingting.fm/live/4877.m3u8",
+              "ok": true,
+              "status": 200,
+              "latencyMs": 152,
+              "contentType": "application/vnd.apple.mpegurl",
+              "rootCause": "OK"
+            },
+            {
+              "name": "河南都市",
+              "group": "☘️河南频道",
+              "url": "https://migu.188766.xyz/?migutoken=7d40a68b796018a8497749ac92fa61c8&id=%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93&type=yy",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 165,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "黑龙江少儿",
+              "group": "☘️黑龙江频道",
+              "url": "http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 1,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            }
+          ],
+          "rootCauses": [
+            "MEDIA_SEGMENT_UNAVAILABLE"
+          ],
+          "error": ""
+        },
+        {
+          "round": 3,
+          "ok": false,
+          "status": 200,
+          "latencyMs": 1403,
+          "channelCount": 434,
+          "groupCount": 37,
+          "duplicateRate": 0.7011,
+          "playableCount": 1,
+          "sampleCount": 6,
+          "media": [
+            {
+              "name": "CCTV-1",
+              "group": "🕘️更新时间",
+              "url": "http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 10206,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "广州影视",
+              "group": "☘️广东频道",
+              "url": "https://stream1.freetv.fun/yan-zhou-ying-shi-6.ctv",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 10644,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "东方影视",
+              "group": "☘️上海频道",
+              "url": "https://zby.130519.xyz/PLTV/11/224/3221225744/index.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 496,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "长沙新闻综合",
+              "group": "☘️湖南频道",
+              "url": "http://ls.qingting.fm/live/4877.m3u8",
+              "ok": true,
+              "status": 200,
+              "latencyMs": 235,
+              "contentType": "application/vnd.apple.mpegurl",
+              "rootCause": "OK"
+            },
+            {
+              "name": "河南都市",
+              "group": "☘️河南频道",
+              "url": "https://migu.188766.xyz/?migutoken=7d40a68b796018a8497749ac92fa61c8&id=%E9%83%BD%E5%B8%82%E9%A2%91%E9%81%93&type=yy",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 1111,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            },
+            {
+              "name": "黑龙江少儿",
+              "group": "☘️黑龙江频道",
+              "url": "http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8",
+              "ok": false,
+              "status": 0,
+              "latencyMs": 2,
+              "contentType": "",
+              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+            }
+          ],
+          "rootCauses": [
+            "MEDIA_SEGMENT_UNAVAILABLE"
+          ],
+          "error": ""
         }
       ],
       "summary": {
@@ -8953,8 +9564,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 0,
-        "averageLatencyMs": 1507,
-        "p95LatencyMs": 2322,
+        "averageLatencyMs": 1309,
+        "p95LatencyMs": 1403,
         "rootCauses": [
           "MEDIA_SEGMENT_UNAVAILABLE"
         ]
@@ -8973,7 +9584,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 1859,
+          "latencyMs": 328,
           "channelCount": 567,
           "groupCount": 35,
           "duplicateRate": 0.2777,
@@ -8986,7 +9597,7 @@
               "url": "http://8.138.7.223/tv/btime.php?id=bjws4k",
               "ok": false,
               "status": 403,
-              "latencyMs": 1827,
+              "latencyMs": 1139,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -8996,7 +9607,7 @@
               "url": "https://zby.130519.xyz/PLTV/11/224/3221225732/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 619,
+              "latencyMs": 238,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9006,7 +9617,7 @@
               "url": "http://php.jdshipin.com/TVOD/iptv.php?id=fhzw",
               "ok": false,
               "status": 0,
-              "latencyMs": 1053,
+              "latencyMs": 366,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9016,7 +9627,7 @@
               "url": "https://live.ottiptv.cc/huya/26355765",
               "ok": true,
               "status": 200,
-              "latencyMs": 2208,
+              "latencyMs": 1819,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9026,7 +9637,7 @@
               "url": "http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 419,
+              "latencyMs": 245,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9036,7 +9647,7 @@
               "url": "http://liveflash.sxrtv.com/live/sxfilm.m3u8?sub_m3u8=true&edge_slice=true",
               "ok": false,
               "status": 403,
-              "latencyMs": 621,
+              "latencyMs": 299,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -9050,7 +9661,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 1555,
+          "latencyMs": 1199,
           "channelCount": 567,
           "groupCount": 35,
           "duplicateRate": 0.2777,
@@ -9063,7 +9674,7 @@
               "url": "http://8.138.7.223/tv/btime.php?id=bjws4k",
               "ok": false,
               "status": 403,
-              "latencyMs": 1038,
+              "latencyMs": 532,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9073,7 +9684,7 @@
               "url": "https://zby.130519.xyz/PLTV/11/224/3221225732/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 259,
+              "latencyMs": 137,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9083,7 +9694,7 @@
               "url": "http://php.jdshipin.com/TVOD/iptv.php?id=fhzw",
               "ok": false,
               "status": 0,
-              "latencyMs": 420,
+              "latencyMs": 212,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9093,7 +9704,7 @@
               "url": "https://live.ottiptv.cc/huya/26355765",
               "ok": true,
               "status": 200,
-              "latencyMs": 1828,
+              "latencyMs": 679,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9103,7 +9714,7 @@
               "url": "http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 477,
+              "latencyMs": 62,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9113,7 +9724,7 @@
               "url": "http://liveflash.sxrtv.com/live/sxfilm.m3u8?sub_m3u8=true&edge_slice=true",
               "ok": false,
               "status": 403,
-              "latencyMs": 277,
+              "latencyMs": 34,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -9127,7 +9738,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 1608,
+          "latencyMs": 320,
           "channelCount": 567,
           "groupCount": 35,
           "duplicateRate": 0.2777,
@@ -9139,10 +9750,10 @@
               "group": "4K频道",
               "url": "http://8.138.7.223/tv/btime.php?id=bjws4k",
               "ok": false,
-              "status": 0,
-              "latencyMs": 12015,
-              "contentType": "",
-              "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
+              "status": 403,
+              "latencyMs": 330,
+              "contentType": "text/html",
+              "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
             {
               "name": "五星体育",
@@ -9150,7 +9761,7 @@
               "url": "https://zby.130519.xyz/PLTV/11/224/3221225732/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 356,
+              "latencyMs": 127,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9160,7 +9771,7 @@
               "url": "http://php.jdshipin.com/TVOD/iptv.php?id=fhzw",
               "ok": false,
               "status": 0,
-              "latencyMs": 184,
+              "latencyMs": 211,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9170,7 +9781,7 @@
               "url": "https://live.ottiptv.cc/huya/26355765",
               "ok": true,
               "status": 200,
-              "latencyMs": 1353,
+              "latencyMs": 663,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9180,7 +9791,7 @@
               "url": "http://tmpstream.hyrtv.cn/xwzh/sd/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 154,
+              "latencyMs": 58,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9190,12 +9801,14 @@
               "url": "http://liveflash.sxrtv.com/live/sxfilm.m3u8?sub_m3u8=true&edge_slice=true",
               "ok": false,
               "status": 403,
-              "latencyMs": 86,
+              "latencyMs": 41,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
           ],
-          "rootCauses": [],
+          "rootCauses": [
+            "AD_OR_PARSE_ENDPOINT"
+          ],
           "error": ""
         }
       ],
@@ -9206,8 +9819,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 1674,
-        "p95LatencyMs": 1859,
+        "averageLatencyMs": 616,
+        "p95LatencyMs": 1199,
         "rootCauses": [
           "AD_OR_PARSE_ENDPOINT"
         ]
@@ -9226,7 +9839,7 @@
           "round": 1,
           "ok": false,
           "status": 200,
-          "latencyMs": 1107,
+          "latencyMs": 296,
           "channelCount": 415,
           "groupCount": 16,
           "duplicateRate": 0.0547,
@@ -9239,7 +9852,7 @@
               "url": "https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001",
               "ok": false,
               "status": 403,
-              "latencyMs": 287,
+              "latencyMs": 339,
               "contentType": "text/html; charset=utf-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9249,7 +9862,7 @@
               "url": "http://39.134.65.73/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225663/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 10323,
+              "latencyMs": 10292,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9259,7 +9872,7 @@
               "url": "http://aktv-stream.m16tv.cfd/stream/aktv/null-1/AKTV.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 8,
+              "latencyMs": 7,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9269,7 +9882,7 @@
               "url": "http://39.134.182.166/hwltc.tv.cdn.zj.chinamobile.com/PLTV/88888888/224/3221230005/smil/index.m3u8?fmt=ts2hls",
               "ok": false,
               "status": 0,
-              "latencyMs": 10641,
+              "latencyMs": 10634,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9279,7 +9892,7 @@
               "url": "http://tvfile.lzgbdst.com/nmip-media/channellive/channel106876/playlist.m3u8?zsicd",
               "ok": false,
               "status": 502,
-              "latencyMs": 373,
+              "latencyMs": 200,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9289,7 +9902,7 @@
               "url": "https://txmov2.a.kwimgs.com/bs3/video-hls/5216294359327079321_hlshd15.m3u8",
               "ok": false,
               "status": 404,
-              "latencyMs": 1807,
+              "latencyMs": 1318,
               "contentType": "application/xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -9304,7 +9917,7 @@
           "round": 2,
           "ok": false,
           "status": 200,
-          "latencyMs": 2289,
+          "latencyMs": 1389,
           "channelCount": 415,
           "groupCount": 16,
           "duplicateRate": 0.0547,
@@ -9317,7 +9930,7 @@
               "url": "https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001",
               "ok": false,
               "status": 403,
-              "latencyMs": 269,
+              "latencyMs": 88,
               "contentType": "text/html; charset=utf-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9327,7 +9940,7 @@
               "url": "http://39.134.65.73/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225663/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 10397,
+              "latencyMs": 10646,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9337,7 +9950,7 @@
               "url": "http://aktv-stream.m16tv.cfd/stream/aktv/null-1/AKTV.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 349,
+              "latencyMs": 6,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9347,7 +9960,7 @@
               "url": "http://39.134.182.166/hwltc.tv.cdn.zj.chinamobile.com/PLTV/88888888/224/3221230005/smil/index.m3u8?fmt=ts2hls",
               "ok": false,
               "status": 0,
-              "latencyMs": 10278,
+              "latencyMs": 10632,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9357,7 +9970,7 @@
               "url": "http://tvfile.lzgbdst.com/nmip-media/channellive/channel106876/playlist.m3u8?zsicd",
               "ok": false,
               "status": 502,
-              "latencyMs": 439,
+              "latencyMs": 149,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9367,7 +9980,7 @@
               "url": "https://txmov2.a.kwimgs.com/bs3/video-hls/5216294359327079321_hlshd15.m3u8",
               "ok": false,
               "status": 404,
-              "latencyMs": 603,
+              "latencyMs": 144,
               "contentType": "application/xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -9382,7 +9995,7 @@
           "round": 3,
           "ok": false,
           "status": 200,
-          "latencyMs": 1733,
+          "latencyMs": 1051,
           "channelCount": 415,
           "groupCount": 16,
           "duplicateRate": 0.0547,
@@ -9395,7 +10008,7 @@
               "url": "https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001",
               "ok": false,
               "status": 403,
-              "latencyMs": 506,
+              "latencyMs": 193,
               "contentType": "text/html; charset=utf-8",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9405,7 +10018,7 @@
               "url": "http://39.134.65.73/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225663/index.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 10458,
+              "latencyMs": 10581,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9415,7 +10028,7 @@
               "url": "http://aktv-stream.m16tv.cfd/stream/aktv/null-1/AKTV.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 8,
+              "latencyMs": 15,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9425,7 +10038,7 @@
               "url": "http://39.134.182.166/hwltc.tv.cdn.zj.chinamobile.com/PLTV/88888888/224/3221230005/smil/index.m3u8?fmt=ts2hls",
               "ok": false,
               "status": 0,
-              "latencyMs": 10921,
+              "latencyMs": 10631,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -9435,7 +10048,7 @@
               "url": "http://tvfile.lzgbdst.com/nmip-media/channellive/channel106876/playlist.m3u8?zsicd",
               "ok": false,
               "status": 502,
-              "latencyMs": 303,
+              "latencyMs": 188,
               "contentType": "text/html",
               "rootCause": "AD_OR_PARSE_ENDPOINT"
             },
@@ -9445,7 +10058,7 @@
               "url": "https://txmov2.a.kwimgs.com/bs3/video-hls/5216294359327079321_hlshd15.m3u8",
               "ok": false,
               "status": 404,
-              "latencyMs": 382,
+              "latencyMs": 141,
               "contentType": "application/xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -9464,8 +10077,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 0,
-        "averageLatencyMs": 1710,
-        "p95LatencyMs": 2289,
+        "averageLatencyMs": 912,
+        "p95LatencyMs": 1389,
         "rootCauses": [
           "MEDIA_SEGMENT_UNAVAILABLE",
           "AD_OR_PARSE_ENDPOINT"
@@ -9485,7 +10098,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 1184,
+          "latencyMs": 1005,
           "channelCount": 334,
           "groupCount": 10,
           "duplicateRate": 0.0205,
@@ -9498,7 +10111,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 2099,
+              "latencyMs": 952,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9508,7 +10121,7 @@
               "url": "http://live.metshop.top/huya/21059599?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 4381,
+              "latencyMs": 2225,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9518,7 +10131,7 @@
               "url": "https://satellitepull.cnr.cn/live/wxjlxcgb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1570,
+              "latencyMs": 331,
               "contentType": "application/x-mpegurl",
               "rootCause": "OK"
             },
@@ -9528,7 +10141,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1082,
+              "latencyMs": 347,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9538,7 +10151,7 @@
               "url": "http://live.yantaitv.cn/live/27f84144e95a4652ae9e5c211b2a6b55/405f3e33ba384aa0a16014d0becd1261-1.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 386,
+              "latencyMs": 351,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9548,7 +10161,7 @@
               "url": "http://stream9.jlntv.cn/aac_jygb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 706,
+              "latencyMs": 381,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9560,7 +10173,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 1345,
+          "latencyMs": 1381,
           "channelCount": 334,
           "groupCount": 10,
           "duplicateRate": 0.0205,
@@ -9573,7 +10186,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1555,
+              "latencyMs": 907,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9583,7 +10196,7 @@
               "url": "http://live.metshop.top/huya/21059599?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 3203,
+              "latencyMs": 1609,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9593,7 +10206,7 @@
               "url": "https://satellitepull.cnr.cn/live/wxjlxcgb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 611,
+              "latencyMs": 157,
               "contentType": "application/x-mpegurl",
               "rootCause": "OK"
             },
@@ -9603,7 +10216,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 198,
+              "latencyMs": 144,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9613,7 +10226,7 @@
               "url": "http://live.yantaitv.cn/live/27f84144e95a4652ae9e5c211b2a6b55/405f3e33ba384aa0a16014d0becd1261-1.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 191,
+              "latencyMs": 135,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9623,7 +10236,7 @@
               "url": "http://stream9.jlntv.cn/aac_jygb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 245,
+              "latencyMs": 188,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9635,7 +10248,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 1853,
+          "latencyMs": 393,
           "channelCount": 334,
           "groupCount": 10,
           "duplicateRate": 0.0205,
@@ -9648,7 +10261,7 @@
               "url": "https://dash2.antik.sk/live/test_cctv_tizen/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1266,
+              "latencyMs": 300,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9658,7 +10271,7 @@
               "url": "http://live.metshop.top/huya/21059599?cdn=alicdn",
               "ok": true,
               "status": 200,
-              "latencyMs": 2626,
+              "latencyMs": 977,
               "contentType": "video/x-flv",
               "rootCause": "OK"
             },
@@ -9668,7 +10281,7 @@
               "url": "https://satellitepull.cnr.cn/live/wxjlxcgb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 538,
+              "latencyMs": 41,
               "contentType": "application/x-mpegurl",
               "rootCause": "OK"
             },
@@ -9678,7 +10291,7 @@
               "url": "http://l.cztvcloud.com/channels/lantian/SXsongyang1/720p.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 378,
+              "latencyMs": 57,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -9688,7 +10301,7 @@
               "url": "http://live.yantaitv.cn/live/27f84144e95a4652ae9e5c211b2a6b55/405f3e33ba384aa0a16014d0becd1261-1.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 390,
+              "latencyMs": 69,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9698,7 +10311,7 @@
               "url": "http://stream9.jlntv.cn/aac_jygb/playlist.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 466,
+              "latencyMs": 137,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9714,8 +10327,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 1461,
-        "p95LatencyMs": 1853,
+        "averageLatencyMs": 926,
+        "p95LatencyMs": 1381,
         "rootCauses": []
       },
       "finalTier": "ACTIVE",
@@ -9732,7 +10345,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 1210,
+          "latencyMs": 918,
           "channelCount": 9,
           "groupCount": 3,
           "duplicateRate": 0.8269,
@@ -9745,7 +10358,7 @@
               "url": "https://english-livebkali.cgtn.com/live/encgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1909,
+              "latencyMs": 396,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9755,7 +10368,7 @@
               "url": "https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 887,
+              "latencyMs": 180,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9765,7 +10378,7 @@
               "url": "https://0472.org/hls/cgtnx.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1769,
+              "latencyMs": 863,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9775,7 +10388,7 @@
               "url": "https://0472.org/hls/cgtnf.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 758,
+              "latencyMs": 227,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9785,7 +10398,7 @@
               "url": "https://0472.org/hls/cgtna.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 622,
+              "latencyMs": 222,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9795,7 +10408,7 @@
               "url": "https://0472.org/hls/cgtne.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 487,
+              "latencyMs": 222,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9807,7 +10420,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 2061,
+          "latencyMs": 227,
           "channelCount": 9,
           "groupCount": 3,
           "duplicateRate": 0.8269,
@@ -9820,7 +10433,7 @@
               "url": "https://english-livebkali.cgtn.com/live/encgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 322,
+              "latencyMs": 111,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9830,7 +10443,7 @@
               "url": "https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 329,
+              "latencyMs": 109,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9840,7 +10453,7 @@
               "url": "https://0472.org/hls/cgtnx.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 282,
+              "latencyMs": 216,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9850,7 +10463,7 @@
               "url": "https://0472.org/hls/cgtnf.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 506,
+              "latencyMs": 243,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9860,7 +10473,7 @@
               "url": "https://0472.org/hls/cgtna.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 329,
+              "latencyMs": 226,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9870,7 +10483,7 @@
               "url": "https://0472.org/hls/cgtne.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 497,
+              "latencyMs": 294,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9882,7 +10495,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 511,
+          "latencyMs": 213,
           "channelCount": 9,
           "groupCount": 3,
           "duplicateRate": 0.8269,
@@ -9895,7 +10508,7 @@
               "url": "https://english-livebkali.cgtn.com/live/encgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 342,
+              "latencyMs": 63,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9905,7 +10518,7 @@
               "url": "https://english-livebkali.cgtn.com/live/doccgtn_0.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 417,
+              "latencyMs": 123,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9915,7 +10528,7 @@
               "url": "https://0472.org/hls/cgtnx.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 515,
+              "latencyMs": 310,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9925,7 +10538,7 @@
               "url": "https://0472.org/hls/cgtnf.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 499,
+              "latencyMs": 239,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9935,7 +10548,7 @@
               "url": "https://0472.org/hls/cgtna.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 543,
+              "latencyMs": 238,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -9945,7 +10558,7 @@
               "url": "https://0472.org/hls/cgtne.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 518,
+              "latencyMs": 272,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -9961,8 +10574,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 1261,
-        "p95LatencyMs": 2061,
+        "averageLatencyMs": 453,
+        "p95LatencyMs": 918,
         "rootCauses": []
       },
       "finalTier": "ACTIVE",
@@ -9979,7 +10592,7 @@
           "round": 1,
           "ok": false,
           "status": 200,
-          "latencyMs": 1979,
+          "latencyMs": 831,
           "channelCount": 91,
           "groupCount": 2,
           "duplicateRate": 0.0319,
@@ -9992,7 +10605,7 @@
               "url": "https://php.946985.filegear-sg.me/tvbnews.php?id=c",
               "ok": true,
               "status": 200,
-              "latencyMs": 1087,
+              "latencyMs": 794,
               "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
               "rootCause": "OK"
             },
@@ -10002,7 +10615,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CCCM",
               "ok": false,
               "status": 200,
-              "latencyMs": 2220,
+              "latencyMs": 1182,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10012,7 +10625,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CTSN",
               "ok": false,
               "status": 200,
-              "latencyMs": 2248,
+              "latencyMs": 5329,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10022,7 +10635,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=C3",
               "ok": false,
               "status": 200,
-              "latencyMs": 2152,
+              "latencyMs": 5459,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10032,7 +10645,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CC1",
               "ok": false,
               "status": 200,
-              "latencyMs": 2017,
+              "latencyMs": 1363,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10042,7 +10655,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=ZJTV",
               "ok": false,
               "status": 200,
-              "latencyMs": 2822,
+              "latencyMs": 2315,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -10056,7 +10669,7 @@
           "round": 2,
           "ok": false,
           "status": 200,
-          "latencyMs": 510,
+          "latencyMs": 215,
           "channelCount": 91,
           "groupCount": 2,
           "duplicateRate": 0.0319,
@@ -10069,7 +10682,7 @@
               "url": "https://php.946985.filegear-sg.me/tvbnews.php?id=c",
               "ok": true,
               "status": 200,
-              "latencyMs": 1141,
+              "latencyMs": 777,
               "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
               "rootCause": "OK"
             },
@@ -10079,7 +10692,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CCCM",
               "ok": false,
               "status": 200,
-              "latencyMs": 1866,
+              "latencyMs": 1317,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10089,7 +10702,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CTSN",
               "ok": false,
               "status": 200,
-              "latencyMs": 2755,
+              "latencyMs": 1720,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10099,7 +10712,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=C3",
               "ok": false,
               "status": 200,
-              "latencyMs": 2695,
+              "latencyMs": 5759,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10109,7 +10722,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CC1",
               "ok": false,
               "status": 200,
-              "latencyMs": 1824,
+              "latencyMs": 1579,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10119,7 +10732,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=ZJTV",
               "ok": false,
               "status": 200,
-              "latencyMs": 2760,
+              "latencyMs": 1573,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -10133,7 +10746,7 @@
           "round": 3,
           "ok": false,
           "status": 200,
-          "latencyMs": 381,
+          "latencyMs": 340,
           "channelCount": 91,
           "groupCount": 2,
           "duplicateRate": 0.0319,
@@ -10146,7 +10759,7 @@
               "url": "https://php.946985.filegear-sg.me/tvbnews.php?id=c",
               "ok": true,
               "status": 200,
-              "latencyMs": 1297,
+              "latencyMs": 851,
               "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
               "rootCause": "OK"
             },
@@ -10156,7 +10769,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CCCM",
               "ok": false,
               "status": 200,
-              "latencyMs": 1855,
+              "latencyMs": 1328,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10166,7 +10779,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CTSN",
               "ok": false,
               "status": 200,
-              "latencyMs": 2993,
+              "latencyMs": 1535,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10176,7 +10789,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=C3",
               "ok": false,
               "status": 200,
-              "latencyMs": 1876,
+              "latencyMs": 1399,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10186,7 +10799,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=CC1",
               "ok": false,
               "status": 200,
-              "latencyMs": 3864,
+              "latencyMs": 1374,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10196,7 +10809,7 @@
               "url": "https://php.946985.filegear-sg.me/mytv265.php?id=ZJTV",
               "ok": false,
               "status": 200,
-              "latencyMs": 4329,
+              "latencyMs": 4087,
               "contentType": "application/dash+xml",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             }
@@ -10214,8 +10827,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 0,
-        "averageLatencyMs": 957,
-        "p95LatencyMs": 1979,
+        "averageLatencyMs": 462,
+        "p95LatencyMs": 831,
         "rootCauses": [
           "MEDIA_SEGMENT_UNAVAILABLE"
         ]
@@ -10234,7 +10847,7 @@
           "round": 1,
           "ok": true,
           "status": 200,
-          "latencyMs": 3236,
+          "latencyMs": 7431,
           "channelCount": 3605,
           "groupCount": 103,
           "duplicateRate": 0.0629,
@@ -10247,7 +10860,7 @@
               "url": "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 2366,
+              "latencyMs": 1896,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10257,7 +10870,7 @@
               "url": "https://amchls.wns.live/hls/stream.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 1144,
+              "latencyMs": 917,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10267,7 +10880,7 @@
               "url": "https://tgn.bozztv.com/betterlife/betterlife/betterlife/index.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 2447,
+              "latencyMs": 3508,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -10277,7 +10890,7 @@
               "url": "https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 3136,
+              "latencyMs": 1695,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -10287,7 +10900,7 @@
               "url": "https://jmp2.uk/plu-625464a945b6a200079257d1.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 1779,
+              "latencyMs": 1847,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10297,7 +10910,7 @@
               "url": "https://reflect-fcpublicmedia.cablecast.tv/live-5/live/stream-1/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1954,
+              "latencyMs": 1513,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -10309,7 +10922,7 @@
           "round": 2,
           "ok": true,
           "status": 200,
-          "latencyMs": 2217,
+          "latencyMs": 2242,
           "channelCount": 3605,
           "groupCount": 103,
           "duplicateRate": 0.0629,
@@ -10322,7 +10935,7 @@
               "url": "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 1907,
+              "latencyMs": 1903,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10332,7 +10945,7 @@
               "url": "https://amchls.wns.live/hls/stream.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 500,
+              "latencyMs": 561,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10342,7 +10955,7 @@
               "url": "https://tgn.bozztv.com/betterlife/betterlife/betterlife/index.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1992,
+              "latencyMs": 2885,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -10352,7 +10965,7 @@
               "url": "https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 2044,
+              "latencyMs": 954,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -10362,7 +10975,7 @@
               "url": "https://jmp2.uk/plu-625464a945b6a200079257d1.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 2565,
+              "latencyMs": 1418,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10372,7 +10985,7 @@
               "url": "https://reflect-fcpublicmedia.cablecast.tv/live-5/live/stream-1/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1679,
+              "latencyMs": 1508,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -10384,7 +10997,7 @@
           "round": 3,
           "ok": true,
           "status": 200,
-          "latencyMs": 3354,
+          "latencyMs": 2044,
           "channelCount": 3605,
           "groupCount": 103,
           "duplicateRate": 0.0629,
@@ -10397,7 +11010,7 @@
               "url": "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 1975,
+              "latencyMs": 1431,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10407,7 +11020,7 @@
               "url": "https://amchls.wns.live/hls/stream.m3u8",
               "ok": false,
               "status": 0,
-              "latencyMs": 1800,
+              "latencyMs": 506,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10417,7 +11030,7 @@
               "url": "https://tgn.bozztv.com/betterlife/betterlife/betterlife/index.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 2189,
+              "latencyMs": 2648,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             },
@@ -10427,7 +11040,7 @@
               "url": "https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 846,
+              "latencyMs": 1040,
               "contentType": "application/x-mpegURL",
               "rootCause": "OK"
             },
@@ -10437,7 +11050,7 @@
               "url": "https://jmp2.uk/plu-625464a945b6a200079257d1.m3u8",
               "ok": false,
               "status": 400,
-              "latencyMs": 1976,
+              "latencyMs": 1572,
               "contentType": "",
               "rootCause": "MEDIA_SEGMENT_UNAVAILABLE"
             },
@@ -10447,7 +11060,7 @@
               "url": "https://reflect-fcpublicmedia.cablecast.tv/live-5/live/stream-1/live.m3u8",
               "ok": true,
               "status": 200,
-              "latencyMs": 1773,
+              "latencyMs": 1134,
               "contentType": "application/vnd.apple.mpegurl",
               "rootCause": "OK"
             }
@@ -10463,8 +11076,8 @@
         "detailOkRate": 0,
         "playOkRate": 0,
         "mediaOkRate": 1,
-        "averageLatencyMs": 2936,
-        "p95LatencyMs": 3354,
+        "averageLatencyMs": 3906,
+        "p95LatencyMs": 7431,
         "rootCauses": []
       },
       "finalTier": "ACTIVE",

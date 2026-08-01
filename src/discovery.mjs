@@ -56,6 +56,24 @@ export function extractCandidates(payload, feedUrl = '') {
   return candidates;
 }
 
+export function extractConfigReferences(payload, feedUrl = '') {
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return [];
+  const references = [];
+  for (const entry of Array.isArray(payload.urls) ? payload.urls : []) {
+    const raw = typeof entry === 'string' ? entry : (entry?.url || entry?.api);
+    const api = normalizeCandidateUrl(raw);
+    if (!api) continue;
+    if (DISALLOWED_CONFIG_KEY_RE.test(JSON.stringify(entry))) continue;
+    references.push({
+      kind: 'config',
+      api,
+      name: typeof entry === 'object' ? String(entry.name || '').trim() : '',
+      discoveredFrom: feedUrl,
+    });
+  }
+  return references;
+}
+
 export function dedupeCandidates(candidates = []) {
   const result = new Map();
   for (const candidate of candidates) {

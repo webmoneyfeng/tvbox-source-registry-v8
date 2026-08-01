@@ -1,10 +1,10 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dedupeCandidates, extractCandidates, isPublicHttpUrl, normalizeCandidateUrl, physicalCandidateKey } from '../src/discovery.mjs';
+import { dedupeCandidates, extractCandidates, extractConfigReferences, isPublicHttpUrl, normalizeCandidateUrl, physicalCandidateKey } from '../src/discovery.mjs';
 import { liveContract, parseM3U } from '../src/live.mjs';
 import { candidateRegistryKey, candidateToRegistrySource, LIVE_SOURCE_REGISTRY, SOURCE_REGISTRY } from '../src/registry.mjs';
-import { parseTvappReadmeSources, tvappKnownNameForUrl } from '../src/tvapp.mjs';
+import { parseTvappPayload, parseTvappReadmeSources, tvappKnownNameForUrl } from '../src/tvapp.mjs';
 import { probeSource } from '../src/worker.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -14,7 +14,10 @@ const MAX_VOD_PROBES = Number(process.env.TVAPP_MAX_VOD_PROBES || 40);
 const MAX_LIVE_SHAPE = Number(process.env.TVAPP_MAX_LIVE_SHAPE || 40);
 const MAX_LIVE_MEDIA = Number(process.env.TVAPP_MAX_LIVE_MEDIA || 14);
 const MAX_MEDIA_PER_PLAYLIST = Number(process.env.TVAPP_MAX_MEDIA_PER_PLAYLIST || 8);
+const MAX_CONFIG_DEPTH = Math.max(0, Math.min(2, Number(process.env.TVAPP_MAX_CONFIG_DEPTH || 2)));
+const MAX_CONFIG_DOCUMENTS = Math.max(1, Number(process.env.TVAPP_MAX_CONFIG_DOCUMENTS || 100));
 const DISALLOWED_DIRECT_SITE_RE = /(?:jar|spider|ext|parse|player|script)/iu;
+const CMS_API_RE = /(?:api\.php\/provide\/vod|\/provide\/vod|\/vod\/?)(?:$|\?)/iu;
 
 async function fetchLimited(url, maxBytes = 1_200_000) {
   const started = Date.now();
@@ -60,44 +63,8 @@ async function fetchLimited(url, maxBytes = 1_200_000) {
   }
 }
 
-function stripJsonComments(value) {
-  let output = '';
-  let inString = false;
-  let escaped = false;
-  let lineComment = false;
-  let blockComment = false;
-  for (let index = 0; index < value.length; index += 1) {
-    const current = value[index];
-    const next = value[index + 1];
-    if (lineComment) {
-      if (current === '\n') { lineComment = false; output += current; }
-      continue;
-    }
-    if (blockComment) {
-      if (current === '*' && next === '/') { blockComment = false; index += 1; }
-      else if (current === '\n') output += current;
-      continue;
-    }
-    if (inString) {
-      output += current;
-      if (escaped) escaped = false;
-      else if (current === '\\') escaped = true;
-      else if (current === '"') inString = false;
-      continue;
-    }
-    if (current === '"') { inString = true; output += current; continue; }
-    if (current === '/' && next === '/') { lineComment = true; index += 1; continue; }
-    if (current === '/' && next === '*') { blockComment = true; index += 1; continue; }
-    output += current;
-  }
-  return output;
-}
-
 function parsePayload(text) {
-  const value = String(text || '').replace(/^\uFEFF/u, '').trim();
-  if (!value) return null;
-  if (/^#EXTM3U/iu.test(value)) return value;
-  try { return JSON.parse(stripJsonComments(value)); } catch { return null; }
+  return parseTvappPayload(text);
 }
 
 function documentType(payload, text) {
@@ -120,6 +87,42 @@ function extractDirectSites(payload, feedUrl) {
     direct.push({ kind: 'vod', api: normalizeCandidateUrl(site.api), name: String(site.name || '').trim(), discoveredFrom: feedUrl });
   }
   return [...base, ...direct];
+}
+
+function isLikelyCmsApi(value) {
+  return CMS_API_RE.test(String(value || ''));
+}
+
+async function inspectVodDocument(entry) {
+  const fetched = await fetchLimited(entry.url, 900_000);
+  const payload = parsePayload(fetched.text);
+  const directCandidates = extractDirectSites(payload, entry.url)
+    .filter((candidate) => candidate.kind === 'vod' && isPublicHttpUrl(candidate.api));
+  const configReferences = extractConfigReferences(payload, entry.url);
+  for (const reference of configReferences) {
+    if (isLikelyCmsApi(reference.api)) {
+      directCandidates.push({
+        kind: 'vod',
+        api: reference.api,
+        name: reference.name,
+        discoveredFrom: entry.url,
+      });
+    }
+  }
+  return {
+    ...entry,
+    ok: fetched.ok,
+    status: fetched.status,
+    finalUrl: fetched.finalUrl,
+    bytes: fetched.bytes,
+    latencyMs: fetched.latencyMs,
+    documentType: documentType(payload, fetched.text),
+    extractedVodCount: directCandidates.length,
+    configReferenceCount: configReferences.length,
+    candidates: directCandidates,
+    configReferences,
+    error: fetched.error,
+  };
 }
 
 function existingKeys() {
@@ -217,24 +220,33 @@ const vodIndexes = entries.filter((entry) => entry.kind === 'vod_index');
 const liveIndexes = entries.filter((entry) => entry.kind === 'live');
 const existing = existingKeys();
 
-const vodDocuments = await mapWithConcurrency(vodIndexes, 5, async (entry) => {
-  const fetched = await fetchLimited(entry.url, 900_000);
-  const payload = parsePayload(fetched.text);
-  const candidates = extractDirectSites(payload, entry.url)
-    .filter((candidate) => candidate.kind === 'vod' && isPublicHttpUrl(candidate.api));
-  return {
-    ...entry,
-    ok: fetched.ok,
-    status: fetched.status,
-    finalUrl: fetched.finalUrl,
-    bytes: fetched.bytes,
-    latencyMs: fetched.latencyMs,
-    documentType: documentType(payload, fetched.text),
-    extractedVodCount: candidates.length,
-    candidates,
-    error: fetched.error,
-  };
-});
+const seenConfigUrls = new Set();
+const discoveredConfigReferences = [];
+const vodDocuments = [];
+let configQueue = dedupeBy(vodIndexes.map((entry) => ({ ...entry, depth: 0 })), (entry) => normalizeCandidateUrl(entry.url));
+let configTraversalTruncated = false;
+for (let depth = 0; configQueue.length && depth <= MAX_CONFIG_DEPTH; depth += 1) {
+  const remaining = MAX_CONFIG_DOCUMENTS - vodDocuments.length;
+  if (remaining <= 0) {
+    configTraversalTruncated = true;
+    break;
+  }
+  const batch = configQueue.slice(0, remaining);
+  if (configQueue.length > batch.length) configTraversalTruncated = true;
+  for (const entry of batch) seenConfigUrls.add(normalizeCandidateUrl(entry.url));
+  const inspected = await mapWithConcurrency(batch, 5, inspectVodDocument);
+  vodDocuments.push(...inspected);
+  const references = inspected.flatMap((document) => document.configReferences || []);
+  discoveredConfigReferences.push(...references);
+  if (depth === MAX_CONFIG_DEPTH) {
+    if (references.some((reference) => !isLikelyCmsApi(reference.api))) configTraversalTruncated = true;
+    break;
+  }
+  configQueue = dedupeBy(references
+    .filter((reference) => !isLikelyCmsApi(reference.api))
+    .filter((reference) => !seenConfigUrls.has(normalizeCandidateUrl(reference.api)))
+    .map((reference) => ({ ...reference, url: reference.api, depth: depth + 1 })), (entry) => normalizeCandidateUrl(entry.url));
+}
 
 const vodCandidates = dedupeBy(
   dedupeCandidates(vodDocuments.flatMap((document) => document.candidates || [])),
@@ -244,7 +256,7 @@ const vodCandidates = dedupeBy(
 );
 const vodProbeTargets = vodCandidates
   .filter((candidate) => !isAlreadyRegistered(candidate))
-  .filter((candidate) => /(?:api\.php\/provide\/vod|\/provide\/vod|\/vod\/?)(?:$|\?)/iu.test(candidate.api))
+  .filter((candidate) => isLikelyCmsApi(candidate.api))
   .slice(0, MAX_VOD_PROBES);
 
 const vodProbes = await mapWithConcurrency(vodProbeTargets, 4, async (candidate) => {
@@ -378,6 +390,10 @@ const report = {
     directSourceOnly: true,
     noCategoryRewrite: true,
     noFilterRewrite: true,
+    configTraversal: {
+      maxDepth: MAX_CONFIG_DEPTH,
+      maxDocuments: MAX_CONFIG_DOCUMENTS,
+    },
     approvalRequiredBeforeRegistryChange: true,
   },
   counts: {
@@ -385,6 +401,9 @@ const report = {
     vodIndexUrls: vodIndexes.length,
     liveUrls: liveIndexes.length,
     vodDocuments: vodDocuments.length,
+    nestedVodDocuments: vodDocuments.filter((document) => Number(document.depth || 0) > 0).length,
+    configReferenceUrls: dedupeBy(discoveredConfigReferences, (reference) => normalizeCandidateUrl(reference.api)).length,
+    configTraversalTruncated,
     extractedVodCandidates: vodCandidates.length,
     newVodProbeTargets: vodProbeTargets.length,
     vodProbation: vodProbes.filter((row) => row.recommendedTier === 'PROBATION').length,
