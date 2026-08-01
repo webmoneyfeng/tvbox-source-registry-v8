@@ -1,3 +1,5 @@
+import { tvappKnownNameForUrl } from './tvapp.mjs';
+
 export const REGISTRY_VERSION = 'v8.1.4';
 
 const RAW_SOURCES = [
@@ -117,8 +119,15 @@ export function candidateToRegistrySource(candidate) {
   };
 }
 
+export function candidateRegistryKey(candidate) {
+  const source = candidateToRegistrySource(candidate);
+  return `${source.kind}:${source.physicalKey}`;
+}
+
 export function sourceDisplayName(source, index = (source.kind === 'live' ? LIVE_SOURCE_REGISTRY : SOURCE_REGISTRY).indexOf(source)) {
   if (source.displayName) return source.displayName;
+  const known = tvappKnownNameForUrl(source.api);
+  if (known) return known;
   try { return new URL(source.api).hostname.replace(/^www\./u, ''); }
   catch { return source.slug || `source-${index + 1}`; }
 }

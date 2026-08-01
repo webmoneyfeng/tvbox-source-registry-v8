@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/registry.mjs && node --check src/health.mjs && node --check src/live.mjs && node --check src/discovery.mjs && node --check src/scoring.mjs && node --check src/worker.mjs && node --check scripts/probe-sources.mjs && node --check scripts/probe-live-sources.mjs && node --check scripts/audit-candidate-pool-v8.mjs && node --check scripts/audit-quality-v8.mjs && node --check scripts/audit-full-source-quality-v8.mjs && node --check scripts/audit-free-budget.mjs && node --check scripts/audit-native-capability-v8.mjs && node --check scripts/audit-deployment-truth-v8.mjs && node --check scripts/audit-source-naming-v8.mjs && node --check scripts/validate-online.mjs && node --test",
+    "check": "node --check src/registry.mjs && node --check src/health.mjs && node --check src/live.mjs && node --check src/discovery.mjs && node --check src/scoring.mjs && node --check src/admission.mjs && node --check src/tvapp.mjs && node --check src/worker.mjs && node --check scripts/probe-sources.mjs && node --check scripts/probe-live-sources.mjs && node --check scripts/audit-candidate-pool-v8.mjs && node --check scripts/audit-quality-v8.mjs && node --check scripts/audit-full-source-quality-v8.mjs && node --check scripts/audit-free-budget.mjs && node --check scripts/audit-native-capability-v8.mjs && node --check scripts/audit-deployment-truth-v8.mjs && node --check scripts/audit-source-naming-v8.mjs && node --check scripts/audit-tvapp-candidates-v8.mjs && node --check scripts/audit-tvapp-stability-v8.mjs && node --check scripts/validate-online.mjs && node --test",
     "test": "node --test",
     "probe": "node scripts/probe-sources.mjs",
     "probe:live": "node scripts/probe-live-sources.mjs",
@@ -14,6 +14,8 @@
     "audit:full": "node scripts/audit-full-source-quality-v8.mjs",
     "audit:free": "node scripts/audit-free-budget.mjs",
     "audit:native": "node scripts/audit-native-capability-v8.mjs",
+    "audit:tvapp": "node scripts/audit-tvapp-candidates-v8.mjs",
+    "audit:tvapp:stability": "node scripts/audit-tvapp-stability-v8.mjs",
     "audit:deployment": "node scripts/audit-deployment-truth-v8.mjs",
     "audit:naming": "node scripts/audit-source-naming-v8.mjs",
     "validate:online": "node scripts/validate-online.mjs",
