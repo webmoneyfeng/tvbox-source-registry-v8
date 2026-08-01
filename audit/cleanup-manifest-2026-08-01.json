@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "cleanup-manifest-v1",
+  "createdAt": "2026-08-01T21:30:00+08:00",
+  "scope": {
+    "local": "TVBox-related repositories under D:/Users/Documents/Code/产品",
+    "homeu": "TVBox-related files, containers, paths and schedules only",
+    "cloudflare": "Account assets related to the current TVBox deployment and referenced shared services"
+  },
+  "evidence": {
+    "currentRepo": "D:/Users/Documents/Code/产品/tvbox-source-registry-v824",
+    "currentCommit": "79e4ed0",
+    "productionWorker": "tvbox-source-registry-v8",
+    "productionKv": "17fb49c03c994650968ed5441d70c77e",
+    "canaryWorker": "tvbox-source-registry-v8-canary",
+    "canaryKv": "3ab5e2e82b1c4a689460841c3c1d0ab1",
+    "homeuInventoryAt": "2026-08-01T21:22:49+08:00",
+    "homeuTvboxMatches": 0,
+    "localCurrentRepoDuplicateGroups": 6,
+    "cloudflareWorkerBindingChecks": [
+      "cloud-mail -> mail KV + mail R2 + D1",
+      "tvbox-source-registry-v8 -> production v3 KV",
+      "tvbox-source-registry-v8-canary -> canary v3 KV",
+      "wenben Pages -> txt KV"
+    ]
+  },
+  "deleteCandidates": {
+    "localWorktrees": [],
+    "localDuplicateFiles": [
+      {
+        "sha256": "D89BC4A261F6A2564F669A106A386160287F792C00CC3CC3427CA6D8C2A3AD36",
+        "keep": "audit/deployment-truth-formal-52d00eb-v82.json",
+        "delete": ["audit/encoding-coherence-formal-52d00eb-v82.json"],
+        "reason": "Exact duplicate; an independent encoding report remains in the audit history"
+      },
+      {
+        "sha256": "FC70A27536178259330FF5180D6DD85A2DDD7B92AEC64A09193758ABEDAC0669",
+        "keep": "audit/deployment-truth-formal-continuation-20260726-2-v82.json",
+        "delete": ["audit/encoding-coherence-formal-continuation-20260726-2-v82.json"],
+        "reason": "Exact duplicate; an independent encoding report remains in the audit history"
+      },
+      {
+        "sha256": "52ABFD642527742C86620C7F1443B11468CF9749D96FD733877212CEC848AB72",
+        "keep": "audit/deployment-truth-formal-post-seed-fix-v82.json",
+        "delete": ["audit/encoding-coherence-formal-post-seed-fix-v82.json"],
+        "reason": "Exact duplicate; an independent encoding report remains in the audit history"
+      },
+      {
+        "sha256": "26A1A9190F6805FE37B83F139DA74A0140D2AE1155457A8560B0B84CCE8B11F1",
+        "keep": "audit/deployment-truth-formal-v821-v82.json",
+        "delete": ["audit/encoding-coherence-formal-v821-v82.json"],
+        "reason": "Exact duplicate; an independent encoding report remains in the audit history"
+      }
+    ],
+    "retainedReferencedDuplicates": [
+      "audit/candidate-discovery-v82.json (written by scripts/discover-public-candidates-v8.mjs and scripts/audit-candidate-pool-v82.mjs)",
+      "audit/candidate-pool-v82.json (written by scripts/audit-candidate-pool-v82.mjs)"
+    ],
+    "cloudflareKvKeys": [
+      {
+        "namespaceId": "17fb49c03c994650968ed5441d70c77e",
+        "key": "registry:health:v1",
+        "reason": "Production code and current Worker versions use registry:health:v3 only"
+      },
+      {
+        "namespaceId": "17fb49c03c994650968ed5441d70c77e",
+        "key": "registry:health:v2",
+        "reason": "Production code and current Worker versions use registry:health:v3 only"
+      }
+    ]
+  },
+  "protected": [
+    "D:/Users/Documents/Code/产品/tvbox-source-registry-v824",
+    "D:/Users/Documents/Code/产品/tvbox-source-registry-v8",
+    "D:/Users/Documents/Code/产品/tvbox-source-registry-v8-local-archive",
+    "D:/Users/Documents/Code/产品/tvbox-source-hub-v73",
+    "D:/Users/Documents/Code/产品/tvbox-source-hub-v73-postmerge-verify",
+    "D:/Users/Documents/Code/产品/tvbox-source-hub-v73-catalog-release-fix (remote recovery not verified)",
+    "D:/Users/Documents/Code/产品/tvbox-source-hub-v73-workflow-cleanup (remote recovery not verified)",
+    "Cloudflare Worker versions for rollback",
+    "Cloudflare cloud-mail Worker, mail KV, mail R2 and its D1 binding",
+    "Cloudflare wenben Pages and txt KV",
+    "All HomeU databases, volumes, active containers and unrelated application files"
+  ],
+  "verificationBeforeDelete": [
+    "Duplicate files have identical SHA-256 and no non-audit reference",
+    "v1/v2 KV keys are not referenced by current local code or Worker bindings",
+    "HomeU has zero TVBox-related containers, paths, references and schedules"
+  ],
+  "rollback": {
+    "localWorktrees": "Recreate from the preserved remote branches",
+    "localDuplicateFiles": "Recover from the current Git commit before cleanup",
+    "cloudflareKvKeys": "Do not rely on deleted v1/v2 keys; current v3 state and Worker versions remain authoritative"
+  }
+}
