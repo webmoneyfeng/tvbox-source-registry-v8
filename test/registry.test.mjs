@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { SOURCE_REGISTRY, candidateToRegistrySource, loadRegistry, tvSite } from '../src/registry.mjs';
+import { SOURCE_REGISTRY, candidateToRegistrySource, loadRegistry, sourceDisplayName, tvSite } from '../src/registry.mjs';
 
 test('registry has unique physical sources and stable priority', () => {
   assert.ok(SOURCE_REGISTRY.length >= 10);
@@ -21,6 +21,20 @@ test('discovered sources carry the same physical key as seeded sources', () => {
     api: 'https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u',
   });
   assert.equal(source.physicalKey, 'raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u');
+});
+
+test('unnamed sources use the playlist path so same-host feeds remain distinguishable', () => {
+  const first = candidateToRegistrySource({
+    kind: 'live',
+    api: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tw.m3u',
+  });
+  const second = candidateToRegistrySource({
+    kind: 'live',
+    api: 'https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u',
+  });
+  assert.notEqual(sourceDisplayName(first), sourceDisplayName(second));
+  assert.match(sourceDisplayName(first), /streams\/tw\.m3u/u);
+  assert.match(sourceDisplayName(second), /m3u\/iptv\.m3u/u);
 });
 
 test('TV sites use source-specific labels and only the first line joins quick search', () => {

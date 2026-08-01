@@ -126,7 +126,12 @@ export function candidateToRegistrySource(candidate) {
 
 export function sourceDisplayName(source, index = (source.kind === 'live' ? LIVE_SOURCE_REGISTRY : SOURCE_REGISTRY).indexOf(source)) {
   if (source.displayName) return source.displayName;
-  try { return new URL(source.api).hostname.replace(/^www\./u, ''); }
+  try {
+    const url = new URL(source.api);
+    const host = url.hostname.replace(/^www\./u, '');
+    const path = url.pathname.replace(/\/+$/u, '').split('/').filter(Boolean).slice(-2).join('/');
+    return path ? `${host} / ${path}` : host;
+  }
   catch { return source.slug || `source-${index + 1}`; }
 }
 
